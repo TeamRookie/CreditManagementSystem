@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Manage_Service-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Manage_Service/target/Manage_Service-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

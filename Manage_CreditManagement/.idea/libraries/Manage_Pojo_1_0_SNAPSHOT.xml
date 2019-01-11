@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Manage_Pojo-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Manage_Pojo/target/Manage_Pojo-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
