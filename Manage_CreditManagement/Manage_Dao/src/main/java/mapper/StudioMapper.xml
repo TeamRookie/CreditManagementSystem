@@ -5,7 +5,7 @@
     <id column="num" property="num" jdbcType="INTEGER" />
     <result column="actitytime" property="actitytime" jdbcType="VARCHAR" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="studioname" property="studioname" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="VARCHAR" />
     <result column="teachernum" property="teachernum" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
@@ -15,6 +15,7 @@
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
     <result column="department" property="department" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -75,8 +76,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, actitytime, facultynum, name, level, teachernum, responsibility, member, stunum, 
-    credit, majornum, gradenum, department
+    num, actitytime, facultynum, studioname, level, teachernum, responsibility, member, 
+    stunum, credit, majornum, gradenum, department, name
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudioExample" >
     select
@@ -110,15 +111,15 @@
   </delete>
   <insert id="insert" parameterType="pojo.Studio" >
     insert into studio (num, actitytime, facultynum, 
-      name, level, teachernum, 
+      studioname, level, teachernum, 
       responsibility, member, stunum, 
       credit, majornum, gradenum, 
-      department)
+      department, name)
     values (#{num,jdbcType=INTEGER}, #{actitytime,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}, 
-      #{name,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, #{teachernum,jdbcType=VARCHAR}, 
+      #{studioname,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, #{teachernum,jdbcType=VARCHAR}, 
       #{responsibility,jdbcType=VARCHAR}, #{member,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
       #{credit,jdbcType=REAL}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
-      #{department,jdbcType=VARCHAR})
+      #{department,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Studio" >
     insert into studio
@@ -132,8 +133,8 @@
       <if test="facultynum != null" >
         facultynum,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="studioname != null" >
+        studioname,
       </if>
       <if test="level != null" >
         level,
@@ -162,6 +163,9 @@
       <if test="department != null" >
         department,
       </if>
+      <if test="name != null" >
+        name,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="num != null" >
@@ -173,8 +177,8 @@
       <if test="facultynum != null" >
         #{facultynum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="studioname != null" >
+        #{studioname,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         #{level,jdbcType=VARCHAR},
@@ -203,6 +207,9 @@
       <if test="department != null" >
         #{department,jdbcType=VARCHAR},
       </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <select id="countByExample" parameterType="pojo.StudioExample" resultType="java.lang.Integer" >
@@ -223,8 +230,8 @@
       <if test="record.facultynum != null" >
         facultynum = #{record.facultynum,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.studioname != null" >
+        studioname = #{record.studioname,jdbcType=VARCHAR},
       </if>
       <if test="record.level != null" >
         level = #{record.level,jdbcType=VARCHAR},
@@ -253,6 +260,9 @@
       <if test="record.department != null" >
         department = #{record.department,jdbcType=VARCHAR},
       </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -263,7 +273,7 @@
     set num = #{record.num,jdbcType=INTEGER},
       actitytime = #{record.actitytime,jdbcType=VARCHAR},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
+      studioname = #{record.studioname,jdbcType=VARCHAR},
       level = #{record.level,jdbcType=VARCHAR},
       teachernum = #{record.teachernum,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
@@ -272,7 +282,8 @@
       credit = #{record.credit,jdbcType=REAL},
       majornum = #{record.majornum,jdbcType=INTEGER},
       gradenum = #{record.gradenum,jdbcType=INTEGER},
-      department = #{record.department,jdbcType=VARCHAR}
+      department = #{record.department,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -286,8 +297,8 @@
       <if test="facultynum != null" >
         facultynum = #{facultynum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="studioname != null" >
+        studioname = #{studioname,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         level = #{level,jdbcType=VARCHAR},
@@ -316,6 +327,9 @@
       <if test="department != null" >
         department = #{department,jdbcType=VARCHAR},
       </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
     </set>
     where num = #{num,jdbcType=INTEGER}
   </update>
@@ -323,7 +337,7 @@
     update studio
     set actitytime = #{actitytime,jdbcType=VARCHAR},
       facultynum = #{facultynum,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR},
+      studioname = #{studioname,jdbcType=VARCHAR},
       level = #{level,jdbcType=VARCHAR},
       teachernum = #{teachernum,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
@@ -332,7 +346,8 @@
       credit = #{credit,jdbcType=REAL},
       majornum = #{majornum,jdbcType=INTEGER},
       gradenum = #{gradenum,jdbcType=INTEGER},
-      department = #{department,jdbcType=VARCHAR}
+      department = #{department,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR}
     where num = #{num,jdbcType=INTEGER}
   </update>
 </mapper>

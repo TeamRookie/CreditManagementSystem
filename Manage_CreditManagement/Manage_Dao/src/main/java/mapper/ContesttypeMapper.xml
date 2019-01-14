@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.ContesttypeMapper" >
   <resultMap id="BaseResultMap" type="pojo.Contesttype" >
-    <result column="id" property="id" jdbcType="INTEGER" />
-    <result column="tiime" property="tiime" jdbcType="VARCHAR" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="time" property="time" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, tiime, name
+    id, time, name
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ContesttypeExample" >
     select
@@ -81,6 +81,16 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from contesttype
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from contesttype
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
   <delete id="deleteByExample" parameterType="pojo.ContesttypeExample" >
     delete from contesttype
     <if test="_parameter != null" >
@@ -88,9 +98,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Contesttype" >
-    insert into contesttype (id, tiime, name
+    insert into contesttype (id, time, name
       )
-    values (#{id,jdbcType=INTEGER}, #{tiime,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{time,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Contesttype" >
@@ -99,8 +109,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="tiime != null" >
-        tiime,
+      <if test="time != null" >
+        time,
       </if>
       <if test="name != null" >
         name,
@@ -110,8 +120,8 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="tiime != null" >
-        #{tiime,jdbcType=VARCHAR},
+      <if test="time != null" >
+        #{time,jdbcType=VARCHAR},
       </if>
       <if test="name != null" >
         #{name,jdbcType=VARCHAR},
@@ -130,8 +140,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.tiime != null" >
-        tiime = #{record.tiime,jdbcType=VARCHAR},
+      <if test="record.time != null" >
+        time = #{record.time,jdbcType=VARCHAR},
       </if>
       <if test="record.name != null" >
         name = #{record.name,jdbcType=VARCHAR},
@@ -144,10 +154,28 @@
   <update id="updateByExample" parameterType="map" >
     update contesttype
     set id = #{record.id,jdbcType=INTEGER},
-      tiime = #{record.tiime,jdbcType=VARCHAR},
+      time = #{record.time,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="pojo.Contesttype" >
+    update contesttype
+    <set >
+      <if test="time != null" >
+        time = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pojo.Contesttype" >
+    update contesttype
+    set time = #{time,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

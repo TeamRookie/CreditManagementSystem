@@ -9,7 +9,7 @@ public class Project {
 
     private String id;
 
-    private String name;
+    private String projectname;
 
     private String level;
 
@@ -28,6 +28,8 @@ public class Project {
     private Integer majornum;
 
     private Integer gradenum;
+
+    private String name;
 
     private byte[] type;
 
@@ -63,12 +65,12 @@ public class Project {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getProjectname() {
+        return projectname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setProjectname(String projectname) {
+        this.projectname = projectname == null ? null : projectname.trim();
     }
 
     public String getLevel() {
@@ -141,6 +143,14 @@ public class Project {
 
     public void setGradenum(Integer gradenum) {
         this.gradenum = gradenum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
     public byte[] getType() {

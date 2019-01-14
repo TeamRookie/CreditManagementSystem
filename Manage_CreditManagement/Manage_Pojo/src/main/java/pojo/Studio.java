@@ -7,7 +7,7 @@ public class Studio {
 
     private Integer facultynum;
 
-    private String name;
+    private String studioname;
 
     private String level;
 
@@ -26,6 +26,8 @@ public class Studio {
     private Integer gradenum;
 
     private String department;
+
+    private String name;
 
     public Integer getNum() {
         return num;
@@ -51,12 +53,12 @@ public class Studio {
         this.facultynum = facultynum;
     }
 
-    public String getName() {
-        return name;
+    public String getStudioname() {
+        return studioname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStudioname(String studioname) {
+        this.studioname = studioname == null ? null : studioname.trim();
     }
 
     public String getLevel() {
@@ -129,5 +131,13 @@ public class Studio {
 
     public void setDepartment(String department) {
         this.department = department == null ? null : department.trim();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 }

@@ -3,7 +3,7 @@ package pojo;
 public class Contesttype {
     private Integer id;
 
-    private String tiime;
+    private String time;
 
     private String name;
 
@@ -15,12 +15,12 @@ public class Contesttype {
         this.id = id;
     }
 
-    public String getTiime() {
-        return tiime;
+    public String getTime() {
+        return time;
     }
 
-    public void setTiime(String tiime) {
-        this.tiime = tiime == null ? null : tiime.trim();
+    public void setTime(String time) {
+        this.time = time == null ? null : time.trim();
     }
 
     public String getName() {

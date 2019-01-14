@@ -13,6 +13,7 @@
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,7 +75,7 @@
   </sql>
   <sql id="Base_Column_List" >
     num, typenum, gettime, level, teacehernum, member, stunum, credit, facultynum, majornum, 
-    gradenum
+    gradenum, name
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.SafetyExample" >
     select
@@ -110,11 +111,13 @@
     insert into safety (num, typenum, gettime, 
       level, teacehernum, member, 
       stunum, credit, facultynum, 
-      majornum, gradenum)
+      majornum, gradenum, name
+      )
     values (#{num,jdbcType=INTEGER}, #{typenum,jdbcType=INTEGER}, #{gettime,jdbcType=VARCHAR}, 
       #{level,jdbcType=VARCHAR}, #{teacehernum,jdbcType=INTEGER}, #{member,jdbcType=VARCHAR}, 
       #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, 
-      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER})
+      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Safety" >
     insert into safety
@@ -152,6 +155,9 @@
       <if test="gradenum != null" >
         gradenum,
       </if>
+      <if test="name != null" >
+        name,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="num != null" >
@@ -186,6 +192,9 @@
       </if>
       <if test="gradenum != null" >
         #{gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -231,6 +240,9 @@
       <if test="record.gradenum != null" >
         gradenum = #{record.gradenum,jdbcType=INTEGER},
       </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -248,7 +260,8 @@
       credit = #{record.credit,jdbcType=REAL},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       majornum = #{record.majornum,jdbcType=INTEGER},
-      gradenum = #{record.gradenum,jdbcType=INTEGER}
+      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -286,6 +299,9 @@
       <if test="gradenum != null" >
         gradenum = #{gradenum,jdbcType=INTEGER},
       </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
     </set>
     where num = #{num,jdbcType=INTEGER}
   </update>
@@ -300,7 +316,8 @@
       credit = #{credit,jdbcType=REAL},
       facultynum = #{facultynum,jdbcType=INTEGER},
       majornum = #{majornum,jdbcType=INTEGER},
-      gradenum = #{gradenum,jdbcType=INTEGER}
+      gradenum = #{gradenum,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR}
     where num = #{num,jdbcType=INTEGER}
   </update>
 </mapper>

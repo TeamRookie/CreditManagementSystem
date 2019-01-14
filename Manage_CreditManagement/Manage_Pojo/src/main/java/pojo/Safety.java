@@ -23,6 +23,8 @@ public class Safety {
 
     private Integer gradenum;
 
+    private String name;
+
     public Integer getNum() {
         return num;
     }
@@ -109,5 +111,13 @@ public class Safety {
 
     public void setGradenum(Integer gradenum) {
         this.gradenum = gradenum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 }

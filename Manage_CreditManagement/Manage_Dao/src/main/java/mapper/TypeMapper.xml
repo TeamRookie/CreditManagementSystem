@@ -6,6 +6,7 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="informationurl" property="informationurl" jdbcType="VARCHAR" />
     <result column="rulesurl" property="rulesurl" jdbcType="VARCHAR" />
+    <result column="importType" property="importtype" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, name, informationurl, rulesurl
+    num, name, informationurl, rulesurl, importType
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TypeExample" >
     select
@@ -100,9 +101,9 @@
   </delete>
   <insert id="insert" parameterType="pojo.Type" >
     insert into type (num, name, informationurl, 
-      rulesurl)
+      rulesurl, importType)
     values (#{num,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{informationurl,jdbcType=VARCHAR}, 
-      #{rulesurl,jdbcType=VARCHAR})
+      #{rulesurl,jdbcType=VARCHAR}, #{importtype,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Type" >
     insert into type
@@ -119,6 +120,9 @@
       <if test="rulesurl != null" >
         rulesurl,
       </if>
+      <if test="importtype != null" >
+        importType,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="num != null" >
@@ -132,6 +136,9 @@
       </if>
       <if test="rulesurl != null" >
         #{rulesurl,jdbcType=VARCHAR},
+      </if>
+      <if test="importtype != null" >
+        #{importtype,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -156,6 +163,9 @@
       <if test="record.rulesurl != null" >
         rulesurl = #{record.rulesurl,jdbcType=VARCHAR},
       </if>
+      <if test="record.importtype != null" >
+        importType = #{record.importtype,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -166,7 +176,8 @@
     set num = #{record.num,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       informationurl = #{record.informationurl,jdbcType=VARCHAR},
-      rulesurl = #{record.rulesurl,jdbcType=VARCHAR}
+      rulesurl = #{record.rulesurl,jdbcType=VARCHAR},
+      importType = #{record.importtype,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -183,6 +194,9 @@
       <if test="rulesurl != null" >
         rulesurl = #{rulesurl,jdbcType=VARCHAR},
       </if>
+      <if test="importtype != null" >
+        importType = #{importtype,jdbcType=VARCHAR},
+      </if>
     </set>
     where num = #{num,jdbcType=INTEGER}
   </update>
@@ -190,7 +204,8 @@
     update type
     set name = #{name,jdbcType=VARCHAR},
       informationurl = #{informationurl,jdbcType=VARCHAR},
-      rulesurl = #{rulesurl,jdbcType=VARCHAR}
+      rulesurl = #{rulesurl,jdbcType=VARCHAR},
+      importType = #{importtype,jdbcType=VARCHAR}
     where num = #{num,jdbcType=INTEGER}
   </update>
 </mapper>

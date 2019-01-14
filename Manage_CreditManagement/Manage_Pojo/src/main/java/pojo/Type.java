@@ -9,6 +9,8 @@ public class Type {
 
     private String rulesurl;
 
+    private String importtype;
+
     public Integer getNum() {
         return num;
     }
@@ -39,5 +41,13 @@ public class Type {
 
     public void setRulesurl(String rulesurl) {
         this.rulesurl = rulesurl == null ? null : rulesurl.trim();
+    }
+
+    public String getImporttype() {
+        return importtype;
+    }
+
+    public void setImporttype(String importtype) {
+        this.importtype = importtype == null ? null : importtype.trim();
     }
 }

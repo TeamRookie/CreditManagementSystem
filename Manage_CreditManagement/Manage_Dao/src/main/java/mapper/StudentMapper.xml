@@ -9,7 +9,6 @@
     <result column="majorum" property="majorum" jdbcType="VARCHAR" />
     <result column="gradenum" property="gradenum" jdbcType="VARCHAR" />
     <result column="telphone" property="telphone" jdbcType="VARCHAR" />
-    <result column="pwd" property="pwd" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="role" property="role" jdbcType="INTEGER" />
     <result column="bankcard" property="bankcard" jdbcType="VARCHAR" />
@@ -74,8 +73,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, name, id, facultynum, majorum, gradenum, telphone, pwd, status, role, bankcard, 
-    password
+    num, name, id, facultynum, majorum, gradenum, telphone, status, role, bankcard, password
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudentExample" >
     select
@@ -110,14 +108,12 @@
   <insert id="insert" parameterType="pojo.Student" >
     insert into student (num, name, id, 
       facultynum, majorum, gradenum, 
-      telphone, pwd, status, 
-      role, bankcard, password
-      )
+      telphone, status, role, 
+      bankcard, password)
     values (#{num,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, 
       #{facultynum,jdbcType=VARCHAR}, #{majorum,jdbcType=VARCHAR}, #{gradenum,jdbcType=VARCHAR}, 
-      #{telphone,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
-      #{role,jdbcType=INTEGER}, #{bankcard,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
-      )
+      #{telphone,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}, 
+      #{bankcard,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Student" >
     insert into student
@@ -142,9 +138,6 @@
       </if>
       <if test="telphone != null" >
         telphone,
-      </if>
-      <if test="pwd != null" >
-        pwd,
       </if>
       <if test="status != null" >
         status,
@@ -180,9 +173,6 @@
       </if>
       <if test="telphone != null" >
         #{telphone,jdbcType=VARCHAR},
-      </if>
-      <if test="pwd != null" >
-        #{pwd,jdbcType=VARCHAR},
       </if>
       <if test="status != null" >
         #{status,jdbcType=INTEGER},
@@ -228,9 +218,6 @@
       <if test="record.telphone != null" >
         telphone = #{record.telphone,jdbcType=VARCHAR},
       </if>
-      <if test="record.pwd != null" >
-        pwd = #{record.pwd,jdbcType=VARCHAR},
-      </if>
       <if test="record.status != null" >
         status = #{record.status,jdbcType=INTEGER},
       </if>
@@ -257,7 +244,6 @@
       majorum = #{record.majorum,jdbcType=VARCHAR},
       gradenum = #{record.gradenum,jdbcType=VARCHAR},
       telphone = #{record.telphone,jdbcType=VARCHAR},
-      pwd = #{record.pwd,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=INTEGER},
       role = #{record.role,jdbcType=INTEGER},
       bankcard = #{record.bankcard,jdbcType=VARCHAR},
@@ -287,9 +273,6 @@
       <if test="telphone != null" >
         telphone = #{telphone,jdbcType=VARCHAR},
       </if>
-      <if test="pwd != null" >
-        pwd = #{pwd,jdbcType=VARCHAR},
-      </if>
       <if test="status != null" >
         status = #{status,jdbcType=INTEGER},
       </if>
@@ -313,7 +296,6 @@
       majorum = #{majorum,jdbcType=VARCHAR},
       gradenum = #{gradenum,jdbcType=VARCHAR},
       telphone = #{telphone,jdbcType=VARCHAR},
-      pwd = #{pwd,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
       role = #{role,jdbcType=INTEGER},
       bankcard = #{bankcard,jdbcType=VARCHAR},

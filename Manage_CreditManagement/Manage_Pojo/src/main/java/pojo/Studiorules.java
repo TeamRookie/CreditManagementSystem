@@ -3,7 +3,7 @@ package pojo;
 public class Studiorules {
     private Integer id;
 
-    private String level;
+    private String score;
 
     private String responsibility;
 
@@ -17,12 +17,12 @@ public class Studiorules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getScore() {
+        return score;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setScore(String score) {
+        this.score = score == null ? null : score.trim();
     }
 
     public String getResponsibility() {

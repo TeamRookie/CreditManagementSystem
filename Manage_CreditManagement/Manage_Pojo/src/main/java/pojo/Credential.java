@@ -19,6 +19,8 @@ public class Credential {
 
     private Integer gradenum;
 
+    private String name;
+
     public Integer getId() {
         return id;
     }
@@ -89,5 +91,13 @@ public class Credential {
 
     public void setGradenum(Integer gradenum) {
         this.gradenum = gradenum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 }

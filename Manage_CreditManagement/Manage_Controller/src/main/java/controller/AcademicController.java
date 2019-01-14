@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pojo.Academicrules;
-import pojo.PageBean;
 import pojo.Type;
 
 import service.AcademicService;
@@ -20,24 +18,19 @@ public class AcademicController
     @Value("${PageSize}")
     private  Integer pageSize;
     @Autowired
-    private TypeService typeService;
-    @Autowired
     private AcademicService academicService;
     @RequestMapping("/academicRules")
     public  String getAcademicRules(Model model,Integer curremtPage)
     {
-        List<Type> typeList = typeService.getAllType();
     /*    final PageBean pageBean = academicService.getPageBean(pageSize, curremtPage);*/
-        model.addAttribute("typeList",typeList);
-/*        model.addAttribute("pageBean",pageBean);*/
-        return  "academicRules";
+    /*     model.addAttribute("pageBean",pageBean);*/
+        return "rules/academicRules";
     }
 
     @RequestMapping("/academic")
-    public  String getAcademic(Model model)
+    public  String getAcademic(Model model,String stuNum,String date,Integer currentPage)
     {
-        List<Type> typeList = typeService.getAllType();
-        model.addAttribute("typeList",typeList);
-        return  "academic";
+        academicService.getAcademicPageBean(stuNum,date,currentPage);
+        return  "information/academic";
     }
 }

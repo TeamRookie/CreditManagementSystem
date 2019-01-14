@@ -1,10 +1,10 @@
 package Impl;
 
-import mapper.AssociationRulesItemMapper;
+import mapper.AssociationItemMapper;
 import mapper.AssociationrulesMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pojo.AssociationExample;
+import org.springframework.transaction.annotation.Transactional;
 import pojo.Associationrules;
 import pojo.AssociationrulesExample;
 import pojo.PageBean;
@@ -12,12 +12,13 @@ import service.AssociationService;
 
 import java.util.List;
 @Service
+@Transactional
 public class AssociationServiceImpl implements AssociationService
 {
     @Autowired
     private AssociationrulesMapper associationRulesMapper;
     @Autowired
-    private AssociationRulesItemMapper associationRulesItemMapper;
+    private AssociationItemMapper associationRulesItemMapper;
     @Override
     public PageBean getPageBean(Integer pageSize, Integer currentPage)
     {

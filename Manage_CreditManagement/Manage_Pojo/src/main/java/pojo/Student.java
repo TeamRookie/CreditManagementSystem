@@ -15,8 +15,6 @@ public class Student {
 
     private String telphone;
 
-    private String pwd;
-
     private Integer status;
 
     private Integer role;
@@ -79,14 +77,6 @@ public class Student {
 
     public void setTelphone(String telphone) {
         this.telphone = telphone == null ? null : telphone.trim();
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd == null ? null : pwd.trim();
     }
 
     public Integer getStatus() {

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pojo.Productionrules;
+import pojo.PageBean;
 import pojo.Type;
 import service.ProductionService;
 import service.TypeService;
@@ -18,23 +18,17 @@ public class ProductionController
     @Value("${PageSize}")
     private  Integer pageSize;
     @Autowired
-    private TypeService typeService;
-    @Autowired
     private ProductionService productionService;
     @RequestMapping("/productionRules")
-    public  String getProductionRules(Model model)
+    public  String getProductionRules(Model model,Integer currentPage)
     {
-        List<Productionrules> productionRulesList = productionService.getProductionRules();
-        List<Type> typeList = typeService.getAllType();
-        model.addAttribute("productionRulesList",productionRulesList);
-        model.addAttribute("typeList",typeList);
-        return  "productionRules";
+        PageBean pageBean = productionService.getPageBean(pageSize, currentPage);
+        model.addAttribute("pageBean",pageBean);
+        return "rules/productionRules";
     }
     @RequestMapping("/production")
     public  String getProduction(Model model)
     {
-        List<Type> typeList = typeService.getAllType();
-        model.addAttribute("typeList",typeList);
         return  "production";
     }
 }

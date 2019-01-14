@@ -5,7 +5,7 @@ public class Practice {
 
     private String time;
 
-    private String name;
+    private String practicename;
 
     private String level;
 
@@ -27,6 +27,8 @@ public class Practice {
 
     private String type;
 
+    private String name;
+
     public Integer getId() {
         return id;
     }
@@ -43,12 +45,12 @@ public class Practice {
         this.time = time == null ? null : time.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getPracticename() {
+        return practicename;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setPracticename(String practicename) {
+        this.practicename = practicename == null ? null : practicename.trim();
     }
 
     public String getLevel() {
@@ -129,5 +131,13 @@ public class Practice {
 
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 }

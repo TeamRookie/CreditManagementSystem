@@ -5,7 +5,7 @@ public class Association {
 
     private String time;
 
-    private String name;
+    private String associationname;
 
     private String level;
 
@@ -23,6 +23,8 @@ public class Association {
 
     private Integer gradenum;
 
+    private String name;
+
     public Integer getId() {
         return id;
     }
@@ -39,12 +41,12 @@ public class Association {
         this.time = time == null ? null : time.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getAssociationname() {
+        return associationname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setAssociationname(String associationname) {
+        this.associationname = associationname == null ? null : associationname.trim();
     }
 
     public String getLevel() {
@@ -109,5 +111,13 @@ public class Association {
 
     public void setGradenum(Integer gradenum) {
         this.gradenum = gradenum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 }

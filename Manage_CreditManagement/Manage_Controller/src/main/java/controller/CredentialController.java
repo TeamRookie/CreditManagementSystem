@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pojo.Credentialrules;
+import pojo.PageBean;
 import pojo.Type;
 import service.CredentialService;
 import service.TypeService;
@@ -17,23 +17,17 @@ public class CredentialController
     @Value("${PageSize}")
     private  Integer pageSize;
     @Autowired
-    private TypeService typeService;
-    @Autowired
     private CredentialService credentialService;
     @RequestMapping("/credentialRules")
-    public  String getCredentialRules(Model model)
+    public  String getCredentialRules(Model model,Integer currentPage)
     {
-        List<Credentialrules> credentialRulesList = credentialService.getCredentialRules();
-        List<Type> typeList = typeService.getAllType();
-        model.addAttribute("typeList",typeList);
-        model.addAttribute("credentialRulesList",credentialRulesList);
-        return  "credentialRules";
+        PageBean pageBean = credentialService.getPageBean(pageSize, currentPage);
+        model.addAttribute("pageBean",pageBean);
+        return "rules/credentialRules";
     }
     @RequestMapping("/credential")
     public  String getCredential(Model model)
     {
-        List<Type> typeList = typeService.getAllType();
-        model.addAttribute("typeList",typeList);
         return  "credential";
     }
 }
