@@ -2,9 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.AcademicMapper" >
   <resultMap id="BaseResultMap" type="pojo.Academic" >
-    <id column="num" property="num" jdbcType="INTEGER" />
-    <result column="typenum" property="typenum" jdbcType="INTEGER" />
-    <result column="actitytime" property="actitytime" jdbcType="VARCHAR" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="academictime" property="academictime" jdbcType="VARCHAR" />
     <result column="theme" property="theme" jdbcType="VARCHAR" />
     <result column="address" property="address" jdbcType="VARCHAR" />
     <result column="undertake" property="undertake" jdbcType="VARCHAR" />
@@ -16,7 +15,8 @@
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="stuname" property="stuname" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -77,8 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, typenum, actitytime, theme, address, undertake, amount, teachernum, member, 
-    stunum, credit, facultynum, majornum, gradenum, name
+    id, academictime, theme, address, undertake, amount, teachernum, member, stunum, 
+    credit, facultynum, majornum, gradenum, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.AcademicExample" >
     select
@@ -98,11 +98,11 @@
     select 
     <include refid="Base_Column_List" />
     from academic
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from academic
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.AcademicExample" >
     delete from academic
@@ -111,30 +111,27 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Academic" >
-    insert into academic (num, typenum, actitytime, 
-      theme, address, undertake, 
-      amount, teachernum, member, 
-      stunum, credit, facultynum, 
-      majornum, gradenum, name
+    insert into academic (id, academictime, theme, 
+      address, undertake, amount, 
+      teachernum, member, stunum, 
+      credit, facultynum, majornum, 
+      gradenum, stuname, url
       )
-    values (#{num,jdbcType=INTEGER}, #{typenum,jdbcType=INTEGER}, #{actitytime,jdbcType=VARCHAR}, 
-      #{theme,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{undertake,jdbcType=VARCHAR}, 
-      #{amount,jdbcType=INTEGER}, #{teachernum,jdbcType=VARCHAR}, #{member,jdbcType=VARCHAR}, 
-      #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, 
-      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{academictime,jdbcType=VARCHAR}, #{theme,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{undertake,jdbcType=VARCHAR}, #{amount,jdbcType=INTEGER}, 
+      #{teachernum,jdbcType=VARCHAR}, #{member,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
+      #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Academic" >
     insert into academic
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="id != null" >
+        id,
       </if>
-      <if test="typenum != null" >
-        typenum,
-      </if>
-      <if test="actitytime != null" >
-        actitytime,
+      <if test="academictime != null" >
+        academictime,
       </if>
       <if test="theme != null" >
         theme,
@@ -169,19 +166,19 @@
       <if test="gradenum != null" >
         gradenum,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="stuname != null" >
+        stuname,
+      </if>
+      <if test="url != null" >
+        url,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
-      <if test="typenum != null" >
-        #{typenum,jdbcType=INTEGER},
-      </if>
-      <if test="actitytime != null" >
-        #{actitytime,jdbcType=VARCHAR},
+      <if test="academictime != null" >
+        #{academictime,jdbcType=VARCHAR},
       </if>
       <if test="theme != null" >
         #{theme,jdbcType=VARCHAR},
@@ -216,8 +213,11 @@
       <if test="gradenum != null" >
         #{gradenum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="stuname != null" >
+        #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -230,14 +230,11 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update academic
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.typenum != null" >
-        typenum = #{record.typenum,jdbcType=INTEGER},
-      </if>
-      <if test="record.actitytime != null" >
-        actitytime = #{record.actitytime,jdbcType=VARCHAR},
+      <if test="record.academictime != null" >
+        academictime = #{record.academictime,jdbcType=VARCHAR},
       </if>
       <if test="record.theme != null" >
         theme = #{record.theme,jdbcType=VARCHAR},
@@ -272,8 +269,11 @@
       <if test="record.gradenum != null" >
         gradenum = #{record.gradenum,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.stuname != null" >
+        stuname = #{record.stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -282,9 +282,8 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update academic
-    set num = #{record.num,jdbcType=INTEGER},
-      typenum = #{record.typenum,jdbcType=INTEGER},
-      actitytime = #{record.actitytime,jdbcType=VARCHAR},
+    set id = #{record.id,jdbcType=INTEGER},
+      academictime = #{record.academictime,jdbcType=VARCHAR},
       theme = #{record.theme,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
       undertake = #{record.undertake,jdbcType=VARCHAR},
@@ -296,7 +295,8 @@
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       majornum = #{record.majornum,jdbcType=INTEGER},
       gradenum = #{record.gradenum,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR}
+      stuname = #{record.stuname,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -304,11 +304,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Academic" >
     update academic
     <set >
-      <if test="typenum != null" >
-        typenum = #{typenum,jdbcType=INTEGER},
-      </if>
-      <if test="actitytime != null" >
-        actitytime = #{actitytime,jdbcType=VARCHAR},
+      <if test="academictime != null" >
+        academictime = #{academictime,jdbcType=VARCHAR},
       </if>
       <if test="theme != null" >
         theme = #{theme,jdbcType=VARCHAR},
@@ -343,16 +340,18 @@
       <if test="gradenum != null" >
         gradenum = #{gradenum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="stuname != null" >
+        stuname = #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
       </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Academic" >
     update academic
-    set typenum = #{typenum,jdbcType=INTEGER},
-      actitytime = #{actitytime,jdbcType=VARCHAR},
+    set academictime = #{academictime,jdbcType=VARCHAR},
       theme = #{theme,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
       undertake = #{undertake,jdbcType=VARCHAR},
@@ -364,7 +363,8 @@
       facultynum = #{facultynum,jdbcType=INTEGER},
       majornum = #{majornum,jdbcType=INTEGER},
       gradenum = #{gradenum,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+      stuname = #{stuname,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import pojo.AcademicPageBean;
 import pojo.Type;
 
 import service.AcademicService;
@@ -28,9 +29,10 @@ public class AcademicController
     }
 
     @RequestMapping("/academic")
-    public  String getAcademic(Model model,String stuNum,String date,Integer currentPage)
+    public  String getAcademic(Model model,String stuNum,String searchDate,Integer currentPage)
     {
-        academicService.getAcademicPageBean(stuNum,date,currentPage);
+        AcademicPageBean pageBean = academicService.getAcademicPageBean(stuNum, searchDate,pageSize, currentPage);
+        model.addAttribute("pageBean",pageBean);
         return  "information/academic";
     }
 }

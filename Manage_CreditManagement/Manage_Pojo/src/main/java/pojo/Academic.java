@@ -1,11 +1,9 @@
 package pojo;
 
 public class Academic {
-    private Integer num;
+    private Integer id;
 
-    private Integer typenum;
-
-    private String actitytime;
+    private String academictime;
 
     private String theme;
 
@@ -29,30 +27,24 @@ public class Academic {
 
     private Integer gradenum;
 
-    private String name;
+    private String stuname;
 
-    public Integer getNum() {
-        return num;
+    private String url;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Integer getTypenum() {
-        return typenum;
+    public String getAcademictime() {
+        return academictime;
     }
 
-    public void setTypenum(Integer typenum) {
-        this.typenum = typenum;
-    }
-
-    public String getActitytime() {
-        return actitytime;
-    }
-
-    public void setActitytime(String actitytime) {
-        this.actitytime = actitytime == null ? null : actitytime.trim();
+    public void setAcademictime(String academictime) {
+        this.academictime = academictime == null ? null : academictime.trim();
     }
 
     public String getTheme() {
@@ -143,11 +135,19 @@ public class Academic {
         this.gradenum = gradenum;
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

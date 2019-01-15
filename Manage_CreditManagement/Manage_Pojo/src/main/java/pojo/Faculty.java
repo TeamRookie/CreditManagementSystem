@@ -1,26 +1,26 @@
 package pojo;
 
 public class Faculty {
-    private Integer num;
+    private Integer facultynum;
 
-    private String name;
+    private String facultyname;
 
     private String password;
 
-    public Integer getNum() {
-        return num;
+    public Integer getFacultynum() {
+        return facultynum;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setFacultynum(Integer facultynum) {
+        this.facultynum = facultynum;
     }
 
-    public String getName() {
-        return name;
+    public String getFacultyname() {
+        return facultyname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setFacultyname(String facultyname) {
+        this.facultyname = facultyname == null ? null : facultyname.trim();
     }
 
     public String getPassword() {

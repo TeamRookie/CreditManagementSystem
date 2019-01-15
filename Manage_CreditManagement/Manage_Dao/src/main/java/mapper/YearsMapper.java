@@ -10,7 +10,7 @@ public interface YearsMapper {
 
     int deleteByExample(YearsExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Years record);
 
@@ -18,7 +18,7 @@ public interface YearsMapper {
 
     List<Years> selectByExample(YearsExample example);
 
-    Years selectByPrimaryKey(Integer num);
+    Years selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Years record, @Param("example") YearsExample example);
 

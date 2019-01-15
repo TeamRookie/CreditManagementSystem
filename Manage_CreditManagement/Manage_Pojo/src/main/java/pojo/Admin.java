@@ -1,18 +1,18 @@
 package pojo;
 
 public class Admin {
-    private String name;
+    private String adminname;
 
     private String password;
 
     private String role;
 
-    public String getName() {
-        return name;
+    public String getAdminname() {
+        return adminname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setAdminname(String adminname) {
+        this.adminname = adminname == null ? null : adminname.trim();
     }
 
     public String getPassword() {

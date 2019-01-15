@@ -3,9 +3,9 @@ package pojo;
 public class Contesttype {
     private Integer id;
 
-    private String time;
+    private String contesttime;
 
-    private String name;
+    private String contestname;
 
     public Integer getId() {
         return id;
@@ -15,19 +15,19 @@ public class Contesttype {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getContesttime() {
+        return contesttime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setContesttime(String contesttime) {
+        this.contesttime = contesttime == null ? null : contesttime.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getContestname() {
+        return contestname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setContestname(String contestname) {
+        this.contestname = contestname == null ? null : contestname.trim();
     }
 }

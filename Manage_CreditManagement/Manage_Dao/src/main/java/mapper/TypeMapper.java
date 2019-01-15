@@ -10,7 +10,7 @@ public interface TypeMapper {
 
     int deleteByExample(TypeExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Type record);
 
@@ -18,7 +18,7 @@ public interface TypeMapper {
 
     List<Type> selectByExample(TypeExample example);
 
-    Type selectByPrimaryKey(Integer num);
+    Type selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Type record, @Param("example") TypeExample example);
 

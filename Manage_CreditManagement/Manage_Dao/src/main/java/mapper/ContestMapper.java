@@ -10,7 +10,7 @@ public interface ContestMapper {
 
     int deleteByExample(ContestExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Contest record);
 
@@ -18,7 +18,7 @@ public interface ContestMapper {
 
     List<Contest> selectByExample(ContestExample example);
 
-    Contest selectByPrimaryKey(Integer num);
+    Contest selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Contest record, @Param("example") ContestExample example);
 

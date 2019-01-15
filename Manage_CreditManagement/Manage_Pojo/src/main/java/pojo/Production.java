@@ -3,7 +3,7 @@ package pojo;
 public class Production {
     private Integer num;
 
-    private String time;
+    private String productiontime;
 
     private String production;
 
@@ -29,7 +29,9 @@ public class Production {
 
     private Integer gradenum;
 
-    private String name;
+    private String stuname;
+
+    private String url;
 
     public Integer getNum() {
         return num;
@@ -39,12 +41,12 @@ public class Production {
         this.num = num;
     }
 
-    public String getTime() {
-        return time;
+    public String getProductiontime() {
+        return productiontime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setProductiontime(String productiontime) {
+        this.productiontime = productiontime == null ? null : productiontime.trim();
     }
 
     public String getProduction() {
@@ -143,11 +145,19 @@ public class Production {
         this.gradenum = gradenum;
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

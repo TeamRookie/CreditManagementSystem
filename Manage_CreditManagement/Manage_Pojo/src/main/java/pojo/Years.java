@@ -1,16 +1,16 @@
 package pojo;
 
 public class Years {
-    private Integer num;
+    private Integer id;
 
     private String schoolyear;
 
-    public Integer getNum() {
-        return num;
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getSchoolyear() {

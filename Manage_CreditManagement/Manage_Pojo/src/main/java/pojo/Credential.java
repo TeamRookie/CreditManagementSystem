@@ -3,7 +3,7 @@ package pojo;
 public class Credential {
     private Integer id;
 
-    private String time;
+    private String credentialtime;
 
     private String type;
 
@@ -19,7 +19,9 @@ public class Credential {
 
     private Integer gradenum;
 
-    private String name;
+    private String stuname;
+
+    private String url;
 
     public Integer getId() {
         return id;
@@ -29,12 +31,12 @@ public class Credential {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getCredentialtime() {
+        return credentialtime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setCredentialtime(String credentialtime) {
+        this.credentialtime = credentialtime == null ? null : credentialtime.trim();
     }
 
     public String getType() {
@@ -93,11 +95,19 @@ public class Credential {
         this.gradenum = gradenum;
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

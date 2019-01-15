@@ -164,143 +164,143 @@ public class PracticetypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNull() {
-            addCriterion("time is null");
+        public Criteria andPracticetimeIsNull() {
+            addCriterion("practicetime is null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNotNull() {
-            addCriterion("time is not null");
+        public Criteria andPracticetimeIsNotNull() {
+            addCriterion("practicetime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeEqualTo(String value) {
-            addCriterion("time =", value, "time");
+        public Criteria andPracticetimeEqualTo(String value) {
+            addCriterion("practicetime =", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotEqualTo(String value) {
-            addCriterion("time <>", value, "time");
+        public Criteria andPracticetimeNotEqualTo(String value) {
+            addCriterion("practicetime <>", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThan(String value) {
-            addCriterion("time >", value, "time");
+        public Criteria andPracticetimeGreaterThan(String value) {
+            addCriterion("practicetime >", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThanOrEqualTo(String value) {
-            addCriterion("time >=", value, "time");
+        public Criteria andPracticetimeGreaterThanOrEqualTo(String value) {
+            addCriterion("practicetime >=", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThan(String value) {
-            addCriterion("time <", value, "time");
+        public Criteria andPracticetimeLessThan(String value) {
+            addCriterion("practicetime <", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThanOrEqualTo(String value) {
-            addCriterion("time <=", value, "time");
+        public Criteria andPracticetimeLessThanOrEqualTo(String value) {
+            addCriterion("practicetime <=", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLike(String value) {
-            addCriterion("time like", value, "time");
+        public Criteria andPracticetimeLike(String value) {
+            addCriterion("practicetime like", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotLike(String value) {
-            addCriterion("time not like", value, "time");
+        public Criteria andPracticetimeNotLike(String value) {
+            addCriterion("practicetime not like", value, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIn(List<String> values) {
-            addCriterion("time in", values, "time");
+        public Criteria andPracticetimeIn(List<String> values) {
+            addCriterion("practicetime in", values, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotIn(List<String> values) {
-            addCriterion("time not in", values, "time");
+        public Criteria andPracticetimeNotIn(List<String> values) {
+            addCriterion("practicetime not in", values, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeBetween(String value1, String value2) {
-            addCriterion("time between", value1, value2, "time");
+        public Criteria andPracticetimeBetween(String value1, String value2) {
+            addCriterion("practicetime between", value1, value2, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotBetween(String value1, String value2) {
-            addCriterion("time not between", value1, value2, "time");
+        public Criteria andPracticetimeNotBetween(String value1, String value2) {
+            addCriterion("practicetime not between", value1, value2, "practicetime");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andPracticenameIsNull() {
+            addCriterion("practicename is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andPracticenameIsNotNull() {
+            addCriterion("practicename is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andPracticenameEqualTo(String value) {
+            addCriterion("practicename =", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andPracticenameNotEqualTo(String value) {
+            addCriterion("practicename <>", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andPracticenameGreaterThan(String value) {
+            addCriterion("practicename >", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andPracticenameGreaterThanOrEqualTo(String value) {
+            addCriterion("practicename >=", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andPracticenameLessThan(String value) {
+            addCriterion("practicename <", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andPracticenameLessThanOrEqualTo(String value) {
+            addCriterion("practicename <=", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andPracticenameLike(String value) {
+            addCriterion("practicename like", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andPracticenameNotLike(String value) {
+            addCriterion("practicename not like", value, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andPracticenameIn(List<String> values) {
+            addCriterion("practicename in", values, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andPracticenameNotIn(List<String> values) {
+            addCriterion("practicename not in", values, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andPracticenameBetween(String value1, String value2) {
+            addCriterion("practicename between", value1, value2, "practicename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andPracticenameNotBetween(String value1, String value2) {
+            addCriterion("practicename not between", value1, value2, "practicename");
             return (Criteria) this;
         }
 

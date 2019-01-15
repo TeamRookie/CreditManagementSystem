@@ -10,7 +10,7 @@ public interface AcademicMapper {
 
     int deleteByExample(AcademicExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Academic record);
 
@@ -18,7 +18,7 @@ public interface AcademicMapper {
 
     List<Academic> selectByExample(AcademicExample example);
 
-    Academic selectByPrimaryKey(Integer num);
+    Academic selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Academic record, @Param("example") AcademicExample example);
 

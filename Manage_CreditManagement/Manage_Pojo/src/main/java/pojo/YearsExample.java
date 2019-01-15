@@ -104,63 +104,63 @@ public class YearsExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andNumIsNull() {
-            addCriterion("num is null");
+        public Criteria andIdIsNull() {
+            addCriterion("id is null");
             return (Criteria) this;
         }
 
-        public Criteria andNumIsNotNull() {
-            addCriterion("num is not null");
+        public Criteria andIdIsNotNull() {
+            addCriterion("id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNumEqualTo(Integer value) {
-            addCriterion("num =", value, "num");
+        public Criteria andIdEqualTo(Integer value) {
+            addCriterion("id =", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotEqualTo(Integer value) {
-            addCriterion("num <>", value, "num");
+        public Criteria andIdNotEqualTo(Integer value) {
+            addCriterion("id <>", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumGreaterThan(Integer value) {
-            addCriterion("num >", value, "num");
+        public Criteria andIdGreaterThan(Integer value) {
+            addCriterion("id >", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumGreaterThanOrEqualTo(Integer value) {
-            addCriterion("num >=", value, "num");
+        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id >=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumLessThan(Integer value) {
-            addCriterion("num <", value, "num");
+        public Criteria andIdLessThan(Integer value) {
+            addCriterion("id <", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumLessThanOrEqualTo(Integer value) {
-            addCriterion("num <=", value, "num");
+        public Criteria andIdLessThanOrEqualTo(Integer value) {
+            addCriterion("id <=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumIn(List<Integer> values) {
-            addCriterion("num in", values, "num");
+        public Criteria andIdIn(List<Integer> values) {
+            addCriterion("id in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotIn(List<Integer> values) {
-            addCriterion("num not in", values, "num");
+        public Criteria andIdNotIn(List<Integer> values) {
+            addCriterion("id not in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumBetween(Integer value1, Integer value2) {
-            addCriterion("num between", value1, value2, "num");
+        public Criteria andIdBetween(Integer value1, Integer value2) {
+            addCriterion("id between", value1, value2, "id");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotBetween(Integer value1, Integer value2) {
-            addCriterion("num not between", value1, value2, "num");
+        public Criteria andIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
 

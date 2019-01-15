@@ -1,19 +1,22 @@
 package pojo;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class AcademicPageBean implements Serializable
+public class ContestPageBean
 {
     private  Integer pageSize;
     private  Integer currentPage;
     private  Integer totalPage;
     private  Integer totalCount;
     private  Integer start;
-    private List pageList;
-    private  String stuNum;
     private  String searchDate;
-    public AcademicPageBean(Integer pageSize, Integer currentPage, Integer totalCount)
+    private  String theme;
+    private  String rank;
+    private  String StuNum;
+
+    private List pageList;
+
+    public ContestPageBean(Integer pageSize, Integer currentPage, Integer totalCount)
     {
 
         this.pageSize = pageSize;
@@ -34,16 +37,6 @@ public class AcademicPageBean implements Serializable
         }
     }
 
-    public String getStuNum()
-    {
-        return stuNum;
-    }
-
-    public void setStuNum(String stuNum)
-    {
-        this.stuNum = stuNum;
-    }
-
     public String getSearchDate()
     {
         return searchDate;
@@ -52,6 +45,36 @@ public class AcademicPageBean implements Serializable
     public void setSearchDate(String searchDate)
     {
         this.searchDate = searchDate;
+    }
+
+    public String getTheme()
+    {
+        return theme;
+    }
+
+    public void setTheme(String theme)
+    {
+        this.theme = theme;
+    }
+
+    public String getRank()
+    {
+        return rank;
+    }
+
+    public void setRank(String rank)
+    {
+        this.rank = rank;
+    }
+
+    public String getStuNum()
+    {
+        return StuNum;
+    }
+
+    public void setStuNum(String stuNum)
+    {
+        StuNum = stuNum;
     }
 
     public Integer getPageSize()
@@ -113,6 +136,4 @@ public class AcademicPageBean implements Serializable
     {
         this.pageList = pageList;
     }
-
-
 }

@@ -12,5 +12,5 @@ public interface AcademicService
 
     PageBean getPageBean(Integer pageSize, Integer currentPage);
     List<Academicrules> getAcademicRules();
-    AcademicPageBean getAcademicPageBean(String stuNum, String date, Integer currentPage);
+    AcademicPageBean getAcademicPageBean(String stuNum, String date, Integer pageSize, Integer currentPage);
 }

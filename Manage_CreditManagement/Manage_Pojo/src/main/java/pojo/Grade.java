@@ -3,7 +3,7 @@ package pojo;
 public class Grade {
     private Integer num;
 
-    private String name;
+    private String gradename;
 
     public Integer getNum() {
         return num;
@@ -13,11 +13,11 @@ public class Grade {
         this.num = num;
     }
 
-    public String getName() {
-        return name;
+    public String getGradename() {
+        return gradename;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setGradename(String gradename) {
+        this.gradename = gradename == null ? null : gradename.trim();
     }
 }

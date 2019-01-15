@@ -43,25 +43,18 @@ public class AcademicServiceImpl implements AcademicService
     }
 
     @Override
-    public AcademicPageBean getAcademicPageBean(String stuNum, String date, Integer currentPage)
+    public AcademicPageBean getAcademicPageBean(String stuNum, String searchDate,Integer pageSize, Integer currentPage)
     {
-        return  null;
+        int totalCount = academicItemMapper.getAcademicTotalCount(stuNum,searchDate);
+        AcademicPageBean academicPageBean=new AcademicPageBean(pageSize,currentPage,totalCount);
+        academicPageBean.setSearchDate(searchDate);
+        academicPageBean.setStuNum(stuNum);
+        Integer start=(academicPageBean.getCurrentPage()-1)*academicPageBean.getPageSize();
+        academicPageBean.setStart(start);
+        List<Academic> academicList = academicItemMapper.getAcademicPageBean(academicPageBean);
+        academicPageBean.setPageList(academicList);
+        return  academicPageBean;
     }
 
 
-/*    @Override
-    public PageBean getAcademic(String stuNum, String date, Integer currentPage)
-    {
-        AcademicExample academicExample=new AcademicExample();
-        AcademicExample.Criteria criteria = academicExample.createCriteria();
-        if (stuNum!=null&&(!stuNum.isEmpty()))
-        {
-            criteria.andStunumEqualTo(stuNum);
-        }
-        if (date!=null&&(!date.isEmpty()))
-        {
-            criteria.andActitytimeEqualTo(date);
-        }
-        List<Academic> academicList = academicMapper.selectByExample(academicExample);
-    }*/
 }

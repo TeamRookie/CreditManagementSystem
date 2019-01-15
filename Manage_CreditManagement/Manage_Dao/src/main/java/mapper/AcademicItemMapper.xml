@@ -11,4 +11,27 @@
     academicrules
     limit ${start},#{pageSize};
   </select>
+    <select id="getAcademicTotalCount" resultType="java.lang.Integer" parameterType="java.lang.String">
+        select COUNT(*) from academic
+        <where>
+            <if test="stuNum!=null and stuNum!= ''">
+                stunum=${stuNum}
+            </if>
+            <if test="searchDate!=null and searchDate!=''">
+              AND  academictime LIKE  CONCAT('${searchDate}','%')
+            </if>
+        </where>
+    </select>
+    <select id="getAcademicPageBean" parameterType="pojo.AcademicPageBean" resultType="pojo.Academic">
+      select * from academic
+        <where>
+            <if test="stuNum != null and stuNum!=''">
+                ${stuNum}=academic.stunum
+            </if>
+            <if test="searchDate != null and searchDate!=''">
+                AND   academic.academictime LIKE  CONCAT('${searchDate}','%')
+            </if>
+        </where>
+        limit ${start},${pageSize}
+    </select>
 </mapper>

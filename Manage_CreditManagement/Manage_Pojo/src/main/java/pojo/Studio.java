@@ -1,9 +1,9 @@
 package pojo;
 
 public class Studio {
-    private Integer num;
+    private Integer id;
 
-    private String actitytime;
+    private String studiotime;
 
     private Integer facultynum;
 
@@ -27,22 +27,24 @@ public class Studio {
 
     private String department;
 
-    private String name;
+    private String stuname;
 
-    public Integer getNum() {
-        return num;
+    private String url;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getActitytime() {
-        return actitytime;
+    public String getStudiotime() {
+        return studiotime;
     }
 
-    public void setActitytime(String actitytime) {
-        this.actitytime = actitytime == null ? null : actitytime.trim();
+    public void setStudiotime(String studiotime) {
+        this.studiotime = studiotime == null ? null : studiotime.trim();
     }
 
     public Integer getFacultynum() {
@@ -133,11 +135,19 @@ public class Studio {
         this.department = department == null ? null : department.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

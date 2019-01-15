@@ -10,7 +10,7 @@ public interface FacultyMapper {
 
     int deleteByExample(FacultyExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer facultynum);
 
     int insert(Faculty record);
 
@@ -18,7 +18,7 @@ public interface FacultyMapper {
 
     List<Faculty> selectByExample(FacultyExample example);
 
-    Faculty selectByPrimaryKey(Integer num);
+    Faculty selectByPrimaryKey(Integer facultynum);
 
     int updateByExampleSelective(@Param("record") Faculty record, @Param("example") FacultyExample example);
 

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pojo.PageBean;
 import pojo.Type;
@@ -27,8 +28,25 @@ public class ContestController
         return "rules/contestRules";
     }
     @RequestMapping("/contest")
-    public  String getContest(Model model)
+    public  String getContest(Model model,String searchDate,String theme,String level,String rank,String stuNum)
     {
+
         return  "contest";
+    }
+    @RequestMapping("/contestImport")
+    public  String getContestImport(Model model,Integer currentPage,String contestDate,String contestName)
+    {
+        PageBean pageBean = contestService.getContestTypePageBean(pageSize, currentPage, contestDate, contestName);
+        model.addAttribute("pageBean",pageBean);
+        return  "import/contestImport";
+    }
+    @RequestMapping("/deleteContestType")
+    public String getContestImport(Integer id)
+    {
+        if (id!=null&&(!StringUtils.isEmpty(id)))
+        {
+            contestService.deleteContestTypeById(id);
+        }
+        return "redirect:contestImport.action";
     }
 }

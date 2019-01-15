@@ -3,7 +3,7 @@
 <mapper namespace="mapper.GradeMapper" >
   <resultMap id="BaseResultMap" type="pojo.Grade" >
     <id column="num" property="num" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, name
+    num, gradename
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.GradeExample" >
     select
@@ -97,8 +97,8 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Grade" >
-    insert into grade (num, name)
-    values (#{num,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+    insert into grade (num, gradename)
+    values (#{num,jdbcType=INTEGER}, #{gradename,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Grade" >
     insert into grade
@@ -106,16 +106,16 @@
       <if test="num != null" >
         num,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="gradename != null" >
+        gradename,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="num != null" >
         #{num,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -131,8 +131,8 @@
       <if test="record.num != null" >
         num = #{record.num,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -142,7 +142,7 @@
   <update id="updateByExample" parameterType="map" >
     update grade
     set num = #{record.num,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR}
+      gradename = #{record.gradename,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -150,15 +150,15 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Grade" >
     update grade
     <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
       </if>
     </set>
     where num = #{num,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Grade" >
     update grade
-    set name = #{name,jdbcType=VARCHAR}
+    set gradename = #{gradename,jdbcType=VARCHAR}
     where num = #{num,jdbcType=INTEGER}
   </update>
 </mapper>

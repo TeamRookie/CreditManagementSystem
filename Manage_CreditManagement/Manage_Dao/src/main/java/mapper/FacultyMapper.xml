@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.FacultyMapper" >
   <resultMap id="BaseResultMap" type="pojo.Faculty" >
-    <id column="num" property="num" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <id column="facultynum" property="facultynum" jdbcType="INTEGER" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, name, password
+    facultynum, facultyname, password
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.FacultyExample" >
     select
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from faculty
-    where num = #{num,jdbcType=INTEGER}
+    where facultynum = #{facultynum,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from faculty
-    where num = #{num,jdbcType=INTEGER}
+    where facultynum = #{facultynum,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.FacultyExample" >
     delete from faculty
@@ -98,30 +98,30 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Faculty" >
-    insert into faculty (num, name, password
+    insert into faculty (facultynum, facultyname, password
       )
-    values (#{num,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
+    values (#{facultynum,jdbcType=INTEGER}, #{facultyname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Faculty" >
     insert into faculty
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="facultynum != null" >
+        facultynum,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="facultyname != null" >
+        facultyname,
       </if>
       <if test="password != null" >
         password,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="facultynum != null" >
+        #{facultynum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
       </if>
       <if test="password != null" >
         #{password,jdbcType=VARCHAR},
@@ -137,11 +137,11 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update faculty
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.facultynum != null" >
+        facultynum = #{record.facultynum,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
       </if>
       <if test="record.password != null" >
         password = #{record.password,jdbcType=VARCHAR},
@@ -153,8 +153,8 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update faculty
-    set num = #{record.num,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
+    set facultynum = #{record.facultynum,jdbcType=INTEGER},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Faculty" >
     update faculty
     <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
       </if>
       <if test="password != null" >
         password = #{password,jdbcType=VARCHAR},
       </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where facultynum = #{facultynum,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Faculty" >
     update faculty
-    set name = #{name,jdbcType=VARCHAR},
+    set facultyname = #{facultyname,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+    where facultynum = #{facultynum,jdbcType=INTEGER}
   </update>
 </mapper>

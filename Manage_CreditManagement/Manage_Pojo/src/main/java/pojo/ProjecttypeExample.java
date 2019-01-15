@@ -164,73 +164,73 @@ public class ProjecttypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNull() {
-            addCriterion("time is null");
+        public Criteria andProjecttimeIsNull() {
+            addCriterion("projecttime is null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNotNull() {
-            addCriterion("time is not null");
+        public Criteria andProjecttimeIsNotNull() {
+            addCriterion("projecttime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeEqualTo(String value) {
-            addCriterion("time =", value, "time");
+        public Criteria andProjecttimeEqualTo(String value) {
+            addCriterion("projecttime =", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotEqualTo(String value) {
-            addCriterion("time <>", value, "time");
+        public Criteria andProjecttimeNotEqualTo(String value) {
+            addCriterion("projecttime <>", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThan(String value) {
-            addCriterion("time >", value, "time");
+        public Criteria andProjecttimeGreaterThan(String value) {
+            addCriterion("projecttime >", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThanOrEqualTo(String value) {
-            addCriterion("time >=", value, "time");
+        public Criteria andProjecttimeGreaterThanOrEqualTo(String value) {
+            addCriterion("projecttime >=", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThan(String value) {
-            addCriterion("time <", value, "time");
+        public Criteria andProjecttimeLessThan(String value) {
+            addCriterion("projecttime <", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThanOrEqualTo(String value) {
-            addCriterion("time <=", value, "time");
+        public Criteria andProjecttimeLessThanOrEqualTo(String value) {
+            addCriterion("projecttime <=", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLike(String value) {
-            addCriterion("time like", value, "time");
+        public Criteria andProjecttimeLike(String value) {
+            addCriterion("projecttime like", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotLike(String value) {
-            addCriterion("time not like", value, "time");
+        public Criteria andProjecttimeNotLike(String value) {
+            addCriterion("projecttime not like", value, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIn(List<String> values) {
-            addCriterion("time in", values, "time");
+        public Criteria andProjecttimeIn(List<String> values) {
+            addCriterion("projecttime in", values, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotIn(List<String> values) {
-            addCriterion("time not in", values, "time");
+        public Criteria andProjecttimeNotIn(List<String> values) {
+            addCriterion("projecttime not in", values, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeBetween(String value1, String value2) {
-            addCriterion("time between", value1, value2, "time");
+        public Criteria andProjecttimeBetween(String value1, String value2) {
+            addCriterion("projecttime between", value1, value2, "projecttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotBetween(String value1, String value2) {
-            addCriterion("time not between", value1, value2, "time");
+        public Criteria andProjecttimeNotBetween(String value1, String value2) {
+            addCriterion("projecttime not between", value1, value2, "projecttime");
             return (Criteria) this;
         }
 
@@ -304,73 +304,73 @@ public class ProjecttypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andProjectnameIsNull() {
+            addCriterion("projectname is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andProjectnameIsNotNull() {
+            addCriterion("projectname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andProjectnameEqualTo(String value) {
+            addCriterion("projectname =", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andProjectnameNotEqualTo(String value) {
+            addCriterion("projectname <>", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andProjectnameGreaterThan(String value) {
+            addCriterion("projectname >", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andProjectnameGreaterThanOrEqualTo(String value) {
+            addCriterion("projectname >=", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andProjectnameLessThan(String value) {
+            addCriterion("projectname <", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andProjectnameLessThanOrEqualTo(String value) {
+            addCriterion("projectname <=", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andProjectnameLike(String value) {
+            addCriterion("projectname like", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andProjectnameNotLike(String value) {
+            addCriterion("projectname not like", value, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andProjectnameIn(List<String> values) {
+            addCriterion("projectname in", values, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andProjectnameNotIn(List<String> values) {
+            addCriterion("projectname not in", values, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andProjectnameBetween(String value1, String value2) {
+            addCriterion("projectname between", value1, value2, "projectname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andProjectnameNotBetween(String value1, String value2) {
+            addCriterion("projectname not between", value1, value2, "projectname");
             return (Criteria) this;
         }
 

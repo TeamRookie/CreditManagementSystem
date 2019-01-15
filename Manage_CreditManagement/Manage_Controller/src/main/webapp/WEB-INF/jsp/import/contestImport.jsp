@@ -281,22 +281,32 @@ ${message}
             <div class="page-content">
 
                 <div class="col-xs-12">
-
-                    <div class="col-sm-1">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" id="searchButton">
+                    <div class="col-sm-1 no-padding-right">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" name="searchButton" id="searchButton">
                             <span class="ace-icon fa fa-search icon-on-right bigger-110">
                                 搜索
                             </span>
                         </button>
                     </div>
-                    <div class="col-sm-1">
-                        <button type="button" class="btn btn-sm btn-primary" id="importButton">
+                    <div class="col-sm-1 no-padding-right">
+                        <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
+                            <a  class="white" href="${pageContext.request.contextPath}/contestImport.action"><span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span></a>
+                        </button>
+                    </div>
+                    <div class="col-sm-1 no-padding-right">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="addContestType();" name="addButton" id="addButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
-                                项目信息导出
+                                添加
                             </span>
                         </button>
                     </div>
-
+                    <div class="col-sm-1 no-padding-right">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" name="importButton" id="importButton">
+                            <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
+                                批量导入
+                            </span>
+                        </button>
+                    </div>
                 </div>
 
 
@@ -304,24 +314,49 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/academic.action">
+                              action="${pageContext.request.contextPath}/contestImport.action">
                             <div class="form-group">
-                                <label class="col-sm-2 control-label no-padding-right" >
-                                    学号
+                                <label class="col-sm-2 control-label no-padding-right"  for="contestName">
+                                    竞赛名称
                                 </label>
                                 <div class="col-sm-2">
-                                    <input onkeyup="value=value.replace(/[^\d]/g,'')"  class="typeahead scrollable" name="stuNum" type="text" placeholder="教室编号" />
+                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称" required />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="date">活动时间</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="date">竞赛时间</label>
                                 <div class="col-sm-2">
-                                    <div class="input-group ">
-                                        <input  name="searchDate" class="typeahead scrollable" id="date" type="text" placeholder="活动时间"/>
-                                        <span class="input-group-addon">
-									        	                <i class="fa fa-calendar bigger-110"></i>
-                                        </span>
-                                    </div>
+                                        <select id="date" class="form-control"   name="contestDate" readonly>
+                                        </select>
                                 </div>
-                                <div class="col-sm-2"></div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2 no-padding-top">
+                                    <button type="submit" class="btn btn-sm btn-primary ">
+                                        <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
+                                        搜索
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-xs-12" id="addForm" style="display: none">
+                        <h4 class="pink" style="height: 20px"></h4>
+                        <form class="form-horizontal" role="form"
+                              action="${pageContext.request.contextPath}/contestImport.action">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right " for="date">竞赛时间</label>
+                                    <div class="col-sm-2">
+                                        <select id="addDate" class="form-control"   name="contestDate" readonly>
+                                        </select>
+                                    </div>
+                                <label class="col-sm-2 control-label no-padding-right"  for="contestName">
+                                    竞赛名称
+                                </label>
+                                <div class="col-sm-2">
+                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称" required />
+                                </div>
+
+                                <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
                                         <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
@@ -343,28 +378,25 @@ ${message}
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
                     <tr>
-                        <th class="center">学号</th>
-                        <th class="center">姓名</th>
-                        <th class="center">时间</th>
-                        <th class="center">主题内容</th>
-                        <th class="center">地点</th>
-                        <th class="center">组织单位</th>
-                        <th class="center">参加人数</th>
+                        <th class="center">竞赛时间</th>
+                        <th class="center">竞赛名称</th>
+                        <th class="center">操作</th>
                     </tr>
                     </thead>
-
                     <tbody>
                     <c:forEach items="${pageBean.pageList}" var="item">
                             <tr>
                                 <td class="center">
-                                        ${item.stunum}
+                                        ${item.contesttime}
                                 </td>
-                                <td class="center">${item.stuname}</td>
-                                <td class="center">${item.academictime}</td>
-                                <td class="center">${item.theme}</td>
-                                <td class="center">${item.address}</td>
-                                <td class="center">${item.undertake}</td>
-                                <td class="center">${item.amount}</td>
+                                <td class="center">${item.contestname}</td>
+                                <td class="center">
+                                    <div class="hidden-sm hidden-xs action-buttons">
+                                        <a class="blue" href="${pageContext.request.contextPath}/deleteContestType.action?id=${item.id}">
+                                            <span class="label label-sm label-inverse arrowed-in">删除</span>
+                                        </a>
+                                    </div>
+                                </td>
                             </tr>
                     </c:forEach>
                     </tbody>
@@ -516,6 +548,18 @@ ${message}
             }
         });
     });
+    function addContestType() {
+        var searchForm=$("#searchForm");
+       if (!searchForm.is("hidden"))
+       {
+           alert("呵呵");
+       }
+       else
+       {
+           searchForm.toggle();
+       }
+
+    }
     function  searchButtonClick() {
         $("#searchForm").toggle();
     }

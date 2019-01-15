@@ -5,6 +5,8 @@ public class Credentialtype {
 
     private String information;
 
+    private Integer type;
+
     public Integer getId() {
         return id;
     }
@@ -19,5 +21,13 @@ public class Credentialtype {
 
     public void setInformation(String information) {
         this.information = information == null ? null : information.trim();
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

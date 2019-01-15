@@ -3,8 +3,8 @@
 <mapper namespace="mapper.AssociationtypeMapper" >
   <resultMap id="BaseResultMap" type="pojo.Associationtype" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="time" property="time" jdbcType="VARCHAR" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="associationtime" property="associationtime" jdbcType="VARCHAR" />
+    <result column="associationname" property="associationname" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, time, name
+    id, associationtime, associationname
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.AssociationtypeExample" >
     select
@@ -98,9 +98,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Associationtype" >
-    insert into associationtype (id, time, name
+    insert into associationtype (id, associationtime, associationname
       )
-    values (#{id,jdbcType=INTEGER}, #{time,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{associationtime,jdbcType=VARCHAR}, #{associationname,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Associationtype" >
@@ -109,22 +109,22 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="time != null" >
-        time,
+      <if test="associationtime != null" >
+        associationtime,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="associationname != null" >
+        associationname,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="time != null" >
-        #{time,jdbcType=VARCHAR},
+      <if test="associationtime != null" >
+        #{associationtime,jdbcType=VARCHAR},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="associationname != null" >
+        #{associationname,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -140,11 +140,11 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.time != null" >
-        time = #{record.time,jdbcType=VARCHAR},
+      <if test="record.associationtime != null" >
+        associationtime = #{record.associationtime,jdbcType=VARCHAR},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.associationname != null" >
+        associationname = #{record.associationname,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -154,8 +154,8 @@
   <update id="updateByExample" parameterType="map" >
     update associationtype
     set id = #{record.id,jdbcType=INTEGER},
-      time = #{record.time,jdbcType=VARCHAR},
-      name = #{record.name,jdbcType=VARCHAR}
+      associationtime = #{record.associationtime,jdbcType=VARCHAR},
+      associationname = #{record.associationname,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -163,19 +163,19 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Associationtype" >
     update associationtype
     <set >
-      <if test="time != null" >
-        time = #{time,jdbcType=VARCHAR},
+      <if test="associationtime != null" >
+        associationtime = #{associationtime,jdbcType=VARCHAR},
       </if>
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="associationname != null" >
+        associationname = #{associationname,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Associationtype" >
     update associationtype
-    set time = #{time,jdbcType=VARCHAR},
-      name = #{name,jdbcType=VARCHAR}
+    set associationtime = #{associationtime,jdbcType=VARCHAR},
+      associationname = #{associationname,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -104,73 +104,73 @@ public class TeacherExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andTeacherumIsNull() {
-            addCriterion("teacherum is null");
+        public Criteria andTeachernumIsNull() {
+            addCriterion("teachernum is null");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumIsNotNull() {
-            addCriterion("teacherum is not null");
+        public Criteria andTeachernumIsNotNull() {
+            addCriterion("teachernum is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumEqualTo(String value) {
-            addCriterion("teacherum =", value, "teacherum");
+        public Criteria andTeachernumEqualTo(String value) {
+            addCriterion("teachernum =", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumNotEqualTo(String value) {
-            addCriterion("teacherum <>", value, "teacherum");
+        public Criteria andTeachernumNotEqualTo(String value) {
+            addCriterion("teachernum <>", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumGreaterThan(String value) {
-            addCriterion("teacherum >", value, "teacherum");
+        public Criteria andTeachernumGreaterThan(String value) {
+            addCriterion("teachernum >", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumGreaterThanOrEqualTo(String value) {
-            addCriterion("teacherum >=", value, "teacherum");
+        public Criteria andTeachernumGreaterThanOrEqualTo(String value) {
+            addCriterion("teachernum >=", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumLessThan(String value) {
-            addCriterion("teacherum <", value, "teacherum");
+        public Criteria andTeachernumLessThan(String value) {
+            addCriterion("teachernum <", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumLessThanOrEqualTo(String value) {
-            addCriterion("teacherum <=", value, "teacherum");
+        public Criteria andTeachernumLessThanOrEqualTo(String value) {
+            addCriterion("teachernum <=", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumLike(String value) {
-            addCriterion("teacherum like", value, "teacherum");
+        public Criteria andTeachernumLike(String value) {
+            addCriterion("teachernum like", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumNotLike(String value) {
-            addCriterion("teacherum not like", value, "teacherum");
+        public Criteria andTeachernumNotLike(String value) {
+            addCriterion("teachernum not like", value, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumIn(List<String> values) {
-            addCriterion("teacherum in", values, "teacherum");
+        public Criteria andTeachernumIn(List<String> values) {
+            addCriterion("teachernum in", values, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumNotIn(List<String> values) {
-            addCriterion("teacherum not in", values, "teacherum");
+        public Criteria andTeachernumNotIn(List<String> values) {
+            addCriterion("teachernum not in", values, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumBetween(String value1, String value2) {
-            addCriterion("teacherum between", value1, value2, "teacherum");
+        public Criteria andTeachernumBetween(String value1, String value2) {
+            addCriterion("teachernum between", value1, value2, "teachernum");
             return (Criteria) this;
         }
 
-        public Criteria andTeacherumNotBetween(String value1, String value2) {
-            addCriterion("teacherum not between", value1, value2, "teacherum");
+        public Criteria andTeachernumNotBetween(String value1, String value2) {
+            addCriterion("teachernum not between", value1, value2, "teachernum");
             return (Criteria) this;
         }
 

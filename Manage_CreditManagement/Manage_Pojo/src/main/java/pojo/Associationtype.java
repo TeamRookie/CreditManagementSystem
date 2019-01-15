@@ -3,9 +3,9 @@ package pojo;
 public class Associationtype {
     private Integer id;
 
-    private String time;
+    private String associationtime;
 
-    private String name;
+    private String associationname;
 
     public Integer getId() {
         return id;
@@ -15,19 +15,19 @@ public class Associationtype {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getAssociationtime() {
+        return associationtime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setAssociationtime(String associationtime) {
+        this.associationtime = associationtime == null ? null : associationtime.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getAssociationname() {
+        return associationname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setAssociationname(String associationname) {
+        this.associationname = associationname == null ? null : associationname.trim();
     }
 }

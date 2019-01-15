@@ -10,7 +10,7 @@ public interface StudioMapper {
 
     int deleteByExample(StudioExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Studio record);
 
@@ -18,7 +18,7 @@ public interface StudioMapper {
 
     List<Studio> selectByExample(StudioExample example);
 
-    Studio selectByPrimaryKey(Integer num);
+    Studio selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Studio record, @Param("example") StudioExample example);
 

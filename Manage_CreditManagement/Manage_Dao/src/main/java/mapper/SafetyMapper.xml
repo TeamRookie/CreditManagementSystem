@@ -2,18 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.SafetyMapper" >
   <resultMap id="BaseResultMap" type="pojo.Safety" >
-    <id column="num" property="num" jdbcType="INTEGER" />
-    <result column="typenum" property="typenum" jdbcType="INTEGER" />
-    <result column="gettime" property="gettime" jdbcType="VARCHAR" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="safetytime" property="safetytime" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="VARCHAR" />
-    <result column="teacehernum" property="teacehernum" jdbcType="INTEGER" />
+    <result column="teachernum" property="teachernum" jdbcType="INTEGER" />
     <result column="member" property="member" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="stuname" property="stuname" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,8 +74,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, typenum, gettime, level, teacehernum, member, stunum, credit, facultynum, majornum, 
-    gradenum, name
+    id, safetytime, level, teachernum, member, stunum, credit, facultynum, majornum, 
+    gradenum, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.SafetyExample" >
     select
@@ -95,11 +95,11 @@
     select 
     <include refid="Base_Column_List" />
     from safety
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from safety
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.SafetyExample" >
     delete from safety
@@ -108,34 +108,31 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Safety" >
-    insert into safety (num, typenum, gettime, 
-      level, teacehernum, member, 
-      stunum, credit, facultynum, 
-      majornum, gradenum, name
+    insert into safety (id, safetytime, level, 
+      teachernum, member, stunum, 
+      credit, facultynum, majornum, 
+      gradenum, stuname, url
       )
-    values (#{num,jdbcType=INTEGER}, #{typenum,jdbcType=INTEGER}, #{gettime,jdbcType=VARCHAR}, 
-      #{level,jdbcType=VARCHAR}, #{teacehernum,jdbcType=INTEGER}, #{member,jdbcType=VARCHAR}, 
-      #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, 
-      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}
+    values (#{id,jdbcType=INTEGER}, #{safetytime,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, 
+      #{teachernum,jdbcType=INTEGER}, #{member,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
+      #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Safety" >
     insert into safety
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="id != null" >
+        id,
       </if>
-      <if test="typenum != null" >
-        typenum,
-      </if>
-      <if test="gettime != null" >
-        gettime,
+      <if test="safetytime != null" >
+        safetytime,
       </if>
       <if test="level != null" >
         level,
       </if>
-      <if test="teacehernum != null" >
-        teacehernum,
+      <if test="teachernum != null" >
+        teachernum,
       </if>
       <if test="member != null" >
         member,
@@ -155,25 +152,25 @@
       <if test="gradenum != null" >
         gradenum,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="stuname != null" >
+        stuname,
+      </if>
+      <if test="url != null" >
+        url,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
-      <if test="typenum != null" >
-        #{typenum,jdbcType=INTEGER},
-      </if>
-      <if test="gettime != null" >
-        #{gettime,jdbcType=VARCHAR},
+      <if test="safetytime != null" >
+        #{safetytime,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         #{level,jdbcType=VARCHAR},
       </if>
-      <if test="teacehernum != null" >
-        #{teacehernum,jdbcType=INTEGER},
+      <if test="teachernum != null" >
+        #{teachernum,jdbcType=INTEGER},
       </if>
       <if test="member != null" >
         #{member,jdbcType=VARCHAR},
@@ -193,8 +190,11 @@
       <if test="gradenum != null" >
         #{gradenum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="stuname != null" >
+        #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -207,20 +207,17 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update safety
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.typenum != null" >
-        typenum = #{record.typenum,jdbcType=INTEGER},
-      </if>
-      <if test="record.gettime != null" >
-        gettime = #{record.gettime,jdbcType=VARCHAR},
+      <if test="record.safetytime != null" >
+        safetytime = #{record.safetytime,jdbcType=VARCHAR},
       </if>
       <if test="record.level != null" >
         level = #{record.level,jdbcType=VARCHAR},
       </if>
-      <if test="record.teacehernum != null" >
-        teacehernum = #{record.teacehernum,jdbcType=INTEGER},
+      <if test="record.teachernum != null" >
+        teachernum = #{record.teachernum,jdbcType=INTEGER},
       </if>
       <if test="record.member != null" >
         member = #{record.member,jdbcType=VARCHAR},
@@ -240,8 +237,11 @@
       <if test="record.gradenum != null" >
         gradenum = #{record.gradenum,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.stuname != null" >
+        stuname = #{record.stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -250,18 +250,18 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update safety
-    set num = #{record.num,jdbcType=INTEGER},
-      typenum = #{record.typenum,jdbcType=INTEGER},
-      gettime = #{record.gettime,jdbcType=VARCHAR},
+    set id = #{record.id,jdbcType=INTEGER},
+      safetytime = #{record.safetytime,jdbcType=VARCHAR},
       level = #{record.level,jdbcType=VARCHAR},
-      teacehernum = #{record.teacehernum,jdbcType=INTEGER},
+      teachernum = #{record.teachernum,jdbcType=INTEGER},
       member = #{record.member,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       majornum = #{record.majornum,jdbcType=INTEGER},
       gradenum = #{record.gradenum,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR}
+      stuname = #{record.stuname,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -269,17 +269,14 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Safety" >
     update safety
     <set >
-      <if test="typenum != null" >
-        typenum = #{typenum,jdbcType=INTEGER},
-      </if>
-      <if test="gettime != null" >
-        gettime = #{gettime,jdbcType=VARCHAR},
+      <if test="safetytime != null" >
+        safetytime = #{safetytime,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         level = #{level,jdbcType=VARCHAR},
       </if>
-      <if test="teacehernum != null" >
-        teacehernum = #{teacehernum,jdbcType=INTEGER},
+      <if test="teachernum != null" >
+        teachernum = #{teachernum,jdbcType=INTEGER},
       </if>
       <if test="member != null" >
         member = #{member,jdbcType=VARCHAR},
@@ -299,25 +296,28 @@
       <if test="gradenum != null" >
         gradenum = #{gradenum,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="stuname != null" >
+        stuname = #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
       </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Safety" >
     update safety
-    set typenum = #{typenum,jdbcType=INTEGER},
-      gettime = #{gettime,jdbcType=VARCHAR},
+    set safetytime = #{safetytime,jdbcType=VARCHAR},
       level = #{level,jdbcType=VARCHAR},
-      teacehernum = #{teacehernum,jdbcType=INTEGER},
+      teachernum = #{teachernum,jdbcType=INTEGER},
       member = #{member,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
       facultynum = #{facultynum,jdbcType=INTEGER},
       majornum = #{majornum,jdbcType=INTEGER},
       gradenum = #{gradenum,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+      stuname = #{stuname,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -5,7 +5,7 @@ public class Studiotype {
 
     private String department;
 
-    private String name;
+    private String studioname;
 
     private String level;
 
@@ -25,12 +25,12 @@ public class Studiotype {
         this.department = department == null ? null : department.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getStudioname() {
+        return studioname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStudioname(String studioname) {
+        this.studioname = studioname == null ? null : studioname.trim();
     }
 
     public String getLevel() {

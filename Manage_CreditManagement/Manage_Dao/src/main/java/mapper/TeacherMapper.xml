@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.TeacherMapper" >
   <resultMap id="BaseResultMap" type="pojo.Teacher" >
-    <id column="teacherum" property="teacherum" jdbcType="VARCHAR" />
+    <id column="teachernum" property="teachernum" jdbcType="VARCHAR" />
     <result column="teachername" property="teachername" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    teacherum, teachername
+    teachernum, teachername
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TeacherExample" >
     select
@@ -84,11 +84,11 @@
     select 
     <include refid="Base_Column_List" />
     from teacher
-    where teacherum = #{teacherum,jdbcType=VARCHAR}
+    where teachernum = #{teachernum,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from teacher
-    where teacherum = #{teacherum,jdbcType=VARCHAR}
+    where teachernum = #{teachernum,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.TeacherExample" >
     delete from teacher
@@ -97,22 +97,22 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Teacher" >
-    insert into teacher (teacherum, teachername)
-    values (#{teacherum,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR})
+    insert into teacher (teachernum, teachername)
+    values (#{teachernum,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Teacher" >
     insert into teacher
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="teacherum != null" >
-        teacherum,
+      <if test="teachernum != null" >
+        teachernum,
       </if>
       <if test="teachername != null" >
         teachername,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="teacherum != null" >
-        #{teacherum,jdbcType=VARCHAR},
+      <if test="teachernum != null" >
+        #{teachernum,jdbcType=VARCHAR},
       </if>
       <if test="teachername != null" >
         #{teachername,jdbcType=VARCHAR},
@@ -128,8 +128,8 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update teacher
     <set >
-      <if test="record.teacherum != null" >
-        teacherum = #{record.teacherum,jdbcType=VARCHAR},
+      <if test="record.teachernum != null" >
+        teachernum = #{record.teachernum,jdbcType=VARCHAR},
       </if>
       <if test="record.teachername != null" >
         teachername = #{record.teachername,jdbcType=VARCHAR},
@@ -141,7 +141,7 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update teacher
-    set teacherum = #{record.teacherum,jdbcType=VARCHAR},
+    set teachernum = #{record.teachernum,jdbcType=VARCHAR},
       teachername = #{record.teachername,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -154,11 +154,11 @@
         teachername = #{teachername,jdbcType=VARCHAR},
       </if>
     </set>
-    where teacherum = #{teacherum,jdbcType=VARCHAR}
+    where teachernum = #{teachernum,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Teacher" >
     update teacher
     set teachername = #{teachername,jdbcType=VARCHAR}
-    where teacherum = #{teacherum,jdbcType=VARCHAR}
+    where teachernum = #{teachernum,jdbcType=VARCHAR}
   </update>
 </mapper>

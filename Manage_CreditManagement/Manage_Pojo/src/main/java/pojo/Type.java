@@ -1,9 +1,9 @@
 package pojo;
 
 public class Type {
-    private Integer num;
+    private Integer id;
 
-    private String name;
+    private String typename;
 
     private String informationurl;
 
@@ -11,20 +11,20 @@ public class Type {
 
     private String importtype;
 
-    public Integer getNum() {
-        return num;
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTypename() {
+        return typename;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setTypename(String typename) {
+        this.typename = typename == null ? null : typename.trim();
     }
 
     public String getInformationurl() {

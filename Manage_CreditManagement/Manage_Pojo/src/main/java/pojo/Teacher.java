@@ -1,16 +1,16 @@
 package pojo;
 
 public class Teacher {
-    private String teacherum;
+    private String teachernum;
 
     private String teachername;
 
-    public String getTeacherum() {
-        return teacherum;
+    public String getTeachernum() {
+        return teachernum;
     }
 
-    public void setTeacherum(String teacherum) {
-        this.teacherum = teacherum == null ? null : teacherum.trim();
+    public void setTeachernum(String teachernum) {
+        this.teachernum = teachernum == null ? null : teachernum.trim();
     }
 
     public String getTeachername() {

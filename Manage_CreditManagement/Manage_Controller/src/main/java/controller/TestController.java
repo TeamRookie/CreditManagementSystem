@@ -9,6 +9,6 @@ public class TestController
     @RequestMapping("/index")
     public String getIndex()
     {
-        return "information/academic";
+        return "redirect:academic.action";
     }
 }

@@ -104,73 +104,73 @@ public class AdminExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andAdminnameIsNull() {
+            addCriterion("adminname is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andAdminnameIsNotNull() {
+            addCriterion("adminname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andAdminnameEqualTo(String value) {
+            addCriterion("adminname =", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andAdminnameNotEqualTo(String value) {
+            addCriterion("adminname <>", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andAdminnameGreaterThan(String value) {
+            addCriterion("adminname >", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andAdminnameGreaterThanOrEqualTo(String value) {
+            addCriterion("adminname >=", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andAdminnameLessThan(String value) {
+            addCriterion("adminname <", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andAdminnameLessThanOrEqualTo(String value) {
+            addCriterion("adminname <=", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andAdminnameLike(String value) {
+            addCriterion("adminname like", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andAdminnameNotLike(String value) {
+            addCriterion("adminname not like", value, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andAdminnameIn(List<String> values) {
+            addCriterion("adminname in", values, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andAdminnameNotIn(List<String> values) {
+            addCriterion("adminname not in", values, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andAdminnameBetween(String value1, String value2) {
+            addCriterion("adminname between", value1, value2, "adminname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andAdminnameNotBetween(String value1, String value2) {
+            addCriterion("adminname not between", value1, value2, "adminname");
             return (Criteria) this;
         }
 

@@ -164,143 +164,143 @@ public class AssociationtypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNull() {
-            addCriterion("time is null");
+        public Criteria andAssociationtimeIsNull() {
+            addCriterion("associationtime is null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNotNull() {
-            addCriterion("time is not null");
+        public Criteria andAssociationtimeIsNotNull() {
+            addCriterion("associationtime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeEqualTo(String value) {
-            addCriterion("time =", value, "time");
+        public Criteria andAssociationtimeEqualTo(String value) {
+            addCriterion("associationtime =", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotEqualTo(String value) {
-            addCriterion("time <>", value, "time");
+        public Criteria andAssociationtimeNotEqualTo(String value) {
+            addCriterion("associationtime <>", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThan(String value) {
-            addCriterion("time >", value, "time");
+        public Criteria andAssociationtimeGreaterThan(String value) {
+            addCriterion("associationtime >", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThanOrEqualTo(String value) {
-            addCriterion("time >=", value, "time");
+        public Criteria andAssociationtimeGreaterThanOrEqualTo(String value) {
+            addCriterion("associationtime >=", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThan(String value) {
-            addCriterion("time <", value, "time");
+        public Criteria andAssociationtimeLessThan(String value) {
+            addCriterion("associationtime <", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThanOrEqualTo(String value) {
-            addCriterion("time <=", value, "time");
+        public Criteria andAssociationtimeLessThanOrEqualTo(String value) {
+            addCriterion("associationtime <=", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLike(String value) {
-            addCriterion("time like", value, "time");
+        public Criteria andAssociationtimeLike(String value) {
+            addCriterion("associationtime like", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotLike(String value) {
-            addCriterion("time not like", value, "time");
+        public Criteria andAssociationtimeNotLike(String value) {
+            addCriterion("associationtime not like", value, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIn(List<String> values) {
-            addCriterion("time in", values, "time");
+        public Criteria andAssociationtimeIn(List<String> values) {
+            addCriterion("associationtime in", values, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotIn(List<String> values) {
-            addCriterion("time not in", values, "time");
+        public Criteria andAssociationtimeNotIn(List<String> values) {
+            addCriterion("associationtime not in", values, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeBetween(String value1, String value2) {
-            addCriterion("time between", value1, value2, "time");
+        public Criteria andAssociationtimeBetween(String value1, String value2) {
+            addCriterion("associationtime between", value1, value2, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotBetween(String value1, String value2) {
-            addCriterion("time not between", value1, value2, "time");
+        public Criteria andAssociationtimeNotBetween(String value1, String value2) {
+            addCriterion("associationtime not between", value1, value2, "associationtime");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andAssociationnameIsNull() {
+            addCriterion("associationname is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andAssociationnameIsNotNull() {
+            addCriterion("associationname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andAssociationnameEqualTo(String value) {
+            addCriterion("associationname =", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andAssociationnameNotEqualTo(String value) {
+            addCriterion("associationname <>", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andAssociationnameGreaterThan(String value) {
+            addCriterion("associationname >", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andAssociationnameGreaterThanOrEqualTo(String value) {
+            addCriterion("associationname >=", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andAssociationnameLessThan(String value) {
+            addCriterion("associationname <", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andAssociationnameLessThanOrEqualTo(String value) {
+            addCriterion("associationname <=", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andAssociationnameLike(String value) {
+            addCriterion("associationname like", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andAssociationnameNotLike(String value) {
+            addCriterion("associationname not like", value, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andAssociationnameIn(List<String> values) {
+            addCriterion("associationname in", values, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andAssociationnameNotIn(List<String> values) {
+            addCriterion("associationname not in", values, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andAssociationnameBetween(String value1, String value2) {
+            addCriterion("associationname between", value1, value2, "associationname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andAssociationnameNotBetween(String value1, String value2) {
+            addCriterion("associationname not between", value1, value2, "associationname");
             return (Criteria) this;
         }
     }

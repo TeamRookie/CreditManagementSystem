@@ -3,9 +3,7 @@ package pojo;
 public class Project {
     private Integer num;
 
-    private Integer typenum;
-
-    private String actitytime;
+    private String projecttime;
 
     private String id;
 
@@ -29,7 +27,9 @@ public class Project {
 
     private Integer gradenum;
 
-    private String name;
+    private String stuname;
+
+    private String url;
 
     private byte[] type;
 
@@ -41,20 +41,12 @@ public class Project {
         this.num = num;
     }
 
-    public Integer getTypenum() {
-        return typenum;
+    public String getProjecttime() {
+        return projecttime;
     }
 
-    public void setTypenum(Integer typenum) {
-        this.typenum = typenum;
-    }
-
-    public String getActitytime() {
-        return actitytime;
-    }
-
-    public void setActitytime(String actitytime) {
-        this.actitytime = actitytime == null ? null : actitytime.trim();
+    public void setProjecttime(String projecttime) {
+        this.projecttime = projecttime == null ? null : projecttime.trim();
     }
 
     public String getId() {
@@ -145,12 +137,20 @@ public class Project {
         this.gradenum = gradenum;
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 
     public byte[] getType() {

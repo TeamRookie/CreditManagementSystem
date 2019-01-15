@@ -10,7 +10,7 @@ public interface SafetyMapper {
 
     int deleteByExample(SafetyExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Safety record);
 
@@ -18,7 +18,7 @@ public interface SafetyMapper {
 
     List<Safety> selectByExample(SafetyExample example);
 
-    Safety selectByPrimaryKey(Integer num);
+    Safety selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Safety record, @Param("example") SafetyExample example);
 

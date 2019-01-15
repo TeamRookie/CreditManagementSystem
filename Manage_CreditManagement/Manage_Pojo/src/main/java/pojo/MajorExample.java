@@ -164,73 +164,73 @@ public class MajorExample {
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andMajornameIsNull() {
+            addCriterion("majorname is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andMajornameIsNotNull() {
+            addCriterion("majorname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andMajornameEqualTo(String value) {
+            addCriterion("majorname =", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andMajornameNotEqualTo(String value) {
+            addCriterion("majorname <>", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andMajornameGreaterThan(String value) {
+            addCriterion("majorname >", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andMajornameGreaterThanOrEqualTo(String value) {
+            addCriterion("majorname >=", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andMajornameLessThan(String value) {
+            addCriterion("majorname <", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andMajornameLessThanOrEqualTo(String value) {
+            addCriterion("majorname <=", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andMajornameLike(String value) {
+            addCriterion("majorname like", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andMajornameNotLike(String value) {
+            addCriterion("majorname not like", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andMajornameIn(List<String> values) {
+            addCriterion("majorname in", values, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andMajornameNotIn(List<String> values) {
+            addCriterion("majorname not in", values, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andMajornameBetween(String value1, String value2) {
+            addCriterion("majorname between", value1, value2, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andMajornameNotBetween(String value1, String value2) {
+            addCriterion("majorname not between", value1, value2, "majorname");
             return (Criteria) this;
         }
     }

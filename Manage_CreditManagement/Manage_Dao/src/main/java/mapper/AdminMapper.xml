@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.AdminMapper" >
   <resultMap id="BaseResultMap" type="pojo.Admin" >
-    <id column="name" property="name" jdbcType="VARCHAR" />
+    <id column="adminname" property="adminname" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="role" property="role" jdbcType="CHAR" />
   </resultMap>
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    name, password, role
+    adminname, password, role
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.AdminExample" >
     select
@@ -85,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from admin
-    where name = #{name,jdbcType=VARCHAR}
+    where adminname = #{adminname,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from admin
-    where name = #{name,jdbcType=VARCHAR}
+    where adminname = #{adminname,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.AdminExample" >
     delete from admin
@@ -98,16 +98,16 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Admin" >
-    insert into admin (name, password, role
+    insert into admin (adminname, password, role
       )
-    values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{role,jdbcType=CHAR}
+    values (#{adminname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{role,jdbcType=CHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Admin" >
     insert into admin
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="name != null" >
-        name,
+      <if test="adminname != null" >
+        adminname,
       </if>
       <if test="password != null" >
         password,
@@ -117,8 +117,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="adminname != null" >
+        #{adminname,jdbcType=VARCHAR},
       </if>
       <if test="password != null" >
         #{password,jdbcType=VARCHAR},
@@ -137,8 +137,8 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update admin
     <set >
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.adminname != null" >
+        adminname = #{record.adminname,jdbcType=VARCHAR},
       </if>
       <if test="record.password != null" >
         password = #{record.password,jdbcType=VARCHAR},
@@ -153,7 +153,7 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update admin
-    set name = #{record.name,jdbcType=VARCHAR},
+    set adminname = #{record.adminname,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
       role = #{record.role,jdbcType=CHAR}
     <if test="_parameter != null" >
@@ -170,12 +170,12 @@
         role = #{role,jdbcType=CHAR},
       </if>
     </set>
-    where name = #{name,jdbcType=VARCHAR}
+    where adminname = #{adminname,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Admin" >
     update admin
     set password = #{password,jdbcType=VARCHAR},
       role = #{role,jdbcType=CHAR}
-    where name = #{name,jdbcType=VARCHAR}
+    where adminname = #{adminname,jdbcType=VARCHAR}
   </update>
 </mapper>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.YearsMapper" >
   <resultMap id="BaseResultMap" type="pojo.Years" >
-    <id column="num" property="num" jdbcType="INTEGER" />
+    <id column="id" property="id" jdbcType="INTEGER" />
     <result column="schoolyear" property="schoolyear" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -64,7 +64,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, schoolyear
+    id, schoolyear
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.YearsExample" >
     select
@@ -84,11 +84,11 @@
     select 
     <include refid="Base_Column_List" />
     from years
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from years
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.YearsExample" >
     delete from years
@@ -97,22 +97,22 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Years" >
-    insert into years (num, schoolyear)
-    values (#{num,jdbcType=INTEGER}, #{schoolyear,jdbcType=VARCHAR})
+    insert into years (id, schoolyear)
+    values (#{id,jdbcType=INTEGER}, #{schoolyear,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Years" >
     insert into years
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="id != null" >
+        id,
       </if>
       <if test="schoolyear != null" >
         schoolyear,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
       <if test="schoolyear != null" >
         #{schoolyear,jdbcType=VARCHAR},
@@ -128,8 +128,8 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update years
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.schoolyear != null" >
         schoolyear = #{record.schoolyear,jdbcType=VARCHAR},
@@ -141,7 +141,7 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update years
-    set num = #{record.num,jdbcType=INTEGER},
+    set id = #{record.id,jdbcType=INTEGER},
       schoolyear = #{record.schoolyear,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -154,11 +154,11 @@
         schoolyear = #{schoolyear,jdbcType=VARCHAR},
       </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Years" >
     update years
     set schoolyear = #{schoolyear,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

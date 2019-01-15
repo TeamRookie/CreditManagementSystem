@@ -3,9 +3,9 @@ package pojo;
 public class Practicetype {
     private Integer id;
 
-    private String time;
+    private String practicetime;
 
-    private String name;
+    private String practicename;
 
     private String type;
 
@@ -17,20 +17,20 @@ public class Practicetype {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getPracticetime() {
+        return practicetime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setPracticetime(String practicetime) {
+        this.practicetime = practicetime == null ? null : practicetime.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getPracticename() {
+        return practicename;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setPracticename(String practicename) {
+        this.practicename = practicename == null ? null : practicename.trim();
     }
 
     public String getType() {

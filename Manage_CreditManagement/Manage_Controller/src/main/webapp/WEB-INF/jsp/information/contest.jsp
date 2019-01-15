@@ -1,43 +1,49 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta charset="utf-8" />
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <title>个人预订 - 创新楼教室预约系统</title>
 
-    <meta name="description" content="Common form elements and layouts" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="Common form elements and layouts"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+<%--    <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/images/logo/favicon.ico"
+          type="image/x-icon"/>--%>
 
     <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/assets/font-awesome/4.5.0/css/font-awesome.min.css"/>
 
     <!-- page specific plugin styles -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/jquery-ui.custom.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/chosen.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-datepicker3.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-timepicker.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/daterangepicker.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-datetimepicker.min.css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-colorpicker.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/jquery-ui.custom.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/chosen.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-datepicker3.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-timepicker.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/daterangepicker.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-colorpicker.min.css"/>
 
     <!-- text fonts -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/fonts.googleapis.com.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/fonts.googleapis.com.css"/>
 
     <!-- ace styles -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace.min.css" class="ace-main-stylesheet"
+          id="main-ace-style"/>
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace-part2.min.css"
+          class="ace-main-stylesheet"/>
     <![endif]-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace-skins.min.css" />
-    <link rel="stylesheet" href=${pageContext.request.contextPath}/"assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace-skins.min.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace-rtl.min.css"/>
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/ace-ie.min.css"/>
     <![endif]-->
 
     <!-- inline styles related to this page -->
@@ -48,12 +54,13 @@
     <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
     <!--[if lte IE 8]>
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script src="assets/js/respond.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/html5shiv.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body class="no-skin">
+${message}
 <div id="navbar" class="navbar navbar-default          ace-save-state">
     <div class="navbar-container ace-save-state" id="navbar-container">
         <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
@@ -67,25 +74,24 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/admin/activity.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     创新楼教室预约系统
                 </small>
             </a>
         </div>
+
         <div class="navbar-buttons navbar-header pull-right" role="navigation">
-            <ul class="nav ace-nav">
-
-
-
-
-
+            <ul class="nav ace-nav" style="text-align: right;">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <img class="nav-user-photo" src="${pageContext.request.contextPath}/assets/images/avatars/user.jpg" alt="Jason's Photo" />
+                        <img class="nav-user-photo"
+                             src="${pageContext.request.contextPath}/assets/images/avatars/用户1.png"
+                             alt="User's Photo"/>
                         <span class="user-info">
-									<small>管理员</small>
+									<small>Welcome,</small>
+									${student.sname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -93,18 +99,25 @@
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/admin/changePassword.html">
+                            <a href="${pageContext.request.contextPath}/student/passwordChange.html">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="${pageContext.request.contextPath}/student/userInfo.html">
+                                <i class="ace-icon fa fa-user"></i>
+                                个人详情
                             </a>
                         </li>
 
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/admin/existAdmin.html">
+                            <a href="${pageContext.request.contextPath}/student/logout.html">
                                 <i class="ace-icon fa fa-power-off"></i>
-                                退出账号
+                                退出
                             </a>
                         </li>
                     </ul>
@@ -112,15 +125,15 @@
             </ul>
         </div>
 
-    </div>
-    <!-- /.navbar-container -->
+    </div><!-- /.navbar-container -->
 </div>
 
 <div class="main-container ace-save-state" id="main-container">
     <script type="text/javascript">
         try {
             ace.settings.loadState('main-container')
-        } catch (e) {}
+        } catch (e) {
+        }
     </script>
 
     <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
@@ -130,7 +143,6 @@
             } catch (e) {
             }
         </script>
-
 
         <ul class="nav nav-list">
             <li class="">
@@ -241,13 +253,13 @@
             </li>
 
         </ul>
-        <!-- /.nav-list -->
 
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
             <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state"
                data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
         </div>
     </div>
+
     <div class="main-content">
         <div class="main-content-inner">
             <div class="breadcrumbs ace-save-state" id="breadcrumbs">
@@ -258,158 +270,155 @@
                     </li>
 
                     <li>
-                        <a href="#">学分规则</a>
+                        <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">
-                        <a href="#">创新创业竞赛类</a>
-                    </li>
+                    <li class="active">主持学术活动类</li>
                 </ul>
 
             </div>
 
 
             <div class="page-content">
-                <div class="col-xs-12">
-                    <div class="clearfix">
-                        <div class="pull-right tableTools-container"></div>
-                    </div>
-                    <div class="page-header">
-                        <h1>
-                            创新创业竞赛类
-                        </h1>
-                    </div>
 
+                <div class="col-xs-12">
+
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" id="searchButton">
+                            <span class="ace-icon fa fa-search icon-on-right bigger-110">
+                                搜索
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-sm btn-primary" id="importButton">
+                            <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
+                                项目信息导出
+                            </span>
+                        </button>
+                    </div>
 
                 </div>
 
 
-                <div class="row" style="display: none">
-                    <div class="col-xs-12">
-                        <form class="form-horizontal" role="form">
+                <div class="row">
+                    <div class="col-xs-12" id="searchForm" style="display: none">
+                        <h4 class="pink" style="height: 20px"></h4>
+                        <form class="form-horizontal" role="form"
+                              action="${pageContext.request.contextPath}/academic.action">
                             <div class="form-group">
-                                <label class="col-sm-5 control-label no-padding-right" > 教室 </label>
+                                <label class="col-sm-2 control-label no-padding-right" >
+                                    学号
+                                </label>
                                 <div class="col-sm-2">
-                                    <input type="text" name="cid" id="cid" placeholder="教室编号">
+                                    <input onkeyup="value=value.replace(/[^\d]/g,'')"  class="typeahead scrollable" name="stuNum" type="text" placeholder="教室编号" />
                                 </div>
-                                <button class="btn btn-sm btn-primary" href="${pageContext.request.contextPath}/admin/classroomInformation.html">
-                                    <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
-                                    搜索
-                                </button>
+                                <label class="col-sm-1 control-label no-padding-right " for="date">活动时间</label>
+                                <div class="col-sm-2">
+                                    <div class="input-group ">
+                                        <input  name="searchDate" class="typeahead scrollable" id="date" type="text" placeholder="活动时间"/>
+                                        <span class="input-group-addon">
+									        	                <i class="fa fa-calendar bigger-110"></i>
+								        	            </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-2 no-padding-top">
+                                    <button type="submit" class="btn btn-sm btn-primary ">
+                                        <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
+                                        搜索
+                                    </button>
+                                </div>
+
                             </div>
+
                         </form>
                     </div>
                 </div>
 
-                <div>
-                    <table id="dynamic-table" class="table table-striped table-bordered table-hover" >
-                        <thead>
-                        <tr>
-                            <th class="center">竞赛级别</th>
-                            <th class="center">获奖等级</th>
-                            <th class="center">学分</th>
-                        </tr>
-                        </thead>
+            </div>
+            <!-- div.table-responsive
 
-                        <tbody>
-                            <C:forEach items="${pageBean.pageList}" var="item">
-                                <tr>
-                                    <td class="center">
-                                        <label class="pos-rel">
-                                            ${item.level}
-                                        </label>
-                                    </td>
+            <!-- div.dataTables_borderWrap -->
+            <div class="table-responsive">
+                <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
+                    <thead>
+                    <tr>
+                        <th class="center">学号</th>
+                        <th class="center">姓名</th>
+                        <th class="center">竞赛时间</th>
+                        <th class="center">竞赛名称</th>
+                        <th class="center">作品名称</th>
+                        <th class="center">竞赛级别</th>
+                        <th class="center">获奖等级</th>
+                        <th class="center">证书单位公章</th>
+                        <th class="center">证书落款时间</th>
+                        <th class="center">团队成员</th>
+                        <th class="center">指导教师</th>
+                        <th class="center">学分</th>
 
-                                    <td class="center">
-                                        <label class="pos-rel">
-                                            ${item.rank}
-                                        </label>
-                                    </td>
-                                    <td class="center">
-                                        <label class="pos-rel">
-                                                ${item.credit}
-                                        </label>
-                                    </td>
-                                </tr>
-                            </C:forEach>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <c:forEach items="${pageBean.pageList}" var="item">
+                            <tr>
+                                <td class="center">
+                                        ${item.stunum}
+                                </td>
+                                <td class="center">${item.stuname}</td>
+                                <td class="center">${item.academictime}</td>
+                                <td class="center">${item.theme}</td>
+                                <td class="center">${item.address}</td>
+                                <td class="center">${item.undertake}</td>
+                                <td class="center">${item.amount}</td>
+                            </tr>
+                    </c:forEach>
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="message-footer clearfix">
+                <%--<div class="pull-left"> ${orderCount} messages total</div>--%>
+
+                    <div class="pull-right">
 
 
+                        &nbsp; &nbsp;
+                        <ul class="pagination middle">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                            </li>
 
+                            <li >
 
-                        </tbody>
-                    </table>
-                    <div class="message-footer clearfix">
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
+                            </li>
 
-                        <div class="pull-right">
-
-
-                            &nbsp; &nbsp;
-                            <ul class="pagination middle">
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/contestRules.action?currentPage=1"><i class="ace-icon fa fa-step-backward middle"></i></a>
-                                </li>
-
-                                <li >
-
-                                    <a href="${pageContext.request.contextPath}/contestRules.action?currentPage=${pageBean.currentPage-1}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
-
-                                </li>
-
-                                <li>
+                            <li>
 													<span>
-														<input value="${pageBean.currentPage}" maxlength="3" type="text" readonly="readonly" />
+														<input value="1" maxlength="3" type="text" readonly="readonly" />
 													</span>
-                                </li>
+                            </li>
 
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/contestRules.action?currentPage=${pageBean.currentPage+1}">
-                                        <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
-                                    </a>
-                                </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}">
+                                    <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
+                                </a>
+                            </li>
 
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/contestRules.action?currentPage=${pageBean.totalPage}">
-                                        <i class="ace-icon fa fa-step-forward middle"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}">
+                                    <i class="ace-icon fa fa-step-forward middle"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
             </div>
         </div>
-
-
-
-        <!-- /.modal-dialog -->
     </div>
-
-    <!-- PAGE CONTENT ENDS -->
-</div>
-<!-- /.col -->
-
-<!-- /.row -->
-
-<!-- /.main-content -->
-
-<div class="footer">
-    <div class="footer-inner">
-        <div class="footer-content">
-
-
-        </div>
-    </div>
-
-</div>
-
-<!-- /.main-content -->
-
-
-
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-</a>
-<!-- /.main-container -->
+</div><!-- /.main-container -->
 
 <!-- basic scripts -->
 
@@ -419,10 +428,10 @@
 <!-- <![endif]-->
 
 <!--[if IE]>
-<script src="assets/js/jquery-1.11.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
 <script type="text/javascript">
-    if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    if ('ontouchstart' in document.documentElement) document.write("<script src='${pageContext.request.contextPath}/assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 </script>
 <script src="${pageContext.request.contextPath}/assets/js/bootstrap.min.js"></script>
 
@@ -450,6 +459,7 @@
 <!-- ace scripts -->
 <script src="${pageContext.request.contextPath}/assets/js/ace-elements.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/js/ace.min.js"></script>
+
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
     $(function(){
@@ -495,8 +505,26 @@
                 alert("获取信息列表失败!");
             }
         });
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getYears.action",
+            success: function(data)
+            {
+                var content="";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";
+                }
+                $("#date").html(content);
+            },
+            fail:function () {
+                alert("获取年份列表失败!");
+            }
+        });
     });
+    function  searchButtonClick() {
+        $("#searchForm").toggle();
+    }
 </script>
 </body>
-
 </html>

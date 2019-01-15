@@ -164,143 +164,143 @@ public class ContesttypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNull() {
-            addCriterion("time is null");
+        public Criteria andContesttimeIsNull() {
+            addCriterion("contesttime is null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIsNotNull() {
-            addCriterion("time is not null");
+        public Criteria andContesttimeIsNotNull() {
+            addCriterion("contesttime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTimeEqualTo(String value) {
-            addCriterion("time =", value, "time");
+        public Criteria andContesttimeEqualTo(String value) {
+            addCriterion("contesttime =", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotEqualTo(String value) {
-            addCriterion("time <>", value, "time");
+        public Criteria andContesttimeNotEqualTo(String value) {
+            addCriterion("contesttime <>", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThan(String value) {
-            addCriterion("time >", value, "time");
+        public Criteria andContesttimeGreaterThan(String value) {
+            addCriterion("contesttime >", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeGreaterThanOrEqualTo(String value) {
-            addCriterion("time >=", value, "time");
+        public Criteria andContesttimeGreaterThanOrEqualTo(String value) {
+            addCriterion("contesttime >=", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThan(String value) {
-            addCriterion("time <", value, "time");
+        public Criteria andContesttimeLessThan(String value) {
+            addCriterion("contesttime <", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLessThanOrEqualTo(String value) {
-            addCriterion("time <=", value, "time");
+        public Criteria andContesttimeLessThanOrEqualTo(String value) {
+            addCriterion("contesttime <=", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeLike(String value) {
-            addCriterion("time like", value, "time");
+        public Criteria andContesttimeLike(String value) {
+            addCriterion("contesttime like", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotLike(String value) {
-            addCriterion("time not like", value, "time");
+        public Criteria andContesttimeNotLike(String value) {
+            addCriterion("contesttime not like", value, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeIn(List<String> values) {
-            addCriterion("time in", values, "time");
+        public Criteria andContesttimeIn(List<String> values) {
+            addCriterion("contesttime in", values, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotIn(List<String> values) {
-            addCriterion("time not in", values, "time");
+        public Criteria andContesttimeNotIn(List<String> values) {
+            addCriterion("contesttime not in", values, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeBetween(String value1, String value2) {
-            addCriterion("time between", value1, value2, "time");
+        public Criteria andContesttimeBetween(String value1, String value2) {
+            addCriterion("contesttime between", value1, value2, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andTimeNotBetween(String value1, String value2) {
-            addCriterion("time not between", value1, value2, "time");
+        public Criteria andContesttimeNotBetween(String value1, String value2) {
+            addCriterion("contesttime not between", value1, value2, "contesttime");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andContestnameIsNull() {
+            addCriterion("contestname is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andContestnameIsNotNull() {
+            addCriterion("contestname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andContestnameEqualTo(String value) {
+            addCriterion("contestname =", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andContestnameNotEqualTo(String value) {
+            addCriterion("contestname <>", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andContestnameGreaterThan(String value) {
+            addCriterion("contestname >", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andContestnameGreaterThanOrEqualTo(String value) {
+            addCriterion("contestname >=", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andContestnameLessThan(String value) {
+            addCriterion("contestname <", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andContestnameLessThanOrEqualTo(String value) {
+            addCriterion("contestname <=", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andContestnameLike(String value) {
+            addCriterion("contestname like", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andContestnameNotLike(String value) {
+            addCriterion("contestname not like", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andContestnameIn(List<String> values) {
+            addCriterion("contestname in", values, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andContestnameNotIn(List<String> values) {
+            addCriterion("contestname not in", values, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andContestnameBetween(String value1, String value2) {
+            addCriterion("contestname between", value1, value2, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andContestnameNotBetween(String value1, String value2) {
+            addCriterion("contestname not between", value1, value2, "contestname");
             return (Criteria) this;
         }
     }

@@ -1,15 +1,13 @@
 package pojo;
 
 public class Safety {
-    private Integer num;
+    private Integer id;
 
-    private Integer typenum;
-
-    private String gettime;
+    private String safetytime;
 
     private String level;
 
-    private Integer teacehernum;
+    private Integer teachernum;
 
     private String member;
 
@@ -23,30 +21,24 @@ public class Safety {
 
     private Integer gradenum;
 
-    private String name;
+    private String stuname;
 
-    public Integer getNum() {
-        return num;
+    private String url;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Integer getTypenum() {
-        return typenum;
+    public String getSafetytime() {
+        return safetytime;
     }
 
-    public void setTypenum(Integer typenum) {
-        this.typenum = typenum;
-    }
-
-    public String getGettime() {
-        return gettime;
-    }
-
-    public void setGettime(String gettime) {
-        this.gettime = gettime == null ? null : gettime.trim();
+    public void setSafetytime(String safetytime) {
+        this.safetytime = safetytime == null ? null : safetytime.trim();
     }
 
     public String getLevel() {
@@ -57,12 +49,12 @@ public class Safety {
         this.level = level == null ? null : level.trim();
     }
 
-    public Integer getTeacehernum() {
-        return teacehernum;
+    public Integer getTeachernum() {
+        return teachernum;
     }
 
-    public void setTeacehernum(Integer teacehernum) {
-        this.teacehernum = teacehernum;
+    public void setTeachernum(Integer teachernum) {
+        this.teachernum = teachernum;
     }
 
     public String getMember() {
@@ -113,11 +105,19 @@ public class Safety {
         this.gradenum = gradenum;
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

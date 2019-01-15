@@ -3,7 +3,7 @@ package pojo;
 public class Major {
     private Integer num;
 
-    private String name;
+    private String majorname;
 
     public Integer getNum() {
         return num;
@@ -13,11 +13,11 @@ public class Major {
         this.num = num;
     }
 
-    public String getName() {
-        return name;
+    public String getMajorname() {
+        return majorname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setMajorname(String majorname) {
+        this.majorname = majorname == null ? null : majorname.trim();
     }
 }

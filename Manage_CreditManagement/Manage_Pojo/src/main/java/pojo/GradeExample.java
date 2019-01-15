@@ -164,73 +164,73 @@ public class GradeExample {
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andGradenameIsNull() {
+            addCriterion("gradename is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andGradenameIsNotNull() {
+            addCriterion("gradename is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andGradenameEqualTo(String value) {
+            addCriterion("gradename =", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andGradenameNotEqualTo(String value) {
+            addCriterion("gradename <>", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andGradenameGreaterThan(String value) {
+            addCriterion("gradename >", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andGradenameGreaterThanOrEqualTo(String value) {
+            addCriterion("gradename >=", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andGradenameLessThan(String value) {
+            addCriterion("gradename <", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andGradenameLessThanOrEqualTo(String value) {
+            addCriterion("gradename <=", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andGradenameLike(String value) {
+            addCriterion("gradename like", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andGradenameNotLike(String value) {
+            addCriterion("gradename not like", value, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andGradenameIn(List<String> values) {
+            addCriterion("gradename in", values, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andGradenameNotIn(List<String> values) {
+            addCriterion("gradename not in", values, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andGradenameBetween(String value1, String value2) {
+            addCriterion("gradename between", value1, value2, "gradename");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andGradenameNotBetween(String value1, String value2) {
+            addCriterion("gradename not between", value1, value2, "gradename");
             return (Criteria) this;
         }
     }

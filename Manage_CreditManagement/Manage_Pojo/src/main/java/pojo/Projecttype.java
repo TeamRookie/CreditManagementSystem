@@ -3,11 +3,11 @@ package pojo;
 public class Projecttype {
     private Integer id;
 
-    private String time;
+    private String projecttime;
 
     private String type;
 
-    private String name;
+    private String projectname;
 
     private String num;
 
@@ -19,12 +19,12 @@ public class Projecttype {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getProjecttime() {
+        return projecttime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setProjecttime(String projecttime) {
+        this.projecttime = projecttime == null ? null : projecttime.trim();
     }
 
     public String getType() {
@@ -35,12 +35,12 @@ public class Projecttype {
         this.type = type == null ? null : type.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getProjectname() {
+        return projectname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setProjectname(String projectname) {
+        this.projectname = projectname == null ? null : projectname.trim();
     }
 
     public String getNum() {

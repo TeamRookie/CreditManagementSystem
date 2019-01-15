@@ -3,7 +3,7 @@ package pojo;
 public class Practice {
     private Integer id;
 
-    private String time;
+    private String practicetime;
 
     private String practicename;
 
@@ -27,7 +27,9 @@ public class Practice {
 
     private String type;
 
-    private String name;
+    private String stuname;
+
+    private String url;
 
     public Integer getId() {
         return id;
@@ -37,12 +39,12 @@ public class Practice {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getPracticetime() {
+        return practicetime;
     }
 
-    public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+    public void setPracticetime(String practicetime) {
+        this.practicetime = practicetime == null ? null : practicetime.trim();
     }
 
     public String getPracticename() {
@@ -133,11 +135,19 @@ public class Practice {
         this.type = type == null ? null : type.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

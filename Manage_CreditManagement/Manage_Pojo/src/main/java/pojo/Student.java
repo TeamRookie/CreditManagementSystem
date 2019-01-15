@@ -3,15 +3,15 @@ package pojo;
 public class Student {
     private String num;
 
-    private String name;
+    private String stuname;
 
     private String id;
 
-    private String facultynum;
+    private Integer facultynum;
 
-    private String majorum;
+    private Integer majorum;
 
-    private String gradenum;
+    private Integer gradenum;
 
     private String telphone;
 
@@ -31,12 +31,12 @@ public class Student {
         this.num = num == null ? null : num.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getStuname() {
+        return stuname;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
     }
 
     public String getId() {
@@ -47,28 +47,28 @@ public class Student {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getFacultynum() {
+    public Integer getFacultynum() {
         return facultynum;
     }
 
-    public void setFacultynum(String facultynum) {
-        this.facultynum = facultynum == null ? null : facultynum.trim();
+    public void setFacultynum(Integer facultynum) {
+        this.facultynum = facultynum;
     }
 
-    public String getMajorum() {
+    public Integer getMajorum() {
         return majorum;
     }
 
-    public void setMajorum(String majorum) {
-        this.majorum = majorum == null ? null : majorum.trim();
+    public void setMajorum(Integer majorum) {
+        this.majorum = majorum;
     }
 
-    public String getGradenum() {
+    public Integer getGradenum() {
         return gradenum;
     }
 
-    public void setGradenum(String gradenum) {
-        this.gradenum = gradenum == null ? null : gradenum.trim();
+    public void setGradenum(Integer gradenum) {
+        this.gradenum = gradenum;
     }
 
     public String getTelphone() {

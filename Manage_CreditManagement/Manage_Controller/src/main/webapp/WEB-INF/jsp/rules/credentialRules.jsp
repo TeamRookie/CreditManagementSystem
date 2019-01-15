@@ -460,13 +460,13 @@
                 {
                     contentRules+="      <li>" +
                         "                            <a href=\"${pageContext.request.contextPath}/"+data[i].rulesurl+".action\">" +
-                        "                                <i class=\"menu-icon fa fa-caret-right\"></i>"+data[i].name+"" +
+                        "                                <i class=\"menu-icon fa fa-caret-right\"></i>"+data[i].typename+"" +
                         "                            </a>" +
                         "                            <b class=\"arrow\"></b>" +
                         "                        </li>";
                     contentInformation+="       <li>" +
                         "                        <a href=\"${pageContext.request.contextPath}/"+data[i].informationurl+".action\">" +
-                        "                            <i class=\"menu-icon fa fa-caret-right\"></i> "+data[i].name+"" +
+                        "                            <i class=\"menu-icon fa fa-caret-right\"></i> "+data[i].typename+"" +
                         "                        </a>" +
                         "                        <b class=\"arrow\"></b>" +
                         "                    </li>";
@@ -474,7 +474,7 @@
                     {
                         contentImport+="     <li>" +
                             "                        <a href=\"${pageContext.request.contextPath}/"+data[i].importtype+".action\">" +
-                            "                            <i class=\"menu-icon fa fa-caret-right\"></i> "+data[i].name+"" +
+                            "                            <i class=\"menu-icon fa fa-caret-right\"></i> "+data[i].typename+"" +
                             "                        </a>" +
                             "" +
                             "                        <b class=\"arrow\"></b>" +

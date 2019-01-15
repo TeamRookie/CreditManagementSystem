@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.TypeMapper" >
   <resultMap id="BaseResultMap" type="pojo.Type" >
-    <id column="num" property="num" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="typename" property="typename" jdbcType="VARCHAR" />
     <result column="informationurl" property="informationurl" jdbcType="VARCHAR" />
     <result column="rulesurl" property="rulesurl" jdbcType="VARCHAR" />
     <result column="importType" property="importtype" jdbcType="VARCHAR" />
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, name, informationurl, rulesurl, importType
+    id, typename, informationurl, rulesurl, importType
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TypeExample" >
     select
@@ -87,11 +87,11 @@
     select 
     <include refid="Base_Column_List" />
     from type
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from type
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.TypeExample" >
     delete from type
@@ -100,19 +100,19 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Type" >
-    insert into type (num, name, informationurl, 
+    insert into type (id, typename, informationurl, 
       rulesurl, importType)
-    values (#{num,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{informationurl,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{typename,jdbcType=VARCHAR}, #{informationurl,jdbcType=VARCHAR}, 
       #{rulesurl,jdbcType=VARCHAR}, #{importtype,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Type" >
     insert into type
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="id != null" >
+        id,
       </if>
-      <if test="name != null" >
-        name,
+      <if test="typename != null" >
+        typename,
       </if>
       <if test="informationurl != null" >
         informationurl,
@@ -125,11 +125,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
+      <if test="typename != null" >
+        #{typename,jdbcType=VARCHAR},
       </if>
       <if test="informationurl != null" >
         #{informationurl,jdbcType=VARCHAR},
@@ -151,11 +151,11 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update type
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
+      <if test="record.typename != null" >
+        typename = #{record.typename,jdbcType=VARCHAR},
       </if>
       <if test="record.informationurl != null" >
         informationurl = #{record.informationurl,jdbcType=VARCHAR},
@@ -173,8 +173,8 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update type
-    set num = #{record.num,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
+    set id = #{record.id,jdbcType=INTEGER},
+      typename = #{record.typename,jdbcType=VARCHAR},
       informationurl = #{record.informationurl,jdbcType=VARCHAR},
       rulesurl = #{record.rulesurl,jdbcType=VARCHAR},
       importType = #{record.importtype,jdbcType=VARCHAR}
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Type" >
     update type
     <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
+      <if test="typename != null" >
+        typename = #{typename,jdbcType=VARCHAR},
       </if>
       <if test="informationurl != null" >
         informationurl = #{informationurl,jdbcType=VARCHAR},
@@ -198,14 +198,14 @@
         importType = #{importtype,jdbcType=VARCHAR},
       </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Type" >
     update type
-    set name = #{name,jdbcType=VARCHAR},
+    set typename = #{typename,jdbcType=VARCHAR},
       informationurl = #{informationurl,jdbcType=VARCHAR},
       rulesurl = #{rulesurl,jdbcType=VARCHAR},
       importType = #{importtype,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
