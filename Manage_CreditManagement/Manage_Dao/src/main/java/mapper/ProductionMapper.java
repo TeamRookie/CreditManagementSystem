@@ -10,7 +10,7 @@ public interface ProductionMapper {
 
     int deleteByExample(ProductionExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Production record);
 
@@ -18,7 +18,7 @@ public interface ProductionMapper {
 
     List<Production> selectByExample(ProductionExample example);
 
-    Production selectByPrimaryKey(Integer num);
+    Production selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Production record, @Param("example") ProductionExample example);
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.TrainItemMapper" >
+    <select id="getTotalCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM trainrules;
+    </select>
+    <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Trainrules">
+        SELECT
+        *
+        FROM
+        trainrules
+        limit ${start},#{pageSize};
+    </select>
+    <select id="getTrainImportTotalCount" resultType="java.lang.Integer">
+        select count(*) from traintype
+        <where>
+            <if test="trainTime !=null and trainTime != ''">
+                #{trainTime} = trainTime
+            </if>
+            <if test="trainContent != null and trainContent != ''">
+                AND  trainContent = #{trainContent}
+            </if>
+        </where>
+    </select>
+    <select id="getTrainImportPageBean" parameterType="hashMap" resultType="pojo.Traintype">
+        select * from traintype
+        <where>
+            <if test="trainTime !=null and trainTime != ''">
+                #{trainTime} = trainTime
+            </if>
+            <if test="trainContent != null and trainContent != ''">
+                AND  trainContent = #{trainContent}
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+</mapper>

@@ -9,7 +9,7 @@ public class Projecttype {
 
     private String projectname;
 
-    private String num;
+    private String projectid;
 
     public Integer getId() {
         return id;
@@ -43,11 +43,11 @@ public class Projecttype {
         this.projectname = projectname == null ? null : projectname.trim();
     }
 
-    public String getNum() {
-        return num;
+    public String getProjectid() {
+        return projectid;
     }
 
-    public void setNum(String num) {
-        this.num = num == null ? null : num.trim();
+    public void setProjectid(String projectid) {
+        this.projectid = projectid == null ? null : projectid.trim();
     }
 }

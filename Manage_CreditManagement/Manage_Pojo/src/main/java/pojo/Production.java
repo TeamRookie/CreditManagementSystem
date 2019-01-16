@@ -1,23 +1,23 @@
 package pojo;
 
 public class Production {
-    private Integer num;
+    private Integer id;
 
     private String productiontime;
 
-    private String production;
+    private String autograph;
+
+    private String productionname;
+
+    private String author;
+
+    private String source;
 
     private String level;
 
     private String rank;
 
-    private String cachet;
-
-    private String booktime;
-
-    private String member;
-
-    private String teachernum;
+    private String responsibility;
 
     private String stunum;
 
@@ -33,12 +33,14 @@ public class Production {
 
     private String url;
 
-    public Integer getNum() {
-        return num;
+    private String productiontype;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getProductiontime() {
@@ -49,12 +51,36 @@ public class Production {
         this.productiontime = productiontime == null ? null : productiontime.trim();
     }
 
-    public String getProduction() {
-        return production;
+    public String getAutograph() {
+        return autograph;
     }
 
-    public void setProduction(String production) {
-        this.production = production == null ? null : production.trim();
+    public void setAutograph(String autograph) {
+        this.autograph = autograph == null ? null : autograph.trim();
+    }
+
+    public String getProductionname() {
+        return productionname;
+    }
+
+    public void setProductionname(String productionname) {
+        this.productionname = productionname == null ? null : productionname.trim();
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author == null ? null : author.trim();
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source == null ? null : source.trim();
     }
 
     public String getLevel() {
@@ -73,36 +99,12 @@ public class Production {
         this.rank = rank == null ? null : rank.trim();
     }
 
-    public String getCachet() {
-        return cachet;
+    public String getResponsibility() {
+        return responsibility;
     }
 
-    public void setCachet(String cachet) {
-        this.cachet = cachet == null ? null : cachet.trim();
-    }
-
-    public String getBooktime() {
-        return booktime;
-    }
-
-    public void setBooktime(String booktime) {
-        this.booktime = booktime == null ? null : booktime.trim();
-    }
-
-    public String getMember() {
-        return member;
-    }
-
-    public void setMember(String member) {
-        this.member = member == null ? null : member.trim();
-    }
-
-    public String getTeachernum() {
-        return teachernum;
-    }
-
-    public void setTeachernum(String teachernum) {
-        this.teachernum = teachernum == null ? null : teachernum.trim();
+    public void setResponsibility(String responsibility) {
+        this.responsibility = responsibility == null ? null : responsibility.trim();
     }
 
     public String getStunum() {
@@ -159,5 +161,13 @@ public class Production {
 
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
+    }
+
+    public String getProductiontype() {
+        return productiontype;
+    }
+
+    public void setProductiontype(String productiontype) {
+        this.productiontype = productiontype == null ? null : productiontype.trim();
     }
 }

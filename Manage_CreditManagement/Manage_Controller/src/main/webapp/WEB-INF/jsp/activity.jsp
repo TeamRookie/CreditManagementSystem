@@ -426,31 +426,31 @@
                 &nbsp; &nbsp;
                 <ul class="pagination middle">
                     <li >
-                        <a href="${pageContext.request.contextPath}/admin/activity.html?currentPage=1&nowDate=${pageBean.nowDate}">
+                        <a href="#">
                             <i class="ace-icon fa fa-step-backward middle"></i>
                         </a>
                     </li>
 
                     <li >
-                        <a href="${pageContext.request.contextPath}/admin/activity.html?currentPage=${pageBean.currentPage-1}&nowDate=${pageBean.nowDate}">
+                        <a href="#">
                             <i class="ace-icon fa fa-caret-left bigger-140 middle"></i>
                         </a>
                     </li>
 
                     <li>
                         <span>
-                            <input readonly="readonly"  value="${pageBean.currentPage}" maxlength="3" type="text"/>
+                            <input readonly="readonly"  value="1" maxlength="3" type="text"/>
                         </span>
                     </li>
 
                     <li>
-                        <a href="${pageContext.request.contextPath}/admin/activity.html?currentPage=${pageBean.currentPage+1}&nowDate=${pageBean.nowDate}">
+                        <a href="#">
                             <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                         </a>
                     </li>
 
                     <li>
-                        <a href="${pageContext.request.contextPath}/admin/activity.html?currentPage=${pageBean.totalPage}&nowDate=${pageBean.nowDate}">
+                        <a href="#">
                             <i class="ace-icon fa fa-step-forward middle"></i>
                         </a>
                     </li>

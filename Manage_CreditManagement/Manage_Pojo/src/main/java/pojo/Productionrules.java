@@ -5,7 +5,7 @@ public class Productionrules {
 
     private String level;
 
-    private String rank;
+    private String responsibility;
 
     private Float credit;
 
@@ -25,12 +25,12 @@ public class Productionrules {
         this.level = level == null ? null : level.trim();
     }
 
-    public String getRank() {
-        return rank;
+    public String getResponsibility() {
+        return responsibility;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank == null ? null : rank.trim();
+    public void setResponsibility(String responsibility) {
+        this.responsibility = responsibility == null ? null : responsibility.trim();
     }
 
     public Float getCredit() {

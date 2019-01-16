@@ -289,9 +289,10 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
+                        <a  class="white" href="${pageContext.request.contextPath}/contestImport.action">
                         <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
-                            <a  class="white" href="${pageContext.request.contextPath}/contestImport.action"><span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span></a>
-                        </button>
+                            <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
+                        </button></a>
                     </div>
                     <div class="col-sm-1 no-padding-right">
                         <button type="button" class="btn btn-sm btn-primary" onclick="addContestType();" name="addButton" id="addButton">
@@ -314,13 +315,13 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/contestImport.action">
+                              action="${pageContext.request.contextPath}/contestImport.action" method="post">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label no-padding-right"  for="contestName">
                                     竞赛名称
                                 </label>
                                 <div class="col-sm-2">
-                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称" required />
+                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称"  />
                                 </div>
                                 <label class="col-sm-1 control-label no-padding-right " for="date">竞赛时间</label>
                                 <div class="col-sm-2">
@@ -342,29 +343,31 @@ ${message}
                     <div class="col-xs-12" id="addForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/contestImport.action">
+                              action="${pageContext.request.contextPath}/addContestType.action" method="post">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right " for="date">竞赛时间</label>
-                                    <div class="col-sm-2">
-                                        <select id="addDate" class="form-control"   name="contestDate" readonly>
-                                        </select>
-                                    </div>
-                                <label class="col-sm-2 control-label no-padding-right"  for="contestName">
+                                <label class="col-sm-2 control-label no-padding-right"  for="addContestName">
                                     竞赛名称
                                 </label>
                                 <div class="col-sm-2">
-                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称" required />
+                                    <input   class="form-control" name="addContestName" id="addContestName" type="text" placeholder="竞赛名称" required />
                                 </div>
-
+                                <label class="col-sm-1 control-label no-padding-right " for="addDate">竞赛时间</label>
+                                <div class="col-sm-2">
+                                    <select id="addDate" class="form-control"   name="addContestDate" readonly>
+                                    </select>
+                                </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
-                                        <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
-                                        搜索
+                                        <span class="ace-icon fa fa-outdent icon-on-right bigger-150 "></span>
+                                        添加
                                     </button>
                                 </div>
 
                             </div>
+
+                        </form>
+
 
                         </form>
                     </div>
@@ -413,29 +416,29 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/contestImport.action?currentPage=1&contestName=${contestName}&contestDate=${contestDate}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/contestImport.action?currentPage=${pageBean.currentPage-1}&contestName=${contestName}&contestDate=${contestDate}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
                             <li>
 													<span>
-														<input value="1" maxlength="3" type="text" readonly="readonly" />
+														<input value="${pageBean.currentPage}" maxlength="3" type="text" readonly="readonly" />
 													</span>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}">
+                                <a href="${pageContext.request.contextPath}/contestImport.action?currentPage=${pageBean.currentPage+1}&contestName=${contestName}&contestDate=${contestDate}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}">
+                                <a href="${pageContext.request.contextPath}/contestImport.action?currentPage=${pageBean.totalPage}&contestName=${contestName}&contestDate=${contestDate}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -537,11 +540,13 @@ ${message}
             success: function(data)
             {
                 var content="";
+                content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
                     content+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";
                 }
                 $("#date").html(content);
+                $("#addDate").html(content);
             },
             fail:function () {
                 alert("获取年份列表失败!");
@@ -549,18 +554,11 @@ ${message}
         });
     });
     function addContestType() {
-        var searchForm=$("#searchForm");
-       if (!searchForm.is("hidden"))
-       {
-           alert("呵呵");
-       }
-       else
-       {
-           searchForm.toggle();
-       }
-
+        $("#addForm").toggle();
+        $("#searchForm").hide();
     }
     function  searchButtonClick() {
+        $("#addForm").hide();
         $("#searchForm").toggle();
     }
 </script>

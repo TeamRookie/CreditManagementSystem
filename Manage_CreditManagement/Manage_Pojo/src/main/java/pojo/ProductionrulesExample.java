@@ -234,73 +234,73 @@ public class ProductionrulesExample {
             return (Criteria) this;
         }
 
-        public Criteria andRankIsNull() {
-            addCriterion("rank is null");
+        public Criteria andResponsibilityIsNull() {
+            addCriterion("responsibility is null");
             return (Criteria) this;
         }
 
-        public Criteria andRankIsNotNull() {
-            addCriterion("rank is not null");
+        public Criteria andResponsibilityIsNotNull() {
+            addCriterion("responsibility is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRankEqualTo(String value) {
-            addCriterion("rank =", value, "rank");
+        public Criteria andResponsibilityEqualTo(String value) {
+            addCriterion("responsibility =", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankNotEqualTo(String value) {
-            addCriterion("rank <>", value, "rank");
+        public Criteria andResponsibilityNotEqualTo(String value) {
+            addCriterion("responsibility <>", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankGreaterThan(String value) {
-            addCriterion("rank >", value, "rank");
+        public Criteria andResponsibilityGreaterThan(String value) {
+            addCriterion("responsibility >", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankGreaterThanOrEqualTo(String value) {
-            addCriterion("rank >=", value, "rank");
+        public Criteria andResponsibilityGreaterThanOrEqualTo(String value) {
+            addCriterion("responsibility >=", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankLessThan(String value) {
-            addCriterion("rank <", value, "rank");
+        public Criteria andResponsibilityLessThan(String value) {
+            addCriterion("responsibility <", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankLessThanOrEqualTo(String value) {
-            addCriterion("rank <=", value, "rank");
+        public Criteria andResponsibilityLessThanOrEqualTo(String value) {
+            addCriterion("responsibility <=", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankLike(String value) {
-            addCriterion("rank like", value, "rank");
+        public Criteria andResponsibilityLike(String value) {
+            addCriterion("responsibility like", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankNotLike(String value) {
-            addCriterion("rank not like", value, "rank");
+        public Criteria andResponsibilityNotLike(String value) {
+            addCriterion("responsibility not like", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankIn(List<String> values) {
-            addCriterion("rank in", values, "rank");
+        public Criteria andResponsibilityIn(List<String> values) {
+            addCriterion("responsibility in", values, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankNotIn(List<String> values) {
-            addCriterion("rank not in", values, "rank");
+        public Criteria andResponsibilityNotIn(List<String> values) {
+            addCriterion("responsibility not in", values, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankBetween(String value1, String value2) {
-            addCriterion("rank between", value1, value2, "rank");
+        public Criteria andResponsibilityBetween(String value1, String value2) {
+            addCriterion("responsibility between", value1, value2, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andRankNotBetween(String value1, String value2) {
-            addCriterion("rank not between", value1, value2, "rank");
+        public Criteria andResponsibilityNotBetween(String value1, String value2) {
+            addCriterion("responsibility not between", value1, value2, "responsibility");
             return (Criteria) this;
         }
 

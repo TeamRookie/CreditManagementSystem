@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="pojo.Productionrules" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="level" property="level" jdbcType="VARCHAR" />
-    <result column="rank" property="rank" jdbcType="VARCHAR" />
+    <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, level, rank, credit
+    id, level, responsibility, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ProductionrulesExample" >
     select
@@ -99,9 +99,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Productionrules" >
-    insert into productionrules (id, level, rank, 
+    insert into productionrules (id, level, responsibility, 
       credit)
-    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, 
       #{credit,jdbcType=REAL})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Productionrules" >
@@ -113,8 +113,8 @@
       <if test="level != null" >
         level,
       </if>
-      <if test="rank != null" >
-        rank,
+      <if test="responsibility != null" >
+        responsibility,
       </if>
       <if test="credit != null" >
         credit,
@@ -127,8 +127,8 @@
       <if test="level != null" >
         #{level,jdbcType=VARCHAR},
       </if>
-      <if test="rank != null" >
-        #{rank,jdbcType=VARCHAR},
+      <if test="responsibility != null" >
+        #{responsibility,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
@@ -150,8 +150,8 @@
       <if test="record.level != null" >
         level = #{record.level,jdbcType=VARCHAR},
       </if>
-      <if test="record.rank != null" >
-        rank = #{record.rank,jdbcType=VARCHAR},
+      <if test="record.responsibility != null" >
+        responsibility = #{record.responsibility,jdbcType=VARCHAR},
       </if>
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
@@ -165,7 +165,7 @@
     update productionrules
     set id = #{record.id,jdbcType=INTEGER},
       level = #{record.level,jdbcType=VARCHAR},
-      rank = #{record.rank,jdbcType=VARCHAR},
+      responsibility = #{record.responsibility,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -177,8 +177,8 @@
       <if test="level != null" >
         level = #{level,jdbcType=VARCHAR},
       </if>
-      <if test="rank != null" >
-        rank = #{rank,jdbcType=VARCHAR},
+      <if test="responsibility != null" >
+        responsibility = #{responsibility,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
@@ -189,7 +189,7 @@
   <update id="updateByPrimaryKey" parameterType="pojo.Productionrules" >
     update productionrules
     set level = #{level,jdbcType=VARCHAR},
-      rank = #{rank,jdbcType=VARCHAR},
+      responsibility = #{responsibility,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL}
     where id = #{id,jdbcType=INTEGER}
   </update>

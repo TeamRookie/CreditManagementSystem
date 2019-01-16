@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import pojo.PageBean;
 import pojo.Type;
 import service.ContestService;
@@ -36,7 +37,9 @@ public class ContestController
     @RequestMapping("/contestImport")
     public  String getContestImport(Model model,Integer currentPage,String contestDate,String contestName)
     {
-        PageBean pageBean = contestService.getContestTypePageBean(pageSize, currentPage, contestDate, contestName);
+        PageBean pageBean = contestService.getContestImportPageBean(pageSize, currentPage, contestDate, contestName);
+        model.addAttribute("contestDate",contestDate);
+        model.addAttribute("contestName",contestName);
         model.addAttribute("pageBean",pageBean);
         return  "import/contestImport";
     }
@@ -48,5 +51,14 @@ public class ContestController
             contestService.deleteContestTypeById(id);
         }
         return "redirect:contestImport.action";
+    }
+    @RequestMapping(value = "/addContestType",method = RequestMethod.POST)
+    public  String addContestImport(String addContestDate,String addContestName)
+    {
+        if (addContestDate!=null&&!addContestDate.isEmpty()&&addContestName!=null&&!addContestName.isEmpty())
+        {
+            contestService.addContestType(addContestDate,addContestName);
+        }
+        return  "redirect:contestImport.action" ;
     }
 }

@@ -1,11 +1,13 @@
 package pojo;
 
 public class Project {
-    private Integer num;
+    private Integer id;
 
     private String projecttime;
 
-    private String id;
+    private String type;
+
+    private String projectid;
 
     private String projectname;
 
@@ -15,7 +17,7 @@ public class Project {
 
     private String member;
 
-    private Integer teachernum;
+    private String teachernames;
 
     private String stunum;
 
@@ -31,14 +33,12 @@ public class Project {
 
     private String url;
 
-    private byte[] type;
-
-    public Integer getNum() {
-        return num;
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getProjecttime() {
@@ -49,12 +49,20 @@ public class Project {
         this.projecttime = projecttime == null ? null : projecttime.trim();
     }
 
-    public String getId() {
-        return id;
+    public String getType() {
+        return type;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setType(String type) {
+        this.type = type == null ? null : type.trim();
+    }
+
+    public String getProjectid() {
+        return projectid;
+    }
+
+    public void setProjectid(String projectid) {
+        this.projectid = projectid == null ? null : projectid.trim();
     }
 
     public String getProjectname() {
@@ -89,12 +97,12 @@ public class Project {
         this.member = member == null ? null : member.trim();
     }
 
-    public Integer getTeachernum() {
-        return teachernum;
+    public String getTeachernames() {
+        return teachernames;
     }
 
-    public void setTeachernum(Integer teachernum) {
-        this.teachernum = teachernum;
+    public void setTeachernames(String teachernames) {
+        this.teachernames = teachernames == null ? null : teachernames.trim();
     }
 
     public String getStunum() {
@@ -151,13 +159,5 @@ public class Project {
 
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
-    }
-
-    public byte[] getType() {
-        return type;
-    }
-
-    public void setType(byte[] type) {
-        this.type = type;
     }
 }

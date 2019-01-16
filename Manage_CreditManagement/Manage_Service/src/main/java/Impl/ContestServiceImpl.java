@@ -1,6 +1,7 @@
 package Impl;
 
 import mapper.ContestItemMapper;
+import mapper.ContestMapper;
 import mapper.ContestrulesMapper;
 import mapper.ContesttypeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class ContestServiceImpl implements ContestService
     private ContestItemMapper contestItemMapper;
     @Autowired
     private ContesttypeMapper contesttypeMapper;
+    @Autowired
+    private ContestMapper contestMapper;
     @Override
     public List<Contestrules> getContestRules()
     {
@@ -48,7 +51,7 @@ public class ContestServiceImpl implements ContestService
     }
 
     @Override
-    public PageBean getContestTypePageBean(Integer pageSize, Integer currentPage, String contestDate, String contestName)
+    public PageBean getContestImportPageBean(Integer pageSize, Integer currentPage, String contestDate, String contestName)
     {
         Integer totalCount=0;
         totalCount=contestItemMapper.getContestImportTotalCount(contestName,contestDate);
@@ -56,7 +59,7 @@ public class ContestServiceImpl implements ContestService
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
         HashMap map=new HashMap();
-        System.out.println(contestDate);
+/*        System.out.println(contestDate);*/
         map.put("pageBean",pageBean);
         map.put("contestDate",contestDate);
         map.put("contestName",contestName);
@@ -68,6 +71,15 @@ public class ContestServiceImpl implements ContestService
     public void deleteContestTypeById(Integer id)
     {
         contesttypeMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void addContestType(String addContestDate, String addContestName)
+    {
+        Contesttype contesttype=new Contesttype();
+        contesttype.setContestname(addContestName);
+        contesttype.setContesttime(addContestDate);
+        contesttypeMapper.insertSelective(contesttype);
     }
 
 

@@ -7,6 +7,8 @@ public class Practice {
 
     private String practicename;
 
+    private String praticetype;
+
     private String level;
 
     private String score;
@@ -53,6 +55,14 @@ public class Practice {
 
     public void setPracticename(String practicename) {
         this.practicename = practicename == null ? null : practicename.trim();
+    }
+
+    public String getPraticetype() {
+        return praticetype;
+    }
+
+    public void setPraticetype(String praticetype) {
+        this.praticetype = praticetype == null ? null : praticetype.trim();
     }
 
     public String getLevel() {

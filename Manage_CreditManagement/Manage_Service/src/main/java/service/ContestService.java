@@ -11,7 +11,8 @@ public interface ContestService
     List<Contestrules> getContestRules();
     PageBean getPageBean(Integer pageSize,Integer currentPage);
     ContestPageBean getContestPageBean(String searchDate,String theme,String rank,String stuNum);
-    PageBean getContestTypePageBean(Integer pageSize, Integer currentPage, String contestDate, String contestName);
+    PageBean getContestImportPageBean(Integer pageSize, Integer currentPage, String contestDate, String contestName);
     void deleteContestTypeById(Integer id);
+    void addContestType(String addContestDate, String addContestName);
 }
 

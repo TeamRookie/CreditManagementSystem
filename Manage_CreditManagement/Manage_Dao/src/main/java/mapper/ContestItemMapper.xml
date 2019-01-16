@@ -15,10 +15,10 @@
     select count(*) from contesttype
      <where>
        <if test="contestDate !=null and contestDate != ''">
-            ${contestDate} = contesttime
+            #{contestDate} = contesttime
        </if>
        <if test="contestName != null and contestName != ''">
-            AND  ${contestName} = contestname
+            AND  contesttype.contestname = #{contestName}
        </if>
      </where>
   </select>

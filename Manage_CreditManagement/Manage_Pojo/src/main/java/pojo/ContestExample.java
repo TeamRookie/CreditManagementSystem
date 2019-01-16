@@ -164,6 +164,76 @@ public class ContestExample {
             return (Criteria) this;
         }
 
+        public Criteria andWorknameIsNull() {
+            addCriterion("workname is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameIsNotNull() {
+            addCriterion("workname is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameEqualTo(String value) {
+            addCriterion("workname =", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameNotEqualTo(String value) {
+            addCriterion("workname <>", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameGreaterThan(String value) {
+            addCriterion("workname >", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameGreaterThanOrEqualTo(String value) {
+            addCriterion("workname >=", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameLessThan(String value) {
+            addCriterion("workname <", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameLessThanOrEqualTo(String value) {
+            addCriterion("workname <=", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameLike(String value) {
+            addCriterion("workname like", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameNotLike(String value) {
+            addCriterion("workname not like", value, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameIn(List<String> values) {
+            addCriterion("workname in", values, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameNotIn(List<String> values) {
+            addCriterion("workname not in", values, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameBetween(String value1, String value2) {
+            addCriterion("workname between", value1, value2, "workname");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorknameNotBetween(String value1, String value2) {
+            addCriterion("workname not between", value1, value2, "workname");
+            return (Criteria) this;
+        }
+
         public Criteria andContesttimeIsNull() {
             addCriterion("contesttime is null");
             return (Criteria) this;
@@ -234,73 +304,73 @@ public class ContestExample {
             return (Criteria) this;
         }
 
-        public Criteria andThemeIsNull() {
-            addCriterion("theme is null");
+        public Criteria andContestnameIsNull() {
+            addCriterion("contestname is null");
             return (Criteria) this;
         }
 
-        public Criteria andThemeIsNotNull() {
-            addCriterion("theme is not null");
+        public Criteria andContestnameIsNotNull() {
+            addCriterion("contestname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andThemeEqualTo(String value) {
-            addCriterion("theme =", value, "theme");
+        public Criteria andContestnameEqualTo(String value) {
+            addCriterion("contestname =", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeNotEqualTo(String value) {
-            addCriterion("theme <>", value, "theme");
+        public Criteria andContestnameNotEqualTo(String value) {
+            addCriterion("contestname <>", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeGreaterThan(String value) {
-            addCriterion("theme >", value, "theme");
+        public Criteria andContestnameGreaterThan(String value) {
+            addCriterion("contestname >", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeGreaterThanOrEqualTo(String value) {
-            addCriterion("theme >=", value, "theme");
+        public Criteria andContestnameGreaterThanOrEqualTo(String value) {
+            addCriterion("contestname >=", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeLessThan(String value) {
-            addCriterion("theme <", value, "theme");
+        public Criteria andContestnameLessThan(String value) {
+            addCriterion("contestname <", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeLessThanOrEqualTo(String value) {
-            addCriterion("theme <=", value, "theme");
+        public Criteria andContestnameLessThanOrEqualTo(String value) {
+            addCriterion("contestname <=", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeLike(String value) {
-            addCriterion("theme like", value, "theme");
+        public Criteria andContestnameLike(String value) {
+            addCriterion("contestname like", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeNotLike(String value) {
-            addCriterion("theme not like", value, "theme");
+        public Criteria andContestnameNotLike(String value) {
+            addCriterion("contestname not like", value, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeIn(List<String> values) {
-            addCriterion("theme in", values, "theme");
+        public Criteria andContestnameIn(List<String> values) {
+            addCriterion("contestname in", values, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeNotIn(List<String> values) {
-            addCriterion("theme not in", values, "theme");
+        public Criteria andContestnameNotIn(List<String> values) {
+            addCriterion("contestname not in", values, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeBetween(String value1, String value2) {
-            addCriterion("theme between", value1, value2, "theme");
+        public Criteria andContestnameBetween(String value1, String value2) {
+            addCriterion("contestname between", value1, value2, "contestname");
             return (Criteria) this;
         }
 
-        public Criteria andThemeNotBetween(String value1, String value2) {
-            addCriterion("theme not between", value1, value2, "theme");
+        public Criteria andContestnameNotBetween(String value1, String value2) {
+            addCriterion("contestname not between", value1, value2, "contestname");
             return (Criteria) this;
         }
 

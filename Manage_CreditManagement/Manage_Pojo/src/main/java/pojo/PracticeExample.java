@@ -304,6 +304,76 @@ public class PracticeExample {
             return (Criteria) this;
         }
 
+        public Criteria andPraticetypeIsNull() {
+            addCriterion("praticetype is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeIsNotNull() {
+            addCriterion("praticetype is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeEqualTo(String value) {
+            addCriterion("praticetype =", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeNotEqualTo(String value) {
+            addCriterion("praticetype <>", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeGreaterThan(String value) {
+            addCriterion("praticetype >", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeGreaterThanOrEqualTo(String value) {
+            addCriterion("praticetype >=", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeLessThan(String value) {
+            addCriterion("praticetype <", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeLessThanOrEqualTo(String value) {
+            addCriterion("praticetype <=", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeLike(String value) {
+            addCriterion("praticetype like", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeNotLike(String value) {
+            addCriterion("praticetype not like", value, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeIn(List<String> values) {
+            addCriterion("praticetype in", values, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeNotIn(List<String> values) {
+            addCriterion("praticetype not in", values, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeBetween(String value1, String value2) {
+            addCriterion("praticetype between", value1, value2, "praticetype");
+            return (Criteria) this;
+        }
+
+        public Criteria andPraticetypeNotBetween(String value1, String value2) {
+            addCriterion("praticetype not between", value1, value2, "praticetype");
+            return (Criteria) this;
+        }
+
         public Criteria andLevelIsNull() {
             addCriterion("level is null");
             return (Criteria) this;

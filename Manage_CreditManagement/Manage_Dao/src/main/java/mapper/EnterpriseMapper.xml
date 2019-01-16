@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.EnterpriseMapper" >
+  <resultMap id="BaseResultMap" type="pojo.Enterprise" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="enterpriseid" property="enterpriseid" jdbcType="VARCHAR" />
+    <result column="enterprisename" property="enterprisename" jdbcType="VARCHAR" />
+    <result column="enterprisetype" property="enterprisetype" jdbcType="VARCHAR" />
+    <result column="residence" property="residence" jdbcType="VARCHAR" />
+    <result column="representative" property="representative" jdbcType="VARCHAR" />
+    <result column="establishtime" property="establishtime" jdbcType="VARCHAR" />
+    <result column="businessscope" property="businessscope" jdbcType="VARCHAR" />
+    <result column="shareholder" property="shareholder" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, enterpriseid, enterprisename, enterprisetype, residence, representative, establishtime, 
+    businessscope, shareholder
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.EnterpriseExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from enterprise
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from enterprise
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from enterprise
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="pojo.EnterpriseExample" >
+    delete from enterprise
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="pojo.Enterprise" >
+    insert into enterprise (id, enterpriseid, enterprisename, 
+      enterprisetype, residence, representative, 
+      establishtime, businessscope, shareholder
+      )
+    values (#{id,jdbcType=INTEGER}, #{enterpriseid,jdbcType=VARCHAR}, #{enterprisename,jdbcType=VARCHAR}, 
+      #{enterprisetype,jdbcType=VARCHAR}, #{residence,jdbcType=VARCHAR}, #{representative,jdbcType=VARCHAR}, 
+      #{establishtime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{shareholder,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="pojo.Enterprise" >
+    insert into enterprise
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="enterpriseid != null" >
+        enterpriseid,
+      </if>
+      <if test="enterprisename != null" >
+        enterprisename,
+      </if>
+      <if test="enterprisetype != null" >
+        enterprisetype,
+      </if>
+      <if test="residence != null" >
+        residence,
+      </if>
+      <if test="representative != null" >
+        representative,
+      </if>
+      <if test="establishtime != null" >
+        establishtime,
+      </if>
+      <if test="businessscope != null" >
+        businessscope,
+      </if>
+      <if test="shareholder != null" >
+        shareholder,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="enterpriseid != null" >
+        #{enterpriseid,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisename != null" >
+        #{enterprisename,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisetype != null" >
+        #{enterprisetype,jdbcType=VARCHAR},
+      </if>
+      <if test="residence != null" >
+        #{residence,jdbcType=VARCHAR},
+      </if>
+      <if test="representative != null" >
+        #{representative,jdbcType=VARCHAR},
+      </if>
+      <if test="establishtime != null" >
+        #{establishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="businessscope != null" >
+        #{businessscope,jdbcType=VARCHAR},
+      </if>
+      <if test="shareholder != null" >
+        #{shareholder,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="pojo.EnterpriseExample" resultType="java.lang.Integer" >
+    select count(*) from enterprise
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update enterprise
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.enterpriseid != null" >
+        enterpriseid = #{record.enterpriseid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enterprisename != null" >
+        enterprisename = #{record.enterprisename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enterprisetype != null" >
+        enterprisetype = #{record.enterprisetype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.residence != null" >
+        residence = #{record.residence,jdbcType=VARCHAR},
+      </if>
+      <if test="record.representative != null" >
+        representative = #{record.representative,jdbcType=VARCHAR},
+      </if>
+      <if test="record.establishtime != null" >
+        establishtime = #{record.establishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessscope != null" >
+        businessscope = #{record.businessscope,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shareholder != null" >
+        shareholder = #{record.shareholder,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update enterprise
+    set id = #{record.id,jdbcType=INTEGER},
+      enterpriseid = #{record.enterpriseid,jdbcType=VARCHAR},
+      enterprisename = #{record.enterprisename,jdbcType=VARCHAR},
+      enterprisetype = #{record.enterprisetype,jdbcType=VARCHAR},
+      residence = #{record.residence,jdbcType=VARCHAR},
+      representative = #{record.representative,jdbcType=VARCHAR},
+      establishtime = #{record.establishtime,jdbcType=VARCHAR},
+      businessscope = #{record.businessscope,jdbcType=VARCHAR},
+      shareholder = #{record.shareholder,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="pojo.Enterprise" >
+    update enterprise
+    <set >
+      <if test="enterpriseid != null" >
+        enterpriseid = #{enterpriseid,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisename != null" >
+        enterprisename = #{enterprisename,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisetype != null" >
+        enterprisetype = #{enterprisetype,jdbcType=VARCHAR},
+      </if>
+      <if test="residence != null" >
+        residence = #{residence,jdbcType=VARCHAR},
+      </if>
+      <if test="representative != null" >
+        representative = #{representative,jdbcType=VARCHAR},
+      </if>
+      <if test="establishtime != null" >
+        establishtime = #{establishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="businessscope != null" >
+        businessscope = #{businessscope,jdbcType=VARCHAR},
+      </if>
+      <if test="shareholder != null" >
+        shareholder = #{shareholder,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pojo.Enterprise" >
+    update enterprise
+    set enterpriseid = #{enterpriseid,jdbcType=VARCHAR},
+      enterprisename = #{enterprisename,jdbcType=VARCHAR},
+      enterprisetype = #{enterprisetype,jdbcType=VARCHAR},
+      residence = #{residence,jdbcType=VARCHAR},
+      representative = #{representative,jdbcType=VARCHAR},
+      establishtime = #{establishtime,jdbcType=VARCHAR},
+      businessscope = #{businessscope,jdbcType=VARCHAR},
+      shareholder = #{shareholder,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

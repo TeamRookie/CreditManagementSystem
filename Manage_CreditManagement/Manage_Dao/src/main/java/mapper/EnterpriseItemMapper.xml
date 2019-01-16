@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.EnterpriseItemMapper" >
+    <select id="getTotalCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM enterpriserules;
+    </select>
+    <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Enterpriserules">
+        SELECT
+        *
+        FROM
+        enterpriserules
+        limit ${start},#{pageSize};
+    </select>
+</mapper>

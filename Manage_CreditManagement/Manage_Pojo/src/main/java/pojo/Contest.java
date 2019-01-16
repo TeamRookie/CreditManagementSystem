@@ -3,9 +3,11 @@ package pojo;
 public class Contest {
     private Integer id;
 
+    private String workname;
+
     private String contesttime;
 
-    private String theme;
+    private String contestname;
 
     private String level;
 
@@ -41,6 +43,14 @@ public class Contest {
         this.id = id;
     }
 
+    public String getWorkname() {
+        return workname;
+    }
+
+    public void setWorkname(String workname) {
+        this.workname = workname == null ? null : workname.trim();
+    }
+
     public String getContesttime() {
         return contesttime;
     }
@@ -49,12 +59,12 @@ public class Contest {
         this.contesttime = contesttime == null ? null : contesttime.trim();
     }
 
-    public String getTheme() {
-        return theme;
+    public String getContestname() {
+        return contestname;
     }
 
-    public void setTheme(String theme) {
-        this.theme = theme == null ? null : theme.trim();
+    public void setContestname(String contestname) {
+        this.contestname = contestname == null ? null : contestname.trim();
     }
 
     public String getLevel() {

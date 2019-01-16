@@ -325,7 +325,7 @@
                                 </td>
                                 <td class="center">
                                     <label class="pos-rel">
-                                        ${item.rank}
+                                        ${item.responsibility}
                                     </label>
                                 </td>
                                 <td class="center">

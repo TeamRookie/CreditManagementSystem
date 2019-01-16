@@ -374,73 +374,73 @@ public class ProjecttypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andNumIsNull() {
-            addCriterion("num is null");
+        public Criteria andProjectidIsNull() {
+            addCriterion("projectid is null");
             return (Criteria) this;
         }
 
-        public Criteria andNumIsNotNull() {
-            addCriterion("num is not null");
+        public Criteria andProjectidIsNotNull() {
+            addCriterion("projectid is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNumEqualTo(String value) {
-            addCriterion("num =", value, "num");
+        public Criteria andProjectidEqualTo(String value) {
+            addCriterion("projectid =", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotEqualTo(String value) {
-            addCriterion("num <>", value, "num");
+        public Criteria andProjectidNotEqualTo(String value) {
+            addCriterion("projectid <>", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumGreaterThan(String value) {
-            addCriterion("num >", value, "num");
+        public Criteria andProjectidGreaterThan(String value) {
+            addCriterion("projectid >", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumGreaterThanOrEqualTo(String value) {
-            addCriterion("num >=", value, "num");
+        public Criteria andProjectidGreaterThanOrEqualTo(String value) {
+            addCriterion("projectid >=", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumLessThan(String value) {
-            addCriterion("num <", value, "num");
+        public Criteria andProjectidLessThan(String value) {
+            addCriterion("projectid <", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumLessThanOrEqualTo(String value) {
-            addCriterion("num <=", value, "num");
+        public Criteria andProjectidLessThanOrEqualTo(String value) {
+            addCriterion("projectid <=", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumLike(String value) {
-            addCriterion("num like", value, "num");
+        public Criteria andProjectidLike(String value) {
+            addCriterion("projectid like", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotLike(String value) {
-            addCriterion("num not like", value, "num");
+        public Criteria andProjectidNotLike(String value) {
+            addCriterion("projectid not like", value, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumIn(List<String> values) {
-            addCriterion("num in", values, "num");
+        public Criteria andProjectidIn(List<String> values) {
+            addCriterion("projectid in", values, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotIn(List<String> values) {
-            addCriterion("num not in", values, "num");
+        public Criteria andProjectidNotIn(List<String> values) {
+            addCriterion("projectid not in", values, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumBetween(String value1, String value2) {
-            addCriterion("num between", value1, value2, "num");
+        public Criteria andProjectidBetween(String value1, String value2) {
+            addCriterion("projectid between", value1, value2, "projectid");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotBetween(String value1, String value2) {
-            addCriterion("num not between", value1, value2, "num");
+        public Criteria andProjectidNotBetween(String value1, String value2) {
+            addCriterion("projectid not between", value1, value2, "projectid");
             return (Criteria) this;
         }
     }

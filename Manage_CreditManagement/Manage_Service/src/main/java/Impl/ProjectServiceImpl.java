@@ -2,14 +2,14 @@ package Impl;
 
 import mapper.ProjectItemMapper;
 import mapper.ProjectrulesMapper;
+import mapper.ProjecttypeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pojo.PageBean;
-import pojo.Projectrules;
-import pojo.ProjectrulesExample;
+import pojo.*;
 import service.ProjectService;
 
+import java.util.HashMap;
 import java.util.List;
 @Service
 @Transactional
@@ -18,7 +18,9 @@ public class ProjectServiceImpl implements ProjectService
     @Autowired
     private ProjectrulesMapper projectRulesMapper;
     @Autowired
-    private ProjectItemMapper projectRulesItemMapper;
+    private ProjectItemMapper projectItemMapper;
+    @Autowired
+    private  ProjecttypeMapper projecttypeMapper;
     @Override
     public List<Projectrules> getProjectRules()
     {
@@ -29,12 +31,44 @@ public class ProjectServiceImpl implements ProjectService
     public PageBean getPageBean(Integer pageSize, Integer currentPage)
     {
         Integer totalCount=0;
-        totalCount=projectRulesItemMapper.getTotalCount();
+        totalCount=projectItemMapper.getTotalCount();
         PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
-        List<Projectrules> projectRulesList = projectRulesItemMapper.getPageBean(pageBean);
+        List<Projectrules> projectRulesList = projectItemMapper.getPageBean(pageBean);
         pageBean.setPageList(projectRulesList);
         return  pageBean;
     }
+
+    @Override
+    public PageBean getProjectImportPageBean(String projectTime, String projectName, Integer pageSize, Integer currentPage)
+    {
+        Integer totalCount=0;
+        totalCount=projectItemMapper.getProjectImportTotalCount(projectTime,projectName);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("projectName",projectName);
+        map.put("projectTime",projectTime);
+        System.out.println(projectName);
+        System.out.println(totalCount);
+        List<Projecttype> projectTypeList = projectItemMapper.getProjectImportPageBean(map);
+        pageBean.setPageList(projectTypeList);
+        return  pageBean;
+    }
+
+    @Override
+    public void deleteProjectTypeById(Integer id)
+    {
+        projecttypeMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void addProjectType(Projecttype projecttype)
+    {
+        projecttypeMapper.insertSelective(projecttype);
+    }
+
 }

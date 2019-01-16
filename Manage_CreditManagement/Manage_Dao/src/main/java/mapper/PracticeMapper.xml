@@ -5,6 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="practicetime" property="practicetime" jdbcType="VARCHAR" />
     <result column="practicename" property="practicename" jdbcType="VARCHAR" />
+    <result column="praticetype" property="praticetype" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="VARCHAR" />
     <result column="score" property="score" jdbcType="VARCHAR" />
     <result column="member" property="member" jdbcType="VARCHAR" />
@@ -77,8 +78,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, practicetime, practicename, level, score, member, teachernum, stunum, credit, 
-    facultynum, majornum, gradenum, type, stuname, url
+    id, practicetime, practicename, praticetype, level, score, member, teachernum, stunum, 
+    credit, facultynum, majornum, gradenum, type, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.PracticeExample" >
     select
@@ -112,15 +113,17 @@
   </delete>
   <insert id="insert" parameterType="pojo.Practice" >
     insert into practice (id, practicetime, practicename, 
-      level, score, member, 
-      teachernum, stunum, credit, 
-      facultynum, majornum, gradenum, 
-      type, stuname, url)
+      praticetype, level, score, 
+      member, teachernum, stunum, 
+      credit, facultynum, majornum, 
+      gradenum, type, stuname, 
+      url)
     values (#{id,jdbcType=INTEGER}, #{practicetime,jdbcType=VARCHAR}, #{practicename,jdbcType=VARCHAR}, 
-      #{level,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, #{member,jdbcType=VARCHAR}, 
-      #{teachernum,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
-      #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
-      #{type,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
+      #{praticetype,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
+      #{member,jdbcType=VARCHAR}, #{teachernum,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
+      #{gradenum,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Practice" >
     insert into practice
@@ -133,6 +136,9 @@
       </if>
       <if test="practicename != null" >
         practicename,
+      </if>
+      <if test="praticetype != null" >
+        praticetype,
       </if>
       <if test="level != null" >
         level,
@@ -180,6 +186,9 @@
       </if>
       <if test="practicename != null" >
         #{practicename,jdbcType=VARCHAR},
+      </if>
+      <if test="praticetype != null" >
+        #{praticetype,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         #{level,jdbcType=VARCHAR},
@@ -237,6 +246,9 @@
       <if test="record.practicename != null" >
         practicename = #{record.practicename,jdbcType=VARCHAR},
       </if>
+      <if test="record.praticetype != null" >
+        praticetype = #{record.praticetype,jdbcType=VARCHAR},
+      </if>
       <if test="record.level != null" >
         level = #{record.level,jdbcType=VARCHAR},
       </if>
@@ -283,6 +295,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       practicetime = #{record.practicetime,jdbcType=VARCHAR},
       practicename = #{record.practicename,jdbcType=VARCHAR},
+      praticetype = #{record.praticetype,jdbcType=VARCHAR},
       level = #{record.level,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=VARCHAR},
       member = #{record.member,jdbcType=VARCHAR},
@@ -307,6 +320,9 @@
       </if>
       <if test="practicename != null" >
         practicename = #{practicename,jdbcType=VARCHAR},
+      </if>
+      <if test="praticetype != null" >
+        praticetype = #{praticetype,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         level = #{level,jdbcType=VARCHAR},
@@ -351,6 +367,7 @@
     update practice
     set practicetime = #{practicetime,jdbcType=VARCHAR},
       practicename = #{practicename,jdbcType=VARCHAR},
+      praticetype = #{praticetype,jdbcType=VARCHAR},
       level = #{level,jdbcType=VARCHAR},
       score = #{score,jdbcType=VARCHAR},
       member = #{member,jdbcType=VARCHAR},

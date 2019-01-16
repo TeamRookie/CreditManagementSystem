@@ -7,4 +7,27 @@
   <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Projectrules">
     select * from projectrules limit #{start},#{pageSize};
   </select>
+  <select id="getProjectImportTotalCount" resultType="java.lang.Integer">
+    select count(*) from projecttype
+    <where>
+      <if test="projectTime !=null and projectTime != ''">
+        #{projectTime} = projecttime
+      </if>
+      <if test="projectName != null and projectName != ''">
+        AND  #{projectName} = projectname
+      </if>
+    </where>
+  </select>
+  <select id="getProjectImportPageBean" parameterType="hashMap" resultType="pojo.Projecttype">
+    select * from projecttype
+    <where>
+      <if test="projectTime !=null and projectTime != ''">
+        #{projectTime} = projecttime
+      </if>
+      <if test="projectName != null and projectName != ''">
+        AND  #{projectName} = projectname
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
 </mapper>

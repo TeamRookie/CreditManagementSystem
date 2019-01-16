@@ -11,4 +11,27 @@
     associationrules
     limit ${start},#{pageSize}
   </select>
+  <select id="getAssociationImportTotalCount" resultType="java.lang.Integer">
+    select count(*) from associationtype
+    <where>
+      <if test="associationTime !=null and associationTime != ''">
+        #{associationTime} = associationtime
+      </if>
+      <if test="associationName != null and associationName != ''">
+        AND  associationname = #{associationName}
+      </if>
+    </where>
+  </select>
+  <select id="getAssociationImportPageBean" parameterType="hashMap" resultType="pojo.Associationtype">
+    select * from associationtype
+    <where>
+      <if test="associationTime !=null and associationTime != ''">
+        #{associationTime} = associationtime
+      </if>
+      <if test="associationName != null and associationName != ''">
+        AND  associationname = #{associationName}
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
 </mapper>

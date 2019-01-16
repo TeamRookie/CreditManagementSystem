@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.ProductionMapper" >
   <resultMap id="BaseResultMap" type="pojo.Production" >
-    <id column="num" property="num" jdbcType="INTEGER" />
+    <id column="id" property="id" jdbcType="INTEGER" />
     <result column="productiontime" property="productiontime" jdbcType="VARCHAR" />
-    <result column="production" property="production" jdbcType="VARCHAR" />
+    <result column="autograph" property="autograph" jdbcType="VARCHAR" />
+    <result column="productionname" property="productionname" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="VARCHAR" />
     <result column="rank" property="rank" jdbcType="VARCHAR" />
-    <result column="cachet" property="cachet" jdbcType="VARCHAR" />
-    <result column="booktime" property="booktime" jdbcType="VARCHAR" />
-    <result column="member" property="member" jdbcType="VARCHAR" />
-    <result column="teachernum" property="teachernum" jdbcType="VARCHAR" />
+    <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
@@ -18,6 +18,7 @@
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="productiontype" property="productiontype" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -78,8 +79,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, productiontime, production, level, rank, cachet, booktime, member, teachernum, 
-    stunum, credit, facultynum, majornum, gradenum, stuname, url
+    id, productiontime, autograph, productionname, author, source, level, rank, responsibility, 
+    stunum, credit, facultynum, majornum, gradenum, stuname, url, productiontype
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ProductionExample" >
     select
@@ -99,11 +100,11 @@
     select 
     <include refid="Base_Column_List" />
     from production
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from production
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.ProductionExample" >
     delete from production
@@ -112,30 +113,39 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Production" >
-    insert into production (num, productiontime, production, 
-      level, rank, cachet, 
-      booktime, member, teachernum, 
+    insert into production (id, productiontime, autograph, 
+      productionname, author, source, 
+      level, rank, responsibility, 
       stunum, credit, facultynum, 
       majornum, gradenum, stuname, 
-      url)
-    values (#{num,jdbcType=INTEGER}, #{productiontime,jdbcType=VARCHAR}, #{production,jdbcType=VARCHAR}, 
-      #{level,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, #{cachet,jdbcType=VARCHAR}, 
-      #{booktime,jdbcType=VARCHAR}, #{member,jdbcType=VARCHAR}, #{teachernum,jdbcType=VARCHAR}, 
+      url, productiontype)
+    values (#{id,jdbcType=INTEGER}, #{productiontime,jdbcType=VARCHAR}, #{autograph,jdbcType=VARCHAR}, 
+      #{productionname,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
+      #{level,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, 
       #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, 
       #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, 
-      #{url,jdbcType=VARCHAR})
+      #{url,jdbcType=VARCHAR}, #{productiontype,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Production" >
     insert into production
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="id != null" >
+        id,
       </if>
       <if test="productiontime != null" >
         productiontime,
       </if>
-      <if test="production != null" >
-        production,
+      <if test="autograph != null" >
+        autograph,
+      </if>
+      <if test="productionname != null" >
+        productionname,
+      </if>
+      <if test="author != null" >
+        author,
+      </if>
+      <if test="source != null" >
+        source,
       </if>
       <if test="level != null" >
         level,
@@ -143,17 +153,8 @@
       <if test="rank != null" >
         rank,
       </if>
-      <if test="cachet != null" >
-        cachet,
-      </if>
-      <if test="booktime != null" >
-        booktime,
-      </if>
-      <if test="member != null" >
-        member,
-      </if>
-      <if test="teachernum != null" >
-        teachernum,
+      <if test="responsibility != null" >
+        responsibility,
       </if>
       <if test="stunum != null" >
         stunum,
@@ -176,16 +177,28 @@
       <if test="url != null" >
         url,
       </if>
+      <if test="productiontype != null" >
+        productiontype,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
       <if test="productiontime != null" >
         #{productiontime,jdbcType=VARCHAR},
       </if>
-      <if test="production != null" >
-        #{production,jdbcType=VARCHAR},
+      <if test="autograph != null" >
+        #{autograph,jdbcType=VARCHAR},
+      </if>
+      <if test="productionname != null" >
+        #{productionname,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         #{level,jdbcType=VARCHAR},
@@ -193,17 +206,8 @@
       <if test="rank != null" >
         #{rank,jdbcType=VARCHAR},
       </if>
-      <if test="cachet != null" >
-        #{cachet,jdbcType=VARCHAR},
-      </if>
-      <if test="booktime != null" >
-        #{booktime,jdbcType=VARCHAR},
-      </if>
-      <if test="member != null" >
-        #{member,jdbcType=VARCHAR},
-      </if>
-      <if test="teachernum != null" >
-        #{teachernum,jdbcType=VARCHAR},
+      <if test="responsibility != null" >
+        #{responsibility,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         #{stunum,jdbcType=VARCHAR},
@@ -226,6 +230,9 @@
       <if test="url != null" >
         #{url,jdbcType=VARCHAR},
       </if>
+      <if test="productiontype != null" >
+        #{productiontype,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <select id="countByExample" parameterType="pojo.ProductionExample" resultType="java.lang.Integer" >
@@ -237,14 +244,23 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update production
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.productiontime != null" >
         productiontime = #{record.productiontime,jdbcType=VARCHAR},
       </if>
-      <if test="record.production != null" >
-        production = #{record.production,jdbcType=VARCHAR},
+      <if test="record.autograph != null" >
+        autograph = #{record.autograph,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productionname != null" >
+        productionname = #{record.productionname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.author != null" >
+        author = #{record.author,jdbcType=VARCHAR},
+      </if>
+      <if test="record.source != null" >
+        source = #{record.source,jdbcType=VARCHAR},
       </if>
       <if test="record.level != null" >
         level = #{record.level,jdbcType=VARCHAR},
@@ -252,17 +268,8 @@
       <if test="record.rank != null" >
         rank = #{record.rank,jdbcType=VARCHAR},
       </if>
-      <if test="record.cachet != null" >
-        cachet = #{record.cachet,jdbcType=VARCHAR},
-      </if>
-      <if test="record.booktime != null" >
-        booktime = #{record.booktime,jdbcType=VARCHAR},
-      </if>
-      <if test="record.member != null" >
-        member = #{record.member,jdbcType=VARCHAR},
-      </if>
-      <if test="record.teachernum != null" >
-        teachernum = #{record.teachernum,jdbcType=VARCHAR},
+      <if test="record.responsibility != null" >
+        responsibility = #{record.responsibility,jdbcType=VARCHAR},
       </if>
       <if test="record.stunum != null" >
         stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -285,6 +292,9 @@
       <if test="record.url != null" >
         url = #{record.url,jdbcType=VARCHAR},
       </if>
+      <if test="record.productiontype != null" >
+        productiontype = #{record.productiontype,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -292,22 +302,23 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update production
-    set num = #{record.num,jdbcType=INTEGER},
+    set id = #{record.id,jdbcType=INTEGER},
       productiontime = #{record.productiontime,jdbcType=VARCHAR},
-      production = #{record.production,jdbcType=VARCHAR},
+      autograph = #{record.autograph,jdbcType=VARCHAR},
+      productionname = #{record.productionname,jdbcType=VARCHAR},
+      author = #{record.author,jdbcType=VARCHAR},
+      source = #{record.source,jdbcType=VARCHAR},
       level = #{record.level,jdbcType=VARCHAR},
       rank = #{record.rank,jdbcType=VARCHAR},
-      cachet = #{record.cachet,jdbcType=VARCHAR},
-      booktime = #{record.booktime,jdbcType=VARCHAR},
-      member = #{record.member,jdbcType=VARCHAR},
-      teachernum = #{record.teachernum,jdbcType=VARCHAR},
+      responsibility = #{record.responsibility,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       majornum = #{record.majornum,jdbcType=INTEGER},
       gradenum = #{record.gradenum,jdbcType=INTEGER},
       stuname = #{record.stuname,jdbcType=VARCHAR},
-      url = #{record.url,jdbcType=VARCHAR}
+      url = #{record.url,jdbcType=VARCHAR},
+      productiontype = #{record.productiontype,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -318,8 +329,17 @@
       <if test="productiontime != null" >
         productiontime = #{productiontime,jdbcType=VARCHAR},
       </if>
-      <if test="production != null" >
-        production = #{production,jdbcType=VARCHAR},
+      <if test="autograph != null" >
+        autograph = #{autograph,jdbcType=VARCHAR},
+      </if>
+      <if test="productionname != null" >
+        productionname = #{productionname,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=VARCHAR},
       </if>
       <if test="level != null" >
         level = #{level,jdbcType=VARCHAR},
@@ -327,17 +347,8 @@
       <if test="rank != null" >
         rank = #{rank,jdbcType=VARCHAR},
       </if>
-      <if test="cachet != null" >
-        cachet = #{cachet,jdbcType=VARCHAR},
-      </if>
-      <if test="booktime != null" >
-        booktime = #{booktime,jdbcType=VARCHAR},
-      </if>
-      <if test="member != null" >
-        member = #{member,jdbcType=VARCHAR},
-      </if>
-      <if test="teachernum != null" >
-        teachernum = #{teachernum,jdbcType=VARCHAR},
+      <if test="responsibility != null" >
+        responsibility = #{responsibility,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         stunum = #{stunum,jdbcType=VARCHAR},
@@ -360,26 +371,30 @@
       <if test="url != null" >
         url = #{url,jdbcType=VARCHAR},
       </if>
+      <if test="productiontype != null" >
+        productiontype = #{productiontype,jdbcType=VARCHAR},
+      </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Production" >
     update production
     set productiontime = #{productiontime,jdbcType=VARCHAR},
-      production = #{production,jdbcType=VARCHAR},
+      autograph = #{autograph,jdbcType=VARCHAR},
+      productionname = #{productionname,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      source = #{source,jdbcType=VARCHAR},
       level = #{level,jdbcType=VARCHAR},
       rank = #{rank,jdbcType=VARCHAR},
-      cachet = #{cachet,jdbcType=VARCHAR},
-      booktime = #{booktime,jdbcType=VARCHAR},
-      member = #{member,jdbcType=VARCHAR},
-      teachernum = #{teachernum,jdbcType=VARCHAR},
+      responsibility = #{responsibility,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
       facultynum = #{facultynum,jdbcType=INTEGER},
       majornum = #{majornum,jdbcType=INTEGER},
       gradenum = #{gradenum,jdbcType=INTEGER},
       stuname = #{stuname,jdbcType=VARCHAR},
-      url = #{url,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+      url = #{url,jdbcType=VARCHAR},
+      productiontype = #{productiontype,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

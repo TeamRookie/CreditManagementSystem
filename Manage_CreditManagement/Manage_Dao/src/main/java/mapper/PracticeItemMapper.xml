@@ -7,4 +7,27 @@
   <select id="getPageBean" resultType="pojo.Practicerules" parameterType="pojo.PageBean">
     select * from practicerules limit #{start},#{pageSize};
   </select>
+  <select id="getPracticeImportTotalCount" resultType="java.lang.Integer">
+    select count(*) from practicetype
+    <where>
+      <if test="practiceTime !=null and practiceTime != ''">
+        #{practiceTime} = practicetime
+      </if>
+      <if test="practiceName != null and practiceName != ''">
+        AND  #{practiceName} = practicename
+      </if>
+    </where>
+  </select>
+  <select id="getPracticeImportPageBean" parameterType="hashMap" resultType="pojo.Practicetype">
+    select * from practicetype
+    <where>
+      <if test="practiceTime !=null and practiceTime != ''">
+        #{practiceTime} = practicetime
+      </if>
+      <if test="practiceName != null and practiceName != ''">
+        AND  #{practiceName} = practicename
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
 </mapper>

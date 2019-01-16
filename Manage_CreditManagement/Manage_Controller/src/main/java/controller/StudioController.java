@@ -30,4 +30,9 @@ public class StudioController
     {
         return  "studio";
     }
+    @RequestMapping("/studioImport")
+    public  String getStudioImport(String studioName,String studioLevel)
+    {
+        return "import/studioImport";
+    }
 }
