@@ -4,9 +4,8 @@
   <resultMap id="BaseResultMap" type="pojo.Safety" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="safetytime" property="safetytime" jdbcType="VARCHAR" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
-    <result column="teachernum" property="teachernum" jdbcType="INTEGER" />
-    <result column="member" property="member" jdbcType="VARCHAR" />
+    <result column="safetylevel" property="safetylevel" jdbcType="VARCHAR" />
+    <result column="teachername" property="teachername" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
@@ -74,8 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, safetytime, level, teachernum, member, stunum, credit, facultynum, majornum, 
-    gradenum, stuname, url
+    id, safetytime, safetylevel, teachername, stunum, credit, facultynum, majornum, gradenum, 
+    stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.SafetyExample" >
     select
@@ -108,16 +107,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Safety" >
-    insert into safety (id, safetytime, level, 
-      teachernum, member, stunum, 
-      credit, facultynum, majornum, 
-      gradenum, stuname, url
-      )
-    values (#{id,jdbcType=INTEGER}, #{safetytime,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, 
-      #{teachernum,jdbcType=INTEGER}, #{member,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
-      #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
-      #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
-      )
+    insert into safety (id, safetytime, safetylevel, 
+      teachername, stunum, credit, 
+      facultynum, majornum, gradenum, 
+      stuname, url)
+    values (#{id,jdbcType=INTEGER}, #{safetytime,jdbcType=VARCHAR}, #{safetylevel,jdbcType=VARCHAR}, 
+      #{teachername,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
+      #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
+      #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Safety" >
     insert into safety
@@ -128,14 +125,11 @@
       <if test="safetytime != null" >
         safetytime,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="safetylevel != null" >
+        safetylevel,
       </if>
-      <if test="teachernum != null" >
-        teachernum,
-      </if>
-      <if test="member != null" >
-        member,
+      <if test="teachername != null" >
+        teachername,
       </if>
       <if test="stunum != null" >
         stunum,
@@ -166,14 +160,11 @@
       <if test="safetytime != null" >
         #{safetytime,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="safetylevel != null" >
+        #{safetylevel,jdbcType=VARCHAR},
       </if>
-      <if test="teachernum != null" >
-        #{teachernum,jdbcType=INTEGER},
-      </if>
-      <if test="member != null" >
-        #{member,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        #{teachername,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         #{stunum,jdbcType=VARCHAR},
@@ -213,14 +204,11 @@
       <if test="record.safetytime != null" >
         safetytime = #{record.safetytime,jdbcType=VARCHAR},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.safetylevel != null" >
+        safetylevel = #{record.safetylevel,jdbcType=VARCHAR},
       </if>
-      <if test="record.teachernum != null" >
-        teachernum = #{record.teachernum,jdbcType=INTEGER},
-      </if>
-      <if test="record.member != null" >
-        member = #{record.member,jdbcType=VARCHAR},
+      <if test="record.teachername != null" >
+        teachername = #{record.teachername,jdbcType=VARCHAR},
       </if>
       <if test="record.stunum != null" >
         stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -252,9 +240,8 @@
     update safety
     set id = #{record.id,jdbcType=INTEGER},
       safetytime = #{record.safetytime,jdbcType=VARCHAR},
-      level = #{record.level,jdbcType=VARCHAR},
-      teachernum = #{record.teachernum,jdbcType=INTEGER},
-      member = #{record.member,jdbcType=VARCHAR},
+      safetylevel = #{record.safetylevel,jdbcType=VARCHAR},
+      teachername = #{record.teachername,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
@@ -272,14 +259,11 @@
       <if test="safetytime != null" >
         safetytime = #{safetytime,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="safetylevel != null" >
+        safetylevel = #{safetylevel,jdbcType=VARCHAR},
       </if>
-      <if test="teachernum != null" >
-        teachernum = #{teachernum,jdbcType=INTEGER},
-      </if>
-      <if test="member != null" >
-        member = #{member,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        teachername = #{teachername,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         stunum = #{stunum,jdbcType=VARCHAR},
@@ -308,9 +292,8 @@
   <update id="updateByPrimaryKey" parameterType="pojo.Safety" >
     update safety
     set safetytime = #{safetytime,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR},
-      teachernum = #{teachernum,jdbcType=INTEGER},
-      member = #{member,jdbcType=VARCHAR},
+      safetylevel = #{safetylevel,jdbcType=VARCHAR},
+      teachername = #{teachername,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
       facultynum = #{facultynum,jdbcType=INTEGER},

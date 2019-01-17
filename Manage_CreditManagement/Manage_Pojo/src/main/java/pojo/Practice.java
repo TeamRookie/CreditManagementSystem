@@ -7,15 +7,15 @@ public class Practice {
 
     private String practicename;
 
-    private String praticetype;
+    private String practicetype;
 
-    private String level;
+    private String practicelevel;
 
     private String score;
 
     private String member;
 
-    private String teachernum;
+    private String teachername;
 
     private String stunum;
 
@@ -26,8 +26,6 @@ public class Practice {
     private Integer majornum;
 
     private Integer gradenum;
-
-    private String type;
 
     private String stuname;
 
@@ -57,20 +55,20 @@ public class Practice {
         this.practicename = practicename == null ? null : practicename.trim();
     }
 
-    public String getPraticetype() {
-        return praticetype;
+    public String getPracticetype() {
+        return practicetype;
     }
 
-    public void setPraticetype(String praticetype) {
-        this.praticetype = praticetype == null ? null : praticetype.trim();
+    public void setPracticetype(String practicetype) {
+        this.practicetype = practicetype == null ? null : practicetype.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getPracticelevel() {
+        return practicelevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setPracticelevel(String practicelevel) {
+        this.practicelevel = practicelevel == null ? null : practicelevel.trim();
     }
 
     public String getScore() {
@@ -89,12 +87,12 @@ public class Practice {
         this.member = member == null ? null : member.trim();
     }
 
-    public String getTeachernum() {
-        return teachernum;
+    public String getTeachername() {
+        return teachername;
     }
 
-    public void setTeachernum(String teachernum) {
-        this.teachernum = teachernum == null ? null : teachernum.trim();
+    public void setTeachername(String teachername) {
+        this.teachername = teachername == null ? null : teachername.trim();
     }
 
     public String getStunum() {
@@ -135,14 +133,6 @@ public class Practice {
 
     public void setGradenum(Integer gradenum) {
         this.gradenum = gradenum;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
     }
 
     public String getStuname() {

@@ -3,7 +3,7 @@
 <mapper namespace="mapper.ProjectrulesMapper" >
   <resultMap id="BaseResultMap" type="pojo.Projectrules" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="projectlevel" property="projectlevel" jdbcType="VARCHAR" />
     <result column="score" property="score" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, level, score, responsibility, credit
+    id, projectlevel, score, responsibility, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ProjectrulesExample" >
     select
@@ -100,9 +100,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Projectrules" >
-    insert into projectrules (id, level, score, 
+    insert into projectrules (id, projectlevel, score, 
       responsibility, credit)
-    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{projectlevel,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
       #{responsibility,jdbcType=VARCHAR}, #{credit,jdbcType=REAL})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Projectrules" >
@@ -111,8 +111,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="projectlevel != null" >
+        projectlevel,
       </if>
       <if test="score != null" >
         score,
@@ -128,8 +128,8 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="projectlevel != null" >
+        #{projectlevel,jdbcType=VARCHAR},
       </if>
       <if test="score != null" >
         #{score,jdbcType=VARCHAR},
@@ -154,8 +154,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.projectlevel != null" >
+        projectlevel = #{record.projectlevel,jdbcType=VARCHAR},
       </if>
       <if test="record.score != null" >
         score = #{record.score,jdbcType=VARCHAR},
@@ -174,7 +174,7 @@
   <update id="updateByExample" parameterType="map" >
     update projectrules
     set id = #{record.id,jdbcType=INTEGER},
-      level = #{record.level,jdbcType=VARCHAR},
+      projectlevel = #{record.projectlevel,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL}
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Projectrules" >
     update projectrules
     <set >
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="projectlevel != null" >
+        projectlevel = #{projectlevel,jdbcType=VARCHAR},
       </if>
       <if test="score != null" >
         score = #{score,jdbcType=VARCHAR},
@@ -202,7 +202,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Projectrules" >
     update projectrules
-    set level = #{level,jdbcType=VARCHAR},
+    set projectlevel = #{projectlevel,jdbcType=VARCHAR},
       score = #{score,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL}

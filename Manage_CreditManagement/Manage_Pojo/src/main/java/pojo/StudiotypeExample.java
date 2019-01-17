@@ -304,73 +304,73 @@ public class StudiotypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andStudiolevelIsNull() {
+            addCriterion("studiolevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andStudiolevelIsNotNull() {
+            addCriterion("studiolevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andStudiolevelEqualTo(String value) {
+            addCriterion("studiolevel =", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andStudiolevelNotEqualTo(String value) {
+            addCriterion("studiolevel <>", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andStudiolevelGreaterThan(String value) {
+            addCriterion("studiolevel >", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andStudiolevelGreaterThanOrEqualTo(String value) {
+            addCriterion("studiolevel >=", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andStudiolevelLessThan(String value) {
+            addCriterion("studiolevel <", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andStudiolevelLessThanOrEqualTo(String value) {
+            addCriterion("studiolevel <=", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andStudiolevelLike(String value) {
+            addCriterion("studiolevel like", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andStudiolevelNotLike(String value) {
+            addCriterion("studiolevel not like", value, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andStudiolevelIn(List<String> values) {
+            addCriterion("studiolevel in", values, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andStudiolevelNotIn(List<String> values) {
+            addCriterion("studiolevel not in", values, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andStudiolevelBetween(String value1, String value2) {
+            addCriterion("studiolevel between", value1, value2, "studiolevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andStudiolevelNotBetween(String value1, String value2) {
+            addCriterion("studiolevel not between", value1, value2, "studiolevel");
             return (Criteria) this;
         }
     }

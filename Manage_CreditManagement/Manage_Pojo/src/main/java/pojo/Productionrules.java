@@ -3,7 +3,7 @@ package pojo;
 public class Productionrules {
     private Integer id;
 
-    private String level;
+    private String productionlevel;
 
     private String responsibility;
 
@@ -17,12 +17,12 @@ public class Productionrules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getProductionlevel() {
+        return productionlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setProductionlevel(String productionlevel) {
+        this.productionlevel = productionlevel == null ? null : productionlevel.trim();
     }
 
     public String getResponsibility() {

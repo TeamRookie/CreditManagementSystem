@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="associationtime" property="associationtime" jdbcType="VARCHAR" />
     <result column="associationname" property="associationname" jdbcType="VARCHAR" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="associationlevel" property="associationlevel" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, associationtime, associationname, level
+    id, associationtime, associationname, associationlevel
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.AssociationtypeExample" >
     select
@@ -100,9 +100,9 @@
   </delete>
   <insert id="insert" parameterType="pojo.Associationtype" >
     insert into associationtype (id, associationtime, associationname, 
-      level)
+      associationlevel)
     values (#{id,jdbcType=INTEGER}, #{associationtime,jdbcType=VARCHAR}, #{associationname,jdbcType=VARCHAR}, 
-      #{level,jdbcType=VARCHAR})
+      #{associationlevel,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Associationtype" >
     insert into associationtype
@@ -116,8 +116,8 @@
       <if test="associationname != null" >
         associationname,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="associationlevel != null" >
+        associationlevel,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -130,8 +130,8 @@
       <if test="associationname != null" >
         #{associationname,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="associationlevel != null" >
+        #{associationlevel,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -153,8 +153,8 @@
       <if test="record.associationname != null" >
         associationname = #{record.associationname,jdbcType=VARCHAR},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.associationlevel != null" >
+        associationlevel = #{record.associationlevel,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -166,7 +166,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       associationtime = #{record.associationtime,jdbcType=VARCHAR},
       associationname = #{record.associationname,jdbcType=VARCHAR},
-      level = #{record.level,jdbcType=VARCHAR}
+      associationlevel = #{record.associationlevel,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -180,8 +180,8 @@
       <if test="associationname != null" >
         associationname = #{associationname,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="associationlevel != null" >
+        associationlevel = #{associationlevel,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -190,7 +190,7 @@
     update associationtype
     set associationtime = #{associationtime,jdbcType=VARCHAR},
       associationname = #{associationname,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR}
+      associationlevel = #{associationlevel,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

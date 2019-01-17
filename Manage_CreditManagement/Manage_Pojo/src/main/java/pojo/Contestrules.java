@@ -3,7 +3,7 @@ package pojo;
 public class Contestrules {
     private Integer id;
 
-    private String level;
+    private String contestlevel;
 
     private String rank;
 
@@ -17,12 +17,12 @@ public class Contestrules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getContestlevel() {
+        return contestlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setContestlevel(String contestlevel) {
+        this.contestlevel = contestlevel == null ? null : contestlevel.trim();
     }
 
     public String getRank() {

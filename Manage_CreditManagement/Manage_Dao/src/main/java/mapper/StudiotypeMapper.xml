@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="department" property="department" jdbcType="VARCHAR" />
     <result column="studioname" property="studioname" jdbcType="VARCHAR" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="studiolevel" property="studiolevel" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, department, studioname, level
+    id, department, studioname, studiolevel
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudiotypeExample" >
     select
@@ -100,9 +100,9 @@
   </delete>
   <insert id="insert" parameterType="pojo.Studiotype" >
     insert into studiotype (id, department, studioname, 
-      level)
+      studiolevel)
     values (#{id,jdbcType=INTEGER}, #{department,jdbcType=VARCHAR}, #{studioname,jdbcType=VARCHAR}, 
-      #{level,jdbcType=VARCHAR})
+      #{studiolevel,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Studiotype" >
     insert into studiotype
@@ -116,8 +116,8 @@
       <if test="studioname != null" >
         studioname,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="studiolevel != null" >
+        studiolevel,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -130,8 +130,8 @@
       <if test="studioname != null" >
         #{studioname,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="studiolevel != null" >
+        #{studiolevel,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -153,8 +153,8 @@
       <if test="record.studioname != null" >
         studioname = #{record.studioname,jdbcType=VARCHAR},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.studiolevel != null" >
+        studiolevel = #{record.studiolevel,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -166,7 +166,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       department = #{record.department,jdbcType=VARCHAR},
       studioname = #{record.studioname,jdbcType=VARCHAR},
-      level = #{record.level,jdbcType=VARCHAR}
+      studiolevel = #{record.studiolevel,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -180,8 +180,8 @@
       <if test="studioname != null" >
         studioname = #{studioname,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="studiolevel != null" >
+        studiolevel = #{studiolevel,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -190,7 +190,7 @@
     update studiotype
     set department = #{department,jdbcType=VARCHAR},
       studioname = #{studioname,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR}
+      studiolevel = #{studiolevel,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

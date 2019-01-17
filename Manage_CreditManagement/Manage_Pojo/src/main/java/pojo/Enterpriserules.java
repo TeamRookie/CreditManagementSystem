@@ -3,7 +3,7 @@ package pojo;
 public class Enterpriserules {
     private Integer id;
 
-    private String level;
+    private String enterpriselevel;
 
     private Float credit;
 
@@ -15,12 +15,12 @@ public class Enterpriserules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getEnterpriselevel() {
+        return enterpriselevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setEnterpriselevel(String enterpriselevel) {
+        this.enterpriselevel = enterpriselevel == null ? null : enterpriselevel.trim();
     }
 
     public Float getCredit() {

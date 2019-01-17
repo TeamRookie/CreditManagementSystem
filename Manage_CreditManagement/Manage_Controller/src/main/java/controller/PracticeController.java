@@ -7,8 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pojo.PageBean;
+import pojo.Practice;
 import pojo.Practicetype;
 import service.PracticeService;
+
+import java.util.List;
 
 @Controller
 public class PracticeController
@@ -25,9 +28,16 @@ public class PracticeController
         return "rules/practiceRules";
     }
     @RequestMapping("/practice")
-    public  String getPractice(Model model)
+    public  String getPractice(Model model,String practiceName,String practiceTime,String practiceType,String practiceLevel,String practiceScore,Integer currentPage)
     {
-        return  "practice";
+        PageBean pageBean= practiceService.getPracticePageBean(practiceName,practiceTime,practiceType,practiceLevel,practiceScore,currentPage,pageSize);
+        model.addAttribute("pageBean",pageBean);
+        model.addAttribute("practiceTime",practiceTime);
+        model.addAttribute("practiceType",practiceType);
+        model.addAttribute("practiceLevel",practiceLevel);
+        model.addAttribute("practiceScore",practiceScore);
+        model.addAttribute("currentPage",currentPage);
+        return  "information/practice";
     }
     @RequestMapping("/practiceImport")
     public  String getPracticeImport(Model model,String practiceTime,String practiceName,Integer currentPage)

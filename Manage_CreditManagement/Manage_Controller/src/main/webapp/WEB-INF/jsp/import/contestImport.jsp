@@ -367,9 +367,6 @@ ${message}
                             </div>
 
                         </form>
-
-
-                        </form>
                     </div>
                 </div>
 

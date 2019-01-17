@@ -314,7 +314,7 @@
                                 <tr>
                                     <td class="center">
                                         <label class="pos-rel">
-                                            ${item.level}
+                                            ${item.credentiallevel}
                                         </label>
                                     </td>
 

@@ -8,7 +8,7 @@
     <result column="productionname" property="productionname" jdbcType="VARCHAR" />
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="source" property="source" jdbcType="VARCHAR" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="productionlevel" property="productionlevel" jdbcType="VARCHAR" />
     <result column="rank" property="rank" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
@@ -79,8 +79,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, productiontime, autograph, productionname, author, source, level, rank, responsibility, 
-    stunum, credit, facultynum, majornum, gradenum, stuname, url, productiontype
+    id, productiontime, autograph, productionname, author, source, productionlevel, rank, 
+    responsibility, stunum, credit, facultynum, majornum, gradenum, stuname, url, productiontype
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ProductionExample" >
     select
@@ -115,13 +115,13 @@
   <insert id="insert" parameterType="pojo.Production" >
     insert into production (id, productiontime, autograph, 
       productionname, author, source, 
-      level, rank, responsibility, 
+      productionlevel, rank, responsibility, 
       stunum, credit, facultynum, 
       majornum, gradenum, stuname, 
       url, productiontype)
     values (#{id,jdbcType=INTEGER}, #{productiontime,jdbcType=VARCHAR}, #{autograph,jdbcType=VARCHAR}, 
       #{productionname,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
-      #{level,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, 
+      #{productionlevel,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, 
       #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, 
       #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, 
       #{url,jdbcType=VARCHAR}, #{productiontype,jdbcType=VARCHAR})
@@ -147,8 +147,8 @@
       <if test="source != null" >
         source,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="productionlevel != null" >
+        productionlevel,
       </if>
       <if test="rank != null" >
         rank,
@@ -200,8 +200,8 @@
       <if test="source != null" >
         #{source,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="productionlevel != null" >
+        #{productionlevel,jdbcType=VARCHAR},
       </if>
       <if test="rank != null" >
         #{rank,jdbcType=VARCHAR},
@@ -262,8 +262,8 @@
       <if test="record.source != null" >
         source = #{record.source,jdbcType=VARCHAR},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.productionlevel != null" >
+        productionlevel = #{record.productionlevel,jdbcType=VARCHAR},
       </if>
       <if test="record.rank != null" >
         rank = #{record.rank,jdbcType=VARCHAR},
@@ -308,7 +308,7 @@
       productionname = #{record.productionname,jdbcType=VARCHAR},
       author = #{record.author,jdbcType=VARCHAR},
       source = #{record.source,jdbcType=VARCHAR},
-      level = #{record.level,jdbcType=VARCHAR},
+      productionlevel = #{record.productionlevel,jdbcType=VARCHAR},
       rank = #{record.rank,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -341,8 +341,8 @@
       <if test="source != null" >
         source = #{source,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="productionlevel != null" >
+        productionlevel = #{productionlevel,jdbcType=VARCHAR},
       </if>
       <if test="rank != null" >
         rank = #{rank,jdbcType=VARCHAR},
@@ -384,7 +384,7 @@
       productionname = #{productionname,jdbcType=VARCHAR},
       author = #{author,jdbcType=VARCHAR},
       source = #{source,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR},
+      productionlevel = #{productionlevel,jdbcType=VARCHAR},
       rank = #{rank,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},

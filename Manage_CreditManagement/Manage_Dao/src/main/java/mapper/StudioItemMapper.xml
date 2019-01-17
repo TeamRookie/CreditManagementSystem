@@ -11,4 +11,33 @@
     studiorules
     limit #{start},#{pageSize}
   </select>
+    <select id="getStudioImportTotalCount" resultType="java.lang.Integer">
+        select count(*) from studiotype
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+        </where>
+    </select>
+    <select id="getStudioImportPageBean" parameterType="hashMap" resultType="pojo.Studiotype">
+        select * from studiotype
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
 </mapper>

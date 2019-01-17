@@ -304,73 +304,73 @@ public class AssociationtypeExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andAssociationlevelIsNull() {
+            addCriterion("associationlevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andAssociationlevelIsNotNull() {
+            addCriterion("associationlevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andAssociationlevelEqualTo(String value) {
+            addCriterion("associationlevel =", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andAssociationlevelNotEqualTo(String value) {
+            addCriterion("associationlevel <>", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andAssociationlevelGreaterThan(String value) {
+            addCriterion("associationlevel >", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andAssociationlevelGreaterThanOrEqualTo(String value) {
+            addCriterion("associationlevel >=", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andAssociationlevelLessThan(String value) {
+            addCriterion("associationlevel <", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andAssociationlevelLessThanOrEqualTo(String value) {
+            addCriterion("associationlevel <=", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andAssociationlevelLike(String value) {
+            addCriterion("associationlevel like", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andAssociationlevelNotLike(String value) {
+            addCriterion("associationlevel not like", value, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andAssociationlevelIn(List<String> values) {
+            addCriterion("associationlevel in", values, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andAssociationlevelNotIn(List<String> values) {
+            addCriterion("associationlevel not in", values, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andAssociationlevelBetween(String value1, String value2) {
+            addCriterion("associationlevel between", value1, value2, "associationlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andAssociationlevelNotBetween(String value1, String value2) {
+            addCriterion("associationlevel not between", value1, value2, "associationlevel");
             return (Criteria) this;
         }
     }

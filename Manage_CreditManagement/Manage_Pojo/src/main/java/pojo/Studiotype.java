@@ -7,7 +7,7 @@ public class Studiotype {
 
     private String studioname;
 
-    private String level;
+    private String studiolevel;
 
     public Integer getId() {
         return id;
@@ -33,11 +33,11 @@ public class Studiotype {
         this.studioname = studioname == null ? null : studioname.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getStudiolevel() {
+        return studiolevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setStudiolevel(String studiolevel) {
+        this.studiolevel = studiolevel == null ? null : studiolevel.trim();
     }
 }

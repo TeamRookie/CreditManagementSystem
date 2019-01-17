@@ -3,7 +3,7 @@ package pojo;
 public class Credentialrules {
     private Integer id;
 
-    private String level;
+    private String credentiallevel;
 
     private Float credit;
 
@@ -15,12 +15,12 @@ public class Credentialrules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getCredentiallevel() {
+        return credentiallevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setCredentiallevel(String credentiallevel) {
+        this.credentiallevel = credentiallevel == null ? null : credentiallevel.trim();
     }
 
     public Float getCredit() {

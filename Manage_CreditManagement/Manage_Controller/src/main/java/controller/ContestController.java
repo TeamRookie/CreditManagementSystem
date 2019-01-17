@@ -29,10 +29,16 @@ public class ContestController
         return "rules/contestRules";
     }
     @RequestMapping("/contest")
-    public  String getContest(Model model,String searchDate,String theme,String level,String rank,String stuNum)
+    public  String getContest(Model model,String studentNumber,String contestTime,String contestLevel,String contestName,String contestRank,Integer currentPage)
     {
-
-        return  "contest";
+        PageBean pageBean= contestService.getContestPageBean(studentNumber,contestTime,contestLevel,contestName,contestRank,currentPage,pageSize);
+        model.addAttribute("pageBean",pageBean);
+        model.addAttribute("contestTime",contestTime);
+        model.addAttribute("contestLevel",contestLevel);
+        model.addAttribute("contestName",contestName);
+        model.addAttribute("contestRank",contestRank);
+        model.addAttribute("studentNumber",studentNumber);
+        return  "information/contest";
     }
     @RequestMapping("/contestImport")
     public  String getContestImport(Model model,Integer currentPage,String contestDate,String contestName)

@@ -43,13 +43,6 @@ public class ContestServiceImpl implements ContestService
         pageBean.setPageList(contestRulesList);
         return  pageBean;
     }
-
-    @Override
-    public ContestPageBean getContestPageBean(String searchDate, String theme, String rank, String stuNum)
-    {
-        return null;
-    }
-
     @Override
     public PageBean getContestImportPageBean(Integer pageSize, Integer currentPage, String contestDate, String contestName)
     {
@@ -80,6 +73,25 @@ public class ContestServiceImpl implements ContestService
         contesttype.setContestname(addContestName);
         contesttype.setContesttime(addContestDate);
         contesttypeMapper.insertSelective(contesttype);
+    }
+
+    @Override
+    public PageBean getContestPageBean(String studentNumber,String contestTime, String contestLevel, String contestName, String contestRank, Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=contestItemMapper.getContestTotalCount(studentNumber,contestTime,contestLevel,contestName,contestRank);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("contestTime",contestTime);
+        map.put("contestLevel",contestLevel);
+        map.put("contestName",contestName);
+        map.put("contestRank",contestRank);
+        map.put("studentNumber",studentNumber);
+        List<Contest> contestList= contestItemMapper.getContestPageBean(map);
+        pageBean.setPageList(contestList);
+        return pageBean;
     }
 
 

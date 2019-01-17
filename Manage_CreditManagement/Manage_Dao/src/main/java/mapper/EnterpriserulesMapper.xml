@@ -3,7 +3,7 @@
 <mapper namespace="mapper.EnterpriserulesMapper" >
   <resultMap id="BaseResultMap" type="pojo.Enterpriserules" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="enterpriselevel" property="enterpriselevel" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, level, credit
+    id, enterpriselevel, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.EnterpriserulesExample" >
     select
@@ -98,9 +98,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Enterpriserules" >
-    insert into enterpriserules (id, level, credit
+    insert into enterpriserules (id, enterpriselevel, credit
       )
-    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}
+    values (#{id,jdbcType=INTEGER}, #{enterpriselevel,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Enterpriserules" >
@@ -109,8 +109,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="enterpriselevel != null" >
+        enterpriselevel,
       </if>
       <if test="credit != null" >
         credit,
@@ -120,8 +120,8 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="enterpriselevel != null" >
+        #{enterpriselevel,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
@@ -140,8 +140,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.enterpriselevel != null" >
+        enterpriselevel = #{record.enterpriselevel,jdbcType=VARCHAR},
       </if>
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
@@ -154,7 +154,7 @@
   <update id="updateByExample" parameterType="map" >
     update enterpriserules
     set id = #{record.id,jdbcType=INTEGER},
-      level = #{record.level,jdbcType=VARCHAR},
+      enterpriselevel = #{record.enterpriselevel,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -163,8 +163,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Enterpriserules" >
     update enterpriserules
     <set >
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="enterpriselevel != null" >
+        enterpriselevel = #{enterpriselevel,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
@@ -174,7 +174,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Enterpriserules" >
     update enterpriserules
-    set level = #{level,jdbcType=VARCHAR},
+    set enterpriselevel = #{enterpriselevel,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL}
     where id = #{id,jdbcType=INTEGER}
   </update>

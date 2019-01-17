@@ -304,143 +304,143 @@ public class PracticeExample {
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeIsNull() {
-            addCriterion("praticetype is null");
+        public Criteria andPracticetypeIsNull() {
+            addCriterion("practicetype is null");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeIsNotNull() {
-            addCriterion("praticetype is not null");
+        public Criteria andPracticetypeIsNotNull() {
+            addCriterion("practicetype is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeEqualTo(String value) {
-            addCriterion("praticetype =", value, "praticetype");
+        public Criteria andPracticetypeEqualTo(String value) {
+            addCriterion("practicetype =", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeNotEqualTo(String value) {
-            addCriterion("praticetype <>", value, "praticetype");
+        public Criteria andPracticetypeNotEqualTo(String value) {
+            addCriterion("practicetype <>", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeGreaterThan(String value) {
-            addCriterion("praticetype >", value, "praticetype");
+        public Criteria andPracticetypeGreaterThan(String value) {
+            addCriterion("practicetype >", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeGreaterThanOrEqualTo(String value) {
-            addCriterion("praticetype >=", value, "praticetype");
+        public Criteria andPracticetypeGreaterThanOrEqualTo(String value) {
+            addCriterion("practicetype >=", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeLessThan(String value) {
-            addCriterion("praticetype <", value, "praticetype");
+        public Criteria andPracticetypeLessThan(String value) {
+            addCriterion("practicetype <", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeLessThanOrEqualTo(String value) {
-            addCriterion("praticetype <=", value, "praticetype");
+        public Criteria andPracticetypeLessThanOrEqualTo(String value) {
+            addCriterion("practicetype <=", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeLike(String value) {
-            addCriterion("praticetype like", value, "praticetype");
+        public Criteria andPracticetypeLike(String value) {
+            addCriterion("practicetype like", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeNotLike(String value) {
-            addCriterion("praticetype not like", value, "praticetype");
+        public Criteria andPracticetypeNotLike(String value) {
+            addCriterion("practicetype not like", value, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeIn(List<String> values) {
-            addCriterion("praticetype in", values, "praticetype");
+        public Criteria andPracticetypeIn(List<String> values) {
+            addCriterion("practicetype in", values, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeNotIn(List<String> values) {
-            addCriterion("praticetype not in", values, "praticetype");
+        public Criteria andPracticetypeNotIn(List<String> values) {
+            addCriterion("practicetype not in", values, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeBetween(String value1, String value2) {
-            addCriterion("praticetype between", value1, value2, "praticetype");
+        public Criteria andPracticetypeBetween(String value1, String value2) {
+            addCriterion("practicetype between", value1, value2, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andPraticetypeNotBetween(String value1, String value2) {
-            addCriterion("praticetype not between", value1, value2, "praticetype");
+        public Criteria andPracticetypeNotBetween(String value1, String value2) {
+            addCriterion("practicetype not between", value1, value2, "practicetype");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andPracticelevelIsNull() {
+            addCriterion("practicelevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andPracticelevelIsNotNull() {
+            addCriterion("practicelevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andPracticelevelEqualTo(String value) {
+            addCriterion("practicelevel =", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andPracticelevelNotEqualTo(String value) {
+            addCriterion("practicelevel <>", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andPracticelevelGreaterThan(String value) {
+            addCriterion("practicelevel >", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andPracticelevelGreaterThanOrEqualTo(String value) {
+            addCriterion("practicelevel >=", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andPracticelevelLessThan(String value) {
+            addCriterion("practicelevel <", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andPracticelevelLessThanOrEqualTo(String value) {
+            addCriterion("practicelevel <=", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andPracticelevelLike(String value) {
+            addCriterion("practicelevel like", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andPracticelevelNotLike(String value) {
+            addCriterion("practicelevel not like", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andPracticelevelIn(List<String> values) {
+            addCriterion("practicelevel in", values, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andPracticelevelNotIn(List<String> values) {
+            addCriterion("practicelevel not in", values, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andPracticelevelBetween(String value1, String value2) {
+            addCriterion("practicelevel between", value1, value2, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andPracticelevelNotBetween(String value1, String value2) {
+            addCriterion("practicelevel not between", value1, value2, "practicelevel");
             return (Criteria) this;
         }
 
@@ -584,73 +584,73 @@ public class PracticeExample {
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumIsNull() {
-            addCriterion("teachernum is null");
+        public Criteria andTeachernameIsNull() {
+            addCriterion("teachername is null");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumIsNotNull() {
-            addCriterion("teachernum is not null");
+        public Criteria andTeachernameIsNotNull() {
+            addCriterion("teachername is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumEqualTo(String value) {
-            addCriterion("teachernum =", value, "teachernum");
+        public Criteria andTeachernameEqualTo(String value) {
+            addCriterion("teachername =", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotEqualTo(String value) {
-            addCriterion("teachernum <>", value, "teachernum");
+        public Criteria andTeachernameNotEqualTo(String value) {
+            addCriterion("teachername <>", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumGreaterThan(String value) {
-            addCriterion("teachernum >", value, "teachernum");
+        public Criteria andTeachernameGreaterThan(String value) {
+            addCriterion("teachername >", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumGreaterThanOrEqualTo(String value) {
-            addCriterion("teachernum >=", value, "teachernum");
+        public Criteria andTeachernameGreaterThanOrEqualTo(String value) {
+            addCriterion("teachername >=", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumLessThan(String value) {
-            addCriterion("teachernum <", value, "teachernum");
+        public Criteria andTeachernameLessThan(String value) {
+            addCriterion("teachername <", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumLessThanOrEqualTo(String value) {
-            addCriterion("teachernum <=", value, "teachernum");
+        public Criteria andTeachernameLessThanOrEqualTo(String value) {
+            addCriterion("teachername <=", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumLike(String value) {
-            addCriterion("teachernum like", value, "teachernum");
+        public Criteria andTeachernameLike(String value) {
+            addCriterion("teachername like", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotLike(String value) {
-            addCriterion("teachernum not like", value, "teachernum");
+        public Criteria andTeachernameNotLike(String value) {
+            addCriterion("teachername not like", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumIn(List<String> values) {
-            addCriterion("teachernum in", values, "teachernum");
+        public Criteria andTeachernameIn(List<String> values) {
+            addCriterion("teachername in", values, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotIn(List<String> values) {
-            addCriterion("teachernum not in", values, "teachernum");
+        public Criteria andTeachernameNotIn(List<String> values) {
+            addCriterion("teachername not in", values, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumBetween(String value1, String value2) {
-            addCriterion("teachernum between", value1, value2, "teachernum");
+        public Criteria andTeachernameBetween(String value1, String value2) {
+            addCriterion("teachername between", value1, value2, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotBetween(String value1, String value2) {
-            addCriterion("teachernum not between", value1, value2, "teachernum");
+        public Criteria andTeachernameNotBetween(String value1, String value2) {
+            addCriterion("teachername not between", value1, value2, "teachername");
             return (Criteria) this;
         }
 
@@ -961,76 +961,6 @@ public class PracticeExample {
 
         public Criteria andGradenumNotBetween(Integer value1, Integer value2) {
             addCriterion("gradenum not between", value1, value2, "gradenum");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIsNull() {
-            addCriterion("type is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIsNotNull() {
-            addCriterion("type is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeEqualTo(String value) {
-            addCriterion("type =", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotEqualTo(String value) {
-            addCriterion("type <>", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeGreaterThan(String value) {
-            addCriterion("type >", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeGreaterThanOrEqualTo(String value) {
-            addCriterion("type >=", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLessThan(String value) {
-            addCriterion("type <", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLessThanOrEqualTo(String value) {
-            addCriterion("type <=", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeLike(String value) {
-            addCriterion("type like", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotLike(String value) {
-            addCriterion("type not like", value, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeIn(List<String> values) {
-            addCriterion("type in", values, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotIn(List<String> values) {
-            addCriterion("type not in", values, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeBetween(String value1, String value2) {
-            addCriterion("type between", value1, value2, "type");
-            return (Criteria) this;
-        }
-
-        public Criteria andTypeNotBetween(String value1, String value2) {
-            addCriterion("type not between", value1, value2, "type");
             return (Criteria) this;
         }
 

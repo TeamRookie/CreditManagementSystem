@@ -3,7 +3,7 @@ package pojo;
 public class Projectrules {
     private Integer id;
 
-    private String level;
+    private String projectlevel;
 
     private String score;
 
@@ -19,12 +19,12 @@ public class Projectrules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getProjectlevel() {
+        return projectlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setProjectlevel(String projectlevel) {
+        this.projectlevel = projectlevel == null ? null : projectlevel.trim();
     }
 
     public String getScore() {

@@ -34,4 +34,57 @@
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>
+    <select id="getContestTotalCount" resultType="java.lang.Integer">
+        select count(*) from contest
+        <where>
+
+            <if test="contestTime !=null and contestTime != ''">
+                #{contestTime} = contesttime
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  contestname = #{contestName}
+            </if>
+            <if test="contestRank != null and contestRank !=''">
+                AND  rank = #{contestRank}
+            </if>
+            <if test="contestLevel != null and contestLevel !=''">
+                AND  contestlevel =#{contestLevel}
+            </if>
+        </where>
+    </select>
+    <select id="getContestPageBean" parameterType="hashMap" resultType="pojo.Contest">
+        select * from contest
+        <where>
+            <if test="contestTime !=null and contestTime != ''">
+                #{contestTime} = contesttime
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  contestname = #{contestName}
+            </if>
+            <if test="contestRank != null and contestRank !=''">
+                <if test="contestRank == '一等奖,金奖'">
+                  AND  ( rank='一等奖' or rank ='金奖')
+                </if>
+                <if test="contestRank == '二等奖,银奖'">
+                    AND  ( rank='二等奖' or rank ='银奖')
+                </if>
+                <if test="contestRank == '三等奖,铜奖'">
+                    AND  ( rank='三等奖' or rank ='铜奖')
+                </if>
+                <if test="contestRank != '一等奖,金奖' and contestRank != '二等奖,银奖' and  contestRank != '三等奖,铜奖'">
+                    AND  rank=#{contestRank}
+                </if>
+            </if>
+            <if test="contestLevel != null and contestLevel !=''">
+                AND  contestlevel =#{contestLevel}
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
 </mapper>

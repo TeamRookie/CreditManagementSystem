@@ -9,4 +9,6 @@ public interface SafetyService
 {
     List<Safetyrules> getSafetyRules();
     PageBean getPageBean(Integer pageSize, Integer currentPage);
+
+    PageBean getSafetyPageBean(String studentNumber,String safetyTime, Integer currentPage, Integer pageSize);
 }

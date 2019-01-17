@@ -14,4 +14,8 @@ public interface PracticeService
     PageBean getPracticeImportPageBean(String practiceTime, String practiceName, Integer currentPage, Integer pageSize);
 
     void addPracticeType(Practicetype practicetype);
+
+
+
+    PageBean getPracticePageBean(String practiceName, String practiceTime, String practiceType, String practiceLevel, String practiceScore, Integer currentPage, Integer pageSize);
 }

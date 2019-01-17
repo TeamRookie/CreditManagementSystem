@@ -459,7 +459,7 @@ ${message}
                             <li>
                                 <a href="${pageContext.request.contextPath}/projectImport.action?currentPage=${pageBean.totalPage}&projectName=${projectName}&projectTime=${projectTime}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
-                                </a>1
+                                </a>
                             </li>
                         </ul>
                     </div>

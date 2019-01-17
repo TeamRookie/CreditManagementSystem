@@ -9,13 +9,11 @@ public class Studio {
 
     private String studioname;
 
-    private String level;
+    private String studiolevel;
 
-    private String teachernum;
+    private String teachername;
 
     private String responsibility;
-
-    private String member;
 
     private String stunum;
 
@@ -63,20 +61,20 @@ public class Studio {
         this.studioname = studioname == null ? null : studioname.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getStudiolevel() {
+        return studiolevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setStudiolevel(String studiolevel) {
+        this.studiolevel = studiolevel == null ? null : studiolevel.trim();
     }
 
-    public String getTeachernum() {
-        return teachernum;
+    public String getTeachername() {
+        return teachername;
     }
 
-    public void setTeachernum(String teachernum) {
-        this.teachernum = teachernum == null ? null : teachernum.trim();
+    public void setTeachername(String teachername) {
+        this.teachername = teachername == null ? null : teachername.trim();
     }
 
     public String getResponsibility() {
@@ -85,14 +83,6 @@ public class Studio {
 
     public void setResponsibility(String responsibility) {
         this.responsibility = responsibility == null ? null : responsibility.trim();
-    }
-
-    public String getMember() {
-        return member;
-    }
-
-    public void setMember(String member) {
-        this.member = member == null ? null : member.trim();
     }
 
     public String getStunum() {

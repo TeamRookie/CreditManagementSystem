@@ -3,7 +3,7 @@
 <mapper namespace="mapper.PracticerulesMapper" >
   <resultMap id="BaseResultMap" type="pojo.Practicerules" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="practicelevel" property="practicelevel" jdbcType="VARCHAR" />
     <result column="score" property="score" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, level, score, responsibility, credit
+    id, practicelevel, score, responsibility, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.PracticerulesExample" >
     select
@@ -100,9 +100,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Practicerules" >
-    insert into practicerules (id, level, score, 
+    insert into practicerules (id, practicelevel, score, 
       responsibility, credit)
-    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{practicelevel,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
       #{responsibility,jdbcType=VARCHAR}, #{credit,jdbcType=REAL})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Practicerules" >
@@ -111,8 +111,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="practicelevel != null" >
+        practicelevel,
       </if>
       <if test="score != null" >
         score,
@@ -128,8 +128,8 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="practicelevel != null" >
+        #{practicelevel,jdbcType=VARCHAR},
       </if>
       <if test="score != null" >
         #{score,jdbcType=VARCHAR},
@@ -154,8 +154,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.practicelevel != null" >
+        practicelevel = #{record.practicelevel,jdbcType=VARCHAR},
       </if>
       <if test="record.score != null" >
         score = #{record.score,jdbcType=VARCHAR},
@@ -174,7 +174,7 @@
   <update id="updateByExample" parameterType="map" >
     update practicerules
     set id = #{record.id,jdbcType=INTEGER},
-      level = #{record.level,jdbcType=VARCHAR},
+      practicelevel = #{record.practicelevel,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL}
@@ -185,8 +185,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Practicerules" >
     update practicerules
     <set >
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="practicelevel != null" >
+        practicelevel = #{practicelevel,jdbcType=VARCHAR},
       </if>
       <if test="score != null" >
         score = #{score,jdbcType=VARCHAR},
@@ -202,7 +202,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Practicerules" >
     update practicerules
-    set level = #{level,jdbcType=VARCHAR},
+    set practicelevel = #{practicelevel,jdbcType=VARCHAR},
       score = #{score,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL}

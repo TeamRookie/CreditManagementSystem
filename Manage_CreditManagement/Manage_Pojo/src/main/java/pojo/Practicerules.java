@@ -3,7 +3,7 @@ package pojo;
 public class Practicerules {
     private Integer id;
 
-    private String level;
+    private String practicelevel;
 
     private String score;
 
@@ -19,12 +19,12 @@ public class Practicerules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getPracticelevel() {
+        return practicelevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setPracticelevel(String practicelevel) {
+        this.practicelevel = practicelevel == null ? null : practicelevel.trim();
     }
 
     public String getScore() {

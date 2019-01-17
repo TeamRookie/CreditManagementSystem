@@ -5,17 +5,16 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="practicetime" property="practicetime" jdbcType="VARCHAR" />
     <result column="practicename" property="practicename" jdbcType="VARCHAR" />
-    <result column="praticetype" property="praticetype" jdbcType="VARCHAR" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="practicetype" property="practicetype" jdbcType="VARCHAR" />
+    <result column="practicelevel" property="practicelevel" jdbcType="VARCHAR" />
     <result column="score" property="score" jdbcType="VARCHAR" />
     <result column="member" property="member" jdbcType="VARCHAR" />
-    <result column="teachernum" property="teachernum" jdbcType="VARCHAR" />
+    <result column="teachername" property="teachername" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
-    <result column="type" property="type" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
   </resultMap>
@@ -78,8 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, practicetime, practicename, praticetype, level, score, member, teachernum, stunum, 
-    credit, facultynum, majornum, gradenum, type, stuname, url
+    id, practicetime, practicename, practicetype, practicelevel, score, member, teachername, 
+    stunum, credit, facultynum, majornum, gradenum, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.PracticeExample" >
     select
@@ -113,17 +112,17 @@
   </delete>
   <insert id="insert" parameterType="pojo.Practice" >
     insert into practice (id, practicetime, practicename, 
-      praticetype, level, score, 
-      member, teachernum, stunum, 
+      practicetype, practicelevel, score, 
+      member, teachername, stunum, 
       credit, facultynum, majornum, 
-      gradenum, type, stuname, 
-      url)
+      gradenum, stuname, url
+      )
     values (#{id,jdbcType=INTEGER}, #{practicetime,jdbcType=VARCHAR}, #{practicename,jdbcType=VARCHAR}, 
-      #{praticetype,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
-      #{member,jdbcType=VARCHAR}, #{teachernum,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{practicetype,jdbcType=VARCHAR}, #{practicelevel,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}, 
+      #{member,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
       #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
-      #{gradenum,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, 
-      #{url,jdbcType=VARCHAR})
+      #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Practice" >
     insert into practice
@@ -137,11 +136,11 @@
       <if test="practicename != null" >
         practicename,
       </if>
-      <if test="praticetype != null" >
-        praticetype,
+      <if test="practicetype != null" >
+        practicetype,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="practicelevel != null" >
+        practicelevel,
       </if>
       <if test="score != null" >
         score,
@@ -149,8 +148,8 @@
       <if test="member != null" >
         member,
       </if>
-      <if test="teachernum != null" >
-        teachernum,
+      <if test="teachername != null" >
+        teachername,
       </if>
       <if test="stunum != null" >
         stunum,
@@ -166,9 +165,6 @@
       </if>
       <if test="gradenum != null" >
         gradenum,
-      </if>
-      <if test="type != null" >
-        type,
       </if>
       <if test="stuname != null" >
         stuname,
@@ -187,11 +183,11 @@
       <if test="practicename != null" >
         #{practicename,jdbcType=VARCHAR},
       </if>
-      <if test="praticetype != null" >
-        #{praticetype,jdbcType=VARCHAR},
+      <if test="practicetype != null" >
+        #{practicetype,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="practicelevel != null" >
+        #{practicelevel,jdbcType=VARCHAR},
       </if>
       <if test="score != null" >
         #{score,jdbcType=VARCHAR},
@@ -199,8 +195,8 @@
       <if test="member != null" >
         #{member,jdbcType=VARCHAR},
       </if>
-      <if test="teachernum != null" >
-        #{teachernum,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        #{teachername,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         #{stunum,jdbcType=VARCHAR},
@@ -216,9 +212,6 @@
       </if>
       <if test="gradenum != null" >
         #{gradenum,jdbcType=INTEGER},
-      </if>
-      <if test="type != null" >
-        #{type,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         #{stuname,jdbcType=VARCHAR},
@@ -246,11 +239,11 @@
       <if test="record.practicename != null" >
         practicename = #{record.practicename,jdbcType=VARCHAR},
       </if>
-      <if test="record.praticetype != null" >
-        praticetype = #{record.praticetype,jdbcType=VARCHAR},
+      <if test="record.practicetype != null" >
+        practicetype = #{record.practicetype,jdbcType=VARCHAR},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.practicelevel != null" >
+        practicelevel = #{record.practicelevel,jdbcType=VARCHAR},
       </if>
       <if test="record.score != null" >
         score = #{record.score,jdbcType=VARCHAR},
@@ -258,8 +251,8 @@
       <if test="record.member != null" >
         member = #{record.member,jdbcType=VARCHAR},
       </if>
-      <if test="record.teachernum != null" >
-        teachernum = #{record.teachernum,jdbcType=VARCHAR},
+      <if test="record.teachername != null" >
+        teachername = #{record.teachername,jdbcType=VARCHAR},
       </if>
       <if test="record.stunum != null" >
         stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -275,9 +268,6 @@
       </if>
       <if test="record.gradenum != null" >
         gradenum = #{record.gradenum,jdbcType=INTEGER},
-      </if>
-      <if test="record.type != null" >
-        type = #{record.type,jdbcType=VARCHAR},
       </if>
       <if test="record.stuname != null" >
         stuname = #{record.stuname,jdbcType=VARCHAR},
@@ -295,17 +285,16 @@
     set id = #{record.id,jdbcType=INTEGER},
       practicetime = #{record.practicetime,jdbcType=VARCHAR},
       practicename = #{record.practicename,jdbcType=VARCHAR},
-      praticetype = #{record.praticetype,jdbcType=VARCHAR},
-      level = #{record.level,jdbcType=VARCHAR},
+      practicetype = #{record.practicetype,jdbcType=VARCHAR},
+      practicelevel = #{record.practicelevel,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=VARCHAR},
       member = #{record.member,jdbcType=VARCHAR},
-      teachernum = #{record.teachernum,jdbcType=VARCHAR},
+      teachername = #{record.teachername,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       majornum = #{record.majornum,jdbcType=INTEGER},
       gradenum = #{record.gradenum,jdbcType=INTEGER},
-      type = #{record.type,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
       url = #{record.url,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -321,11 +310,11 @@
       <if test="practicename != null" >
         practicename = #{practicename,jdbcType=VARCHAR},
       </if>
-      <if test="praticetype != null" >
-        praticetype = #{praticetype,jdbcType=VARCHAR},
+      <if test="practicetype != null" >
+        practicetype = #{practicetype,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="practicelevel != null" >
+        practicelevel = #{practicelevel,jdbcType=VARCHAR},
       </if>
       <if test="score != null" >
         score = #{score,jdbcType=VARCHAR},
@@ -333,8 +322,8 @@
       <if test="member != null" >
         member = #{member,jdbcType=VARCHAR},
       </if>
-      <if test="teachernum != null" >
-        teachernum = #{teachernum,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        teachername = #{teachername,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         stunum = #{stunum,jdbcType=VARCHAR},
@@ -351,9 +340,6 @@
       <if test="gradenum != null" >
         gradenum = #{gradenum,jdbcType=INTEGER},
       </if>
-      <if test="type != null" >
-        type = #{type,jdbcType=VARCHAR},
-      </if>
       <if test="stuname != null" >
         stuname = #{stuname,jdbcType=VARCHAR},
       </if>
@@ -367,17 +353,16 @@
     update practice
     set practicetime = #{practicetime,jdbcType=VARCHAR},
       practicename = #{practicename,jdbcType=VARCHAR},
-      praticetype = #{praticetype,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR},
+      practicetype = #{practicetype,jdbcType=VARCHAR},
+      practicelevel = #{practicelevel,jdbcType=VARCHAR},
       score = #{score,jdbcType=VARCHAR},
       member = #{member,jdbcType=VARCHAR},
-      teachernum = #{teachernum,jdbcType=VARCHAR},
+      teachername = #{teachername,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
       facultynum = #{facultynum,jdbcType=INTEGER},
       majornum = #{majornum,jdbcType=INTEGER},
       gradenum = #{gradenum,jdbcType=INTEGER},
-      type = #{type,jdbcType=VARCHAR},
       stuname = #{stuname,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

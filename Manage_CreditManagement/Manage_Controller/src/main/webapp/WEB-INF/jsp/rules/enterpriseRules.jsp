@@ -316,7 +316,7 @@
                             <C:forEach items="${pageBean.pageList}" var="item">
                                 <tr>
                                     <td class="center">
-                                        ${item.level}
+                                        ${item.enterpriselevel}
                                     </td>
 
                                     <td class="center">

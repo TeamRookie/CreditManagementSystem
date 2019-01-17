@@ -7,11 +7,11 @@ public class Association {
 
     private String associationname;
 
-    private String level;
+    private String associationlevel;
 
     private String responsibility;
 
-    private String teachernum;
+    private String teachername;
 
     private String stunum;
 
@@ -51,12 +51,12 @@ public class Association {
         this.associationname = associationname == null ? null : associationname.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getAssociationlevel() {
+        return associationlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setAssociationlevel(String associationlevel) {
+        this.associationlevel = associationlevel == null ? null : associationlevel.trim();
     }
 
     public String getResponsibility() {
@@ -67,12 +67,12 @@ public class Association {
         this.responsibility = responsibility == null ? null : responsibility.trim();
     }
 
-    public String getTeachernum() {
-        return teachernum;
+    public String getTeachername() {
+        return teachername;
     }
 
-    public void setTeachernum(String teachernum) {
-        this.teachernum = teachernum == null ? null : teachernum.trim();
+    public void setTeachername(String teachername) {
+        this.teachername = teachername == null ? null : teachername.trim();
     }
 
     public String getStunum() {

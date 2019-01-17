@@ -11,13 +11,13 @@ public class Project {
 
     private String projectname;
 
-    private String level;
+    private String projectlevel;
 
     private String score;
 
     private String member;
 
-    private String teachernames;
+    private String teachername;
 
     private String stunum;
 
@@ -73,12 +73,12 @@ public class Project {
         this.projectname = projectname == null ? null : projectname.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getProjectlevel() {
+        return projectlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setProjectlevel(String projectlevel) {
+        this.projectlevel = projectlevel == null ? null : projectlevel.trim();
     }
 
     public String getScore() {
@@ -97,12 +97,12 @@ public class Project {
         this.member = member == null ? null : member.trim();
     }
 
-    public String getTeachernames() {
-        return teachernames;
+    public String getTeachername() {
+        return teachername;
     }
 
-    public void setTeachernames(String teachernames) {
-        this.teachernames = teachernames == null ? null : teachernames.trim();
+    public void setTeachername(String teachername) {
+        this.teachername = teachername == null ? null : teachername.trim();
     }
 
     public String getStunum() {

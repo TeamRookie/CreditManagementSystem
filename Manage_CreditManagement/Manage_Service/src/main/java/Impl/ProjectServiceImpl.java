@@ -71,4 +71,25 @@ public class ProjectServiceImpl implements ProjectService
         projecttypeMapper.insertSelective(projecttype);
     }
 
+    @Override
+    public PageBean getProjectPageBean(String studentNumber, String projectTime, String projectType, String projectId, String projectLevel, String projectScore, Integer currentPage, Integer pageSize)
+    {
+
+        Integer totalCount =projectItemMapper.getProjectTotalCount(studentNumber,projectTime,projectType,projectId,projectLevel,projectScore);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("studentNumber",studentNumber);
+        map.put("projectTime",projectTime);
+        map.put("projectType",projectType);
+        map.put("projectId",projectId);
+        map.put("projectLevel",projectLevel);
+        map.put("projectScore",projectScore);
+        List<Project> projectList=projectItemMapper.getProjectPageBean(map);
+        pageBean.setPageList(projectList);
+        return pageBean;
+    }
+
 }

@@ -30,4 +30,45 @@
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>
+  <select id="getPracticeTotalCount" resultType="java.lang.Integer">
+    select count(*) from practice
+    <where>
+      <if test="practiceTime !=null and practiceTime != ''">
+        #{practiceTime} = practicetime
+      </if>
+      <if test="practiceName != null and practiceName != ''">
+        AND  #{practiceName} = practicename
+      </if>
+      <if test="practiceType !=null and practiceType !=''">
+        AND  #{practiceType}= practicetype
+      </if>
+      <if test="practiceLevel !=null and practiceLevel !=''">
+        AND  #{practiceLevel}= practicelevel
+      </if>
+      <if test="practiceScore !=null and practiceScore !=''">
+        AND  #{practiceScore}= score
+      </if>
+    </where>
+  </select>
+  <select id="getPracticePageBean" parameterType="hashMap" resultType="pojo.Practice">
+    select * from practice
+    <where>
+      <if test="practiceTime !=null and practiceTime != ''">
+        #{practiceTime} = practicetime
+      </if>
+      <if test="practiceName != null and practiceName != ''">
+        AND  #{practiceName} = practicename
+      </if>
+      <if test="practiceType !=null and practiceType !=''">
+        AND  #{practiceType}= practicetype
+      </if>
+      <if test="practiceLevel !=null and practiceLevel !=''">
+        AND  #{practiceLevel}= practicelevel
+      </if>
+      <if test="practiceScore !=null and practiceScore !=''">
+        AND  #{practiceScore}= score
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
 </mapper>

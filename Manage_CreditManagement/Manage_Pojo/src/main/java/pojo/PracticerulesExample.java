@@ -164,73 +164,73 @@ public class PracticerulesExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andPracticelevelIsNull() {
+            addCriterion("practicelevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andPracticelevelIsNotNull() {
+            addCriterion("practicelevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andPracticelevelEqualTo(String value) {
+            addCriterion("practicelevel =", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andPracticelevelNotEqualTo(String value) {
+            addCriterion("practicelevel <>", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andPracticelevelGreaterThan(String value) {
+            addCriterion("practicelevel >", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andPracticelevelGreaterThanOrEqualTo(String value) {
+            addCriterion("practicelevel >=", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andPracticelevelLessThan(String value) {
+            addCriterion("practicelevel <", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andPracticelevelLessThanOrEqualTo(String value) {
+            addCriterion("practicelevel <=", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andPracticelevelLike(String value) {
+            addCriterion("practicelevel like", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andPracticelevelNotLike(String value) {
+            addCriterion("practicelevel not like", value, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andPracticelevelIn(List<String> values) {
+            addCriterion("practicelevel in", values, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andPracticelevelNotIn(List<String> values) {
+            addCriterion("practicelevel not in", values, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andPracticelevelBetween(String value1, String value2) {
+            addCriterion("practicelevel between", value1, value2, "practicelevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andPracticelevelNotBetween(String value1, String value2) {
+            addCriterion("practicelevel not between", value1, value2, "practicelevel");
             return (Criteria) this;
         }
 

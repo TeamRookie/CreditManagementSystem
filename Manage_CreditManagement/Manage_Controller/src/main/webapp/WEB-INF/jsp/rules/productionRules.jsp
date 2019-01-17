@@ -320,7 +320,7 @@
                             <tr>
                                 <td class="center">
                                     <label class="pos-rel">
-                                        ${item.level}
+                                        ${item.productionlevel}
                                     </label>
                                 </td>
                                 <td class="center">

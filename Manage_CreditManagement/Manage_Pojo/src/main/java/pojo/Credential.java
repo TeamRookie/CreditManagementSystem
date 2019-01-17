@@ -7,7 +7,7 @@ public class Credential {
 
     private String type;
 
-    private String level;
+    private String credentiallevel;
 
     private String stunum;
 
@@ -47,12 +47,12 @@ public class Credential {
         this.type = type == null ? null : type.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getCredentiallevel() {
+        return credentiallevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setCredentiallevel(String credentiallevel) {
+        this.credentiallevel = credentiallevel == null ? null : credentiallevel.trim();
     }
 
     public String getStunum() {

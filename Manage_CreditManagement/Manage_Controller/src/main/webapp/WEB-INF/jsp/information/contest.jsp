@@ -289,6 +289,12 @@ ${message}
                             </span>
                         </button>
                     </div>
+                    <div class="col-sm-1 no-padding-right">
+                        <a  class="white" href="${pageContext.request.contextPath}/contest.action">
+                            <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
+                                <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
+                            </button></a>
+                    </div>
                     <div class="col-sm-1">
                         <button type="button" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
@@ -304,24 +310,24 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/academic.action">
+                              action="${pageContext.request.contextPath}/contest.action">
                             <div class="form-group">
-                                <label class="col-sm-2 control-label no-padding-right" >
+                                <label class="col-sm-1 control-label no-padding-right"  for="number">
                                     学号
                                 </label>
                                 <div class="col-sm-2">
-                                    <input onkeyup="value=value.replace(/[^\d]/g,'')"  class="typeahead scrollable" name="stuNum" type="text" placeholder="教室编号" />
+                                    <input onkeyup="value=value.replace(/[^\d]/g,'')" class="form-control"  name="studentNumber" id="number" type="text" placeholder="学号" />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="date">活动时间</label>
+
+                                <label class="col-sm-1 control-label no-padding-right"  for="contestName">
+                                    竞赛名称
+                                </label>
                                 <div class="col-sm-2">
-                                    <div class="input-group ">
-                                        <input  name="searchDate" class="typeahead scrollable" id="date" type="text" placeholder="活动时间"/>
-                                        <span class="input-group-addon">
-									        	                <i class="fa fa-calendar bigger-110"></i>
-								        	            </span>
-                                    </div>
+                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称"  />
                                 </div>
-                                <div class="col-sm-2"></div>
+
+
+                                <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
                                         <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
@@ -330,7 +336,38 @@ ${message}
                                 </div>
 
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right " for="date">竞赛时间</label>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="contestDate" readonly>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="contestLevel">竞赛级别</label>
+                                <div class="col-sm-1">
+                                    <select id="contestLevel" class="form-control"   name="contestLevel" readonly>
+                                        <option value="">请选择</option>
+                                        <option value="国际">国际</option>
+                                        <option value="国家">国家</option>
+                                        <option value="省级">省级</option>
+                                        <option value="市级">市级</option>
+                                        <option value="校级">校级</option>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="contestRank">竞赛级别</label>
+                                <div class="col-sm-2">
+                                    <select id="contestRank" class="form-control"   name="contestRank" readonly>
+                                        <option value="">请选择</option>
+                                        <option value="特等奖">特等奖</option>
+                                        <option value="一等奖,金奖">一等奖,金奖</option>
+                                        <option value="二等奖,银奖">二等奖,银奖</option>
+                                        <option value="三等奖,铜奖">三等奖,铜奖</option>
+                                        <option value="优秀奖">优秀奖</option>
+                                        <option value="成功参与奖">成功参与奖</option>
+                                        <option value="其他奖">其他奖</option>
+                                    </select>
+                                </div>
 
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -366,11 +403,16 @@ ${message}
                                         ${item.stunum}
                                 </td>
                                 <td class="center">${item.stuname}</td>
-                                <td class="center">${item.academictime}</td>
-                                <td class="center">${item.theme}</td>
-                                <td class="center">${item.address}</td>
-                                <td class="center">${item.undertake}</td>
-                                <td class="center">${item.amount}</td>
+                                <td class="center">${item.contesttime}</td>
+                                <td class="center">${item.contestname}</td>
+                                <td class="center">${item.workname}</td>
+                                <td class="center">${item.contestlevel}</td>
+                                <td class="center">${item.rank}</td>
+                                <td class="center">${item.cachet}</td>
+                                <td class="center">${item.booktime}</td>
+                                <td class="center">${item.member}</td>
+                                <td class="center">${item.teachername}</td>
+                                <td class="center">${item.credit}</td>
                             </tr>
                     </c:forEach>
                     </tbody>
@@ -387,29 +429,29 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
                             <li>
 													<span>
-														<input value="1" maxlength="3" type="text" readonly="readonly" />
+														<input value="${pageBean.currentPage}" maxlength="3" type="text" readonly="readonly" />
 													</span>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}">
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}">
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -511,6 +553,7 @@ ${message}
             success: function(data)
             {
                 var content="";
+                content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
                     content+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";

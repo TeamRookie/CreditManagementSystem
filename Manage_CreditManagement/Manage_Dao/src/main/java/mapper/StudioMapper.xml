@@ -6,10 +6,9 @@
     <result column="studiotime" property="studiotime" jdbcType="VARCHAR" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
     <result column="studioname" property="studioname" jdbcType="VARCHAR" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
-    <result column="teachernum" property="teachernum" jdbcType="VARCHAR" />
+    <result column="studiolevel" property="studiolevel" jdbcType="VARCHAR" />
+    <result column="teachername" property="teachername" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
-    <result column="member" property="member" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
@@ -77,7 +76,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, studiotime, facultynum, studioname, level, teachernum, responsibility, member, 
+    id, studiotime, facultynum, studioname, studiolevel, teachername, responsibility, 
     stunum, credit, majornum, gradenum, department, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudioExample" >
@@ -112,17 +111,15 @@
   </delete>
   <insert id="insert" parameterType="pojo.Studio" >
     insert into studio (id, studiotime, facultynum, 
-      studioname, level, teachernum, 
-      responsibility, member, stunum, 
-      credit, majornum, gradenum, 
-      department, stuname, url
-      )
+      studioname, studiolevel, teachername, 
+      responsibility, stunum, credit, 
+      majornum, gradenum, department, 
+      stuname, url)
     values (#{id,jdbcType=INTEGER}, #{studiotime,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}, 
-      #{studioname,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR}, #{teachernum,jdbcType=VARCHAR}, 
-      #{responsibility,jdbcType=VARCHAR}, #{member,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
-      #{credit,jdbcType=REAL}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
-      #{department,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
-      )
+      #{studioname,jdbcType=VARCHAR}, #{studiolevel,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR}, 
+      #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
+      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{department,jdbcType=VARCHAR}, 
+      #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Studio" >
     insert into studio
@@ -139,17 +136,14 @@
       <if test="studioname != null" >
         studioname,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="studiolevel != null" >
+        studiolevel,
       </if>
-      <if test="teachernum != null" >
-        teachernum,
+      <if test="teachername != null" >
+        teachername,
       </if>
       <if test="responsibility != null" >
         responsibility,
-      </if>
-      <if test="member != null" >
-        member,
       </if>
       <if test="stunum != null" >
         stunum,
@@ -186,17 +180,14 @@
       <if test="studioname != null" >
         #{studioname,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="studiolevel != null" >
+        #{studiolevel,jdbcType=VARCHAR},
       </if>
-      <if test="teachernum != null" >
-        #{teachernum,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        #{teachername,jdbcType=VARCHAR},
       </if>
       <if test="responsibility != null" >
         #{responsibility,jdbcType=VARCHAR},
-      </if>
-      <if test="member != null" >
-        #{member,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         #{stunum,jdbcType=VARCHAR},
@@ -242,17 +233,14 @@
       <if test="record.studioname != null" >
         studioname = #{record.studioname,jdbcType=VARCHAR},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.studiolevel != null" >
+        studiolevel = #{record.studiolevel,jdbcType=VARCHAR},
       </if>
-      <if test="record.teachernum != null" >
-        teachernum = #{record.teachernum,jdbcType=VARCHAR},
+      <if test="record.teachername != null" >
+        teachername = #{record.teachername,jdbcType=VARCHAR},
       </if>
       <if test="record.responsibility != null" >
         responsibility = #{record.responsibility,jdbcType=VARCHAR},
-      </if>
-      <if test="record.member != null" >
-        member = #{record.member,jdbcType=VARCHAR},
       </if>
       <if test="record.stunum != null" >
         stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -286,10 +274,9 @@
       studiotime = #{record.studiotime,jdbcType=VARCHAR},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       studioname = #{record.studioname,jdbcType=VARCHAR},
-      level = #{record.level,jdbcType=VARCHAR},
-      teachernum = #{record.teachernum,jdbcType=VARCHAR},
+      studiolevel = #{record.studiolevel,jdbcType=VARCHAR},
+      teachername = #{record.teachername,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
-      member = #{record.member,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
       majornum = #{record.majornum,jdbcType=INTEGER},
@@ -313,17 +300,14 @@
       <if test="studioname != null" >
         studioname = #{studioname,jdbcType=VARCHAR},
       </if>
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="studiolevel != null" >
+        studiolevel = #{studiolevel,jdbcType=VARCHAR},
       </if>
-      <if test="teachernum != null" >
-        teachernum = #{teachernum,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        teachername = #{teachername,jdbcType=VARCHAR},
       </if>
       <if test="responsibility != null" >
         responsibility = #{responsibility,jdbcType=VARCHAR},
-      </if>
-      <if test="member != null" >
-        member = #{member,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         stunum = #{stunum,jdbcType=VARCHAR},
@@ -354,10 +338,9 @@
     set studiotime = #{studiotime,jdbcType=VARCHAR},
       facultynum = #{facultynum,jdbcType=INTEGER},
       studioname = #{studioname,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR},
-      teachernum = #{teachernum,jdbcType=VARCHAR},
+      studiolevel = #{studiolevel,jdbcType=VARCHAR},
+      teachername = #{teachername,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
-      member = #{member,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
       majornum = #{majornum,jdbcType=INTEGER},

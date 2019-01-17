@@ -3,7 +3,7 @@
 <mapper namespace="mapper.SafetyrulesMapper" >
   <resultMap id="BaseResultMap" type="pojo.Safetyrules" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="level" property="level" jdbcType="VARCHAR" />
+    <result column="safetylevel" property="safetylevel" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -65,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, level, credit
+    id, safetylevel, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.SafetyrulesExample" >
     select
@@ -98,9 +98,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Safetyrules" >
-    insert into safetyrules (id, level, credit
+    insert into safetyrules (id, safetylevel, credit
       )
-    values (#{id,jdbcType=INTEGER}, #{level,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}
+    values (#{id,jdbcType=INTEGER}, #{safetylevel,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Safetyrules" >
@@ -109,8 +109,8 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="level != null" >
-        level,
+      <if test="safetylevel != null" >
+        safetylevel,
       </if>
       <if test="credit != null" >
         credit,
@@ -120,8 +120,8 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="level != null" >
-        #{level,jdbcType=VARCHAR},
+      <if test="safetylevel != null" >
+        #{safetylevel,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
@@ -140,8 +140,8 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.level != null" >
-        level = #{record.level,jdbcType=VARCHAR},
+      <if test="record.safetylevel != null" >
+        safetylevel = #{record.safetylevel,jdbcType=VARCHAR},
       </if>
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
@@ -154,7 +154,7 @@
   <update id="updateByExample" parameterType="map" >
     update safetyrules
     set id = #{record.id,jdbcType=INTEGER},
-      level = #{record.level,jdbcType=VARCHAR},
+      safetylevel = #{record.safetylevel,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -163,8 +163,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Safetyrules" >
     update safetyrules
     <set >
-      <if test="level != null" >
-        level = #{level,jdbcType=VARCHAR},
+      <if test="safetylevel != null" >
+        safetylevel = #{safetylevel,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
@@ -174,7 +174,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Safetyrules" >
     update safetyrules
-    set level = #{level,jdbcType=VARCHAR},
+    set safetylevel = #{safetylevel,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL}
     where id = #{id,jdbcType=INTEGER}
   </update>

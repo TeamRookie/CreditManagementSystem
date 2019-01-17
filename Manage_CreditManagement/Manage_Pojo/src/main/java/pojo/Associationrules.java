@@ -3,7 +3,7 @@ package pojo;
 public class Associationrules {
     private Integer id;
 
-    private String level;
+    private String associationlevel;
 
     private String responsibility;
 
@@ -17,12 +17,12 @@ public class Associationrules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getAssociationlevel() {
+        return associationlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setAssociationlevel(String associationlevel) {
+        this.associationlevel = associationlevel == null ? null : associationlevel.trim();
     }
 
     public String getResponsibility() {

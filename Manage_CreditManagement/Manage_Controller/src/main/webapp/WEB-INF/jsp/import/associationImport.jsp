@@ -362,7 +362,7 @@ ${message}
                                     社团级别
                                 </label>
                                 <div class="col-sm-1">
-                                    <select id="addLevel" class="form-control"   name="level" readonly>
+                                    <select id="addLevel" class="form-control"   name="associationlevel" readonly>
                                         <option value="5星社团">5星社团</option>
                                         <option value="4星社团">4星社团</option>
                                         <option value="3星社团">3星社团</option>
@@ -407,7 +407,7 @@ ${message}
                                         ${item.associationtime}
                                 </td>
                                 <td class="center">${item.associationname}</td>
-                                <td class="center">${item.level}</td>
+                                <td class="center">${item.associationlevel}</td>
                                 <td class="center">
                                     <div class="hidden-sm hidden-xs action-buttons">
                                         <a class="blue" href="${pageContext.request.contextPath}/deleteAssociationType.action?id=${item.id}">

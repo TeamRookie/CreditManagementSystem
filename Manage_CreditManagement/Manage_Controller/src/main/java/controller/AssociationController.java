@@ -44,7 +44,7 @@ public class AssociationController
     @RequestMapping(value = "/addAssociationType",method = RequestMethod.POST)
     public  String addAssociationType(Associationtype associationtype)
     {
-        if (associationtype!=null&&associationtype.getAssociationname()!=null&&!associationtype.getAssociationname().isEmpty()&&associationtype.getAssociationtime()!=null&&!associationtype.getAssociationtime().isEmpty()&&associationtype.getLevel()!=null&&!associationtype.getLevel().isEmpty())
+        if (associationtype!=null&&associationtype.getAssociationname()!=null&&!associationtype.getAssociationname().isEmpty()&&associationtype.getAssociationtime()!=null&&!associationtype.getAssociationtime().isEmpty()&&associationtype.getAssociationlevel()!=null&&!associationtype.getAssociationlevel().isEmpty())
         {
             associationService.addAssociationType(associationtype);
         }

@@ -14,4 +14,5 @@ public interface ProjectService
     void deleteProjectTypeById(Integer id);
 
     void addProjectType(Projecttype projecttype);
+    PageBean getProjectPageBean(String studentNumber, String projectTime, String projectType, String projectId, String projectLevel, String projectScore, Integer currentPage, Integer pageSize);
 }

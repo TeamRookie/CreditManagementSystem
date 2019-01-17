@@ -164,73 +164,73 @@ public class CredentialrulesExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andCredentiallevelIsNull() {
+            addCriterion("credentiallevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andCredentiallevelIsNotNull() {
+            addCriterion("credentiallevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andCredentiallevelEqualTo(String value) {
+            addCriterion("credentiallevel =", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andCredentiallevelNotEqualTo(String value) {
+            addCriterion("credentiallevel <>", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andCredentiallevelGreaterThan(String value) {
+            addCriterion("credentiallevel >", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andCredentiallevelGreaterThanOrEqualTo(String value) {
+            addCriterion("credentiallevel >=", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andCredentiallevelLessThan(String value) {
+            addCriterion("credentiallevel <", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andCredentiallevelLessThanOrEqualTo(String value) {
+            addCriterion("credentiallevel <=", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andCredentiallevelLike(String value) {
+            addCriterion("credentiallevel like", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andCredentiallevelNotLike(String value) {
+            addCriterion("credentiallevel not like", value, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andCredentiallevelIn(List<String> values) {
+            addCriterion("credentiallevel in", values, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andCredentiallevelNotIn(List<String> values) {
+            addCriterion("credentiallevel not in", values, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andCredentiallevelBetween(String value1, String value2) {
+            addCriterion("credentiallevel between", value1, value2, "credentiallevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andCredentiallevelNotBetween(String value1, String value2) {
+            addCriterion("credentiallevel not between", value1, value2, "credentiallevel");
             return (Criteria) this;
         }
 

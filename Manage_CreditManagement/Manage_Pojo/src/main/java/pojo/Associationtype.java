@@ -7,7 +7,7 @@ public class Associationtype {
 
     private String associationname;
 
-    private String level;
+    private String associationlevel;
 
     public Integer getId() {
         return id;
@@ -33,11 +33,11 @@ public class Associationtype {
         this.associationname = associationname == null ? null : associationname.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getAssociationlevel() {
+        return associationlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setAssociationlevel(String associationlevel) {
+        this.associationlevel = associationlevel == null ? null : associationlevel.trim();
     }
 }

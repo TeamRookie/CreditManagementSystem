@@ -374,73 +374,73 @@ public class ContestExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andContestlevelIsNull() {
+            addCriterion("contestlevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andContestlevelIsNotNull() {
+            addCriterion("contestlevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andContestlevelEqualTo(String value) {
+            addCriterion("contestlevel =", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andContestlevelNotEqualTo(String value) {
+            addCriterion("contestlevel <>", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andContestlevelGreaterThan(String value) {
+            addCriterion("contestlevel >", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andContestlevelGreaterThanOrEqualTo(String value) {
+            addCriterion("contestlevel >=", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andContestlevelLessThan(String value) {
+            addCriterion("contestlevel <", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andContestlevelLessThanOrEqualTo(String value) {
+            addCriterion("contestlevel <=", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andContestlevelLike(String value) {
+            addCriterion("contestlevel like", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andContestlevelNotLike(String value) {
+            addCriterion("contestlevel not like", value, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andContestlevelIn(List<String> values) {
+            addCriterion("contestlevel in", values, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andContestlevelNotIn(List<String> values) {
+            addCriterion("contestlevel not in", values, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andContestlevelBetween(String value1, String value2) {
+            addCriterion("contestlevel between", value1, value2, "contestlevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andContestlevelNotBetween(String value1, String value2) {
+            addCriterion("contestlevel not between", value1, value2, "contestlevel");
             return (Criteria) this;
         }
 
@@ -724,73 +724,73 @@ public class ContestExample {
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumIsNull() {
-            addCriterion("teachernum is null");
+        public Criteria andTeachernameIsNull() {
+            addCriterion("teachername is null");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumIsNotNull() {
-            addCriterion("teachernum is not null");
+        public Criteria andTeachernameIsNotNull() {
+            addCriterion("teachername is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumEqualTo(String value) {
-            addCriterion("teachernum =", value, "teachernum");
+        public Criteria andTeachernameEqualTo(String value) {
+            addCriterion("teachername =", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotEqualTo(String value) {
-            addCriterion("teachernum <>", value, "teachernum");
+        public Criteria andTeachernameNotEqualTo(String value) {
+            addCriterion("teachername <>", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumGreaterThan(String value) {
-            addCriterion("teachernum >", value, "teachernum");
+        public Criteria andTeachernameGreaterThan(String value) {
+            addCriterion("teachername >", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumGreaterThanOrEqualTo(String value) {
-            addCriterion("teachernum >=", value, "teachernum");
+        public Criteria andTeachernameGreaterThanOrEqualTo(String value) {
+            addCriterion("teachername >=", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumLessThan(String value) {
-            addCriterion("teachernum <", value, "teachernum");
+        public Criteria andTeachernameLessThan(String value) {
+            addCriterion("teachername <", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumLessThanOrEqualTo(String value) {
-            addCriterion("teachernum <=", value, "teachernum");
+        public Criteria andTeachernameLessThanOrEqualTo(String value) {
+            addCriterion("teachername <=", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumLike(String value) {
-            addCriterion("teachernum like", value, "teachernum");
+        public Criteria andTeachernameLike(String value) {
+            addCriterion("teachername like", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotLike(String value) {
-            addCriterion("teachernum not like", value, "teachernum");
+        public Criteria andTeachernameNotLike(String value) {
+            addCriterion("teachername not like", value, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumIn(List<String> values) {
-            addCriterion("teachernum in", values, "teachernum");
+        public Criteria andTeachernameIn(List<String> values) {
+            addCriterion("teachername in", values, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotIn(List<String> values) {
-            addCriterion("teachernum not in", values, "teachernum");
+        public Criteria andTeachernameNotIn(List<String> values) {
+            addCriterion("teachername not in", values, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumBetween(String value1, String value2) {
-            addCriterion("teachernum between", value1, value2, "teachernum");
+        public Criteria andTeachernameBetween(String value1, String value2) {
+            addCriterion("teachername between", value1, value2, "teachername");
             return (Criteria) this;
         }
 
-        public Criteria andTeachernumNotBetween(String value1, String value2) {
-            addCriterion("teachernum not between", value1, value2, "teachernum");
+        public Criteria andTeachernameNotBetween(String value1, String value2) {
+            addCriterion("teachername not between", value1, value2, "teachername");
             return (Criteria) this;
         }
 

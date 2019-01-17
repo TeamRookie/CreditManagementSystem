@@ -5,11 +5,9 @@ public class Safety {
 
     private String safetytime;
 
-    private String level;
+    private String safetylevel;
 
-    private Integer teachernum;
-
-    private String member;
+    private String teachername;
 
     private String stunum;
 
@@ -41,28 +39,20 @@ public class Safety {
         this.safetytime = safetytime == null ? null : safetytime.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getSafetylevel() {
+        return safetylevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setSafetylevel(String safetylevel) {
+        this.safetylevel = safetylevel == null ? null : safetylevel.trim();
     }
 
-    public Integer getTeachernum() {
-        return teachernum;
+    public String getTeachername() {
+        return teachername;
     }
 
-    public void setTeachernum(Integer teachernum) {
-        this.teachernum = teachernum;
-    }
-
-    public String getMember() {
-        return member;
-    }
-
-    public void setMember(String member) {
-        this.member = member == null ? null : member.trim();
+    public void setTeachername(String teachername) {
+        this.teachername = teachername == null ? null : teachername.trim();
     }
 
     public String getStunum() {

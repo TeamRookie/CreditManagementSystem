@@ -9,7 +9,7 @@ public class Contest {
 
     private String contestname;
 
-    private String level;
+    private String contestlevel;
 
     private String rank;
 
@@ -19,7 +19,7 @@ public class Contest {
 
     private String member;
 
-    private String teachernum;
+    private String teachername;
 
     private String stunum;
 
@@ -67,12 +67,12 @@ public class Contest {
         this.contestname = contestname == null ? null : contestname.trim();
     }
 
-    public String getLevel() {
-        return level;
+    public String getContestlevel() {
+        return contestlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setContestlevel(String contestlevel) {
+        this.contestlevel = contestlevel == null ? null : contestlevel.trim();
     }
 
     public String getRank() {
@@ -107,12 +107,12 @@ public class Contest {
         this.member = member == null ? null : member.trim();
     }
 
-    public String getTeachernum() {
-        return teachernum;
+    public String getTeachername() {
+        return teachername;
     }
 
-    public void setTeachernum(String teachernum) {
-        this.teachernum = teachernum == null ? null : teachernum.trim();
+    public void setTeachername(String teachername) {
+        this.teachername = teachername == null ? null : teachername.trim();
     }
 
     public String getStunum() {

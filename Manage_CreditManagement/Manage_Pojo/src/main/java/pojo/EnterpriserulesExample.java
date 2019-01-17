@@ -164,73 +164,73 @@ public class EnterpriserulesExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andEnterpriselevelIsNull() {
+            addCriterion("enterpriselevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andEnterpriselevelIsNotNull() {
+            addCriterion("enterpriselevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andEnterpriselevelEqualTo(String value) {
+            addCriterion("enterpriselevel =", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andEnterpriselevelNotEqualTo(String value) {
+            addCriterion("enterpriselevel <>", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andEnterpriselevelGreaterThan(String value) {
+            addCriterion("enterpriselevel >", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andEnterpriselevelGreaterThanOrEqualTo(String value) {
+            addCriterion("enterpriselevel >=", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andEnterpriselevelLessThan(String value) {
+            addCriterion("enterpriselevel <", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andEnterpriselevelLessThanOrEqualTo(String value) {
+            addCriterion("enterpriselevel <=", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andEnterpriselevelLike(String value) {
+            addCriterion("enterpriselevel like", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andEnterpriselevelNotLike(String value) {
+            addCriterion("enterpriselevel not like", value, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andEnterpriselevelIn(List<String> values) {
+            addCriterion("enterpriselevel in", values, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andEnterpriselevelNotIn(List<String> values) {
+            addCriterion("enterpriselevel not in", values, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andEnterpriselevelBetween(String value1, String value2) {
+            addCriterion("enterpriselevel between", value1, value2, "enterpriselevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andEnterpriselevelNotBetween(String value1, String value2) {
+            addCriterion("enterpriselevel not between", value1, value2, "enterpriselevel");
             return (Criteria) this;
         }
 

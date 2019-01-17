@@ -318,7 +318,7 @@
                                 <tr>
                                     <td class="center">
                                         <label class="pos-rel">
-                                            ${item.level}
+                                            ${item.safetylevel}
                                         </label>
                                     </td>
 

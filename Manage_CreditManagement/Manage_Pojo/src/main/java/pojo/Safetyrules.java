@@ -3,7 +3,7 @@ package pojo;
 public class Safetyrules {
     private Integer id;
 
-    private String level;
+    private String safetylevel;
 
     private Float credit;
 
@@ -15,12 +15,12 @@ public class Safetyrules {
         this.id = id;
     }
 
-    public String getLevel() {
-        return level;
+    public String getSafetylevel() {
+        return safetylevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setSafetylevel(String safetylevel) {
+        this.safetylevel = safetylevel == null ? null : safetylevel.trim();
     }
 
     public Float getCredit() {

@@ -28,9 +28,18 @@ public class ProjectController
         return "rules/projectRules";
     }
     @RequestMapping("/project")
-    public  String getProject(Model model)
+    public  String getProject(Model model,String studentNumber,String projectTime,String projectType,String projectId,String projectLevel,String projectScore,Integer currentPage)
     {
-        return  "project";
+        PageBean pageBean= projectService.getProjectPageBean(studentNumber,projectTime,projectType,projectId,projectLevel,projectScore,currentPage,pageSize);
+        model.addAttribute("pageBean",pageBean);
+        model.addAttribute("studentNumber",studentNumber);
+        model.addAttribute("projectTime",projectTime);
+        model.addAttribute("projectType",projectType);
+        model.addAttribute("projectId",projectId);
+        model.addAttribute("projectLevel",projectLevel);
+        model.addAttribute("projectScore",projectScore);
+        model.addAttribute("currentPage",currentPage);
+        return  "information/project";
     }
     @RequestMapping("/projectImport")
     public  String getProjectImport(Model model,String projectTime,String projectName,Integer currentPage)

@@ -164,73 +164,73 @@ public class SafetyrulesExample {
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNull() {
-            addCriterion("level is null");
+        public Criteria andSafetylevelIsNull() {
+            addCriterion("safetylevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIsNotNull() {
-            addCriterion("level is not null");
+        public Criteria andSafetylevelIsNotNull() {
+            addCriterion("safetylevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLevelEqualTo(String value) {
-            addCriterion("level =", value, "level");
+        public Criteria andSafetylevelEqualTo(String value) {
+            addCriterion("safetylevel =", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotEqualTo(String value) {
-            addCriterion("level <>", value, "level");
+        public Criteria andSafetylevelNotEqualTo(String value) {
+            addCriterion("safetylevel <>", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThan(String value) {
-            addCriterion("level >", value, "level");
+        public Criteria andSafetylevelGreaterThan(String value) {
+            addCriterion("safetylevel >", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelGreaterThanOrEqualTo(String value) {
-            addCriterion("level >=", value, "level");
+        public Criteria andSafetylevelGreaterThanOrEqualTo(String value) {
+            addCriterion("safetylevel >=", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThan(String value) {
-            addCriterion("level <", value, "level");
+        public Criteria andSafetylevelLessThan(String value) {
+            addCriterion("safetylevel <", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLessThanOrEqualTo(String value) {
-            addCriterion("level <=", value, "level");
+        public Criteria andSafetylevelLessThanOrEqualTo(String value) {
+            addCriterion("safetylevel <=", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelLike(String value) {
-            addCriterion("level like", value, "level");
+        public Criteria andSafetylevelLike(String value) {
+            addCriterion("safetylevel like", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotLike(String value) {
-            addCriterion("level not like", value, "level");
+        public Criteria andSafetylevelNotLike(String value) {
+            addCriterion("safetylevel not like", value, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelIn(List<String> values) {
-            addCriterion("level in", values, "level");
+        public Criteria andSafetylevelIn(List<String> values) {
+            addCriterion("safetylevel in", values, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotIn(List<String> values) {
-            addCriterion("level not in", values, "level");
+        public Criteria andSafetylevelNotIn(List<String> values) {
+            addCriterion("safetylevel not in", values, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelBetween(String value1, String value2) {
-            addCriterion("level between", value1, value2, "level");
+        public Criteria andSafetylevelBetween(String value1, String value2) {
+            addCriterion("safetylevel between", value1, value2, "safetylevel");
             return (Criteria) this;
         }
 
-        public Criteria andLevelNotBetween(String value1, String value2) {
-            addCriterion("level not between", value1, value2, "level");
+        public Criteria andSafetylevelNotBetween(String value1, String value2) {
+            addCriterion("safetylevel not between", value1, value2, "safetylevel");
             return (Criteria) this;
         }
 

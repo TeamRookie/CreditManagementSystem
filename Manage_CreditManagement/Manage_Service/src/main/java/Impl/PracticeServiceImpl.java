@@ -64,4 +64,23 @@ public class PracticeServiceImpl implements PracticeService
     {
         practicetypeMapper.insertSelective(practicetype);
     }
+
+    @Override
+    public PageBean getPracticePageBean(String practiceName, String practiceTime, String practiceType, String practiceLevel, String practiceScore, Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=practiceItemMapper.getPracticeTotalCount(practiceName,practiceTime,practiceType,practiceLevel,practiceScore);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("practiceTime",practiceTime);
+        map.put("practiceType",practiceType);
+        map.put("practiceName",practiceName);
+        map.put("practiceLevel",practiceLevel);
+        map.put("practiceScore",practiceScore);
+        List<Practice> practiceList=practiceItemMapper.getPracticePageBean(map);
+        pageBean.setPageList(practiceList);
+        return pageBean;
+    }
 }
