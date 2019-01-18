@@ -51,7 +51,6 @@ public class CredentialServiceImpl implements CredentialService
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
         HashMap map=new HashMap();
-        /*        System.out.println(contestDate);*/
         map.put("pageBean",pageBean);
         map.put("information",information);
         List<Credentialtype> credentialTypeList = credentialItemMapper.getCredentialImportPageBean(map);
@@ -72,5 +71,29 @@ public class CredentialServiceImpl implements CredentialService
     public void deleteCredentialTypeById(Integer id)
     {
         credentialtypeMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public PageBean getCredentialPageBean(String studentNumber,String credentialTime, String credentialType, Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=credentialItemMapper.getCredentialTotalCount(studentNumber,credentialTime,credentialType);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("credentialTime",credentialTime);
+        map.put("studentNumber",studentNumber);
+        map.put("credentialType",credentialType);
+        List<Credential> credentialList=credentialItemMapper.getCredentialPageBean(map);
+        pageBean.setPageList(credentialList);
+        return pageBean;
+    }
+
+    @Override
+    public List<Credentialtype> getAllCredentialType()
+    {
+        List<Credentialtype> credentialtypeList= credentialItemMapper.getAllCredentialType();
+        return credentialtypeList;
     }
 }

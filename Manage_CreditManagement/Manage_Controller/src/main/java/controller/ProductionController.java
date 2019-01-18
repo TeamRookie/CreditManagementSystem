@@ -27,8 +27,13 @@ public class ProductionController
         return "rules/productionRules";
     }
     @RequestMapping("/production")
-    public  String getProduction(Model model)
+    public  String getProduction(Model model,String productionType,String productionTime,Integer currentPage,String studentNumber)
     {
-        return  "production";
+        PageBean pageBean=productionService.getProductionPageBean(studentNumber,productionType,productionTime,currentPage,pageSize);
+        model.addAttribute("studentNumber",studentNumber);
+        model.addAttribute("productionType",productionType);
+        model.addAttribute("productionTime",productionTime);
+        model.addAttribute("pageBean",pageBean);
+        return  "information/production";
     }
 }

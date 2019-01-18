@@ -22,11 +22,11 @@ public class DepartmentController
         List<Department> departmentList = departmentService.getAllDepartment();
         return departmentList;
     }
-    @RequestMapping("/getExistDepartment")
+    @RequestMapping("/getExistStudioDepartment")
     @ResponseBody
-    public  List<Department> getExistDepartment()
+    public  List<Department> getExistStudioDepartment()
     {
-        List<Department> departmentList=departmentService.getExistDepartment();
+        List<Department> departmentList=departmentService.getExistSudioDepartment();
         return  departmentList;
     }
 }

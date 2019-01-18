@@ -40,4 +40,48 @@
         </where>
         limit #{pageBean.start},#{pageBean.pageSize}
     </select>
+    <select id="getStudioTotalCount" resultType="java.lang.Integer">
+        select count(*) from studio
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+            <if test="studioTime != null and studioTime != ''">
+                AND  studiotime = #{studioTime}
+            </if>
+        </where>
+    </select>
+    <select id="getStudioPageBean" parameterType="hashMap" resultType="pojo.Studio">
+        select * from studio
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+            <if test="studioTime != null and studioTime != ''">
+                AND  studiotime = #{studioTime}
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getAllStudioName" resultType="java.lang.String">
+      select DISTINCT studioname from studiotype ;
+    </select>
 </mapper>

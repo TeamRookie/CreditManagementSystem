@@ -1,6 +1,5 @@
 package service;
 
-import pojo.AcademicPageBean;
 import pojo.Academicrules;
 import pojo.PageBean;
 
@@ -12,5 +11,6 @@ public interface AcademicService
 
     PageBean getPageBean(Integer pageSize, Integer currentPage);
     List<Academicrules> getAcademicRules();
-    AcademicPageBean getAcademicPageBean(String stuNum, String date, Integer pageSize, Integer currentPage);
+
+    PageBean getAcademicPageBean(String studentNumber, String academicTime, String academicDepartment, Integer currentPage, Integer pageSize);
 }

@@ -9,4 +9,6 @@ public interface ProductionService
 {
     List<Productionrules> getProductionRules();
     PageBean getPageBean(Integer pageSize, Integer currentPage);
+
+    PageBean getProductionPageBean(String studentNumber, String productionType, String productionTime, Integer currentPage, Integer pageSize);
 }

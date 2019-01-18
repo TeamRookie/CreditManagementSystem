@@ -281,33 +281,28 @@ ${message}
             <div class="page-content">
 
                 <div class="col-xs-12">
-                    <div class="col-sm-1 no-padding-right">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" name="searchButton" id="searchButton">
+
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" id="searchButton">
                             <span class="ace-icon fa fa-search icon-on-right bigger-110">
                                 搜索
                             </span>
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <a  class="white" href="${pageContext.request.contextPath}/studioImport.action">
-                        <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
-                            <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
-                        </button></a>
+                        <a  class="white" href="${pageContext.request.contextPath}/production.action">
+                            <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
+                                <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
+                            </button></a>
                     </div>
-                    <div class="col-sm-1 no-padding-right">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="addType();" name="addButton" id="addButton">
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
-                                添加
+                                项目信息导出
                             </span>
                         </button>
                     </div>
-                    <div class="col-sm-1 no-padding-right">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="" name="importButton" id="importButton">
-                            <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
-                                批量导入
-                            </span>
-                        </button>
-                    </div>
+
                 </div>
 
 
@@ -315,30 +310,29 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/studioImport.action" method="post">
+                              action="${pageContext.request.contextPath}/production.action">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right"  for="name">
-                                    工作室名称
+                                <label class="col-sm-2 control-label no-padding-right"  for="number">
+                                    学号
                                 </label>
                                 <div class="col-sm-2">
-                                    <input   class="form-control" name="studioName" id="name" type="text" placeholder="工作室名称" />
+                                    <input id="number" onkeyup="value=value.replace(/[^\d]/g,'')"  class="typeahead scrollable" name="studentNumber" type="text" placeholder="" />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="department">
-                                    所属部门
-                                </label>
-                                <div class="col-sm-2">
-                                    <select id="department" class="form-control"   name="studioDepartment" readonly>
-                                        <option value="">请选择</option>
+                                <label class="col-sm-1 control-label no-padding-right " for="date">发表时间</label>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="productionTime" readonly>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="studioLevel">
-                                    工作室等级
-                                </label>
+                                <label class="col-sm-1 control-label no-padding-right " for="productionType">论文类型</label>
                                 <div class="col-sm-2">
-                                    <select id="studioLevel" class="form-control"   name="studioLevel" readonly>
+                                    <select id="productionType" class="form-control"   name="productionType" readonly>
                                         <option value="">请选择</option>
-                                        <option value="优秀工作室">优秀工作室</option>
-                                        <option value="注册工作室">注册工作室</option>
+                                        <option value="会议论文">会议论文</option>
+                                        <option value="核心期刊">核心期刊</option>
+                                        <option value="一般学术刊物">一般学术刊物</option>
+                                        <option value="公开刊物发表">公开刊物发表</option>
+                                        <option value="报纸">报纸</option>
+                                        <option value="大连大学报">大连大学报</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-1"></div>
@@ -346,47 +340,6 @@ ${message}
                                     <button type="submit" class="btn btn-sm btn-primary ">
                                         <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
                                         搜索
-                                    </button>
-                                </div>
-
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="col-xs-12" id="addForm" style="display: none">
-                        <h4 class="pink" style="height: 20px"></h4>
-                        <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/addStudioType.action" method="post">
-                            <div class="form-group">
-
-                                <label class="col-sm-1 control-label no-padding-right"  for="studioname" >
-                                    工作室名称
-                                </label>
-                                <div class="col-sm-2">
-                                    <input required   class="form-control" name="studioname" id="studioname" type="text" placeholder="工作室名称" />
-                                </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="studiodepartment">
-                                    所属部门
-                                </label>
-                                <div class="col-sm-2">
-                                    <select id="studiodepartment" class="form-control"   name="department" readonly>
-                                    </select>
-                                </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="studiolevel">
-                                    工作室等级
-                                </label>
-                                <div class="col-sm-2">
-                                    <select id="studiolevel" class="form-control"   name="studiolevel" readonly>
-                                        <option value="优秀工作室">优秀工作室</option>
-                                        <option value="注册工作室">注册工作室</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-1 no-padding-top">
-                                    <button type="submit" class="btn btn-sm btn-primary ">
-                                        <span class="ace-icon fa fa-outdent icon-on-right bigger-150 "></span>
-                                        添加
                                     </button>
                                 </div>
 
@@ -404,31 +357,34 @@ ${message}
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
                     <tr>
-                        <th class="center">工作室等级</th>
-                        <th class="center">工作室名称</th>
-                        <th class="center">所属部门</th>
-                        <th class="center">操作</th>
+                        <th class="center">学号</th>
+                        <th class="center">姓名</th>
+                        <th class="center">发表时间 </th>
+                        <th class="center">论文(文章，作品)名称</th>
+                        <th class="center">类型</th>
+                        <th class="center">题名</th>
+                        <th class="center">职责</th>
+                        <th class="center">作者</th>
+                        <th class="center">来源</th>
+                        <th class="center">分数</th>
                     </tr>
                     </thead>
+
                     <tbody>
                     <c:forEach items="${pageBean.pageList}" var="item">
                             <tr>
                                 <td class="center">
-                                        ${item.studioname}
+                                        ${item.stunum}
                                 </td>
-                                <td class="center">
-                                        ${item.studiolevel}
-                                </td>
-                                <td class="center">
-                                        ${item.department}
-                                </td>
-                                <td class="center">
-                                    <div class="hidden-sm hidden-xs action-buttons">
-                                        <a class="blue" href="${pageContext.request.contextPath}/deleteStudioType.action?id=${item.id}">
-                                            <span class="label label-sm label-inverse arrowed-in">删除</span>
-                                        </a>
-                                    </div>
-                                </td>
+                                <td class="center">${item.stuname}</td>
+                                <td class="center">${item.productiontime}</td>
+                                <td class="center">${item.productionname}</td>
+                                <td class="center">${item.productiontype}</td>
+                                <td class="center">${item.autograph}</td>
+                                <td class="center">${item.responsibility}</td>
+                                <td class="center">${item.author}</td>
+                                <td class="center">${item.source}</td>
+                                <td class="center">${item.credit}</td>
                             </tr>
                     </c:forEach>
                     </tbody>
@@ -445,29 +401,29 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/studioImport.action?currentPage=1&studioName=${studioName}&studioLevel=${studioLevel}&studioDepartment=${studioDepartment}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/production.action?currentPage=1&studentNumber=${studentNumber}&productionTime=${productionTime}&productionType=${productionType}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/studioImport.action?currentPage=${pageBean.currentPage-1}&studioName=${studioName}&studioLevel=${studioLevel}&studioDepartment=${studioDepartment}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/production.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&productionTime=${productionTime}&productionType=${productionType}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
                             <li>
 													<span>
-														<input value="${pageBean.currentPage}" maxlength="3" type="text" readonly="readonly" />
+														<input value="1" maxlength="3" type="text" readonly="readonly" />
 													</span>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/studioImport.action?currentPage=${pageBean.currentPage+1}&studioName=${studioName}&studioLevel=${studioLevel}&studioDepartment=${studioDepartment}">
+                                <a href="${pageContext.request.contextPath}/production.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&productionTime=${productionTime}&productionType=${productionType}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/studioImport.action?currentPage=${pageBean.totalPage}&studioName=${studioName}&studioLevel=${studioLevel}&studioDepartment=${studioDepartment}">
+                                <a href="${pageContext.request.contextPath}/production.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&productionTime=${productionTime}&productionType=${productionType}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -568,59 +524,21 @@ ${message}
             url: "${pageContext.request.contextPath}/getYears.action",
             success: function(data)
             {
-                var  addContent="";
-                var content="<option  value=''>请选择</option>";
+                var content="";
+                content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
                     content+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";
-                    addContent+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";
                 }
                 $("#date").html(content);
-                $("#addDate").html(addContent);
             },
             fail:function () {
                 alert("获取年份列表失败!");
             }
         });
-        $.ajax({
-            type: "POST",
-            url: "${pageContext.request.contextPath}/getExistStudioDepartment.action",
-            success: function(data)
-            {
-                var content="<option value=''>请选择</option>";
-                for (var i=0;i<data.length;i++)
-                {
-                    content+="<option  value='"+data[i].department+"'>"+data[i].department+"</option>";
-                }
-                $("#department").html(content);
-            },
-            fail:function () {
-                alert("获取部门列表失败!");
-            }
-        });
-        $.ajax({
-            type: "POST",
-            url: "${pageContext.request.contextPath}/getAllDepartment.action",
-            success: function(data)
-            {
-                var content="";
-                for (var i=0;i<data.length;i++)
-                {
-                    content+="<option  value='"+data[i].department+"'>"+data[i].department+"</option>";
-                }
-                $("#studiodepartment").html(content);
-            },
-            fail:function () {
-                alert("获取部门列表失败!");
-            }
-        });
+
     });
-    function addType() {
-        $("#addForm").toggle();
-        $("#searchForm").hide();
-    }
     function  searchButtonClick() {
-        $("#addForm").hide();
         $("#searchForm").toggle();
     }
 </script>

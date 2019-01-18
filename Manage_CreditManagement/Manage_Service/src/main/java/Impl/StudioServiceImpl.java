@@ -70,4 +70,31 @@ public class StudioServiceImpl implements StudioService
     {
         studiotypeMapper.insertSelective(studiotype);
     }
+
+    @Override
+    public PageBean getStudioPageBean(String studentNumber, String studioTime, String studioDepartment, String studioName, String studioLevel, Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=studioItemMapper.getStudioTotalCount(studentNumber,studioTime,studioDepartment,studioName,studioLevel);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        /*        System.out.println(contestDate);*/
+        map.put("pageBean",pageBean);
+        map.put("studioName",studioName);
+        map.put("studioLevel",studioLevel);
+        map.put("studioDepartment",studioDepartment);
+        map.put("studioTime",studioTime);
+        map.put("studentNumber",studentNumber);
+        List<Studio> studiosList=studioItemMapper.getStudioPageBean(map);
+        pageBean.setPageList(studiosList);
+        return pageBean;
+    }
+
+    @Override
+    public List<String> getAllStudioName()
+    {
+       List<String> nameList= studioItemMapper.getAllStudioName();
+       return  nameList;
+    }
 }

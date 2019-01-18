@@ -289,6 +289,12 @@ ${message}
                             </span>
                         </button>
                     </div>
+                    <div class="col-sm-1 no-padding-right">
+                        <a  class="white" href="${pageContext.request.contextPath}/academic.action">
+                            <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
+                                <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
+                            </button></a>
+                    </div>
                     <div class="col-sm-1">
                         <button type="button" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
@@ -306,22 +312,23 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/academic.action">
                             <div class="form-group">
-                                <label class="col-sm-2 control-label no-padding-right" >
+                                <label class="col-sm-2 control-label no-padding-right"  for="number">
                                     学号
                                 </label>
                                 <div class="col-sm-2">
-                                    <input onkeyup="value=value.replace(/[^\d]/g,'')"  class="typeahead scrollable" name="stuNum" type="text" placeholder="教室编号" />
+                                    <input id="number" onkeyup="value=value.replace(/[^\d]/g,'')"  class="typeahead scrollable" name="studentNumber" type="text" placeholder="" />
                                 </div>
                                 <label class="col-sm-1 control-label no-padding-right " for="date">活动时间</label>
-                                <div class="col-sm-2">
-                                    <div class="input-group ">
-                                        <input  name="searchDate" class="typeahead scrollable" id="date" type="text" placeholder="活动时间"/>
-                                        <span class="input-group-addon">
-									        	                <i class="fa fa-calendar bigger-110"></i>
-                                        </span>
-                                    </div>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="academicTime" readonly>
+                                    </select>
                                 </div>
-                                <div class="col-sm-2"></div>
+                                <label class="col-sm-1 control-label no-padding-right " for="academicDepartment">组织单位</label>
+                                <div class="col-sm-2">
+                                    <select id="academicDepartment" class="form-control"   name="academicDepartment" readonly>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
                                         <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
@@ -381,12 +388,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -397,13 +404,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}">
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}">
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -505,6 +512,7 @@ ${message}
             success: function(data)
             {
                 var content="";
+                content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
                     content+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";
@@ -513,6 +521,23 @@ ${message}
             },
             fail:function () {
                 alert("获取年份列表失败!");
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getAllDepartment.action",
+            success: function(data)
+            {
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].department+"'>"+data[i].department+"</option>";
+                }
+                $("#academicDepartment").html(content);
+            },
+            fail:function () {
+                alert("获取组织单位列表失败!");
             }
         });
     });

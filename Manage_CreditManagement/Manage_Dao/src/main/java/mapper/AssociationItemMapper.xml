@@ -34,4 +34,39 @@
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>
+  <select id="getAssociationTotalCount" resultType="java.lang.Integer">
+    select count(*) from association
+    <where>
+      <if test="associationTime !=null and associationTime != ''">
+        #{associationTime} = associationtime
+      </if>
+      <if test="associationName != null and associationName != ''">
+        AND  associationname = #{associationName}
+      </if>
+      <if test="studentNumber != null and studentNumber != ''">
+        AND  stunum = #{studentNumber}
+      </if>
+      <if test="associationLevel != null and associationLevel != ''">
+        AND  associationlevel = #{associationLevel}
+      </if>
+    </where>
+  </select>
+  <select id="getAssociationPageBean" parameterType="hashMap" resultType="pojo.Association">
+    select * from association
+    <where>
+      <if test="associationTime !=null and associationTime != ''">
+        #{associationTime} = associationtime
+      </if>
+      <if test="associationName != null and associationName != ''">
+        AND  associationname = #{associationName}
+      </if>
+      <if test="studentNumber != null and studentNumber != ''">
+        AND  stunum = #{studentNumber}
+      </if>
+      <if test="associationLevel != null and associationLevel != ''">
+        AND  associationlevel = #{associationLevel}
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
 </mapper>

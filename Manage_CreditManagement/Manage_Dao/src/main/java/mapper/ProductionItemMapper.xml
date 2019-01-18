@@ -7,4 +7,33 @@
   <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Productionrules">
     select * from productionrules limit #{start},#{pageSize};
   </select>
+  <select id="getProductionTotalCount" resultType="java.lang.Integer">
+    select count(*) from production
+    <where>
+      <if test="studentNumber !=null and studentNumber != ''">
+        #{studentNumber} = stunum
+      </if>
+      <if test="productionTime !=null and productionTime!=''">
+        AND  productiontime LIKE  CONCAT('${productionTime}','%')
+      </if>
+      <if test="productionType != null and productionType != ''">
+        AND  productiontype = #{productionType}
+      </if>
+    </where>
+  </select>
+  <select id="getProductionPageBean" parameterType="hashMap" resultType="pojo.Production">
+    select * from production
+    <where>
+      <if test="studentNumber !=null and studentNumber != ''">
+        #{studentNumber} = stunum
+      </if>
+      <if test="productionTime !=null and productionTime!=''">
+        AND  productiontime LIKE  CONCAT('${productionTime}','%')
+      </if>
+      <if test="productionType != null and productionType != ''">
+        AND  productiontype = #{productionType}
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
 </mapper>

@@ -16,4 +16,6 @@ public interface AssociationService
     void addAssociationType(Associationtype associationtype);
 
     void deleteAssociationTypeById(Integer id);
+
+    PageBean getAssociationPageBean(String studentNumber, String associationTime, String associationName, String associationLevel, Integer currentPage, Integer pageSize);
 }

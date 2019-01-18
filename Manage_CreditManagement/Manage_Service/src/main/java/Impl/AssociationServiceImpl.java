@@ -69,4 +69,22 @@ public class AssociationServiceImpl implements AssociationService
     {
         associationtypeMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public PageBean getAssociationPageBean(String studentNumber, String associationTime, String associationName, String associationLevel, Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=associationItemMapper.getAssociationTotalCount(studentNumber,associationTime,associationName,associationLevel);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("associationName",associationName);
+        map.put("associationTime",associationTime);
+        map.put("studentNumber",studentNumber);
+        map.put("associationLevel",associationLevel);
+        List<Association> associationList=associationItemMapper.getAssociationPageBean(map);
+        pageBean.setPageList(associationList);
+        return pageBean;
+    }
 }

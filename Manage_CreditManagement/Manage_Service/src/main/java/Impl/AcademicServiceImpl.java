@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pojo.*;
 import service.AcademicService;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -43,18 +44,22 @@ public class AcademicServiceImpl implements AcademicService
     }
 
     @Override
-    public AcademicPageBean getAcademicPageBean(String stuNum, String searchDate,Integer pageSize, Integer currentPage)
+    public PageBean getAcademicPageBean(String studentNumber, String academicTime, String academicDepartment, Integer currentPage, Integer pageSize)
     {
-        int totalCount = academicItemMapper.getAcademicTotalCount(stuNum,searchDate);
-        AcademicPageBean academicPageBean=new AcademicPageBean(pageSize,currentPage,totalCount);
-        academicPageBean.setSearchDate(searchDate);
-        academicPageBean.setStuNum(stuNum);
-        Integer start=(academicPageBean.getCurrentPage()-1)*academicPageBean.getPageSize();
-        academicPageBean.setStart(start);
-        List<Academic> academicList = academicItemMapper.getAcademicPageBean(academicPageBean);
-        academicPageBean.setPageList(academicList);
-        return  academicPageBean;
+        int totalCount = academicItemMapper.getAcademicTotalCount(studentNumber,academicTime,academicDepartment);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("studentNumber",studentNumber);
+        map.put("academicTime",academicTime);
+        map.put("academicDepartment",academicDepartment);
+        List<Academic> academicList = academicItemMapper.getAcademicPageBean(map);
+        pageBean.setPageList(academicList);
+        return  pageBean;
     }
+
 
 
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import pojo.PageBean;
 import pojo.Studiotype;
 import pojo.Type;
@@ -31,9 +32,16 @@ public class StudioController
     }
 
     @RequestMapping("/studio")
-    public String getStudio(Model model)
+    public String getStudio(Model model,String studentNumber,String studioTime,String studioDepartment,String studioName,String studioLevel,Integer currentPage)
     {
-        return "studio";
+        PageBean pageBean=studioService.getStudioPageBean(studentNumber,studioTime,studioDepartment,studioName,studioLevel,currentPage,pageSize);
+        model.addAttribute("pageBean",pageBean);
+        model.addAttribute("studentNumber",studentNumber);
+        model.addAttribute("studioTime",studioTime);
+        model.addAttribute("studioDepartment",studioDepartment);
+        model.addAttribute("studioName",studioName);
+        model.addAttribute("studioLevel",studioLevel);
+        return "information/studio";
     }
 
     @RequestMapping("/studioImport")
@@ -60,5 +68,12 @@ public class StudioController
             studioService.addStudioType(studiotype);
         }
         return "redirect:studioImport.action";
+    }
+    @RequestMapping("/getAllStudioName")
+    @ResponseBody
+    public List<String> getAllStudioName()
+    {
+        List<String> nameList= studioService.getAllStudioName();
+        return  nameList;
     }
 }

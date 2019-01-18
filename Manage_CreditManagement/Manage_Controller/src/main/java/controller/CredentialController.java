@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import pojo.Credentialtype;
 import pojo.PageBean;
 import pojo.Type;
 import service.CredentialService;
@@ -27,9 +29,13 @@ public class CredentialController
         return "rules/credentialRules";
     }
     @RequestMapping("/credential")
-    public  String getCredential(Model model)
+    public  String getCredential(Model model,String studentNumber,String credentialTime,String credentialType,Integer currentPage)
     {
-        return  "credential";
+        PageBean pageBean=credentialService.getCredentialPageBean(studentNumber,credentialTime,credentialType,currentPage,pageSize);
+        model.addAttribute("credentialTime",credentialTime);
+        model.addAttribute("credentialType",credentialType);
+        model.addAttribute("pageBean",pageBean);
+        return  "information/credential";
     }
     @RequestMapping("/credentialImport")
     public  String getCredentialImport(Model model,String information,Integer currentPage)
@@ -50,5 +56,12 @@ public class CredentialController
     {
         credentialService.deleteCredentialTypeById(id);
         return "redirect:credentialImport.action";
+    }
+    @RequestMapping("/getCredentialType")
+    @ResponseBody
+    public List<Credentialtype> getCredentialType()
+    {
+        List<Credentialtype> credentialtypeList= credentialService.getAllCredentialType();
+        return  credentialtypeList;
     }
 }

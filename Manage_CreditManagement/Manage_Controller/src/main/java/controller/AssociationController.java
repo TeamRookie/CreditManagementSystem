@@ -28,9 +28,15 @@ public class AssociationController
         return "rules/associationRules";
     }
     @RequestMapping("/association")
-    public  String getAssociation(Model model)
+    public  String getAssociation(Model model,Integer currentPage,String studentNumber,String associationTime, String associationName,String associationLevel)
     {
-        return  "association";
+         PageBean pageBean=associationService.getAssociationPageBean(studentNumber,associationTime,associationName,associationLevel,currentPage,pageSize);
+         model.addAttribute("studentNumber",studentNumber);
+         model.addAttribute("associationName",associationName);
+         model.addAttribute("associationLevel",associationLevel);
+         model.addAttribute("associationTime",associationTime);
+         model.addAttribute("pageBean",pageBean);
+        return  "information/association";
     }
     @RequestMapping("/associationImport")
     public  String getAssociationImport(Model model,String associationName,String associationTime,Integer currentPage)

@@ -25,9 +25,9 @@ public class DepartmentServiceImpl implements DepartmentService
     }
 
     @Override
-    public List<Department> getExistDepartment()
+    public List<Department> getExistSudioDepartment()
     {
-        List<Department> departmentList = departmentItemMapper.getExistDepartment();
+        List<Department> departmentList = departmentItemMapper.getExistStudioDepartment();
         return departmentList;
     }
 }
