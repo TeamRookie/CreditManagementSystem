@@ -22,4 +22,13 @@ public class EnterpriseController
         model.addAttribute("pageBean",pageBean);
         return  "rules/enterpriseRules";
     }
+    @RequestMapping("/enterprise")
+    public  String getEnterprise(Model model,String studentNumber,String enterpriseType,String enterpriseTime,Integer currentPage)
+    {
+        PageBean pageBean=enterpriseService.getEnterprisePageBean(studentNumber,enterpriseType,enterpriseTime,currentPage,pageSize);
+        model.addAttribute("pageBean",pageBean);
+        model.addAttribute("enterpriseType",enterpriseType);
+        model.addAttribute("enterpriseTime",enterpriseTime);
+        return "information/enterprise";
+    }
 }

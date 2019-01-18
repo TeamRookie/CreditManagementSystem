@@ -1,10 +1,9 @@
 package mapper;
 
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Production;
 import pojo.ProductionExample;
-
-import java.util.List;
 
 public interface ProductionMapper {
     int countByExample(ProductionExample example);

@@ -13,8 +13,6 @@ public class Production {
 
     private String source;
 
-    private String productionlevel;
-
     private String rank;
 
     private String responsibility;
@@ -81,14 +79,6 @@ public class Production {
 
     public void setSource(String source) {
         this.source = source == null ? null : source.trim();
-    }
-
-    public String getProductionlevel() {
-        return productionlevel;
-    }
-
-    public void setProductionlevel(String productionlevel) {
-        this.productionlevel = productionlevel == null ? null : productionlevel.trim();
     }
 
     public String getRank() {

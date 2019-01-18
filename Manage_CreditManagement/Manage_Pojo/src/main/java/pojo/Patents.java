@@ -15,6 +15,18 @@ public class Patents {
 
     private String patentsname;
 
+    private String stunum;
+
+    private String stuname;
+
+    private Integer facultynum;
+
+    private Integer majornum;
+
+    private Integer gradenum;
+
+    private String url;
+
     public Integer getId() {
         return id;
     }
@@ -69,5 +81,53 @@ public class Patents {
 
     public void setPatentsname(String patentsname) {
         this.patentsname = patentsname == null ? null : patentsname.trim();
+    }
+
+    public String getStunum() {
+        return stunum;
+    }
+
+    public void setStunum(String stunum) {
+        this.stunum = stunum == null ? null : stunum.trim();
+    }
+
+    public String getStuname() {
+        return stuname;
+    }
+
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
+    public Integer getFacultynum() {
+        return facultynum;
+    }
+
+    public void setFacultynum(Integer facultynum) {
+        this.facultynum = facultynum;
+    }
+
+    public Integer getMajornum() {
+        return majornum;
+    }
+
+    public void setMajornum(Integer majornum) {
+        this.majornum = majornum;
+    }
+
+    public Integer getGradenum() {
+        return gradenum;
+    }
+
+    public void setGradenum(Integer gradenum) {
+        this.gradenum = gradenum;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url == null ? null : url.trim();
     }
 }

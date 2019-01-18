@@ -8,6 +8,12 @@
     <result column="trainsite" property="trainsite" jdbcType="VARCHAR" />
     <result column="organizationunit" property="organizationunit" jdbcType="VARCHAR" />
     <result column="tearchename" property="tearchename" jdbcType="VARCHAR" />
+    <result column="stunum" property="stunum" jdbcType="VARCHAR" />
+    <result column="stuname" property="stuname" jdbcType="VARCHAR" />
+    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
+    <result column="majornum" property="majornum" jdbcType="INTEGER" />
+    <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,7 +74,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, traincontent, traintime, trainsite, organizationunit, tearchename
+    id, traincontent, traintime, trainsite, organizationunit, tearchename, stunum, stuname, 
+    facultynum, majornum, gradenum, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TrainExample" >
     select
@@ -102,10 +109,14 @@
   </delete>
   <insert id="insert" parameterType="pojo.Train" >
     insert into train (id, traincontent, traintime, 
-      trainsite, organizationunit, tearchename
+      trainsite, organizationunit, tearchename, 
+      stunum, stuname, facultynum, 
+      majornum, gradenum, url
       )
     values (#{id,jdbcType=INTEGER}, #{traincontent,jdbcType=VARCHAR}, #{traintime,jdbcType=VARCHAR}, 
-      #{trainsite,jdbcType=VARCHAR}, #{organizationunit,jdbcType=VARCHAR}, #{tearchename,jdbcType=VARCHAR}
+      #{trainsite,jdbcType=VARCHAR}, #{organizationunit,jdbcType=VARCHAR}, #{tearchename,jdbcType=VARCHAR}, 
+      #{stunum,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}, 
+      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Train" >
@@ -129,6 +140,24 @@
       <if test="tearchename != null" >
         tearchename,
       </if>
+      <if test="stunum != null" >
+        stunum,
+      </if>
+      <if test="stuname != null" >
+        stuname,
+      </if>
+      <if test="facultynum != null" >
+        facultynum,
+      </if>
+      <if test="majornum != null" >
+        majornum,
+      </if>
+      <if test="gradenum != null" >
+        gradenum,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -148,6 +177,24 @@
       </if>
       <if test="tearchename != null" >
         #{tearchename,jdbcType=VARCHAR},
+      </if>
+      <if test="stunum != null" >
+        #{stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="facultynum != null" >
+        #{facultynum,jdbcType=INTEGER},
+      </if>
+      <if test="majornum != null" >
+        #{majornum,jdbcType=INTEGER},
+      </if>
+      <if test="gradenum != null" >
+        #{gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -178,6 +225,24 @@
       <if test="record.tearchename != null" >
         tearchename = #{record.tearchename,jdbcType=VARCHAR},
       </if>
+      <if test="record.stunum != null" >
+        stunum = #{record.stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stuname != null" >
+        stuname = #{record.stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.facultynum != null" >
+        facultynum = #{record.facultynum,jdbcType=INTEGER},
+      </if>
+      <if test="record.majornum != null" >
+        majornum = #{record.majornum,jdbcType=INTEGER},
+      </if>
+      <if test="record.gradenum != null" >
+        gradenum = #{record.gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -190,7 +255,13 @@
       traintime = #{record.traintime,jdbcType=VARCHAR},
       trainsite = #{record.trainsite,jdbcType=VARCHAR},
       organizationunit = #{record.organizationunit,jdbcType=VARCHAR},
-      tearchename = #{record.tearchename,jdbcType=VARCHAR}
+      tearchename = #{record.tearchename,jdbcType=VARCHAR},
+      stunum = #{record.stunum,jdbcType=VARCHAR},
+      stuname = #{record.stuname,jdbcType=VARCHAR},
+      facultynum = #{record.facultynum,jdbcType=INTEGER},
+      majornum = #{record.majornum,jdbcType=INTEGER},
+      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      url = #{record.url,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -213,6 +284,24 @@
       <if test="tearchename != null" >
         tearchename = #{tearchename,jdbcType=VARCHAR},
       </if>
+      <if test="stunum != null" >
+        stunum = #{stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        stuname = #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="facultynum != null" >
+        facultynum = #{facultynum,jdbcType=INTEGER},
+      </if>
+      <if test="majornum != null" >
+        majornum = #{majornum,jdbcType=INTEGER},
+      </if>
+      <if test="gradenum != null" >
+        gradenum = #{gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -222,7 +311,13 @@
       traintime = #{traintime,jdbcType=VARCHAR},
       trainsite = #{trainsite,jdbcType=VARCHAR},
       organizationunit = #{organizationunit,jdbcType=VARCHAR},
-      tearchename = #{tearchename,jdbcType=VARCHAR}
+      tearchename = #{tearchename,jdbcType=VARCHAR},
+      stunum = #{stunum,jdbcType=VARCHAR},
+      stuname = #{stuname,jdbcType=VARCHAR},
+      facultynum = #{facultynum,jdbcType=INTEGER},
+      majornum = #{majornum,jdbcType=INTEGER},
+      gradenum = #{gradenum,jdbcType=INTEGER},
+      url = #{url,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

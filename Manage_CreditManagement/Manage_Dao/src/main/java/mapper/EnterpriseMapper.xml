@@ -11,6 +11,14 @@
     <result column="establishtime" property="establishtime" jdbcType="VARCHAR" />
     <result column="businessscope" property="businessscope" jdbcType="VARCHAR" />
     <result column="shareholder" property="shareholder" jdbcType="VARCHAR" />
+    <result column="stunum" property="stunum" jdbcType="VARCHAR" />
+    <result column="stuname" property="stuname" jdbcType="VARCHAR" />
+    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
+    <result column="majornum" property="majornum" jdbcType="INTEGER" />
+    <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="rank" property="rank" jdbcType="VARCHAR" />
+    <result column="credit" property="credit" jdbcType="REAL" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -72,7 +80,8 @@
   </sql>
   <sql id="Base_Column_List" >
     id, enterpriseid, enterprisename, enterprisetype, residence, representative, establishtime, 
-    businessscope, shareholder
+    businessscope, shareholder, stunum, stuname, facultynum, majornum, gradenum, url, 
+    rank, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.EnterpriseExample" >
     select
@@ -107,12 +116,16 @@
   <insert id="insert" parameterType="pojo.Enterprise" >
     insert into enterprise (id, enterpriseid, enterprisename, 
       enterprisetype, residence, representative, 
-      establishtime, businessscope, shareholder
-      )
+      establishtime, businessscope, shareholder, 
+      stunum, stuname, facultynum, 
+      majornum, gradenum, url, 
+      rank, credit)
     values (#{id,jdbcType=INTEGER}, #{enterpriseid,jdbcType=VARCHAR}, #{enterprisename,jdbcType=VARCHAR}, 
       #{enterprisetype,jdbcType=VARCHAR}, #{residence,jdbcType=VARCHAR}, #{representative,jdbcType=VARCHAR}, 
-      #{establishtime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{shareholder,jdbcType=VARCHAR}
-      )
+      #{establishtime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{shareholder,jdbcType=VARCHAR}, 
+      #{stunum,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}, 
+      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
+      #{rank,jdbcType=VARCHAR}, #{credit,jdbcType=REAL})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Enterprise" >
     insert into enterprise
@@ -144,6 +157,30 @@
       <if test="shareholder != null" >
         shareholder,
       </if>
+      <if test="stunum != null" >
+        stunum,
+      </if>
+      <if test="stuname != null" >
+        stuname,
+      </if>
+      <if test="facultynum != null" >
+        facultynum,
+      </if>
+      <if test="majornum != null" >
+        majornum,
+      </if>
+      <if test="gradenum != null" >
+        gradenum,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="rank != null" >
+        rank,
+      </if>
+      <if test="credit != null" >
+        credit,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -172,6 +209,30 @@
       </if>
       <if test="shareholder != null" >
         #{shareholder,jdbcType=VARCHAR},
+      </if>
+      <if test="stunum != null" >
+        #{stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="facultynum != null" >
+        #{facultynum,jdbcType=INTEGER},
+      </if>
+      <if test="majornum != null" >
+        #{majornum,jdbcType=INTEGER},
+      </if>
+      <if test="gradenum != null" >
+        #{gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="rank != null" >
+        #{rank,jdbcType=VARCHAR},
+      </if>
+      <if test="credit != null" >
+        #{credit,jdbcType=REAL},
       </if>
     </trim>
   </insert>
@@ -211,6 +272,30 @@
       <if test="record.shareholder != null" >
         shareholder = #{record.shareholder,jdbcType=VARCHAR},
       </if>
+      <if test="record.stunum != null" >
+        stunum = #{record.stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stuname != null" >
+        stuname = #{record.stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.facultynum != null" >
+        facultynum = #{record.facultynum,jdbcType=INTEGER},
+      </if>
+      <if test="record.majornum != null" >
+        majornum = #{record.majornum,jdbcType=INTEGER},
+      </if>
+      <if test="record.gradenum != null" >
+        gradenum = #{record.gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rank != null" >
+        rank = #{record.rank,jdbcType=VARCHAR},
+      </if>
+      <if test="record.credit != null" >
+        credit = #{record.credit,jdbcType=REAL},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -226,7 +311,15 @@
       representative = #{record.representative,jdbcType=VARCHAR},
       establishtime = #{record.establishtime,jdbcType=VARCHAR},
       businessscope = #{record.businessscope,jdbcType=VARCHAR},
-      shareholder = #{record.shareholder,jdbcType=VARCHAR}
+      shareholder = #{record.shareholder,jdbcType=VARCHAR},
+      stunum = #{record.stunum,jdbcType=VARCHAR},
+      stuname = #{record.stuname,jdbcType=VARCHAR},
+      facultynum = #{record.facultynum,jdbcType=INTEGER},
+      majornum = #{record.majornum,jdbcType=INTEGER},
+      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      url = #{record.url,jdbcType=VARCHAR},
+      rank = #{record.rank,jdbcType=VARCHAR},
+      credit = #{record.credit,jdbcType=REAL}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -258,6 +351,30 @@
       <if test="shareholder != null" >
         shareholder = #{shareholder,jdbcType=VARCHAR},
       </if>
+      <if test="stunum != null" >
+        stunum = #{stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        stuname = #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="facultynum != null" >
+        facultynum = #{facultynum,jdbcType=INTEGER},
+      </if>
+      <if test="majornum != null" >
+        majornum = #{majornum,jdbcType=INTEGER},
+      </if>
+      <if test="gradenum != null" >
+        gradenum = #{gradenum,jdbcType=INTEGER},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="rank != null" >
+        rank = #{rank,jdbcType=VARCHAR},
+      </if>
+      <if test="credit != null" >
+        credit = #{credit,jdbcType=REAL},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -270,7 +387,15 @@
       representative = #{representative,jdbcType=VARCHAR},
       establishtime = #{establishtime,jdbcType=VARCHAR},
       businessscope = #{businessscope,jdbcType=VARCHAR},
-      shareholder = #{shareholder,jdbcType=VARCHAR}
+      shareholder = #{shareholder,jdbcType=VARCHAR},
+      stunum = #{stunum,jdbcType=VARCHAR},
+      stuname = #{stuname,jdbcType=VARCHAR},
+      facultynum = #{facultynum,jdbcType=INTEGER},
+      majornum = #{majornum,jdbcType=INTEGER},
+      gradenum = #{gradenum,jdbcType=INTEGER},
+      url = #{url,jdbcType=VARCHAR},
+      rank = #{rank,jdbcType=VARCHAR},
+      credit = #{credit,jdbcType=REAL}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
