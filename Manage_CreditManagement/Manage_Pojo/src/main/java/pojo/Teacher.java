@@ -5,6 +5,8 @@ public class Teacher {
 
     private String teachername;
 
+    private String department;
+
     public String getTeachernum() {
         return teachernum;
     }
@@ -19,5 +21,13 @@ public class Teacher {
 
     public void setTeachername(String teachername) {
         this.teachername = teachername == null ? null : teachername.trim();
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department == null ? null : department.trim();
     }
 }

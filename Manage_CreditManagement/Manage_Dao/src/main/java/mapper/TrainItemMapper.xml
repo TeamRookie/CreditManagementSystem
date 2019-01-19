@@ -34,4 +34,42 @@
         </where>
         limit #{pageBean.start},#{pageBean.pageSize}
     </select>
+    <select id="getTrainTotalCount" resultType="java.lang.Integer">
+        select count(*) from train
+        <where>
+            <if test="trainDepartment !=null and trainDepartment != ''">
+                #{trainDepartment} = department
+            </if>
+            <if test="trainContent != null and trainContent != ''">
+                AND  traincontent = #{trainContent}
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="trainTime !=null and trainTime!=''">
+                AND  traintime LIKE  CONCAT('${trainTime}','%')
+            </if>
+        </where>
+    </select>
+    <select id="getTrainPageBean" parameterType="hashMap" resultType="pojo.Train">
+        select * from train
+        <where>
+            <if test="trainDepartment !=null and trainDepartment != ''">
+                #{trainDepartment} = department
+            </if>
+            <if test="trainContent != null and trainContent != ''">
+                AND  traincontent = #{trainContent}
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="trainTime !=null and trainTime!=''">
+                AND  traintime LIKE  CONCAT('${trainTime}','%')
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getTrainContentByYear" resultType="java.lang.String" parameterType="java.lang.String">
+        select traincontent from  traintype where traintime;
+    </select>
 </mapper>

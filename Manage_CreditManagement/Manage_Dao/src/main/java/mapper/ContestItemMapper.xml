@@ -13,27 +13,27 @@
   </select>
   <select id="getContestImportTotalCount" resultType="java.lang.Integer">
     select count(*) from contesttype
-     <where>
-       <if test="contestDate !=null and contestDate != ''">
-            #{contestDate} = contesttime
-       </if>
-       <if test="contestName != null and contestName != ''">
-            AND  contesttype.contestname = #{contestName}
-       </if>
-     </where>
-  </select>
-  <select id="getContestImportPageBean" parameterType="hashMap" resultType="pojo.Contesttype">
-    select * from contesttype
     <where>
         <if test="contestDate !=null and contestDate != ''">
-          #{contestDate} = contesttime
+            #{contestDate} = contesttime
         </if>
         <if test="contestName != null and contestName != ''">
-          AND  #{contestName} = contestname
+            AND  contesttype.contestname = #{contestName}
         </if>
     </where>
-    limit #{pageBean.start},#{pageBean.pageSize}
-  </select>
+</select>
+    <select id="getContestImportPageBean" parameterType="hashMap" resultType="pojo.Contesttype">
+        select * from contesttype
+        <where>
+            <if test="contestDate !=null and contestDate != ''">
+                #{contestDate} = contesttime
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  #{contestName} = contestname
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
     <select id="getContestTotalCount" resultType="java.lang.Integer">
         select count(*) from contest
         <where>

@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="pojo.Teacher" >
     <id column="teachernum" property="teachernum" jdbcType="VARCHAR" />
     <result column="teachername" property="teachername" jdbcType="VARCHAR" />
+    <result column="department" property="department" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -64,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    teachernum, teachername
+    teachernum, teachername, department
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TeacherExample" >
     select
@@ -97,8 +98,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Teacher" >
-    insert into teacher (teachernum, teachername)
-    values (#{teachernum,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR})
+    insert into teacher (teachernum, teachername, department
+      )
+    values (#{teachernum,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Teacher" >
     insert into teacher
@@ -109,6 +112,9 @@
       <if test="teachername != null" >
         teachername,
       </if>
+      <if test="department != null" >
+        department,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="teachernum != null" >
@@ -116,6 +122,9 @@
       </if>
       <if test="teachername != null" >
         #{teachername,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        #{department,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -134,6 +143,9 @@
       <if test="record.teachername != null" >
         teachername = #{record.teachername,jdbcType=VARCHAR},
       </if>
+      <if test="record.department != null" >
+        department = #{record.department,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -142,7 +154,8 @@
   <update id="updateByExample" parameterType="map" >
     update teacher
     set teachernum = #{record.teachernum,jdbcType=VARCHAR},
-      teachername = #{record.teachername,jdbcType=VARCHAR}
+      teachername = #{record.teachername,jdbcType=VARCHAR},
+      department = #{record.department,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -153,12 +166,16 @@
       <if test="teachername != null" >
         teachername = #{teachername,jdbcType=VARCHAR},
       </if>
+      <if test="department != null" >
+        department = #{department,jdbcType=VARCHAR},
+      </if>
     </set>
     where teachernum = #{teachernum,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Teacher" >
     update teacher
-    set teachername = #{teachername,jdbcType=VARCHAR}
+    set teachername = #{teachername,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR}
     where teachernum = #{teachernum,jdbcType=VARCHAR}
   </update>
 </mapper>

@@ -7,11 +7,7 @@ public class Student {
 
     private String id;
 
-    private Integer facultynum;
-
-    private Integer majorum;
-
-    private Integer gradenum;
+    private Integer grade;
 
     private String telphone;
 
@@ -22,6 +18,12 @@ public class Student {
     private String bankcard;
 
     private String password;
+
+    private String studenttime;
+
+    private String facultyname;
+
+    private String majorname;
 
     public String getNum() {
         return num;
@@ -47,28 +49,12 @@ public class Student {
         this.id = id == null ? null : id.trim();
     }
 
-    public Integer getFacultynum() {
-        return facultynum;
+    public Integer getGrade() {
+        return grade;
     }
 
-    public void setFacultynum(Integer facultynum) {
-        this.facultynum = facultynum;
-    }
-
-    public Integer getMajorum() {
-        return majorum;
-    }
-
-    public void setMajorum(Integer majorum) {
-        this.majorum = majorum;
-    }
-
-    public Integer getGradenum() {
-        return gradenum;
-    }
-
-    public void setGradenum(Integer gradenum) {
-        this.gradenum = gradenum;
+    public void setGrade(Integer grade) {
+        this.grade = grade;
     }
 
     public String getTelphone() {
@@ -109,5 +95,29 @@ public class Student {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public String getStudenttime() {
+        return studenttime;
+    }
+
+    public void setStudenttime(String studenttime) {
+        this.studenttime = studenttime == null ? null : studenttime.trim();
+    }
+
+    public String getFacultyname() {
+        return facultyname;
+    }
+
+    public void setFacultyname(String facultyname) {
+        this.facultyname = facultyname == null ? null : facultyname.trim();
+    }
+
+    public String getMajorname() {
+        return majorname;
+    }
+
+    public void setMajorname(String majorname) {
+        this.majorname = majorname == null ? null : majorname.trim();
     }
 }

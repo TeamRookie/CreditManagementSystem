@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import pojo.PageBean;
+import pojo.Train;
 import service.TrainService;
+
+import java.util.List;
 
 @Controller
 public class TrainController
@@ -30,5 +34,22 @@ public class TrainController
         model.addAttribute("trainContent",trainContent);
         model.addAttribute("trainTime",trainTime);
         return "import/trainImport";
+    }
+    @RequestMapping("/train")
+    public  String getTrain(Model model,String studentNumber,String trainTime,String trainContent,String trainDepartment,Integer currentPage)
+    {
+        PageBean pageBean=trainService.getTrainPageBean(studentNumber,trainTime,trainContent,trainDepartment,currentPage,pageSize);
+        model.addAttribute("trainTime",trainTime);
+        model.addAttribute("trainContent",trainContent);
+        model.addAttribute("trainDepartment",trainDepartment);
+        model.addAttribute("pageBean",pageBean);
+        return  "information/train";
+    }
+    @RequestMapping("/getTrainContentByYear")
+    @ResponseBody
+    public List<String> getTrainContentByYear(String trainTime)
+    {
+        List<String>  trainList=trainService.getTrainContentByYear(trainTime);
+        return  trainList;
     }
 }

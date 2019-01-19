@@ -14,6 +14,7 @@
     <result column="majornum" property="majornum" jdbcType="INTEGER" />
     <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
     <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="credit" property="credit" jdbcType="REAL" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -75,7 +76,7 @@
   </sql>
   <sql id="Base_Column_List" >
     id, traincontent, traintime, trainsite, organizationunit, tearchename, stunum, stuname, 
-    facultynum, majornum, gradenum, url
+    facultynum, majornum, gradenum, url, credit
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TrainExample" >
     select
@@ -111,13 +112,13 @@
     insert into train (id, traincontent, traintime, 
       trainsite, organizationunit, tearchename, 
       stunum, stuname, facultynum, 
-      majornum, gradenum, url
-      )
+      majornum, gradenum, url, 
+      credit)
     values (#{id,jdbcType=INTEGER}, #{traincontent,jdbcType=VARCHAR}, #{traintime,jdbcType=VARCHAR}, 
       #{trainsite,jdbcType=VARCHAR}, #{organizationunit,jdbcType=VARCHAR}, #{tearchename,jdbcType=VARCHAR}, 
       #{stunum,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}, 
-      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}
-      )
+      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Train" >
     insert into train
@@ -158,6 +159,9 @@
       <if test="url != null" >
         url,
       </if>
+      <if test="credit != null" >
+        credit,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -195,6 +199,9 @@
       </if>
       <if test="url != null" >
         #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="credit != null" >
+        #{credit,jdbcType=REAL},
       </if>
     </trim>
   </insert>
@@ -243,6 +250,9 @@
       <if test="record.url != null" >
         url = #{record.url,jdbcType=VARCHAR},
       </if>
+      <if test="record.credit != null" >
+        credit = #{record.credit,jdbcType=REAL},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -261,7 +271,8 @@
       facultynum = #{record.facultynum,jdbcType=INTEGER},
       majornum = #{record.majornum,jdbcType=INTEGER},
       gradenum = #{record.gradenum,jdbcType=INTEGER},
-      url = #{record.url,jdbcType=VARCHAR}
+      url = #{record.url,jdbcType=VARCHAR},
+      credit = #{record.credit,jdbcType=REAL}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -302,6 +313,9 @@
       <if test="url != null" >
         url = #{url,jdbcType=VARCHAR},
       </if>
+      <if test="credit != null" >
+        credit = #{credit,jdbcType=REAL},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -317,7 +331,8 @@
       facultynum = #{facultynum,jdbcType=INTEGER},
       majornum = #{majornum,jdbcType=INTEGER},
       gradenum = #{gradenum,jdbcType=INTEGER},
-      url = #{url,jdbcType=VARCHAR}
+      url = #{url,jdbcType=VARCHAR},
+      credit = #{credit,jdbcType=REAL}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

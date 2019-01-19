@@ -27,6 +27,8 @@ public class Patents {
 
     private String url;
 
+    private Float credit;
+
     public Integer getId() {
         return id;
     }
@@ -129,5 +131,13 @@ public class Patents {
 
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
+    }
+
+    public Float getCredit() {
+        return credit;
+    }
+
+    public void setCredit(Float credit) {
+        this.credit = credit;
     }
 }
