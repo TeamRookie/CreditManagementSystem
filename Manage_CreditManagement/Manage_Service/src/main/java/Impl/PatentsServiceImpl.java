@@ -4,9 +4,11 @@ import mapper.PatentsItemMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.PageBean;
+import pojo.Patents;
 import pojo.Patentsrules;
 import service.PatentsService;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -23,6 +25,22 @@ public class PatentsServiceImpl implements PatentsService
         pageBean.setStart(start);
         List<Patentsrules> patentsRulesList = patentsItemMapper.getPageBean(pageBean);
         pageBean.setPageList(patentsRulesList);
+        return  pageBean;
+    }
+
+    @Override
+    public PageBean getPatentsPageBean(String studentNumber,String patentsType, Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=patentsItemMapper.getPatentsTotalCount(studentNumber,patentsType);
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        map.put("studentNumber",studentNumber);
+        map.put("patentsType",patentsType);
+        List<Patents> patentsList = patentsItemMapper.getPatentsPageBean(map);
+        pageBean.setPageList(patentsList);
         return  pageBean;
     }
 }

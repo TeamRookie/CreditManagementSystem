@@ -10,7 +10,7 @@ public interface MajorMapper {
 
     int deleteByExample(MajorExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Major record);
 
@@ -18,7 +18,7 @@ public interface MajorMapper {
 
     List<Major> selectByExample(MajorExample example);
 
-    Major selectByPrimaryKey(Integer num);
+    Major selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Major record, @Param("example") MajorExample example);
 

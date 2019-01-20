@@ -17,7 +17,7 @@ public class Patents {
 
     private String stunum;
 
-    private String stuname;
+    private Float credit;
 
     private Integer facultynum;
 
@@ -25,9 +25,11 @@ public class Patents {
 
     private Integer gradenum;
 
+    private String stuname;
+
     private String url;
 
-    private Float credit;
+    private String responsibility;
 
     public Integer getId() {
         return id;
@@ -93,12 +95,12 @@ public class Patents {
         this.stunum = stunum == null ? null : stunum.trim();
     }
 
-    public String getStuname() {
-        return stuname;
+    public Float getCredit() {
+        return credit;
     }
 
-    public void setStuname(String stuname) {
-        this.stuname = stuname == null ? null : stuname.trim();
+    public void setCredit(Float credit) {
+        this.credit = credit;
     }
 
     public Integer getFacultynum() {
@@ -125,6 +127,14 @@ public class Patents {
         this.gradenum = gradenum;
     }
 
+    public String getStuname() {
+        return stuname;
+    }
+
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
     public String getUrl() {
         return url;
     }
@@ -133,11 +143,11 @@ public class Patents {
         this.url = url == null ? null : url.trim();
     }
 
-    public Float getCredit() {
-        return credit;
+    public String getResponsibility() {
+        return responsibility;
     }
 
-    public void setCredit(Float credit) {
-        this.credit = credit;
+    public void setResponsibility(String responsibility) {
+        this.responsibility = responsibility == null ? null : responsibility.trim();
     }
 }

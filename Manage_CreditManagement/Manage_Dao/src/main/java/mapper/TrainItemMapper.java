@@ -17,6 +17,5 @@ public interface TrainItemMapper
     Integer getTrainTotalCount(@Param("studentNumber") String studentNumber,@Param("trainTime") String trainTime,@Param("trainContent") String trainContent,@Param("trainDepartment") String trainDepartment);
 
     List<Train> getTrainPageBean(HashMap map);
-
-    List<String> getTrainContentByYear(@Param("trainTime") String trainTime);
+    List<String> getTrainContent();
 }

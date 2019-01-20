@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
-    <title>个人预订 - 创新楼教室预约系统</title>
+    <title>项目信息管理</title>
 
     <meta name="description" content="Common form elements and layouts"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -272,7 +272,7 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">主持学术活动类</li>
+                    <li class="active"> <a href="#">行业证书考核</a></li>
                 </ul>
 
             </div>

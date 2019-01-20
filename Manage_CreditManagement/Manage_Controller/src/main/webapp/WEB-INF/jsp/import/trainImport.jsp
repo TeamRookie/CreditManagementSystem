@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
-    <title>个人预订 - 创新楼教室预约系统</title>
+    <title>项目信息导入</title>
 
     <meta name="description" content="Common form elements and layouts"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -272,7 +272,10 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">主持学术活动类</li>
+                    <li>
+                        <a href="#">参加创业类培训</a>
+                    </li>
+
                 </ul>
 
             </div>
@@ -289,7 +292,7 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <a  class="white" href="${pageContext.request.contextPath}/credentialImport.action">
+                        <a  class="white" href="${pageContext.request.contextPath}/trainImport.action">
                         <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
                             <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
                         </button></a>
@@ -315,13 +318,13 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/credentialImport.action" method="post">
+                              action="${pageContext.request.contextPath}/trainImport.action" method="post">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label no-padding-right"  for="name">
-                                    证书名称
+                                    培训内容
                                 </label>
                                 <div class="col-sm-2">
-                                    <input   class="form-control" name="information" id="name" type="text" placeholder="证书名称" />
+                                    <input   class="form-control" name="trainContent" id="name" type="text" placeholder="培训内容" />
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
@@ -338,14 +341,14 @@ ${message}
                     <div class="col-xs-12" id="addForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/addCredentialType.action" method="post">
+                              action="${pageContext.request.contextPath}/addTrainType.action" method="post">
                             <div class="form-group">
 
                                 <label class="col-sm-1 control-label no-padding-right"  for="addProjectName">
-                                    证书名称
+                                    培训内容
                                 </label>
                                 <div class="col-sm-1">
-                                    <input   class="form-control" name="addInformation" id="addProjectName" type="text" placeholder="证书名称" required />
+                                    <input   class="form-control" name="trainContent" id="addProjectName" type="text" placeholder="培训内容" required />
                                 </div>
 
                                 <div class="col-sm-1"></div>
@@ -370,7 +373,7 @@ ${message}
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
                     <tr>
-                        <th class="center">教育部考试中心备案证书类考核</th>
+                        <th class="center">培训内容</th>
                         <th class="center">操作</th>
                     </tr>
                     </thead>
@@ -378,11 +381,11 @@ ${message}
                     <c:forEach items="${pageBean.pageList}" var="item">
                             <tr>
                                 <td class="center">
-                                        ${item.information}
+                                        ${item.traincontent}
                                 </td>
                                 <td class="center">
                                     <div class="hidden-sm hidden-xs action-buttons">
-                                        <a class="blue" href="${pageContext.request.contextPath}/deleteCredentialType.action?id=${item.id}">
+                                        <a class="blue" href="${pageContext.request.contextPath}/deleteTrainType.action?id=${item.id}">
                                             <span class="label label-sm label-inverse arrowed-in">删除</span>
                                         </a>
                                     </div>
@@ -403,12 +406,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/credentialImport.action?currentPage=1&information=${information}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/trainImport.action?currentPage=1&information=${information}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/credentialImport.action?currentPage=${pageBean.currentPage-1}&information=${information}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/trainImport.action?currentPage=${pageBean.currentPage-1}&information=${information}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -419,13 +422,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/credentialImport.action?currentPage=${pageBean.currentPage+1}&information=${information}">
+                                <a href="${pageContext.request.contextPath}/trainImport.action?currentPage=${pageBean.currentPage+1}&information=${information}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/credentialImport.action?currentPage=${pageBean.totalPage}&information=${information}">
+                                <a href="${pageContext.request.contextPath}/trainImport.action?currentPage=${pageBean.totalPage}&information=${information}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>

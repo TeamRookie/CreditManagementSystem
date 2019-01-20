@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pojo.PageBean;
 import pojo.Train;
@@ -41,15 +42,27 @@ public class TrainController
         PageBean pageBean=trainService.getTrainPageBean(studentNumber,trainTime,trainContent,trainDepartment,currentPage,pageSize);
         model.addAttribute("trainTime",trainTime);
         model.addAttribute("trainContent",trainContent);
-        model.addAttribute("trainDepartment",trainDepartment);
+        model.addAttribute("studentNumber",studentNumber);
         model.addAttribute("pageBean",pageBean);
         return  "information/train";
     }
-    @RequestMapping("/getTrainContentByYear")
+    @RequestMapping("/getTrainContent")
     @ResponseBody
-    public List<String> getTrainContentByYear(String trainTime)
+    public List<String> getTrainContent()
     {
-        List<String>  trainList=trainService.getTrainContentByYear(trainTime);
+        List<String>  trainList=trainService.getTrainContent();
         return  trainList;
+    }
+    @RequestMapping(value = "/addTrainType",method = RequestMethod.POST)
+    public String addTrainType(String trainContent)
+    {
+        trainService.addTrainImport(trainContent);
+        return "redirect:trainImport.action";
+    }
+    @RequestMapping("/deleteTrainType")
+    public  String deleteTrainType(Integer id)
+    {
+        trainService.deleteTrainType(id);
+        return "redirect:trainImport.action";
     }
 }

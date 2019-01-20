@@ -1,16 +1,18 @@
 package pojo;
 
 public class Grade {
-    private Integer num;
+    private Integer id;
 
     private String gradename;
 
-    public Integer getNum() {
-        return num;
+    private Integer majornum;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setNum(Integer num) {
-        this.num = num;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getGradename() {
@@ -19,5 +21,13 @@ public class Grade {
 
     public void setGradename(String gradename) {
         this.gradename = gradename == null ? null : gradename.trim();
+    }
+
+    public Integer getMajornum() {
+        return majornum;
+    }
+
+    public void setMajornum(Integer majornum) {
+        this.majornum = majornum;
     }
 }

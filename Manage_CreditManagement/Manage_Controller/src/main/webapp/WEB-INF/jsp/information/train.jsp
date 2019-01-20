@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
-    <title>个人预订 - 创新楼教室预约系统</title>
+    <title>项目信息管理</title>
 
     <meta name="description" content="Common form elements and layouts"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -272,7 +272,9 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">主持学术活动类</li>
+                    <li>
+                        <a href="#">参加创业类培训</a>
+                    </li>
                 </ul>
 
             </div>
@@ -290,7 +292,7 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <a  class="white" href="${pageContext.request.contextPath}/contest.action">
+                        <a  class="white" href="${pageContext.request.contextPath}/train.action">
                             <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
                                 <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
                             </button></a>
@@ -375,7 +377,7 @@ ${message}
                                 <td class="center">${item.traincontent}</td>
                                 <td class="center">${item.traintime}</td>
                                 <td class="center">${item.trainsite}</td>
-                                <td class="center">${item.department}</td>
+                                <td class="center">${item.organizationunit}</td>
                                 <td class="center">${item.teachername}</td>
                                 <td class="center">${item.credit}</td>
                             </tr>
@@ -394,12 +396,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/train.action?currentPage=1&studentNumber=${studentNumber}&trainContent=${trainContent}&trainTime=${trainTime}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/train.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&trainContent=${trainContent}&trainTime=${trainTime}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -410,13 +412,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
+                                <a href="${pageContext.request.contextPath}/train.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&trainContent=${trainContent}&trainTime=${trainTime}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
+                                <a href="${pageContext.request.contextPath}/train.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&trainContent=${trainContent}&trainTime=${trainTime}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -529,22 +531,16 @@ ${message}
                 alert("获取年份列表失败!");
             }
         });
-    });
-    function  searchButtonClick() {
-        $("#searchForm").toggle();
-    }
-    function  getTrainContent() {
-        var date=$("#date").val();
         $.ajax({
             type: "POST",
-            url: "${pageContext.request.contextPath}/getTrainContentByYear.action",
+            url: "${pageContext.request.contextPath}/getTrainContent.action",
             success: function(data)
             {
                 var content="";
                 content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
-                    content+="<option  value='"+data[i].schoolyear+"'>"+data[i].schoolyear+"</option>";
+                    content+="<option  value='"+data+"'>"+data+"</option>";
                 }
                 $("#trainContent").html(content);
             },
@@ -552,7 +548,12 @@ ${message}
                 alert("获取培训内容列表失败!");
             }
         });
+    });
+    function  searchButtonClick() {
+        $("#searchForm").toggle();
+
     }
+
 </script>
 </body>
 </html>

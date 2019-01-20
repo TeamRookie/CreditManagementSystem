@@ -1,13 +1,18 @@
 package pojo;
 
-public class Student {
+public class Student
+{
     private String num;
 
     private String stuname;
 
     private String id;
 
-    private Integer grade;
+    private Faculty faculty;
+
+    private Major major;
+
+    private Grade grade;
 
     private String telphone;
 
@@ -20,10 +25,6 @@ public class Student {
     private String password;
 
     private String studenttime;
-
-    private String facultyname;
-
-    private String majorname;
 
     public String getNum() {
         return num;
@@ -49,15 +50,31 @@ public class Student {
         this.id = id == null ? null : id.trim();
     }
 
-    public Integer getGrade() {
-        return grade;
-    }
+    public Faculty getFaculty() {
+		return faculty;
+	}
 
-    public void setGrade(Integer grade) {
-        this.grade = grade;
-    }
+	public void setFaculty(Faculty faculty) {
+		this.faculty = faculty;
+	}
 
-    public String getTelphone() {
+	public Major getMajor() {
+		return major;
+	}
+
+	public void setMajor(Major major) {
+		this.major = major;
+	}
+
+	public Grade getGrade() {
+		return grade;
+	}
+
+	public void setGrade(Grade grade) {
+		this.grade = grade;
+	}
+
+	public String getTelphone() {
         return telphone;
     }
 
@@ -103,21 +120,5 @@ public class Student {
 
     public void setStudenttime(String studenttime) {
         this.studenttime = studenttime == null ? null : studenttime.trim();
-    }
-
-    public String getFacultyname() {
-        return facultyname;
-    }
-
-    public void setFacultyname(String facultyname) {
-        this.facultyname = facultyname == null ? null : facultyname.trim();
-    }
-
-    public String getMajorname() {
-        return majorname;
-    }
-
-    public void setMajorname(String majorname) {
-        this.majorname = majorname == null ? null : majorname.trim();
     }
 }

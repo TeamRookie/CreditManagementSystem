@@ -1,6 +1,7 @@
 package Impl;
 
 import mapper.TrainItemMapper;
+import mapper.TraintypeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.*;
@@ -14,6 +15,8 @@ public class TrainServiceImpl implements TrainService
 {
     @Autowired
     private TrainItemMapper trainItemMapper;
+    @Autowired
+    private TraintypeMapper traintypeMapper;
     public PageBean getPageBean(Integer currentPage, Integer pageSize)
     {
         Integer totalCount=0;
@@ -30,7 +33,7 @@ public class TrainServiceImpl implements TrainService
     public PageBean getTrainImportPageBean(String trainContent, String trainTime, Integer currentPage, Integer pageSize)
     {
         Integer totalCount=0;
-        totalCount=trainItemMapper.getTrainImportTotalCount(trainContent,trainContent);
+        totalCount=trainItemMapper.getTrainImportTotalCount(trainContent,trainTime);
         PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
@@ -61,9 +64,23 @@ public class TrainServiceImpl implements TrainService
     }
 
     @Override
-    public List<String> getTrainContentByYear(String trainTime)
+    public List<String> getTrainContent()
     {
-        List<String> timeList=trainItemMapper.getTrainContentByYear(trainTime);
+        List<String> timeList=trainItemMapper.getTrainContent();
         return timeList;
+    }
+
+    @Override
+    public void addTrainImport(String trainContent)
+    {
+        Traintype traintype=new Traintype();
+        traintype.setTraincontent(trainContent);
+        traintypeMapper.insertSelective(traintype);
+    }
+
+    @Override
+    public void deleteTrainType(Integer id)
+    {
+        traintypeMapper.deleteByPrimaryKey(id);
     }
 }

@@ -1,18 +1,18 @@
 package pojo;
 
 public class Faculty {
-    private Integer facultynum;
+    private Integer id;
 
     private String facultyname;
 
     private String password;
 
-    public Integer getFacultynum() {
-        return facultynum;
+    public Integer getId() {
+        return id;
     }
 
-    public void setFacultynum(Integer facultynum) {
-        this.facultynum = facultynum;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getFacultyname() {

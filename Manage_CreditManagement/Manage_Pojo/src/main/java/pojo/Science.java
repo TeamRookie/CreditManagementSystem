@@ -1,17 +1,21 @@
 package pojo;
 
-public class Train {
+public class Science {
     private Integer id;
 
-    private String traincontent;
+    private String sciencename;
 
-    private String traintime;
+    private String sciencetype;
 
-    private String trainsite;
+    private String sciencelevel;
 
-    private String organizationunit;
+    private String sciencestarttime;
+
+    private String scienceendtime;
 
     private String teachername;
+
+    private String responsibility;
 
     private String stunum;
 
@@ -35,36 +39,44 @@ public class Train {
         this.id = id;
     }
 
-    public String getTraincontent() {
-        return traincontent;
+    public String getSciencename() {
+        return sciencename;
     }
 
-    public void setTraincontent(String traincontent) {
-        this.traincontent = traincontent == null ? null : traincontent.trim();
+    public void setSciencename(String sciencename) {
+        this.sciencename = sciencename == null ? null : sciencename.trim();
     }
 
-    public String getTraintime() {
-        return traintime;
+    public String getSciencetype() {
+        return sciencetype;
     }
 
-    public void setTraintime(String traintime) {
-        this.traintime = traintime == null ? null : traintime.trim();
+    public void setSciencetype(String sciencetype) {
+        this.sciencetype = sciencetype == null ? null : sciencetype.trim();
     }
 
-    public String getTrainsite() {
-        return trainsite;
+    public String getSciencelevel() {
+        return sciencelevel;
     }
 
-    public void setTrainsite(String trainsite) {
-        this.trainsite = trainsite == null ? null : trainsite.trim();
+    public void setSciencelevel(String sciencelevel) {
+        this.sciencelevel = sciencelevel == null ? null : sciencelevel.trim();
     }
 
-    public String getOrganizationunit() {
-        return organizationunit;
+    public String getSciencestarttime() {
+        return sciencestarttime;
     }
 
-    public void setOrganizationunit(String organizationunit) {
-        this.organizationunit = organizationunit == null ? null : organizationunit.trim();
+    public void setSciencestarttime(String sciencestarttime) {
+        this.sciencestarttime = sciencestarttime == null ? null : sciencestarttime.trim();
+    }
+
+    public String getScienceendtime() {
+        return scienceendtime;
+    }
+
+    public void setScienceendtime(String scienceendtime) {
+        this.scienceendtime = scienceendtime == null ? null : scienceendtime.trim();
     }
 
     public String getTeachername() {
@@ -73,6 +85,14 @@ public class Train {
 
     public void setTeachername(String teachername) {
         this.teachername = teachername == null ? null : teachername.trim();
+    }
+
+    public String getResponsibility() {
+        return responsibility;
+    }
+
+    public void setResponsibility(String responsibility) {
+        this.responsibility = responsibility == null ? null : responsibility.trim();
     }
 
     public String getStunum() {

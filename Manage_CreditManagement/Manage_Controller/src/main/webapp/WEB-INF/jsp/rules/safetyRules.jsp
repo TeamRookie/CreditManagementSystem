@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <title></title>
+    <title>学分规则管理</title>
 
     <meta name="description" content="Common form elements and layouts" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -261,7 +261,7 @@
                         <a href="#">学分规则</a>
                     </li>
                     <li class="active">
-                        <a href="#">主持学术活动类</a>
+                        <a href="#">优秀安全员</a>
                     </li>
                 </ul>
 

@@ -394,7 +394,7 @@ ${message}
                                 <td class="center">${item.stuname}</td>
                                 <td class="center">${item.id}</td>
                                 <td class="center">${item.studenttime}</td>
-                                <td class="center">${item.facultyname}</td>
+                                <td class="center">${item.faculty.facultyname}</td>
                                 <td class="center">${item.majorname}</td>
                                 <td class="center">${item.grade}</td>
                                 <td class="center">${item.bankcard}</td>

@@ -272,7 +272,7 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">主持学术活动类</li>
+                    <li class="active">      <a href="#">创新创业竞赛类</a></li>
                 </ul>
 
             </div>

@@ -5,15 +5,15 @@
     <id column="num" property="num" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="id" property="id" jdbcType="VARCHAR" />
-    <result column="grade" property="grade" jdbcType="INTEGER" />
     <result column="telphone" property="telphone" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="role" property="role" jdbcType="INTEGER" />
     <result column="bankcard" property="bankcard" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="studenttime" property="studenttime" jdbcType="VARCHAR" />
-    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
-    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <association property="faculty" column="facultynum" javaType="pojo.Faculty"  select="mapper.FacultyMapper.selectByPrimaryKey"/>
+    <association property="major" column="majornum" javaType="pojo.Major"  select="mapper.MajorMapper.selectByPrimaryKey"/>
+    <association property="grade" column="gradenum" javaType="pojo.Grade"  select="mapper.GradeMapper.selectByPrimaryKey"/>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,8 +74,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, stuname, id, grade, telphone, status, role, bankcard, password, studenttime, 
-    facultyname, majorname
+    num, stuname, id, facultynum, majornum, gradenum, telphone, status, role, bankcard, 
+    password, studenttime
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudentExample" >
     select
@@ -109,14 +109,14 @@
   </delete>
   <insert id="insert" parameterType="pojo.Student" >
     insert into student (num, stuname, id, 
-      grade, telphone, status, 
-      role, bankcard, password, 
-      studenttime, facultyname, majorname
+      facultynum, majornum, gradenum, 
+      telphone, status, role, 
+      bankcard, password, studenttime
       )
     values (#{num,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, 
-      #{grade,jdbcType=INTEGER}, #{telphone,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
-      #{role,jdbcType=INTEGER}, #{bankcard,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{studenttime,jdbcType=VARCHAR}, #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}
+      #{faculty.num,jdbcType=INTEGER}, #{major.num,jdbcType=INTEGER}, #{grade.num,jdbcType=INTEGER}, 
+      #{telphone,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}, 
+      #{bankcard,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{studenttime,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Student" >
@@ -131,8 +131,14 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="grade != null" >
-        grade,
+      <if test="faculty.num != null" >
+        facultynum,
+      </if>
+      <if test="major.num != null" >
+        majornum,
+      </if>
+      <if test="grade.num != null" >
+        gradenum,
       </if>
       <if test="telphone != null" >
         telphone,
@@ -152,12 +158,6 @@
       <if test="studenttime != null" >
         studenttime,
       </if>
-      <if test="facultyname != null" >
-        facultyname,
-      </if>
-      <if test="majorname != null" >
-        majorname,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="num != null" >
@@ -169,8 +169,14 @@
       <if test="id != null" >
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="grade != null" >
-        #{grade,jdbcType=INTEGER},
+      <if test="faculty.num != null" >
+        #{faculty.num,jdbcType=INTEGER},
+      </if>
+      <if test="major.num != null" >
+        #{major.num,jdbcType=INTEGER},
+      </if>
+      <if test="grade.num != null" >
+        #{grade.num,jdbcType=INTEGER},
       </if>
       <if test="telphone != null" >
         #{telphone,jdbcType=VARCHAR},
@@ -189,12 +195,6 @@
       </if>
       <if test="studenttime != null" >
         #{studenttime,jdbcType=VARCHAR},
-      </if>
-      <if test="facultyname != null" >
-        #{facultyname,jdbcType=VARCHAR},
-      </if>
-      <if test="majorname != null" >
-        #{majorname,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -216,8 +216,14 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.grade != null" >
-        grade = #{record.grade,jdbcType=INTEGER},
+      <if test="record.faculty.num != null" >
+        facultynum = #{record.faculty.num,jdbcType=INTEGER},
+      </if>
+      <if test="record.major.num != null" >
+        majornum = #{record.major.num,jdbcType=INTEGER},
+      </if>
+      <if test="record.grade.num != null" >
+        gradenum = #{record.grade.num,jdbcType=INTEGER},
       </if>
       <if test="record.telphone != null" >
         telphone = #{record.telphone,jdbcType=VARCHAR},
@@ -237,12 +243,6 @@
       <if test="record.studenttime != null" >
         studenttime = #{record.studenttime,jdbcType=VARCHAR},
       </if>
-      <if test="record.facultyname != null" >
-        facultyname = #{record.facultyname,jdbcType=VARCHAR},
-      </if>
-      <if test="record.majorname != null" >
-        majorname = #{record.majorname,jdbcType=VARCHAR},
-      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -253,15 +253,15 @@
     set num = #{record.num,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
       id = #{record.id,jdbcType=VARCHAR},
-      grade = #{record.grade,jdbcType=INTEGER},
+      facultynum = #{record.faculty.num,jdbcType=INTEGER},
+      majornum = #{record.major.num,jdbcType=INTEGER},
+      gradenum = #{record.grade.num,jdbcType=INTEGER},
       telphone = #{record.telphone,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=INTEGER},
       role = #{record.role,jdbcType=INTEGER},
       bankcard = #{record.bankcard,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
-      studenttime = #{record.studenttime,jdbcType=VARCHAR},
-      facultyname = #{record.facultyname,jdbcType=VARCHAR},
-      majorname = #{record.majorname,jdbcType=VARCHAR}
+      studenttime = #{record.studenttime,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -275,8 +275,14 @@
       <if test="id != null" >
         id = #{id,jdbcType=VARCHAR},
       </if>
-      <if test="grade != null" >
-        grade = #{grade,jdbcType=INTEGER},
+      <if test="faculty.num != null" >
+        facultynum = #{faculty.num,jdbcType=INTEGER},
+      </if>
+      <if test="major.num != null" >
+        majornum = #{major.num,jdbcType=INTEGER},
+      </if>
+      <if test="grade.num != null" >
+        gradenum = #{grade.num,jdbcType=INTEGER},
       </if>
       <if test="telphone != null" >
         telphone = #{telphone,jdbcType=VARCHAR},
@@ -296,12 +302,6 @@
       <if test="studenttime != null" >
         studenttime = #{studenttime,jdbcType=VARCHAR},
       </if>
-      <if test="facultyname != null" >
-        facultyname = #{facultyname,jdbcType=VARCHAR},
-      </if>
-      <if test="majorname != null" >
-        majorname = #{majorname,jdbcType=VARCHAR},
-      </if>
     </set>
     where num = #{num,jdbcType=VARCHAR}
   </update>
@@ -309,15 +309,15 @@
     update student
     set stuname = #{stuname,jdbcType=VARCHAR},
       id = #{id,jdbcType=VARCHAR},
-      grade = #{grade,jdbcType=INTEGER},
+      facultynum = #{faculty.num,jdbcType=INTEGER},
+      majornum = #{major.num,jdbcType=INTEGER},
+      gradenum = #{grade.num,jdbcType=INTEGER},
       telphone = #{telphone,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
       role = #{role,jdbcType=INTEGER},
       bankcard = #{bankcard,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      studenttime = #{studenttime,jdbcType=VARCHAR},
-      facultyname = #{facultyname,jdbcType=VARCHAR},
-      majorname = #{majorname,jdbcType=VARCHAR}
+      studenttime = #{studenttime,jdbcType=VARCHAR}
     where num = #{num,jdbcType=VARCHAR}
   </update>
 </mapper>

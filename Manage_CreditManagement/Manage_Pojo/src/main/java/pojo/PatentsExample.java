@@ -654,73 +654,63 @@ public class PatentsExample {
             return (Criteria) this;
         }
 
-        public Criteria andStunameIsNull() {
-            addCriterion("stuname is null");
+        public Criteria andCreditIsNull() {
+            addCriterion("credit is null");
             return (Criteria) this;
         }
 
-        public Criteria andStunameIsNotNull() {
-            addCriterion("stuname is not null");
+        public Criteria andCreditIsNotNull() {
+            addCriterion("credit is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStunameEqualTo(String value) {
-            addCriterion("stuname =", value, "stuname");
+        public Criteria andCreditEqualTo(Float value) {
+            addCriterion("credit =", value, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameNotEqualTo(String value) {
-            addCriterion("stuname <>", value, "stuname");
+        public Criteria andCreditNotEqualTo(Float value) {
+            addCriterion("credit <>", value, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameGreaterThan(String value) {
-            addCriterion("stuname >", value, "stuname");
+        public Criteria andCreditGreaterThan(Float value) {
+            addCriterion("credit >", value, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameGreaterThanOrEqualTo(String value) {
-            addCriterion("stuname >=", value, "stuname");
+        public Criteria andCreditGreaterThanOrEqualTo(Float value) {
+            addCriterion("credit >=", value, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameLessThan(String value) {
-            addCriterion("stuname <", value, "stuname");
+        public Criteria andCreditLessThan(Float value) {
+            addCriterion("credit <", value, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameLessThanOrEqualTo(String value) {
-            addCriterion("stuname <=", value, "stuname");
+        public Criteria andCreditLessThanOrEqualTo(Float value) {
+            addCriterion("credit <=", value, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameLike(String value) {
-            addCriterion("stuname like", value, "stuname");
+        public Criteria andCreditIn(List<Float> values) {
+            addCriterion("credit in", values, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameNotLike(String value) {
-            addCriterion("stuname not like", value, "stuname");
+        public Criteria andCreditNotIn(List<Float> values) {
+            addCriterion("credit not in", values, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameIn(List<String> values) {
-            addCriterion("stuname in", values, "stuname");
+        public Criteria andCreditBetween(Float value1, Float value2) {
+            addCriterion("credit between", value1, value2, "credit");
             return (Criteria) this;
         }
 
-        public Criteria andStunameNotIn(List<String> values) {
-            addCriterion("stuname not in", values, "stuname");
-            return (Criteria) this;
-        }
-
-        public Criteria andStunameBetween(String value1, String value2) {
-            addCriterion("stuname between", value1, value2, "stuname");
-            return (Criteria) this;
-        }
-
-        public Criteria andStunameNotBetween(String value1, String value2) {
-            addCriterion("stuname not between", value1, value2, "stuname");
+        public Criteria andCreditNotBetween(Float value1, Float value2) {
+            addCriterion("credit not between", value1, value2, "credit");
             return (Criteria) this;
         }
 
@@ -904,6 +894,76 @@ public class PatentsExample {
             return (Criteria) this;
         }
 
+        public Criteria andStunameIsNull() {
+            addCriterion("stuname is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameIsNotNull() {
+            addCriterion("stuname is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameEqualTo(String value) {
+            addCriterion("stuname =", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameNotEqualTo(String value) {
+            addCriterion("stuname <>", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameGreaterThan(String value) {
+            addCriterion("stuname >", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameGreaterThanOrEqualTo(String value) {
+            addCriterion("stuname >=", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameLessThan(String value) {
+            addCriterion("stuname <", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameLessThanOrEqualTo(String value) {
+            addCriterion("stuname <=", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameLike(String value) {
+            addCriterion("stuname like", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameNotLike(String value) {
+            addCriterion("stuname not like", value, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameIn(List<String> values) {
+            addCriterion("stuname in", values, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameNotIn(List<String> values) {
+            addCriterion("stuname not in", values, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameBetween(String value1, String value2) {
+            addCriterion("stuname between", value1, value2, "stuname");
+            return (Criteria) this;
+        }
+
+        public Criteria andStunameNotBetween(String value1, String value2) {
+            addCriterion("stuname not between", value1, value2, "stuname");
+            return (Criteria) this;
+        }
+
         public Criteria andUrlIsNull() {
             addCriterion("url is null");
             return (Criteria) this;
@@ -974,63 +1034,73 @@ public class PatentsExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreditIsNull() {
-            addCriterion("credit is null");
+        public Criteria andResponsibilityIsNull() {
+            addCriterion("responsibility is null");
             return (Criteria) this;
         }
 
-        public Criteria andCreditIsNotNull() {
-            addCriterion("credit is not null");
+        public Criteria andResponsibilityIsNotNull() {
+            addCriterion("responsibility is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCreditEqualTo(Float value) {
-            addCriterion("credit =", value, "credit");
+        public Criteria andResponsibilityEqualTo(String value) {
+            addCriterion("responsibility =", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditNotEqualTo(Float value) {
-            addCriterion("credit <>", value, "credit");
+        public Criteria andResponsibilityNotEqualTo(String value) {
+            addCriterion("responsibility <>", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditGreaterThan(Float value) {
-            addCriterion("credit >", value, "credit");
+        public Criteria andResponsibilityGreaterThan(String value) {
+            addCriterion("responsibility >", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditGreaterThanOrEqualTo(Float value) {
-            addCriterion("credit >=", value, "credit");
+        public Criteria andResponsibilityGreaterThanOrEqualTo(String value) {
+            addCriterion("responsibility >=", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditLessThan(Float value) {
-            addCriterion("credit <", value, "credit");
+        public Criteria andResponsibilityLessThan(String value) {
+            addCriterion("responsibility <", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditLessThanOrEqualTo(Float value) {
-            addCriterion("credit <=", value, "credit");
+        public Criteria andResponsibilityLessThanOrEqualTo(String value) {
+            addCriterion("responsibility <=", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditIn(List<Float> values) {
-            addCriterion("credit in", values, "credit");
+        public Criteria andResponsibilityLike(String value) {
+            addCriterion("responsibility like", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditNotIn(List<Float> values) {
-            addCriterion("credit not in", values, "credit");
+        public Criteria andResponsibilityNotLike(String value) {
+            addCriterion("responsibility not like", value, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditBetween(Float value1, Float value2) {
-            addCriterion("credit between", value1, value2, "credit");
+        public Criteria andResponsibilityIn(List<String> values) {
+            addCriterion("responsibility in", values, "responsibility");
             return (Criteria) this;
         }
 
-        public Criteria andCreditNotBetween(Float value1, Float value2) {
-            addCriterion("credit not between", value1, value2, "credit");
+        public Criteria andResponsibilityNotIn(List<String> values) {
+            addCriterion("responsibility not in", values, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityBetween(String value1, String value2) {
+            addCriterion("responsibility between", value1, value2, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityNotBetween(String value1, String value2) {
+            addCriterion("responsibility not between", value1, value2, "responsibility");
             return (Criteria) this;
         }
     }

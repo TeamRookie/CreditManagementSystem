@@ -2,8 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.MajorMapper" >
   <resultMap id="BaseResultMap" type="pojo.Major" >
-    <id column="num" property="num" jdbcType="INTEGER" />
+    <id column="id" property="id" jdbcType="INTEGER" />
     <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -64,7 +65,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, majorname
+    id, majorname, facultynum
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.MajorExample" >
     select
@@ -84,11 +85,11 @@
     select 
     <include refid="Base_Column_List" />
     from major
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from major
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="pojo.MajorExample" >
     delete from major
@@ -97,25 +98,33 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Major" >
-    insert into major (num, majorname)
-    values (#{num,jdbcType=INTEGER}, #{majorname,jdbcType=VARCHAR})
+    insert into major (id, majorname, facultynum
+      )
+    values (#{id,jdbcType=INTEGER}, #{majorname,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Major" >
     insert into major
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        num,
+      <if test="id != null" >
+        id,
       </if>
       <if test="majorname != null" >
         majorname,
       </if>
+      <if test="facultynum != null" >
+        facultynum,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
       <if test="majorname != null" >
         #{majorname,jdbcType=VARCHAR},
+      </if>
+      <if test="facultynum != null" >
+        #{facultynum,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -128,11 +137,14 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update major
     <set >
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.majorname != null" >
         majorname = #{record.majorname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.facultynum != null" >
+        facultynum = #{record.facultynum,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -141,8 +153,9 @@
   </update>
   <update id="updateByExample" parameterType="map" >
     update major
-    set num = #{record.num,jdbcType=INTEGER},
-      majorname = #{record.majorname,jdbcType=VARCHAR}
+    set id = #{record.id,jdbcType=INTEGER},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      facultynum = #{record.facultynum,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -153,12 +166,16 @@
       <if test="majorname != null" >
         majorname = #{majorname,jdbcType=VARCHAR},
       </if>
+      <if test="facultynum != null" >
+        facultynum = #{facultynum,jdbcType=INTEGER},
+      </if>
     </set>
-    where num = #{num,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Major" >
     update major
-    set majorname = #{majorname,jdbcType=VARCHAR}
-    where num = #{num,jdbcType=INTEGER}
+    set majorname = #{majorname,jdbcType=VARCHAR},
+      facultynum = #{facultynum,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

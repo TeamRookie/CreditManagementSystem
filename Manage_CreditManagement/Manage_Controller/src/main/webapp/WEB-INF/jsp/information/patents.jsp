@@ -272,10 +272,7 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li>
-                        <a href="#">大学生创新工作室</a>
-                    </li>
-
+                    <li class="active"><a href="#">获得专利</a></li>
                 </ul>
 
             </div>
@@ -293,7 +290,7 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <a  class="white" href="${pageContext.request.contextPath}/studio.action">
+                        <a  class="white" href="${pageContext.request.contextPath}/patents.action">
                             <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
                                 <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
                             </button></a>
@@ -313,7 +310,7 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/studio.action">
+                              action="${pageContext.request.contextPath}/patents.action">
                             <div class="form-group">
                                 <label class="col-sm-1 control-label no-padding-right"  for="number">
                                     学号
@@ -322,11 +319,13 @@ ${message}
                                     <input onkeyup="value=value.replace(/[^\d]/g,'')" class="form-control"  name="studentNumber" id="number" type="text" placeholder="学号" />
                                 </div>
 
-                                <label class="col-sm-1 control-label no-padding-right"  for="studioName">
-                                    工作室名称
-                                </label>
-                                <div class="col-sm-2">
-                                    <select id="studioName" class="form-control"   name="studioName" readonly>
+                                <label class="col-sm-1 control-label no-padding-right " for="patentsType">专利类型</label>
+                                <div class="col-sm-1">
+                                    <select id="patentsType" class="form-control"   name="patentsType" readonly>
+                                            <option value="">请选择</option>
+                                            <option value="发明">发明</option>
+                                        <option value="实用新型">实用新型</option>
+                                        <option value="外观">外观</option>
                                     </select>
                                 </div>
 
@@ -340,27 +339,7 @@ ${message}
                                 </div>
 
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right " for="date">参与时间</label>
-                                <div class="col-sm-1">
-                                    <select id="date" class="form-control"   name="studioTime" readonly>
-                                    </select>
-                                </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="contestLevel">工作室等级</label>
-                                <div class="col-sm-1">
-                                    <select id="contestLevel" class="form-control"   name="studioLevel" readonly>
-                                        <option value="">请选择</option>
-                                        <option value="优秀工作室">优秀工作室</option>
-                                        <option value="注册工作室">注册工作室</option>
-                                    </select>
-                                </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="studioDepartment">所属部门</label>
-                                <div class="col-sm-2">
-                                    <select id="studioDepartment" class="form-control"   name="studioDepartment" readonly>
-                                    </select>
-                                </div>
 
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -375,12 +354,13 @@ ${message}
                     <tr>
                         <th class="center">学号</th>
                         <th class="center">姓名</th>
-                        <th class="center">参加时间</th>
-                        <th class="center">所属部门</th>
-                        <th class="center">工作室名称</th>
-                        <th class="center">工作室等级</th>
-                        <th class="center">负责指导加教师</th>
                         <th class="center">团队职责</th>
+                        <th class="center">专利类型</th>
+                        <th class="center">申请号</th>
+                        <th class="center">申请日</th>
+                        <th class="center">申请人</th>
+                        <th class="center">发明人</th>
+                        <th class="center">专利名称</th>
                         <th class="center">学分</th>
 
                     </tr>
@@ -393,12 +373,13 @@ ${message}
                                         ${item.stunum}
                                 </td>
                                 <td class="center">${item.stuname}</td>
-                                <td class="center">${item.studiotime}</td>
-                                <td class="center">${item.department}</td>
-                                <td class="center">${item.studioname}</td>
-                                <td class="center">${item.studiolevel}</td>
                                 <td class="center">${item.responsibility}</td>
-                                <td class="center">${item.teachername}</td>
+                                <td class="center">${item.patentstype}</td>
+                                <td class="center">${item.patentsid}</td>
+                                <td class="center">${item.patentstime}</td>
+                                <td class="center">${item.proposer}</td>
+                                <td class="center">${item.inventor}</td>
+                                <td class="center">${item.patentsname}</td>
                                 <td class="center">${item.credit}</td>
                             </tr>
                     </c:forEach>
@@ -416,12 +397,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/studio.action?currentPage=1&studentNumber=${studentNumber}&studioDepartment=${studioDepartment}&studioLevel=${studioLevel}&studioName=${studioName}&studioTime=${studioTime}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/patents.action?currentPage=1&studentNumber=${studentNumber}&patentsType=${patentsType}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/studio.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&studioDepartment=${studioDepartment}&studioLevel=${studioLevel}&studioName=${studioName}&studioTime=${studioTime}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/patents.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&patentsType=${patentsType}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -432,13 +413,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/studio.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&studioDepartment=${studioDepartment}&studioLevel=${studioLevel}&studioName=${studioName}&studioTime=${studioTime}">
+                                <a href="${pageContext.request.contextPath}/patents.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&patentsType=${patentsType}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/studio.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&studioDepartment=${studioDepartment}&studioLevel=${studioLevel}&studioName=${studioName}&studioTime=${studioTime}">
+                                <a href="${pageContext.request.contextPath}/patents.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&patentsType=${patentsType}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -551,41 +532,6 @@ ${message}
                 alert("获取年份列表失败!");
             }
         });
-        $.ajax({
-            type: "POST",
-            url: "${pageContext.request.contextPath}/getExistStudioDepartment.action",
-            success: function(data)
-            {
-                var content="";
-                content="<option  value=''>请选择</option>";
-                for (var i=0;i<data.length;i++)
-                {
-                    content+="<option  value='"+data[i].department+"'>"+data[i].department+"</option>";
-                }
-                $("#studioDepartment").html(content);
-            },
-            fail:function () {
-                alert("获取部门列表失败!");
-            }
-        });
-        $.ajax({
-            type: "POST",
-            url: "${pageContext.request.contextPath}/getAllStudioName.action",
-            success: function(data)
-            {
-                var content="";
-                content="<option  value=''>请选择</option>";
-                for (var i=0;i<data.length;i++)
-                {
-                    content+="<option  value='"+data[i]+"'>"+data[i]+"</option>";
-                }
-                $("#studioName").html(content);
-            },
-            fail:function () {
-                alert("获取工作室名称列表失败!");
-            }
-        });
-
     });
     function  searchButtonClick() {
         $("#searchForm").toggle();

@@ -10,7 +10,7 @@ public interface GradeMapper {
 
     int deleteByExample(GradeExample example);
 
-    int deleteByPrimaryKey(Integer num);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(Grade record);
 
@@ -18,7 +18,7 @@ public interface GradeMapper {
 
     List<Grade> selectByExample(GradeExample example);
 
-    Grade selectByPrimaryKey(Integer num);
+    Grade selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") Grade record, @Param("example") GradeExample example);
 

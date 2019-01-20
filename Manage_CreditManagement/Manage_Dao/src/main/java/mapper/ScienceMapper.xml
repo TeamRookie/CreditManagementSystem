@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="mapper.EnterpriseMapper" >
-  <resultMap id="BaseResultMap" type="pojo.Enterprise" >
+<mapper namespace="mapper.ScienceMapper" >
+  <resultMap id="BaseResultMap" type="pojo.Science" >
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="enterpriseid" property="enterpriseid" jdbcType="VARCHAR" />
-    <result column="enterprisename" property="enterprisename" jdbcType="VARCHAR" />
-    <result column="enterprisetype" property="enterprisetype" jdbcType="VARCHAR" />
-    <result column="residence" property="residence" jdbcType="VARCHAR" />
-    <result column="representative" property="representative" jdbcType="VARCHAR" />
-    <result column="establishtime" property="establishtime" jdbcType="VARCHAR" />
-    <result column="businessscope" property="businessscope" jdbcType="VARCHAR" />
-    <result column="rank" property="rank" jdbcType="VARCHAR" />
-    <result column="shareholder" property="shareholder" jdbcType="VARCHAR" />
+    <result column="sciencename" property="sciencename" jdbcType="VARCHAR" />
+    <result column="sciencetype" property="sciencetype" jdbcType="VARCHAR" />
+    <result column="sciencelevel" property="sciencelevel" jdbcType="VARCHAR" />
+    <result column="sciencestarttime" property="sciencestarttime" jdbcType="VARCHAR" />
+    <result column="scienceendtime" property="scienceendtime" jdbcType="VARCHAR" />
+    <result column="teachername" property="teachername" jdbcType="VARCHAR" />
+    <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
     <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
@@ -79,17 +77,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, enterpriseid, enterprisename, enterprisetype, residence, representative, establishtime, 
-    businessscope, rank, shareholder, stunum, credit, facultynum, majornum, gradenum, 
-    stuname, url
+    id, sciencename, sciencetype, sciencelevel, sciencestarttime, scienceendtime, teachername, 
+    responsibility, stunum, credit, facultynum, majornum, gradenum, stuname, url
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.EnterpriseExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ScienceExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from enterprise
+    from science
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -100,65 +97,59 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from enterprise
+    from science
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from enterprise
+    delete from science
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="pojo.EnterpriseExample" >
-    delete from enterprise
+  <delete id="deleteByExample" parameterType="pojo.ScienceExample" >
+    delete from science
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="pojo.Enterprise" >
-    insert into enterprise (id, enterpriseid, enterprisename, 
-      enterprisetype, residence, representative, 
-      establishtime, businessscope, rank, 
-      shareholder, stunum, credit, 
-      facultynum, majornum, gradenum, 
-      stuname, url)
-    values (#{id,jdbcType=INTEGER}, #{enterpriseid,jdbcType=VARCHAR}, #{enterprisename,jdbcType=VARCHAR}, 
-      #{enterprisetype,jdbcType=VARCHAR}, #{residence,jdbcType=VARCHAR}, #{representative,jdbcType=VARCHAR}, 
-      #{establishtime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, 
-      #{shareholder,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
-      #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
-      #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="pojo.Science" >
+    insert into science (id, sciencename, sciencetype, 
+      sciencelevel, sciencestarttime, scienceendtime, 
+      teachername, responsibility, stunum, 
+      credit, facultynum, majornum, 
+      gradenum, stuname, url
+      )
+    values (#{id,jdbcType=INTEGER}, #{sciencename,jdbcType=VARCHAR}, #{sciencetype,jdbcType=VARCHAR}, 
+      #{sciencelevel,jdbcType=VARCHAR}, #{sciencestarttime,jdbcType=VARCHAR}, #{scienceendtime,jdbcType=VARCHAR}, 
+      #{teachername,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
+      #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="pojo.Enterprise" >
-    insert into enterprise
+  <insert id="insertSelective" parameterType="pojo.Science" >
+    insert into science
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="enterpriseid != null" >
-        enterpriseid,
+      <if test="sciencename != null" >
+        sciencename,
       </if>
-      <if test="enterprisename != null" >
-        enterprisename,
+      <if test="sciencetype != null" >
+        sciencetype,
       </if>
-      <if test="enterprisetype != null" >
-        enterprisetype,
+      <if test="sciencelevel != null" >
+        sciencelevel,
       </if>
-      <if test="residence != null" >
-        residence,
+      <if test="sciencestarttime != null" >
+        sciencestarttime,
       </if>
-      <if test="representative != null" >
-        representative,
+      <if test="scienceendtime != null" >
+        scienceendtime,
       </if>
-      <if test="establishtime != null" >
-        establishtime,
+      <if test="teachername != null" >
+        teachername,
       </if>
-      <if test="businessscope != null" >
-        businessscope,
-      </if>
-      <if test="rank != null" >
-        rank,
-      </if>
-      <if test="shareholder != null" >
-        shareholder,
+      <if test="responsibility != null" >
+        responsibility,
       </if>
       <if test="stunum != null" >
         stunum,
@@ -186,32 +177,26 @@
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="enterpriseid != null" >
-        #{enterpriseid,jdbcType=VARCHAR},
+      <if test="sciencename != null" >
+        #{sciencename,jdbcType=VARCHAR},
       </if>
-      <if test="enterprisename != null" >
-        #{enterprisename,jdbcType=VARCHAR},
+      <if test="sciencetype != null" >
+        #{sciencetype,jdbcType=VARCHAR},
       </if>
-      <if test="enterprisetype != null" >
-        #{enterprisetype,jdbcType=VARCHAR},
+      <if test="sciencelevel != null" >
+        #{sciencelevel,jdbcType=VARCHAR},
       </if>
-      <if test="residence != null" >
-        #{residence,jdbcType=VARCHAR},
+      <if test="sciencestarttime != null" >
+        #{sciencestarttime,jdbcType=VARCHAR},
       </if>
-      <if test="representative != null" >
-        #{representative,jdbcType=VARCHAR},
+      <if test="scienceendtime != null" >
+        #{scienceendtime,jdbcType=VARCHAR},
       </if>
-      <if test="establishtime != null" >
-        #{establishtime,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        #{teachername,jdbcType=VARCHAR},
       </if>
-      <if test="businessscope != null" >
-        #{businessscope,jdbcType=VARCHAR},
-      </if>
-      <if test="rank != null" >
-        #{rank,jdbcType=VARCHAR},
-      </if>
-      <if test="shareholder != null" >
-        #{shareholder,jdbcType=VARCHAR},
+      <if test="responsibility != null" >
+        #{responsibility,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         #{stunum,jdbcType=VARCHAR},
@@ -236,44 +221,38 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="pojo.EnterpriseExample" resultType="java.lang.Integer" >
-    select count(*) from enterprise
+  <select id="countByExample" parameterType="pojo.ScienceExample" resultType="java.lang.Integer" >
+    select count(*) from science
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update enterprise
+    update science
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.enterpriseid != null" >
-        enterpriseid = #{record.enterpriseid,jdbcType=VARCHAR},
+      <if test="record.sciencename != null" >
+        sciencename = #{record.sciencename,jdbcType=VARCHAR},
       </if>
-      <if test="record.enterprisename != null" >
-        enterprisename = #{record.enterprisename,jdbcType=VARCHAR},
+      <if test="record.sciencetype != null" >
+        sciencetype = #{record.sciencetype,jdbcType=VARCHAR},
       </if>
-      <if test="record.enterprisetype != null" >
-        enterprisetype = #{record.enterprisetype,jdbcType=VARCHAR},
+      <if test="record.sciencelevel != null" >
+        sciencelevel = #{record.sciencelevel,jdbcType=VARCHAR},
       </if>
-      <if test="record.residence != null" >
-        residence = #{record.residence,jdbcType=VARCHAR},
+      <if test="record.sciencestarttime != null" >
+        sciencestarttime = #{record.sciencestarttime,jdbcType=VARCHAR},
       </if>
-      <if test="record.representative != null" >
-        representative = #{record.representative,jdbcType=VARCHAR},
+      <if test="record.scienceendtime != null" >
+        scienceendtime = #{record.scienceendtime,jdbcType=VARCHAR},
       </if>
-      <if test="record.establishtime != null" >
-        establishtime = #{record.establishtime,jdbcType=VARCHAR},
+      <if test="record.teachername != null" >
+        teachername = #{record.teachername,jdbcType=VARCHAR},
       </if>
-      <if test="record.businessscope != null" >
-        businessscope = #{record.businessscope,jdbcType=VARCHAR},
-      </if>
-      <if test="record.rank != null" >
-        rank = #{record.rank,jdbcType=VARCHAR},
-      </if>
-      <if test="record.shareholder != null" >
-        shareholder = #{record.shareholder,jdbcType=VARCHAR},
+      <if test="record.responsibility != null" >
+        responsibility = #{record.responsibility,jdbcType=VARCHAR},
       </if>
       <if test="record.stunum != null" >
         stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -302,17 +281,15 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update enterprise
+    update science
     set id = #{record.id,jdbcType=INTEGER},
-      enterpriseid = #{record.enterpriseid,jdbcType=VARCHAR},
-      enterprisename = #{record.enterprisename,jdbcType=VARCHAR},
-      enterprisetype = #{record.enterprisetype,jdbcType=VARCHAR},
-      residence = #{record.residence,jdbcType=VARCHAR},
-      representative = #{record.representative,jdbcType=VARCHAR},
-      establishtime = #{record.establishtime,jdbcType=VARCHAR},
-      businessscope = #{record.businessscope,jdbcType=VARCHAR},
-      rank = #{record.rank,jdbcType=VARCHAR},
-      shareholder = #{record.shareholder,jdbcType=VARCHAR},
+      sciencename = #{record.sciencename,jdbcType=VARCHAR},
+      sciencetype = #{record.sciencetype,jdbcType=VARCHAR},
+      sciencelevel = #{record.sciencelevel,jdbcType=VARCHAR},
+      sciencestarttime = #{record.sciencestarttime,jdbcType=VARCHAR},
+      scienceendtime = #{record.scienceendtime,jdbcType=VARCHAR},
+      teachername = #{record.teachername,jdbcType=VARCHAR},
+      responsibility = #{record.responsibility,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
       facultynum = #{record.facultynum,jdbcType=INTEGER},
@@ -324,35 +301,29 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="pojo.Enterprise" >
-    update enterprise
+  <update id="updateByPrimaryKeySelective" parameterType="pojo.Science" >
+    update science
     <set >
-      <if test="enterpriseid != null" >
-        enterpriseid = #{enterpriseid,jdbcType=VARCHAR},
+      <if test="sciencename != null" >
+        sciencename = #{sciencename,jdbcType=VARCHAR},
       </if>
-      <if test="enterprisename != null" >
-        enterprisename = #{enterprisename,jdbcType=VARCHAR},
+      <if test="sciencetype != null" >
+        sciencetype = #{sciencetype,jdbcType=VARCHAR},
       </if>
-      <if test="enterprisetype != null" >
-        enterprisetype = #{enterprisetype,jdbcType=VARCHAR},
+      <if test="sciencelevel != null" >
+        sciencelevel = #{sciencelevel,jdbcType=VARCHAR},
       </if>
-      <if test="residence != null" >
-        residence = #{residence,jdbcType=VARCHAR},
+      <if test="sciencestarttime != null" >
+        sciencestarttime = #{sciencestarttime,jdbcType=VARCHAR},
       </if>
-      <if test="representative != null" >
-        representative = #{representative,jdbcType=VARCHAR},
+      <if test="scienceendtime != null" >
+        scienceendtime = #{scienceendtime,jdbcType=VARCHAR},
       </if>
-      <if test="establishtime != null" >
-        establishtime = #{establishtime,jdbcType=VARCHAR},
+      <if test="teachername != null" >
+        teachername = #{teachername,jdbcType=VARCHAR},
       </if>
-      <if test="businessscope != null" >
-        businessscope = #{businessscope,jdbcType=VARCHAR},
-      </if>
-      <if test="rank != null" >
-        rank = #{rank,jdbcType=VARCHAR},
-      </if>
-      <if test="shareholder != null" >
-        shareholder = #{shareholder,jdbcType=VARCHAR},
+      <if test="responsibility != null" >
+        responsibility = #{responsibility,jdbcType=VARCHAR},
       </if>
       <if test="stunum != null" >
         stunum = #{stunum,jdbcType=VARCHAR},
@@ -378,17 +349,15 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="pojo.Enterprise" >
-    update enterprise
-    set enterpriseid = #{enterpriseid,jdbcType=VARCHAR},
-      enterprisename = #{enterprisename,jdbcType=VARCHAR},
-      enterprisetype = #{enterprisetype,jdbcType=VARCHAR},
-      residence = #{residence,jdbcType=VARCHAR},
-      representative = #{representative,jdbcType=VARCHAR},
-      establishtime = #{establishtime,jdbcType=VARCHAR},
-      businessscope = #{businessscope,jdbcType=VARCHAR},
-      rank = #{rank,jdbcType=VARCHAR},
-      shareholder = #{shareholder,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="pojo.Science" >
+    update science
+    set sciencename = #{sciencename,jdbcType=VARCHAR},
+      sciencetype = #{sciencetype,jdbcType=VARCHAR},
+      sciencelevel = #{sciencelevel,jdbcType=VARCHAR},
+      sciencestarttime = #{sciencestarttime,jdbcType=VARCHAR},
+      scienceendtime = #{scienceendtime,jdbcType=VARCHAR},
+      teachername = #{teachername,jdbcType=VARCHAR},
+      responsibility = #{responsibility,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
       facultynum = #{facultynum,jdbcType=INTEGER},

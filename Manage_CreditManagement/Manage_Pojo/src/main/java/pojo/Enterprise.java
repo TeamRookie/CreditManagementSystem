@@ -17,11 +17,13 @@ public class Enterprise {
 
     private String businessscope;
 
+    private String rank;
+
     private String shareholder;
 
     private String stunum;
 
-    private String stuname;
+    private Float credit;
 
     private Integer facultynum;
 
@@ -29,11 +31,9 @@ public class Enterprise {
 
     private Integer gradenum;
 
+    private String stuname;
+
     private String url;
-
-    private String rank;
-
-    private Float credit;
 
     public Integer getId() {
         return id;
@@ -99,6 +99,14 @@ public class Enterprise {
         this.businessscope = businessscope == null ? null : businessscope.trim();
     }
 
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank == null ? null : rank.trim();
+    }
+
     public String getShareholder() {
         return shareholder;
     }
@@ -115,12 +123,12 @@ public class Enterprise {
         this.stunum = stunum == null ? null : stunum.trim();
     }
 
-    public String getStuname() {
-        return stuname;
+    public Float getCredit() {
+        return credit;
     }
 
-    public void setStuname(String stuname) {
-        this.stuname = stuname == null ? null : stuname.trim();
+    public void setCredit(Float credit) {
+        this.credit = credit;
     }
 
     public Integer getFacultynum() {
@@ -147,27 +155,19 @@ public class Enterprise {
         this.gradenum = gradenum;
     }
 
+    public String getStuname() {
+        return stuname;
+    }
+
+    public void setStuname(String stuname) {
+        this.stuname = stuname == null ? null : stuname.trim();
+    }
+
     public String getUrl() {
         return url;
     }
 
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
-    }
-
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank == null ? null : rank.trim();
-    }
-
-    public Float getCredit() {
-        return credit;
-    }
-
-    public void setCredit(Float credit) {
-        this.credit = credit;
     }
 }

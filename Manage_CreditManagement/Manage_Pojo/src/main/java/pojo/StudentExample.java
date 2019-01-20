@@ -314,63 +314,183 @@ public class StudentExample {
             return (Criteria) this;
         }
 
-        public Criteria andGradeIsNull() {
-            addCriterion("grade is null");
+        public Criteria andFacultynumIsNull() {
+            addCriterion("facultynum is null");
             return (Criteria) this;
         }
 
-        public Criteria andGradeIsNotNull() {
-            addCriterion("grade is not null");
+        public Criteria andFacultynumIsNotNull() {
+            addCriterion("facultynum is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGradeEqualTo(Integer value) {
-            addCriterion("grade =", value, "grade");
+        public Criteria andFacultynumEqualTo(Integer value) {
+            addCriterion("facultynum =", value, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeNotEqualTo(Integer value) {
-            addCriterion("grade <>", value, "grade");
+        public Criteria andFacultynumNotEqualTo(Integer value) {
+            addCriterion("facultynum <>", value, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeGreaterThan(Integer value) {
-            addCriterion("grade >", value, "grade");
+        public Criteria andFacultynumGreaterThan(Integer value) {
+            addCriterion("facultynum >", value, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("grade >=", value, "grade");
+        public Criteria andFacultynumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("facultynum >=", value, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeLessThan(Integer value) {
-            addCriterion("grade <", value, "grade");
+        public Criteria andFacultynumLessThan(Integer value) {
+            addCriterion("facultynum <", value, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeLessThanOrEqualTo(Integer value) {
-            addCriterion("grade <=", value, "grade");
+        public Criteria andFacultynumLessThanOrEqualTo(Integer value) {
+            addCriterion("facultynum <=", value, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeIn(List<Integer> values) {
-            addCriterion("grade in", values, "grade");
+        public Criteria andFacultynumIn(List<Integer> values) {
+            addCriterion("facultynum in", values, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeNotIn(List<Integer> values) {
-            addCriterion("grade not in", values, "grade");
+        public Criteria andFacultynumNotIn(List<Integer> values) {
+            addCriterion("facultynum not in", values, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeBetween(Integer value1, Integer value2) {
-            addCriterion("grade between", value1, value2, "grade");
+        public Criteria andFacultynumBetween(Integer value1, Integer value2) {
+            addCriterion("facultynum between", value1, value2, "facultynum");
             return (Criteria) this;
         }
 
-        public Criteria andGradeNotBetween(Integer value1, Integer value2) {
-            addCriterion("grade not between", value1, value2, "grade");
+        public Criteria andFacultynumNotBetween(Integer value1, Integer value2) {
+            addCriterion("facultynum not between", value1, value2, "facultynum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumIsNull() {
+            addCriterion("majornum is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumIsNotNull() {
+            addCriterion("majornum is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumEqualTo(Integer value) {
+            addCriterion("majornum =", value, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumNotEqualTo(Integer value) {
+            addCriterion("majornum <>", value, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumGreaterThan(Integer value) {
+            addCriterion("majornum >", value, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("majornum >=", value, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumLessThan(Integer value) {
+            addCriterion("majornum <", value, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumLessThanOrEqualTo(Integer value) {
+            addCriterion("majornum <=", value, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumIn(List<Integer> values) {
+            addCriterion("majornum in", values, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumNotIn(List<Integer> values) {
+            addCriterion("majornum not in", values, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumBetween(Integer value1, Integer value2) {
+            addCriterion("majornum between", value1, value2, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornumNotBetween(Integer value1, Integer value2) {
+            addCriterion("majornum not between", value1, value2, "majornum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumIsNull() {
+            addCriterion("gradenum is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumIsNotNull() {
+            addCriterion("gradenum is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumEqualTo(Integer value) {
+            addCriterion("gradenum =", value, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumNotEqualTo(Integer value) {
+            addCriterion("gradenum <>", value, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumGreaterThan(Integer value) {
+            addCriterion("gradenum >", value, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("gradenum >=", value, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumLessThan(Integer value) {
+            addCriterion("gradenum <", value, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumLessThanOrEqualTo(Integer value) {
+            addCriterion("gradenum <=", value, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumIn(List<Integer> values) {
+            addCriterion("gradenum in", values, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumNotIn(List<Integer> values) {
+            addCriterion("gradenum not in", values, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumBetween(Integer value1, Integer value2) {
+            addCriterion("gradenum between", value1, value2, "gradenum");
+            return (Criteria) this;
+        }
+
+        public Criteria andGradenumNotBetween(Integer value1, Integer value2) {
+            addCriterion("gradenum not between", value1, value2, "gradenum");
             return (Criteria) this;
         }
 
@@ -771,146 +891,6 @@ public class StudentExample {
 
         public Criteria andStudenttimeNotBetween(String value1, String value2) {
             addCriterion("studenttime not between", value1, value2, "studenttime");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameIsNull() {
-            addCriterion("facultyname is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameIsNotNull() {
-            addCriterion("facultyname is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameEqualTo(String value) {
-            addCriterion("facultyname =", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameNotEqualTo(String value) {
-            addCriterion("facultyname <>", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameGreaterThan(String value) {
-            addCriterion("facultyname >", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameGreaterThanOrEqualTo(String value) {
-            addCriterion("facultyname >=", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameLessThan(String value) {
-            addCriterion("facultyname <", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameLessThanOrEqualTo(String value) {
-            addCriterion("facultyname <=", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameLike(String value) {
-            addCriterion("facultyname like", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameNotLike(String value) {
-            addCriterion("facultyname not like", value, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameIn(List<String> values) {
-            addCriterion("facultyname in", values, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameNotIn(List<String> values) {
-            addCriterion("facultyname not in", values, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameBetween(String value1, String value2) {
-            addCriterion("facultyname between", value1, value2, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andFacultynameNotBetween(String value1, String value2) {
-            addCriterion("facultyname not between", value1, value2, "facultyname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameIsNull() {
-            addCriterion("majorname is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameIsNotNull() {
-            addCriterion("majorname is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameEqualTo(String value) {
-            addCriterion("majorname =", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameNotEqualTo(String value) {
-            addCriterion("majorname <>", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameGreaterThan(String value) {
-            addCriterion("majorname >", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameGreaterThanOrEqualTo(String value) {
-            addCriterion("majorname >=", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameLessThan(String value) {
-            addCriterion("majorname <", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameLessThanOrEqualTo(String value) {
-            addCriterion("majorname <=", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameLike(String value) {
-            addCriterion("majorname like", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameNotLike(String value) {
-            addCriterion("majorname not like", value, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameIn(List<String> values) {
-            addCriterion("majorname in", values, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameNotIn(List<String> values) {
-            addCriterion("majorname not in", values, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameBetween(String value1, String value2) {
-            addCriterion("majorname between", value1, value2, "majorname");
-            return (Criteria) this;
-        }
-
-        public Criteria andMajornameNotBetween(String value1, String value2) {
-            addCriterion("majorname not between", value1, value2, "majorname");
             return (Criteria) this;
         }
     }

@@ -3,14 +3,14 @@ package pojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainExample {
+public class ScienceExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public TrainExample() {
+    public ScienceExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,283 +164,353 @@ public class TrainExample {
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentIsNull() {
-            addCriterion("traincontent is null");
+        public Criteria andSciencenameIsNull() {
+            addCriterion("sciencename is null");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentIsNotNull() {
-            addCriterion("traincontent is not null");
+        public Criteria andSciencenameIsNotNull() {
+            addCriterion("sciencename is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentEqualTo(String value) {
-            addCriterion("traincontent =", value, "traincontent");
+        public Criteria andSciencenameEqualTo(String value) {
+            addCriterion("sciencename =", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentNotEqualTo(String value) {
-            addCriterion("traincontent <>", value, "traincontent");
+        public Criteria andSciencenameNotEqualTo(String value) {
+            addCriterion("sciencename <>", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentGreaterThan(String value) {
-            addCriterion("traincontent >", value, "traincontent");
+        public Criteria andSciencenameGreaterThan(String value) {
+            addCriterion("sciencename >", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentGreaterThanOrEqualTo(String value) {
-            addCriterion("traincontent >=", value, "traincontent");
+        public Criteria andSciencenameGreaterThanOrEqualTo(String value) {
+            addCriterion("sciencename >=", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentLessThan(String value) {
-            addCriterion("traincontent <", value, "traincontent");
+        public Criteria andSciencenameLessThan(String value) {
+            addCriterion("sciencename <", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentLessThanOrEqualTo(String value) {
-            addCriterion("traincontent <=", value, "traincontent");
+        public Criteria andSciencenameLessThanOrEqualTo(String value) {
+            addCriterion("sciencename <=", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentLike(String value) {
-            addCriterion("traincontent like", value, "traincontent");
+        public Criteria andSciencenameLike(String value) {
+            addCriterion("sciencename like", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentNotLike(String value) {
-            addCriterion("traincontent not like", value, "traincontent");
+        public Criteria andSciencenameNotLike(String value) {
+            addCriterion("sciencename not like", value, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentIn(List<String> values) {
-            addCriterion("traincontent in", values, "traincontent");
+        public Criteria andSciencenameIn(List<String> values) {
+            addCriterion("sciencename in", values, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentNotIn(List<String> values) {
-            addCriterion("traincontent not in", values, "traincontent");
+        public Criteria andSciencenameNotIn(List<String> values) {
+            addCriterion("sciencename not in", values, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentBetween(String value1, String value2) {
-            addCriterion("traincontent between", value1, value2, "traincontent");
+        public Criteria andSciencenameBetween(String value1, String value2) {
+            addCriterion("sciencename between", value1, value2, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraincontentNotBetween(String value1, String value2) {
-            addCriterion("traincontent not between", value1, value2, "traincontent");
+        public Criteria andSciencenameNotBetween(String value1, String value2) {
+            addCriterion("sciencename not between", value1, value2, "sciencename");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeIsNull() {
-            addCriterion("traintime is null");
+        public Criteria andSciencetypeIsNull() {
+            addCriterion("sciencetype is null");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeIsNotNull() {
-            addCriterion("traintime is not null");
+        public Criteria andSciencetypeIsNotNull() {
+            addCriterion("sciencetype is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeEqualTo(String value) {
-            addCriterion("traintime =", value, "traintime");
+        public Criteria andSciencetypeEqualTo(String value) {
+            addCriterion("sciencetype =", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeNotEqualTo(String value) {
-            addCriterion("traintime <>", value, "traintime");
+        public Criteria andSciencetypeNotEqualTo(String value) {
+            addCriterion("sciencetype <>", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeGreaterThan(String value) {
-            addCriterion("traintime >", value, "traintime");
+        public Criteria andSciencetypeGreaterThan(String value) {
+            addCriterion("sciencetype >", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeGreaterThanOrEqualTo(String value) {
-            addCriterion("traintime >=", value, "traintime");
+        public Criteria andSciencetypeGreaterThanOrEqualTo(String value) {
+            addCriterion("sciencetype >=", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeLessThan(String value) {
-            addCriterion("traintime <", value, "traintime");
+        public Criteria andSciencetypeLessThan(String value) {
+            addCriterion("sciencetype <", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeLessThanOrEqualTo(String value) {
-            addCriterion("traintime <=", value, "traintime");
+        public Criteria andSciencetypeLessThanOrEqualTo(String value) {
+            addCriterion("sciencetype <=", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeLike(String value) {
-            addCriterion("traintime like", value, "traintime");
+        public Criteria andSciencetypeLike(String value) {
+            addCriterion("sciencetype like", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeNotLike(String value) {
-            addCriterion("traintime not like", value, "traintime");
+        public Criteria andSciencetypeNotLike(String value) {
+            addCriterion("sciencetype not like", value, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeIn(List<String> values) {
-            addCriterion("traintime in", values, "traintime");
+        public Criteria andSciencetypeIn(List<String> values) {
+            addCriterion("sciencetype in", values, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeNotIn(List<String> values) {
-            addCriterion("traintime not in", values, "traintime");
+        public Criteria andSciencetypeNotIn(List<String> values) {
+            addCriterion("sciencetype not in", values, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeBetween(String value1, String value2) {
-            addCriterion("traintime between", value1, value2, "traintime");
+        public Criteria andSciencetypeBetween(String value1, String value2) {
+            addCriterion("sciencetype between", value1, value2, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTraintimeNotBetween(String value1, String value2) {
-            addCriterion("traintime not between", value1, value2, "traintime");
+        public Criteria andSciencetypeNotBetween(String value1, String value2) {
+            addCriterion("sciencetype not between", value1, value2, "sciencetype");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteIsNull() {
-            addCriterion("trainsite is null");
+        public Criteria andSciencelevelIsNull() {
+            addCriterion("sciencelevel is null");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteIsNotNull() {
-            addCriterion("trainsite is not null");
+        public Criteria andSciencelevelIsNotNull() {
+            addCriterion("sciencelevel is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteEqualTo(String value) {
-            addCriterion("trainsite =", value, "trainsite");
+        public Criteria andSciencelevelEqualTo(String value) {
+            addCriterion("sciencelevel =", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteNotEqualTo(String value) {
-            addCriterion("trainsite <>", value, "trainsite");
+        public Criteria andSciencelevelNotEqualTo(String value) {
+            addCriterion("sciencelevel <>", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteGreaterThan(String value) {
-            addCriterion("trainsite >", value, "trainsite");
+        public Criteria andSciencelevelGreaterThan(String value) {
+            addCriterion("sciencelevel >", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteGreaterThanOrEqualTo(String value) {
-            addCriterion("trainsite >=", value, "trainsite");
+        public Criteria andSciencelevelGreaterThanOrEqualTo(String value) {
+            addCriterion("sciencelevel >=", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteLessThan(String value) {
-            addCriterion("trainsite <", value, "trainsite");
+        public Criteria andSciencelevelLessThan(String value) {
+            addCriterion("sciencelevel <", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteLessThanOrEqualTo(String value) {
-            addCriterion("trainsite <=", value, "trainsite");
+        public Criteria andSciencelevelLessThanOrEqualTo(String value) {
+            addCriterion("sciencelevel <=", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteLike(String value) {
-            addCriterion("trainsite like", value, "trainsite");
+        public Criteria andSciencelevelLike(String value) {
+            addCriterion("sciencelevel like", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteNotLike(String value) {
-            addCriterion("trainsite not like", value, "trainsite");
+        public Criteria andSciencelevelNotLike(String value) {
+            addCriterion("sciencelevel not like", value, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteIn(List<String> values) {
-            addCriterion("trainsite in", values, "trainsite");
+        public Criteria andSciencelevelIn(List<String> values) {
+            addCriterion("sciencelevel in", values, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteNotIn(List<String> values) {
-            addCriterion("trainsite not in", values, "trainsite");
+        public Criteria andSciencelevelNotIn(List<String> values) {
+            addCriterion("sciencelevel not in", values, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteBetween(String value1, String value2) {
-            addCriterion("trainsite between", value1, value2, "trainsite");
+        public Criteria andSciencelevelBetween(String value1, String value2) {
+            addCriterion("sciencelevel between", value1, value2, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andTrainsiteNotBetween(String value1, String value2) {
-            addCriterion("trainsite not between", value1, value2, "trainsite");
+        public Criteria andSciencelevelNotBetween(String value1, String value2) {
+            addCriterion("sciencelevel not between", value1, value2, "sciencelevel");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitIsNull() {
-            addCriterion("organizationunit is null");
+        public Criteria andSciencestarttimeIsNull() {
+            addCriterion("sciencestarttime is null");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitIsNotNull() {
-            addCriterion("organizationunit is not null");
+        public Criteria andSciencestarttimeIsNotNull() {
+            addCriterion("sciencestarttime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitEqualTo(String value) {
-            addCriterion("organizationunit =", value, "organizationunit");
+        public Criteria andSciencestarttimeEqualTo(String value) {
+            addCriterion("sciencestarttime =", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitNotEqualTo(String value) {
-            addCriterion("organizationunit <>", value, "organizationunit");
+        public Criteria andSciencestarttimeNotEqualTo(String value) {
+            addCriterion("sciencestarttime <>", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitGreaterThan(String value) {
-            addCriterion("organizationunit >", value, "organizationunit");
+        public Criteria andSciencestarttimeGreaterThan(String value) {
+            addCriterion("sciencestarttime >", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitGreaterThanOrEqualTo(String value) {
-            addCriterion("organizationunit >=", value, "organizationunit");
+        public Criteria andSciencestarttimeGreaterThanOrEqualTo(String value) {
+            addCriterion("sciencestarttime >=", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitLessThan(String value) {
-            addCriterion("organizationunit <", value, "organizationunit");
+        public Criteria andSciencestarttimeLessThan(String value) {
+            addCriterion("sciencestarttime <", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitLessThanOrEqualTo(String value) {
-            addCriterion("organizationunit <=", value, "organizationunit");
+        public Criteria andSciencestarttimeLessThanOrEqualTo(String value) {
+            addCriterion("sciencestarttime <=", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitLike(String value) {
-            addCriterion("organizationunit like", value, "organizationunit");
+        public Criteria andSciencestarttimeLike(String value) {
+            addCriterion("sciencestarttime like", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitNotLike(String value) {
-            addCriterion("organizationunit not like", value, "organizationunit");
+        public Criteria andSciencestarttimeNotLike(String value) {
+            addCriterion("sciencestarttime not like", value, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitIn(List<String> values) {
-            addCriterion("organizationunit in", values, "organizationunit");
+        public Criteria andSciencestarttimeIn(List<String> values) {
+            addCriterion("sciencestarttime in", values, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitNotIn(List<String> values) {
-            addCriterion("organizationunit not in", values, "organizationunit");
+        public Criteria andSciencestarttimeNotIn(List<String> values) {
+            addCriterion("sciencestarttime not in", values, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitBetween(String value1, String value2) {
-            addCriterion("organizationunit between", value1, value2, "organizationunit");
+        public Criteria andSciencestarttimeBetween(String value1, String value2) {
+            addCriterion("sciencestarttime between", value1, value2, "sciencestarttime");
             return (Criteria) this;
         }
 
-        public Criteria andOrganizationunitNotBetween(String value1, String value2) {
-            addCriterion("organizationunit not between", value1, value2, "organizationunit");
+        public Criteria andSciencestarttimeNotBetween(String value1, String value2) {
+            addCriterion("sciencestarttime not between", value1, value2, "sciencestarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeIsNull() {
+            addCriterion("scienceendtime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeIsNotNull() {
+            addCriterion("scienceendtime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeEqualTo(String value) {
+            addCriterion("scienceendtime =", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeNotEqualTo(String value) {
+            addCriterion("scienceendtime <>", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeGreaterThan(String value) {
+            addCriterion("scienceendtime >", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeGreaterThanOrEqualTo(String value) {
+            addCriterion("scienceendtime >=", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeLessThan(String value) {
+            addCriterion("scienceendtime <", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeLessThanOrEqualTo(String value) {
+            addCriterion("scienceendtime <=", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeLike(String value) {
+            addCriterion("scienceendtime like", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeNotLike(String value) {
+            addCriterion("scienceendtime not like", value, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeIn(List<String> values) {
+            addCriterion("scienceendtime in", values, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeNotIn(List<String> values) {
+            addCriterion("scienceendtime not in", values, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeBetween(String value1, String value2) {
+            addCriterion("scienceendtime between", value1, value2, "scienceendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andScienceendtimeNotBetween(String value1, String value2) {
+            addCriterion("scienceendtime not between", value1, value2, "scienceendtime");
             return (Criteria) this;
         }
 
@@ -511,6 +581,76 @@ public class TrainExample {
 
         public Criteria andTeachernameNotBetween(String value1, String value2) {
             addCriterion("teachername not between", value1, value2, "teachername");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityIsNull() {
+            addCriterion("responsibility is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityIsNotNull() {
+            addCriterion("responsibility is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityEqualTo(String value) {
+            addCriterion("responsibility =", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityNotEqualTo(String value) {
+            addCriterion("responsibility <>", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityGreaterThan(String value) {
+            addCriterion("responsibility >", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityGreaterThanOrEqualTo(String value) {
+            addCriterion("responsibility >=", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityLessThan(String value) {
+            addCriterion("responsibility <", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityLessThanOrEqualTo(String value) {
+            addCriterion("responsibility <=", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityLike(String value) {
+            addCriterion("responsibility like", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityNotLike(String value) {
+            addCriterion("responsibility not like", value, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityIn(List<String> values) {
+            addCriterion("responsibility in", values, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityNotIn(List<String> values) {
+            addCriterion("responsibility not in", values, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityBetween(String value1, String value2) {
+            addCriterion("responsibility between", value1, value2, "responsibility");
+            return (Criteria) this;
+        }
+
+        public Criteria andResponsibilityNotBetween(String value1, String value2) {
+            addCriterion("responsibility not between", value1, value2, "responsibility");
             return (Criteria) this;
         }
 

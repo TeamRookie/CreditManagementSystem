@@ -11,4 +11,29 @@
         patentsrules
         limit ${start},#{pageSize};
     </select>
+    <select id="getPatentsTotalCount" resultType="java.lang.Integer">
+        select count(*) from patents
+        <where>
+            <if test="studentNumber !=null and studentNumber != ''">
+                #{studentNumber} = stunum
+            </if>
+
+            <if test="patentsType != null and patentsType != ''">
+                AND  patentstype = #{patentsType}
+            </if>
+        </where>
+    </select>
+    <select id="getPatentsPageBean" parameterType="hashMap" resultType="pojo.Patents">
+        select * from patents
+        <where>
+            <if test="studentNumber !=null and studentNumber != ''">
+                #{studentNumber} = stunum
+            </if>
+
+            <if test="patentsType != null and patentsType != ''">
+                AND  patentstype = #{patentsType}
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
 </mapper>

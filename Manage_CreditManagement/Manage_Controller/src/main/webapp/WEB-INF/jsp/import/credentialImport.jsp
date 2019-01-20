@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
-    <title>个人预订 - 创新楼教室预约系统</title>
+    <title>项目信息导入</title>
 
     <meta name="description" content="Common form elements and layouts"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -269,10 +269,13 @@ ${message}
                         <a href="#">首页</a>
                     </li>
 
-                    <li>
-                        <a href="#">项目信息管理</a>
+                          <li>
+                        <a href="#">项目信息导入</a>
                     </li>
-                    <li class="active">主持学术活动类</li>
+                    <li>
+                        <a href="#">行业证书考核</a>
+                    </li>
+
                 </ul>
 
             </div>
@@ -318,10 +321,10 @@ ${message}
                               action="${pageContext.request.contextPath}/credentialImport.action" method="post">
                             <div class="form-group">
                                 <label class="col-sm-2 control-label no-padding-right"  for="name">
-                                    证书名称
+                                    证书类型
                                 </label>
                                 <div class="col-sm-2">
-                                    <input   class="form-control" name="information" id="name" type="text" placeholder="证书名称" />
+                                    <input   class="form-control" name="information" id="name" type="text" placeholder="证书类型" />
                                 </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
@@ -342,10 +345,10 @@ ${message}
                             <div class="form-group">
 
                                 <label class="col-sm-1 control-label no-padding-right"  for="addProjectName">
-                                    证书名称
+                                    证书类型
                                 </label>
                                 <div class="col-sm-1">
-                                    <input   class="form-control" name="addInformation" id="addProjectName" type="text" placeholder="证书名称" required />
+                                    <input   class="form-control" name="addInformation" id="addProjectName" type="text" placeholder="证书类型" required />
                                 </div>
 
                                 <div class="col-sm-1"></div>
