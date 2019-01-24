@@ -8,15 +8,15 @@
     <result column="enterprisetype" property="enterprisetype" jdbcType="VARCHAR" />
     <result column="residence" property="residence" jdbcType="VARCHAR" />
     <result column="representative" property="representative" jdbcType="VARCHAR" />
-    <result column="establishtime" property="establishtime" jdbcType="VARCHAR" />
+    <result column="enterprisetime" property="enterprisetime" jdbcType="VARCHAR" />
     <result column="businessscope" property="businessscope" jdbcType="VARCHAR" />
     <result column="rank" property="rank" jdbcType="VARCHAR" />
     <result column="shareholder" property="shareholder" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
-    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
-    <result column="majornum" property="majornum" jdbcType="INTEGER" />
-    <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
+    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
   </resultMap>
@@ -79,8 +79,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, enterpriseid, enterprisename, enterprisetype, residence, representative, establishtime, 
-    businessscope, rank, shareholder, stunum, credit, facultynum, majornum, gradenum, 
+    id, enterpriseid, enterprisename, enterprisetype, residence, representative, enterprisetime, 
+    businessscope, rank, shareholder, stunum, credit, facultyname, majorname, gradename, 
     stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.EnterpriseExample" >
@@ -116,15 +116,15 @@
   <insert id="insert" parameterType="pojo.Enterprise" >
     insert into enterprise (id, enterpriseid, enterprisename, 
       enterprisetype, residence, representative, 
-      establishtime, businessscope, rank, 
+      enterprisetime, businessscope, rank, 
       shareholder, stunum, credit, 
-      facultynum, majornum, gradenum, 
+      facultyname, majorname, gradename, 
       stuname, url)
     values (#{id,jdbcType=INTEGER}, #{enterpriseid,jdbcType=VARCHAR}, #{enterprisename,jdbcType=VARCHAR}, 
       #{enterprisetype,jdbcType=VARCHAR}, #{residence,jdbcType=VARCHAR}, #{representative,jdbcType=VARCHAR}, 
-      #{establishtime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, 
+      #{enterprisetime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, 
       #{shareholder,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
-      #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
+      #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, 
       #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Enterprise" >
@@ -148,8 +148,8 @@
       <if test="representative != null" >
         representative,
       </if>
-      <if test="establishtime != null" >
-        establishtime,
+      <if test="enterprisetime != null" >
+        enterprisetime,
       </if>
       <if test="businessscope != null" >
         businessscope,
@@ -166,14 +166,14 @@
       <if test="credit != null" >
         credit,
       </if>
-      <if test="facultynum != null" >
-        facultynum,
+      <if test="facultyname != null" >
+        facultyname,
       </if>
-      <if test="majornum != null" >
-        majornum,
+      <if test="majorname != null" >
+        majorname,
       </if>
-      <if test="gradenum != null" >
-        gradenum,
+      <if test="gradename != null" >
+        gradename,
       </if>
       <if test="stuname != null" >
         stuname,
@@ -201,8 +201,8 @@
       <if test="representative != null" >
         #{representative,jdbcType=VARCHAR},
       </if>
-      <if test="establishtime != null" >
-        #{establishtime,jdbcType=VARCHAR},
+      <if test="enterprisetime != null" >
+        #{enterprisetime,jdbcType=VARCHAR},
       </if>
       <if test="businessscope != null" >
         #{businessscope,jdbcType=VARCHAR},
@@ -219,14 +219,14 @@
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
       </if>
-      <if test="facultynum != null" >
-        #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="majornum != null" >
-        #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         #{stuname,jdbcType=VARCHAR},
@@ -263,8 +263,8 @@
       <if test="record.representative != null" >
         representative = #{record.representative,jdbcType=VARCHAR},
       </if>
-      <if test="record.establishtime != null" >
-        establishtime = #{record.establishtime,jdbcType=VARCHAR},
+      <if test="record.enterprisetime != null" >
+        enterprisetime = #{record.enterprisetime,jdbcType=VARCHAR},
       </if>
       <if test="record.businessscope != null" >
         businessscope = #{record.businessscope,jdbcType=VARCHAR},
@@ -281,14 +281,14 @@
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
       </if>
-      <if test="record.facultynum != null" >
-        facultynum = #{record.facultynum,jdbcType=INTEGER},
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="record.majornum != null" >
-        majornum = #{record.majornum,jdbcType=INTEGER},
+      <if test="record.majorname != null" >
+        majorname = #{record.majorname,jdbcType=VARCHAR},
       </if>
-      <if test="record.gradenum != null" >
-        gradenum = #{record.gradenum,jdbcType=INTEGER},
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
       </if>
       <if test="record.stuname != null" >
         stuname = #{record.stuname,jdbcType=VARCHAR},
@@ -309,15 +309,15 @@
       enterprisetype = #{record.enterprisetype,jdbcType=VARCHAR},
       residence = #{record.residence,jdbcType=VARCHAR},
       representative = #{record.representative,jdbcType=VARCHAR},
-      establishtime = #{record.establishtime,jdbcType=VARCHAR},
+      enterprisetime = #{record.enterprisetime,jdbcType=VARCHAR},
       businessscope = #{record.businessscope,jdbcType=VARCHAR},
       rank = #{record.rank,jdbcType=VARCHAR},
       shareholder = #{record.shareholder,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
-      facultynum = #{record.facultynum,jdbcType=INTEGER},
-      majornum = #{record.majornum,jdbcType=INTEGER},
-      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
       url = #{record.url,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -342,8 +342,8 @@
       <if test="representative != null" >
         representative = #{representative,jdbcType=VARCHAR},
       </if>
-      <if test="establishtime != null" >
-        establishtime = #{establishtime,jdbcType=VARCHAR},
+      <if test="enterprisetime != null" >
+        enterprisetime = #{enterprisetime,jdbcType=VARCHAR},
       </if>
       <if test="businessscope != null" >
         businessscope = #{businessscope,jdbcType=VARCHAR},
@@ -360,14 +360,14 @@
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
       </if>
-      <if test="facultynum != null" >
-        facultynum = #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="majornum != null" >
-        majornum = #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        majorname = #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        gradenum = #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         stuname = #{stuname,jdbcType=VARCHAR},
@@ -385,15 +385,15 @@
       enterprisetype = #{enterprisetype,jdbcType=VARCHAR},
       residence = #{residence,jdbcType=VARCHAR},
       representative = #{representative,jdbcType=VARCHAR},
-      establishtime = #{establishtime,jdbcType=VARCHAR},
+      enterprisetime = #{enterprisetime,jdbcType=VARCHAR},
       businessscope = #{businessscope,jdbcType=VARCHAR},
       rank = #{rank,jdbcType=VARCHAR},
       shareholder = #{shareholder,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
-      facultynum = #{facultynum,jdbcType=INTEGER},
-      majornum = #{majornum,jdbcType=INTEGER},
-      gradenum = #{gradenum,jdbcType=INTEGER},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
       stuname = #{stuname,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

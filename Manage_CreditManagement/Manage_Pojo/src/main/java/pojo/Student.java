@@ -1,18 +1,17 @@
 package pojo;
 
-public class Student
-{
+public class Student {
     private String num;
 
     private String stuname;
 
     private String id;
 
-    private Faculty faculty;
+    private String facultyname;
 
-    private Major major;
+    private String majorname;
 
-    private Grade grade;
+    private String gradename;
 
     private String telphone;
 
@@ -50,31 +49,31 @@ public class Student
         this.id = id == null ? null : id.trim();
     }
 
-    public Faculty getFaculty() {
-		return faculty;
-	}
+    public String getFacultyname() {
+        return facultyname;
+    }
 
-	public void setFaculty(Faculty faculty) {
-		this.faculty = faculty;
-	}
+    public void setFacultyname(String facultyname) {
+        this.facultyname = facultyname == null ? null : facultyname.trim();
+    }
 
-	public Major getMajor() {
-		return major;
-	}
+    public String getMajorname() {
+        return majorname;
+    }
 
-	public void setMajor(Major major) {
-		this.major = major;
-	}
+    public void setMajorname(String majorname) {
+        this.majorname = majorname == null ? null : majorname.trim();
+    }
 
-	public Grade getGrade() {
-		return grade;
-	}
+    public String getGradename() {
+        return gradename;
+    }
 
-	public void setGrade(Grade grade) {
-		this.grade = grade;
-	}
+    public void setGradename(String gradename) {
+        this.gradename = gradename == null ? null : gradename.trim();
+    }
 
-	public String getTelphone() {
+    public String getTelphone() {
         return telphone;
     }
 

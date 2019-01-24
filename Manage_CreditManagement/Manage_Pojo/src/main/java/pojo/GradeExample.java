@@ -234,63 +234,73 @@ public class GradeExample {
             return (Criteria) this;
         }
 
-        public Criteria andMajornumIsNull() {
-            addCriterion("majornum is null");
+        public Criteria andMajornameIsNull() {
+            addCriterion("majorname is null");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumIsNotNull() {
-            addCriterion("majornum is not null");
+        public Criteria andMajornameIsNotNull() {
+            addCriterion("majorname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumEqualTo(Integer value) {
-            addCriterion("majornum =", value, "majornum");
+        public Criteria andMajornameEqualTo(String value) {
+            addCriterion("majorname =", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumNotEqualTo(Integer value) {
-            addCriterion("majornum <>", value, "majornum");
+        public Criteria andMajornameNotEqualTo(String value) {
+            addCriterion("majorname <>", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumGreaterThan(Integer value) {
-            addCriterion("majornum >", value, "majornum");
+        public Criteria andMajornameGreaterThan(String value) {
+            addCriterion("majorname >", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumGreaterThanOrEqualTo(Integer value) {
-            addCriterion("majornum >=", value, "majornum");
+        public Criteria andMajornameGreaterThanOrEqualTo(String value) {
+            addCriterion("majorname >=", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumLessThan(Integer value) {
-            addCriterion("majornum <", value, "majornum");
+        public Criteria andMajornameLessThan(String value) {
+            addCriterion("majorname <", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumLessThanOrEqualTo(Integer value) {
-            addCriterion("majornum <=", value, "majornum");
+        public Criteria andMajornameLessThanOrEqualTo(String value) {
+            addCriterion("majorname <=", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumIn(List<Integer> values) {
-            addCriterion("majornum in", values, "majornum");
+        public Criteria andMajornameLike(String value) {
+            addCriterion("majorname like", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumNotIn(List<Integer> values) {
-            addCriterion("majornum not in", values, "majornum");
+        public Criteria andMajornameNotLike(String value) {
+            addCriterion("majorname not like", value, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumBetween(Integer value1, Integer value2) {
-            addCriterion("majornum between", value1, value2, "majornum");
+        public Criteria andMajornameIn(List<String> values) {
+            addCriterion("majorname in", values, "majorname");
             return (Criteria) this;
         }
 
-        public Criteria andMajornumNotBetween(Integer value1, Integer value2) {
-            addCriterion("majornum not between", value1, value2, "majornum");
+        public Criteria andMajornameNotIn(List<String> values) {
+            addCriterion("majorname not in", values, "majorname");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornameBetween(String value1, String value2) {
+            addCriterion("majorname between", value1, value2, "majorname");
+            return (Criteria) this;
+        }
+
+        public Criteria andMajornameNotBetween(String value1, String value2) {
+            addCriterion("majorname not between", value1, value2, "majorname");
             return (Criteria) this;
         }
     }

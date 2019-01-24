@@ -5,15 +5,15 @@
     <id column="num" property="num" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
+    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
     <result column="telphone" property="telphone" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="role" property="role" jdbcType="INTEGER" />
     <result column="bankcard" property="bankcard" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="studenttime" property="studenttime" jdbcType="VARCHAR" />
-    <association property="faculty" column="facultynum" javaType="pojo.Faculty"  select="mapper.FacultyMapper.selectByPrimaryKey"/>
-    <association property="major" column="majornum" javaType="pojo.Major"  select="mapper.MajorMapper.selectByPrimaryKey"/>
-    <association property="grade" column="gradenum" javaType="pojo.Grade"  select="mapper.GradeMapper.selectByPrimaryKey"/>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -74,7 +74,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    num, stuname, id, facultynum, majornum, gradenum, telphone, status, role, bankcard, 
+    num, stuname, id, facultyname, majorname, gradename, telphone, status, role, bankcard, 
     password, studenttime
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudentExample" >
@@ -109,12 +109,12 @@
   </delete>
   <insert id="insert" parameterType="pojo.Student" >
     insert into student (num, stuname, id, 
-      facultynum, majornum, gradenum, 
+      facultyname, majorname, gradename, 
       telphone, status, role, 
       bankcard, password, studenttime
       )
     values (#{num,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{id,jdbcType=VARCHAR}, 
-      #{faculty.num,jdbcType=INTEGER}, #{major.num,jdbcType=INTEGER}, #{grade.num,jdbcType=INTEGER}, 
+      #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, 
       #{telphone,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}, 
       #{bankcard,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{studenttime,jdbcType=VARCHAR}
       )
@@ -131,14 +131,14 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="faculty.num != null" >
-        facultynum,
+      <if test="facultyname != null" >
+        facultyname,
       </if>
-      <if test="major.num != null" >
-        majornum,
+      <if test="majorname != null" >
+        majorname,
       </if>
-      <if test="grade.num != null" >
-        gradenum,
+      <if test="gradename != null" >
+        gradename,
       </if>
       <if test="telphone != null" >
         telphone,
@@ -169,14 +169,14 @@
       <if test="id != null" >
         #{id,jdbcType=VARCHAR},
       </if>
-      <if test="faculty.num != null" >
-        #{faculty.num,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="major.num != null" >
-        #{major.num,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="grade.num != null" >
-        #{grade.num,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="telphone != null" >
         #{telphone,jdbcType=VARCHAR},
@@ -216,14 +216,14 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=VARCHAR},
       </if>
-      <if test="record.faculty.num != null" >
-        facultynum = #{record.faculty.num,jdbcType=INTEGER},
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="record.major.num != null" >
-        majornum = #{record.major.num,jdbcType=INTEGER},
+      <if test="record.majorname != null" >
+        majorname = #{record.majorname,jdbcType=VARCHAR},
       </if>
-      <if test="record.grade.num != null" >
-        gradenum = #{record.grade.num,jdbcType=INTEGER},
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
       </if>
       <if test="record.telphone != null" >
         telphone = #{record.telphone,jdbcType=VARCHAR},
@@ -253,9 +253,9 @@
     set num = #{record.num,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
       id = #{record.id,jdbcType=VARCHAR},
-      facultynum = #{record.faculty.num,jdbcType=INTEGER},
-      majornum = #{record.major.num,jdbcType=INTEGER},
-      gradenum = #{record.grade.num,jdbcType=INTEGER},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
       telphone = #{record.telphone,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=INTEGER},
       role = #{record.role,jdbcType=INTEGER},
@@ -275,14 +275,14 @@
       <if test="id != null" >
         id = #{id,jdbcType=VARCHAR},
       </if>
-      <if test="faculty.num != null" >
-        facultynum = #{faculty.num,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="major.num != null" >
-        majornum = #{major.num,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        majorname = #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="grade.num != null" >
-        gradenum = #{grade.num,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="telphone != null" >
         telphone = #{telphone,jdbcType=VARCHAR},
@@ -309,9 +309,9 @@
     update student
     set stuname = #{stuname,jdbcType=VARCHAR},
       id = #{id,jdbcType=VARCHAR},
-      facultynum = #{faculty.num,jdbcType=INTEGER},
-      majornum = #{major.num,jdbcType=INTEGER},
-      gradenum = #{grade.num,jdbcType=INTEGER},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
       telphone = #{telphone,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
       role = #{role,jdbcType=INTEGER},

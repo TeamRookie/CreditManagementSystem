@@ -9,14 +9,14 @@
     <result column="proposer" property="proposer" jdbcType="VARCHAR" />
     <result column="inventor" property="inventor" jdbcType="VARCHAR" />
     <result column="patentsname" property="patentsname" jdbcType="VARCHAR" />
+    <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
-    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
-    <result column="majornum" property="majornum" jdbcType="INTEGER" />
-    <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
+    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
-    <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -77,8 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, patentstype, patentsid, patentstime, proposer, inventor, patentsname, stunum, 
-    credit, facultynum, majornum, gradenum, stuname, url, responsibility
+    id, patentstype, patentsid, patentstime, proposer, inventor, patentsname, responsibility, 
+    stunum, credit, facultyname, majorname, gradename, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.PatentsExample" >
     select
@@ -113,15 +113,15 @@
   <insert id="insert" parameterType="pojo.Patents" >
     insert into patents (id, patentstype, patentsid, 
       patentstime, proposer, inventor, 
-      patentsname, stunum, credit, 
-      facultynum, majornum, gradenum, 
-      stuname, url, responsibility
+      patentsname, responsibility, stunum, 
+      credit, facultyname, majorname, 
+      gradename, stuname, url
       )
     values (#{id,jdbcType=INTEGER}, #{patentstype,jdbcType=VARCHAR}, #{patentsid,jdbcType=VARCHAR}, 
       #{patentstime,jdbcType=VARCHAR}, #{proposer,jdbcType=VARCHAR}, #{inventor,jdbcType=VARCHAR}, 
-      #{patentsname,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
-      #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, 
-      #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}
+      #{patentsname,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, 
+      #{gradename,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Patents" >
@@ -148,29 +148,29 @@
       <if test="patentsname != null" >
         patentsname,
       </if>
+      <if test="responsibility != null" >
+        responsibility,
+      </if>
       <if test="stunum != null" >
         stunum,
       </if>
       <if test="credit != null" >
         credit,
       </if>
-      <if test="facultynum != null" >
-        facultynum,
+      <if test="facultyname != null" >
+        facultyname,
       </if>
-      <if test="majornum != null" >
-        majornum,
+      <if test="majorname != null" >
+        majorname,
       </if>
-      <if test="gradenum != null" >
-        gradenum,
+      <if test="gradename != null" >
+        gradename,
       </if>
       <if test="stuname != null" >
         stuname,
       </if>
       <if test="url != null" >
         url,
-      </if>
-      <if test="responsibility != null" >
-        responsibility,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -195,29 +195,29 @@
       <if test="patentsname != null" >
         #{patentsname,jdbcType=VARCHAR},
       </if>
+      <if test="responsibility != null" >
+        #{responsibility,jdbcType=VARCHAR},
+      </if>
       <if test="stunum != null" >
         #{stunum,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
       </if>
-      <if test="facultynum != null" >
-        #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="majornum != null" >
-        #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         #{stuname,jdbcType=VARCHAR},
       </if>
       <if test="url != null" >
         #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="responsibility != null" >
-        #{responsibility,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -251,29 +251,29 @@
       <if test="record.patentsname != null" >
         patentsname = #{record.patentsname,jdbcType=VARCHAR},
       </if>
+      <if test="record.responsibility != null" >
+        responsibility = #{record.responsibility,jdbcType=VARCHAR},
+      </if>
       <if test="record.stunum != null" >
         stunum = #{record.stunum,jdbcType=VARCHAR},
       </if>
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
       </if>
-      <if test="record.facultynum != null" >
-        facultynum = #{record.facultynum,jdbcType=INTEGER},
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="record.majornum != null" >
-        majornum = #{record.majornum,jdbcType=INTEGER},
+      <if test="record.majorname != null" >
+        majorname = #{record.majorname,jdbcType=VARCHAR},
       </if>
-      <if test="record.gradenum != null" >
-        gradenum = #{record.gradenum,jdbcType=INTEGER},
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
       </if>
       <if test="record.stuname != null" >
         stuname = #{record.stuname,jdbcType=VARCHAR},
       </if>
       <if test="record.url != null" >
         url = #{record.url,jdbcType=VARCHAR},
-      </if>
-      <if test="record.responsibility != null" >
-        responsibility = #{record.responsibility,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -289,14 +289,14 @@
       proposer = #{record.proposer,jdbcType=VARCHAR},
       inventor = #{record.inventor,jdbcType=VARCHAR},
       patentsname = #{record.patentsname,jdbcType=VARCHAR},
+      responsibility = #{record.responsibility,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
-      facultynum = #{record.facultynum,jdbcType=INTEGER},
-      majornum = #{record.majornum,jdbcType=INTEGER},
-      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
-      url = #{record.url,jdbcType=VARCHAR},
-      responsibility = #{record.responsibility,jdbcType=VARCHAR}
+      url = #{record.url,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -322,29 +322,29 @@
       <if test="patentsname != null" >
         patentsname = #{patentsname,jdbcType=VARCHAR},
       </if>
+      <if test="responsibility != null" >
+        responsibility = #{responsibility,jdbcType=VARCHAR},
+      </if>
       <if test="stunum != null" >
         stunum = #{stunum,jdbcType=VARCHAR},
       </if>
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
       </if>
-      <if test="facultynum != null" >
-        facultynum = #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="majornum != null" >
-        majornum = #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        majorname = #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        gradenum = #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         stuname = #{stuname,jdbcType=VARCHAR},
       </if>
       <if test="url != null" >
         url = #{url,jdbcType=VARCHAR},
-      </if>
-      <if test="responsibility != null" >
-        responsibility = #{responsibility,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -357,14 +357,14 @@
       proposer = #{proposer,jdbcType=VARCHAR},
       inventor = #{inventor,jdbcType=VARCHAR},
       patentsname = #{patentsname,jdbcType=VARCHAR},
+      responsibility = #{responsibility,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
-      facultynum = #{facultynum,jdbcType=INTEGER},
-      majornum = #{majornum,jdbcType=INTEGER},
-      gradenum = #{gradenum,jdbcType=INTEGER},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
       stuname = #{stuname,jdbcType=VARCHAR},
-      url = #{url,jdbcType=VARCHAR},
-      responsibility = #{responsibility,jdbcType=VARCHAR}
+      url = #{url,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

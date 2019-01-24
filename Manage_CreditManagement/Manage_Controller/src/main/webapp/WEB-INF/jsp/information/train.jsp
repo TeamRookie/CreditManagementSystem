@@ -374,7 +374,7 @@ ${message}
                                         ${item.stunum}
                                 </td>
                                 <td class="center">${item.stuname}</td>
-                                <td class="center">${item.traincontent}</td>
+                                <td class="center">${item.trainname}</td>
                                 <td class="center">${item.traintime}</td>
                                 <td class="center">${item.trainsite}</td>
                                 <td class="center">${item.organizationunit}</td>

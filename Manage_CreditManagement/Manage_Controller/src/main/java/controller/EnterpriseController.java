@@ -29,6 +29,7 @@ public class EnterpriseController
         model.addAttribute("pageBean",pageBean);
         model.addAttribute("enterpriseType",enterpriseType);
         model.addAttribute("enterpriseTime",enterpriseTime);
+        model.addAttribute("studentNumber",studentNumber);
         return "information/enterprise";
     }
 }

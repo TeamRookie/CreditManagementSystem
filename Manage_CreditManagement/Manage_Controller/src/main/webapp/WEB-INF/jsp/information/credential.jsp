@@ -390,12 +390,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/association.action?currentPage=1&studentNumber=${studentNumber}&associationTime=${associationTime}&associationName=${associationName}&associationLevel=${associationLevel}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/credential.action?currentPage=1&studentNumber=${studentNumber}&credentialTime=${credentialTime}&credentialType=${credentialType}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/association.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&associationTime=${associationTime}&associationName=${associationName}&associationLevel=${associationLevel}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/credential.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&credentialTime=${credentialTime}&credentialType=${credentialType}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -406,13 +406,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/association.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&associationTime=${associationTime}&associationName=${associationName}&associationLevel=${associationLevel}">
+                                <a href="${pageContext.request.contextPath}/credential.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&credentialTime=${credentialTime}&credentialType=${credentialType}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/association.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&associationTime=${associationTime}&associationName=${associationName}&associationLevel=${associationLevel}">
+                                <a href="${pageContext.request.contextPath}/credential.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&credentialTime=${credentialTime}&credentialType=${credentialType}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>

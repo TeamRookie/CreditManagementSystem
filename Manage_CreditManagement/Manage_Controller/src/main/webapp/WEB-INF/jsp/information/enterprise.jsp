@@ -290,7 +290,7 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <a  class="white" href="${pageContext.request.contextPath}/enterpries.action">
+                        <a  class="white" href="${pageContext.request.contextPath}/enterprise.action">
                             <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
                                 <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
                             </button></a>
@@ -310,7 +310,7 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/contest.action">
+                              action="${pageContext.request.contextPath}/enterprise.action">
                             <div class="form-group">
                                 <label class="col-sm-1 control-label no-padding-right"  for="number">
                                     学号
@@ -374,7 +374,7 @@ ${message}
                                 <td class="center">${item.rank}</td>
                                 <td class="center">${item.residence}</td>
                                 <td class="center">${item.representative}</td>
-                                <td class="center">${item.establishtime}</td>
+                                <td class="center">${item.enterprisetime}</td>
                                 <td class="center">${item.businessscope}</td>
                                 <td class="center">${item.shareholder}</td>
                                 <td class="center">${item.credit}</td>
@@ -394,12 +394,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=1&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/enterprise.action?currentPage=1&studentNumber=${studentNumber}&enterpriseType=${enterpriseType}&enterpriseTime=${enterpriseTime}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/enterprise.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&enterpriseType=${enterpriseType}&enterpriseTime=${enterpriseTime}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -410,13 +410,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
+                                <a href="${pageContext.request.contextPath}/enterprise.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&enterpriseType=${enterpriseType}&enterpriseTime=${enterpriseTime}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
+                                <a href="${pageContext.request.contextPath}/enterprise.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&enterpriseType=${enterpriseType}&enterpriseTime=${enterpriseTime}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>

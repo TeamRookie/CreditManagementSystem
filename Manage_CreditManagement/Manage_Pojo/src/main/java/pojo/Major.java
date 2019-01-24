@@ -5,7 +5,7 @@ public class Major {
 
     private String majorname;
 
-    private Integer facultynum;
+    private String facultyname;
 
     public Integer getId() {
         return id;
@@ -23,11 +23,11 @@ public class Major {
         this.majorname = majorname == null ? null : majorname.trim();
     }
 
-    public Integer getFacultynum() {
-        return facultynum;
+    public String getFacultyname() {
+        return facultyname;
     }
 
-    public void setFacultynum(Integer facultynum) {
-        this.facultynum = facultynum;
+    public void setFacultyname(String facultyname) {
+        this.facultyname = facultyname == null ? null : facultyname.trim();
     }
 }

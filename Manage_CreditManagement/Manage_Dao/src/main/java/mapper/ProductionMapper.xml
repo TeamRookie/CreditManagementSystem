@@ -8,13 +8,12 @@
     <result column="productionname" property="productionname" jdbcType="VARCHAR" />
     <result column="author" property="author" jdbcType="VARCHAR" />
     <result column="source" property="source" jdbcType="VARCHAR" />
-    <result column="rank" property="rank" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
-    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
-    <result column="majornum" property="majornum" jdbcType="INTEGER" />
-    <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
+    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
     <result column="productiontype" property="productiontype" jdbcType="VARCHAR" />
@@ -78,8 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, productiontime, autograph, productionname, author, source, rank, responsibility, 
-    stunum, credit, facultynum, majornum, gradenum, stuname, url, productiontype
+    id, productiontime, autograph, productionname, author, source, responsibility, stunum, 
+    credit, facultyname, majorname, gradename, stuname, url, productiontype
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ProductionExample" >
     select
@@ -114,16 +113,16 @@
   <insert id="insert" parameterType="pojo.Production" >
     insert into production (id, productiontime, autograph, 
       productionname, author, source, 
-      rank, responsibility, stunum, 
-      credit, facultynum, majornum, 
-      gradenum, stuname, url, 
-      productiontype)
+      responsibility, stunum, credit, 
+      facultyname, majorname, gradename, 
+      stuname, url, productiontype
+      )
     values (#{id,jdbcType=INTEGER}, #{productiontime,jdbcType=VARCHAR}, #{autograph,jdbcType=VARCHAR}, 
       #{productionname,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, #{source,jdbcType=VARCHAR}, 
-      #{rank,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
-      #{credit,jdbcType=REAL}, #{facultynum,jdbcType=INTEGER}, #{majornum,jdbcType=INTEGER}, 
-      #{gradenum,jdbcType=INTEGER}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, 
-      #{productiontype,jdbcType=VARCHAR})
+      #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
+      #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, 
+      #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{productiontype,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Production" >
     insert into production
@@ -146,9 +145,6 @@
       <if test="source != null" >
         source,
       </if>
-      <if test="rank != null" >
-        rank,
-      </if>
       <if test="responsibility != null" >
         responsibility,
       </if>
@@ -158,14 +154,14 @@
       <if test="credit != null" >
         credit,
       </if>
-      <if test="facultynum != null" >
-        facultynum,
+      <if test="facultyname != null" >
+        facultyname,
       </if>
-      <if test="majornum != null" >
-        majornum,
+      <if test="majorname != null" >
+        majorname,
       </if>
-      <if test="gradenum != null" >
-        gradenum,
+      <if test="gradename != null" >
+        gradename,
       </if>
       <if test="stuname != null" >
         stuname,
@@ -196,9 +192,6 @@
       <if test="source != null" >
         #{source,jdbcType=VARCHAR},
       </if>
-      <if test="rank != null" >
-        #{rank,jdbcType=VARCHAR},
-      </if>
       <if test="responsibility != null" >
         #{responsibility,jdbcType=VARCHAR},
       </if>
@@ -208,14 +201,14 @@
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
       </if>
-      <if test="facultynum != null" >
-        #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="majornum != null" >
-        #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         #{stuname,jdbcType=VARCHAR},
@@ -255,9 +248,6 @@
       <if test="record.source != null" >
         source = #{record.source,jdbcType=VARCHAR},
       </if>
-      <if test="record.rank != null" >
-        rank = #{record.rank,jdbcType=VARCHAR},
-      </if>
       <if test="record.responsibility != null" >
         responsibility = #{record.responsibility,jdbcType=VARCHAR},
       </if>
@@ -267,14 +257,14 @@
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
       </if>
-      <if test="record.facultynum != null" >
-        facultynum = #{record.facultynum,jdbcType=INTEGER},
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="record.majornum != null" >
-        majornum = #{record.majornum,jdbcType=INTEGER},
+      <if test="record.majorname != null" >
+        majorname = #{record.majorname,jdbcType=VARCHAR},
       </if>
-      <if test="record.gradenum != null" >
-        gradenum = #{record.gradenum,jdbcType=INTEGER},
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
       </if>
       <if test="record.stuname != null" >
         stuname = #{record.stuname,jdbcType=VARCHAR},
@@ -298,13 +288,12 @@
       productionname = #{record.productionname,jdbcType=VARCHAR},
       author = #{record.author,jdbcType=VARCHAR},
       source = #{record.source,jdbcType=VARCHAR},
-      rank = #{record.rank,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
-      facultynum = #{record.facultynum,jdbcType=INTEGER},
-      majornum = #{record.majornum,jdbcType=INTEGER},
-      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
       url = #{record.url,jdbcType=VARCHAR},
       productiontype = #{record.productiontype,jdbcType=VARCHAR}
@@ -330,9 +319,6 @@
       <if test="source != null" >
         source = #{source,jdbcType=VARCHAR},
       </if>
-      <if test="rank != null" >
-        rank = #{rank,jdbcType=VARCHAR},
-      </if>
       <if test="responsibility != null" >
         responsibility = #{responsibility,jdbcType=VARCHAR},
       </if>
@@ -342,14 +328,14 @@
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
       </if>
-      <if test="facultynum != null" >
-        facultynum = #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
       </if>
-      <if test="majornum != null" >
-        majornum = #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        majorname = #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        gradenum = #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="stuname != null" >
         stuname = #{stuname,jdbcType=VARCHAR},
@@ -370,13 +356,12 @@
       productionname = #{productionname,jdbcType=VARCHAR},
       author = #{author,jdbcType=VARCHAR},
       source = #{source,jdbcType=VARCHAR},
-      rank = #{rank,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
-      facultynum = #{facultynum,jdbcType=INTEGER},
-      majornum = #{majornum,jdbcType=INTEGER},
-      gradenum = #{gradenum,jdbcType=INTEGER},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
       stuname = #{stuname,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR},
       productiontype = #{productiontype,jdbcType=VARCHAR}

@@ -15,21 +15,21 @@ public class Patents {
 
     private String patentsname;
 
+    private String responsibility;
+
     private String stunum;
 
     private Float credit;
 
-    private Integer facultynum;
+    private String facultyname;
 
-    private Integer majornum;
+    private String majorname;
 
-    private Integer gradenum;
+    private String gradename;
 
     private String stuname;
 
     private String url;
-
-    private String responsibility;
 
     public Integer getId() {
         return id;
@@ -87,6 +87,14 @@ public class Patents {
         this.patentsname = patentsname == null ? null : patentsname.trim();
     }
 
+    public String getResponsibility() {
+        return responsibility;
+    }
+
+    public void setResponsibility(String responsibility) {
+        this.responsibility = responsibility == null ? null : responsibility.trim();
+    }
+
     public String getStunum() {
         return stunum;
     }
@@ -103,28 +111,28 @@ public class Patents {
         this.credit = credit;
     }
 
-    public Integer getFacultynum() {
-        return facultynum;
+    public String getFacultyname() {
+        return facultyname;
     }
 
-    public void setFacultynum(Integer facultynum) {
-        this.facultynum = facultynum;
+    public void setFacultyname(String facultyname) {
+        this.facultyname = facultyname == null ? null : facultyname.trim();
     }
 
-    public Integer getMajornum() {
-        return majornum;
+    public String getMajorname() {
+        return majorname;
     }
 
-    public void setMajornum(Integer majornum) {
-        this.majornum = majornum;
+    public void setMajorname(String majorname) {
+        this.majorname = majorname == null ? null : majorname.trim();
     }
 
-    public Integer getGradenum() {
-        return gradenum;
+    public String getGradename() {
+        return gradename;
     }
 
-    public void setGradenum(Integer gradenum) {
-        this.gradenum = gradenum;
+    public void setGradename(String gradename) {
+        this.gradename = gradename == null ? null : gradename.trim();
     }
 
     public String getStuname() {
@@ -141,13 +149,5 @@ public class Patents {
 
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
-    }
-
-    public String getResponsibility() {
-        return responsibility;
-    }
-
-    public void setResponsibility(String responsibility) {
-        this.responsibility = responsibility == null ? null : responsibility.trim();
     }
 }

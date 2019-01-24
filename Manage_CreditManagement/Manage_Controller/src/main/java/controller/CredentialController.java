@@ -34,6 +34,7 @@ public class CredentialController
         PageBean pageBean=credentialService.getCredentialPageBean(studentNumber,credentialTime,credentialType,currentPage,pageSize);
         model.addAttribute("credentialTime",credentialTime);
         model.addAttribute("credentialType",credentialType);
+        model.addAttribute("studentNumber",studentNumber);
         model.addAttribute("pageBean",pageBean);
         return  "information/credential";
     }

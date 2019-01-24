@@ -5,7 +5,7 @@ public class Grade {
 
     private String gradename;
 
-    private Integer majornum;
+    private String majorname;
 
     public Integer getId() {
         return id;
@@ -23,11 +23,11 @@ public class Grade {
         this.gradename = gradename == null ? null : gradename.trim();
     }
 
-    public Integer getMajornum() {
-        return majornum;
+    public String getMajorname() {
+        return majorname;
     }
 
-    public void setMajornum(Integer majornum) {
-        this.majornum = majornum;
+    public void setMajorname(String majorname) {
+        this.majorname = majorname == null ? null : majorname.trim();
     }
 }

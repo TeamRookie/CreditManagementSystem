@@ -13,11 +13,11 @@ public class Safety {
 
     private Float credit;
 
-    private Integer facultynum;
+    private String facultyname;
 
-    private Integer majornum;
+    private String majorname;
 
-    private Integer gradenum;
+    private String gradename;
 
     private String stuname;
 
@@ -71,28 +71,28 @@ public class Safety {
         this.credit = credit;
     }
 
-    public Integer getFacultynum() {
-        return facultynum;
+    public String getFacultyname() {
+        return facultyname;
     }
 
-    public void setFacultynum(Integer facultynum) {
-        this.facultynum = facultynum;
+    public void setFacultyname(String facultyname) {
+        this.facultyname = facultyname == null ? null : facultyname.trim();
     }
 
-    public Integer getMajornum() {
-        return majornum;
+    public String getMajorname() {
+        return majorname;
     }
 
-    public void setMajornum(Integer majornum) {
-        this.majornum = majornum;
+    public void setMajorname(String majorname) {
+        this.majorname = majorname == null ? null : majorname.trim();
     }
 
-    public Integer getGradenum() {
-        return gradenum;
+    public String getGradename() {
+        return gradename;
     }
 
-    public void setGradenum(Integer gradenum) {
-        this.gradenum = gradenum;
+    public void setGradename(String gradename) {
+        this.gradename = gradename == null ? null : gradename.trim();
     }
 
     public String getStuname() {

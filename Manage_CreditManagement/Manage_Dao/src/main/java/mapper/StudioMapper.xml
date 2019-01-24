@@ -4,15 +4,15 @@
   <resultMap id="BaseResultMap" type="pojo.Studio" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="studiotime" property="studiotime" jdbcType="VARCHAR" />
-    <result column="facultynum" property="facultynum" jdbcType="INTEGER" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
     <result column="studioname" property="studioname" jdbcType="VARCHAR" />
     <result column="studiolevel" property="studiolevel" jdbcType="VARCHAR" />
     <result column="teachername" property="teachername" jdbcType="VARCHAR" />
     <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
-    <result column="majornum" property="majornum" jdbcType="INTEGER" />
-    <result column="gradenum" property="gradenum" jdbcType="INTEGER" />
+    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
     <result column="department" property="department" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
@@ -76,8 +76,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, studiotime, facultynum, studioname, studiolevel, teachername, responsibility, 
-    stunum, credit, majornum, gradenum, department, stuname, url
+    id, studiotime, facultyname, studioname, studiolevel, teachername, responsibility, 
+    stunum, credit, majorname, gradename, department, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudioExample" >
     select
@@ -110,15 +110,15 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Studio" >
-    insert into studio (id, studiotime, facultynum, 
+    insert into studio (id, studiotime, facultyname, 
       studioname, studiolevel, teachername, 
       responsibility, stunum, credit, 
-      majornum, gradenum, department, 
+      majorname, gradename, department, 
       stuname, url)
-    values (#{id,jdbcType=INTEGER}, #{studiotime,jdbcType=VARCHAR}, #{facultynum,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{studiotime,jdbcType=VARCHAR}, #{facultyname,jdbcType=VARCHAR}, 
       #{studioname,jdbcType=VARCHAR}, #{studiolevel,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR}, 
       #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
-      #{majornum,jdbcType=INTEGER}, #{gradenum,jdbcType=INTEGER}, #{department,jdbcType=VARCHAR}, 
+      #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, 
       #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Studio" >
@@ -130,8 +130,8 @@
       <if test="studiotime != null" >
         studiotime,
       </if>
-      <if test="facultynum != null" >
-        facultynum,
+      <if test="facultyname != null" >
+        facultyname,
       </if>
       <if test="studioname != null" >
         studioname,
@@ -151,11 +151,11 @@
       <if test="credit != null" >
         credit,
       </if>
-      <if test="majornum != null" >
-        majornum,
+      <if test="majorname != null" >
+        majorname,
       </if>
-      <if test="gradenum != null" >
-        gradenum,
+      <if test="gradename != null" >
+        gradename,
       </if>
       <if test="department != null" >
         department,
@@ -174,8 +174,8 @@
       <if test="studiotime != null" >
         #{studiotime,jdbcType=VARCHAR},
       </if>
-      <if test="facultynum != null" >
-        #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
       </if>
       <if test="studioname != null" >
         #{studioname,jdbcType=VARCHAR},
@@ -195,11 +195,11 @@
       <if test="credit != null" >
         #{credit,jdbcType=REAL},
       </if>
-      <if test="majornum != null" >
-        #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="department != null" >
         #{department,jdbcType=VARCHAR},
@@ -227,8 +227,8 @@
       <if test="record.studiotime != null" >
         studiotime = #{record.studiotime,jdbcType=VARCHAR},
       </if>
-      <if test="record.facultynum != null" >
-        facultynum = #{record.facultynum,jdbcType=INTEGER},
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
       </if>
       <if test="record.studioname != null" >
         studioname = #{record.studioname,jdbcType=VARCHAR},
@@ -248,11 +248,11 @@
       <if test="record.credit != null" >
         credit = #{record.credit,jdbcType=REAL},
       </if>
-      <if test="record.majornum != null" >
-        majornum = #{record.majornum,jdbcType=INTEGER},
+      <if test="record.majorname != null" >
+        majorname = #{record.majorname,jdbcType=VARCHAR},
       </if>
-      <if test="record.gradenum != null" >
-        gradenum = #{record.gradenum,jdbcType=INTEGER},
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
       </if>
       <if test="record.department != null" >
         department = #{record.department,jdbcType=VARCHAR},
@@ -272,15 +272,15 @@
     update studio
     set id = #{record.id,jdbcType=INTEGER},
       studiotime = #{record.studiotime,jdbcType=VARCHAR},
-      facultynum = #{record.facultynum,jdbcType=INTEGER},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
       studioname = #{record.studioname,jdbcType=VARCHAR},
       studiolevel = #{record.studiolevel,jdbcType=VARCHAR},
       teachername = #{record.teachername,jdbcType=VARCHAR},
       responsibility = #{record.responsibility,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
-      majornum = #{record.majornum,jdbcType=INTEGER},
-      gradenum = #{record.gradenum,jdbcType=INTEGER},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
       department = #{record.department,jdbcType=VARCHAR},
       stuname = #{record.stuname,jdbcType=VARCHAR},
       url = #{record.url,jdbcType=VARCHAR}
@@ -294,8 +294,8 @@
       <if test="studiotime != null" >
         studiotime = #{studiotime,jdbcType=VARCHAR},
       </if>
-      <if test="facultynum != null" >
-        facultynum = #{facultynum,jdbcType=INTEGER},
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
       </if>
       <if test="studioname != null" >
         studioname = #{studioname,jdbcType=VARCHAR},
@@ -315,11 +315,11 @@
       <if test="credit != null" >
         credit = #{credit,jdbcType=REAL},
       </if>
-      <if test="majornum != null" >
-        majornum = #{majornum,jdbcType=INTEGER},
+      <if test="majorname != null" >
+        majorname = #{majorname,jdbcType=VARCHAR},
       </if>
-      <if test="gradenum != null" >
-        gradenum = #{gradenum,jdbcType=INTEGER},
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
       </if>
       <if test="department != null" >
         department = #{department,jdbcType=VARCHAR},
@@ -336,15 +336,15 @@
   <update id="updateByPrimaryKey" parameterType="pojo.Studio" >
     update studio
     set studiotime = #{studiotime,jdbcType=VARCHAR},
-      facultynum = #{facultynum,jdbcType=INTEGER},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
       studioname = #{studioname,jdbcType=VARCHAR},
       studiolevel = #{studiolevel,jdbcType=VARCHAR},
       teachername = #{teachername,jdbcType=VARCHAR},
       responsibility = #{responsibility,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},
-      majornum = #{majornum,jdbcType=INTEGER},
-      gradenum = #{gradenum,jdbcType=INTEGER},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
       department = #{department,jdbcType=VARCHAR},
       stuname = #{stuname,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR}

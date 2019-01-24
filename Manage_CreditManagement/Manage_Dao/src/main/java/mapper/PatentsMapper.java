@@ -1,10 +1,9 @@
 package mapper;
 
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Patents;
 import pojo.PatentsExample;
-
-import java.util.List;
 
 public interface PatentsMapper {
     int countByExample(PatentsExample example);

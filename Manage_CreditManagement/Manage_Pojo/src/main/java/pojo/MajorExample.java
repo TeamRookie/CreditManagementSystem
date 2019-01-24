@@ -234,63 +234,73 @@ public class MajorExample {
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumIsNull() {
-            addCriterion("facultynum is null");
+        public Criteria andFacultynameIsNull() {
+            addCriterion("facultyname is null");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumIsNotNull() {
-            addCriterion("facultynum is not null");
+        public Criteria andFacultynameIsNotNull() {
+            addCriterion("facultyname is not null");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumEqualTo(Integer value) {
-            addCriterion("facultynum =", value, "facultynum");
+        public Criteria andFacultynameEqualTo(String value) {
+            addCriterion("facultyname =", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumNotEqualTo(Integer value) {
-            addCriterion("facultynum <>", value, "facultynum");
+        public Criteria andFacultynameNotEqualTo(String value) {
+            addCriterion("facultyname <>", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumGreaterThan(Integer value) {
-            addCriterion("facultynum >", value, "facultynum");
+        public Criteria andFacultynameGreaterThan(String value) {
+            addCriterion("facultyname >", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumGreaterThanOrEqualTo(Integer value) {
-            addCriterion("facultynum >=", value, "facultynum");
+        public Criteria andFacultynameGreaterThanOrEqualTo(String value) {
+            addCriterion("facultyname >=", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumLessThan(Integer value) {
-            addCriterion("facultynum <", value, "facultynum");
+        public Criteria andFacultynameLessThan(String value) {
+            addCriterion("facultyname <", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumLessThanOrEqualTo(Integer value) {
-            addCriterion("facultynum <=", value, "facultynum");
+        public Criteria andFacultynameLessThanOrEqualTo(String value) {
+            addCriterion("facultyname <=", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumIn(List<Integer> values) {
-            addCriterion("facultynum in", values, "facultynum");
+        public Criteria andFacultynameLike(String value) {
+            addCriterion("facultyname like", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumNotIn(List<Integer> values) {
-            addCriterion("facultynum not in", values, "facultynum");
+        public Criteria andFacultynameNotLike(String value) {
+            addCriterion("facultyname not like", value, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumBetween(Integer value1, Integer value2) {
-            addCriterion("facultynum between", value1, value2, "facultynum");
+        public Criteria andFacultynameIn(List<String> values) {
+            addCriterion("facultyname in", values, "facultyname");
             return (Criteria) this;
         }
 
-        public Criteria andFacultynumNotBetween(Integer value1, Integer value2) {
-            addCriterion("facultynum not between", value1, value2, "facultynum");
+        public Criteria andFacultynameNotIn(List<String> values) {
+            addCriterion("facultyname not in", values, "facultyname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFacultynameBetween(String value1, String value2) {
+            addCriterion("facultyname between", value1, value2, "facultyname");
+            return (Criteria) this;
+        }
+
+        public Criteria andFacultynameNotBetween(String value1, String value2) {
+            addCriterion("facultyname not between", value1, value2, "facultyname");
             return (Criteria) this;
         }
     }

@@ -290,7 +290,7 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <a  class="white" href="${pageContext.request.contextPath}/contest.action">
+                        <a  class="white" href="${pageContext.request.contextPath}/science.action">
                             <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
                                 <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
                             </button></a>
@@ -310,7 +310,7 @@ ${message}
                     <div class="col-xs-12" id="searchForm" style="display: none">
                         <h4 class="pink" style="height: 20px"></h4>
                         <form class="form-horizontal" role="form"
-                              action="${pageContext.request.contextPath}/contest.action">
+                              action="${pageContext.request.contextPath}/science.action">
                             <div class="form-group">
                                 <label class="col-sm-1 control-label no-padding-right"  for="number">
                                     学号
@@ -319,14 +319,13 @@ ${message}
                                     <input onkeyup="value=value.replace(/[^\d]/g,'')" class="form-control"  name="studentNumber" id="number" type="text" placeholder="学号" />
                                 </div>
 
-                                <label class="col-sm-1 control-label no-padding-right"  for="contestName">
-                                    竞赛名称
-                                </label>
-                                <div class="col-sm-2">
-                                    <input   class="form-control" name="contestName" id="contestName" type="text" placeholder="竞赛名称"  />
+
+
+                                <label class="col-sm-1 control-label no-padding-right " for="date">课题开始时间</label>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="scienceTime" readonly>
+                                    </select>
                                 </div>
-
-
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-2 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
@@ -337,33 +336,26 @@ ${message}
 
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right " for="date">竞赛时间</label>
+
+                                <label class="col-sm-1 control-label no-padding-right " for="contestLevel">课题级别</label>
                                 <div class="col-sm-1">
-                                    <select id="date" class="form-control"   name="contestTime" readonly>
-                                    </select>
-                                </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="contestLevel">竞赛级别</label>
-                                <div class="col-sm-1">
-                                    <select id="contestLevel" class="form-control"   name="contestLevel" readonly>
+                                    <select id="contestLevel" class="form-control"   name="scienceLevel" readonly>
                                         <option value="">请选择</option>
                                         <option value="国际">国际</option>
                                         <option value="国家">国家</option>
                                         <option value="省级">省级</option>
                                         <option value="市级">市级</option>
+                                        <option value="区级">区级</option>
                                         <option value="校级">校级</option>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="contestRank">竞赛级别</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="contestRank">课题类型</label>
                                 <div class="col-sm-2">
-                                    <select id="contestRank" class="form-control"   name="contestRank" readonly>
+                                    <select id="contestRank" class="form-control"   name="scienceType" readonly>
                                         <option value="">请选择</option>
-                                        <option value="特等奖">特等奖</option>
-                                        <option value="一等奖,金奖">一等奖,金奖</option>
-                                        <option value="二等奖,银奖">二等奖,银奖</option>
-                                        <option value="三等奖,铜奖">三等奖,铜奖</option>
-                                        <option value="优秀奖">优秀奖</option>
-                                        <option value="成功参与奖">成功参与奖</option>
-                                        <option value="其他奖">其他奖</option>
+                                        <option value="横向科研项目">横向科研项目</option>
+                                        <option value="纵向科研项目">纵向科研项目</option>
+                                        <option value="校内科研项目">校内科研项目</option>
                                     </select>
                                 </div>
 
@@ -382,15 +374,13 @@ ${message}
                     <tr>
                         <th class="center">学号</th>
                         <th class="center">姓名</th>
-                        <th class="center">竞赛时间</th>
-                        <th class="center">竞赛名称</th>
-                        <th class="center">作品名称</th>
-                        <th class="center">竞赛级别</th>
-                        <th class="center">获奖等级</th>
-                        <th class="center">证书单位公章</th>
-                        <th class="center">证书落款时间</th>
-                        <th class="center">团队成员</th>
-                        <th class="center">指导教师</th>
+                        <th class="center">科研项目名称</th>
+                        <th class="center">课题类型</th>
+                        <th class="center">课题级别</th>
+                        <th class="center">课题开始时间</th>
+                        <th class="center">课题结束时间</th>
+                        <th class="center">指导老师</th>
+                        <th class="center">职责</th>
                         <th class="center">学分</th>
 
                     </tr>
@@ -403,15 +393,13 @@ ${message}
                                         ${item.stunum}
                                 </td>
                                 <td class="center">${item.stuname}</td>
-                                <td class="center">${item.contesttime}</td>
-                                <td class="center">${item.contestname}</td>
-                                <td class="center">${item.workname}</td>
-                                <td class="center">${item.contestlevel}</td>
-                                <td class="center">${item.rank}</td>
-                                <td class="center">${item.cachet}</td>
-                                <td class="center">${item.booktime}</td>
-                                <td class="center">${item.member}</td>
+                                <td class="center">${item.sciencename}</td>
+                                <td class="center">${item.sciencetype}</td>
+                                <td class="center">${item.sciencelevel}</td>
+                                <td class="center">${item.sciencestarttime}</td>
+                                <td class="center">${item.scienceendtime}</td>
                                 <td class="center">${item.teachername}</td>
+                                <td class="center">${item.responsibility}</td>
                                 <td class="center">${item.credit}</td>
                             </tr>
                     </c:forEach>
@@ -429,12 +417,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/contest.action?currentPage=1&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/science.action?currentPage=1&studentNumber=${studentNumber}&scienceLevel=${scienceLevel}&scienceTime=${scienceTime}&scienceType=${scienceType}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/contest.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/science.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&scienceLevel=${scienceLevel}&scienceTime=${scienceTime}&scienceType=${scienceType}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -445,13 +433,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/contest.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
+                                <a href="${pageContext.request.contextPath}/science.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&scienceLevel=${scienceLevel}&scienceTime=${scienceTime}&scienceType=${scienceType}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/contest.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&contestTime=${contestTime}&contestName=${contestName}&contestRank=${contestRank}&contestLevel=${contestLevel}">
+                                <a href="${pageContext.request.contextPath}/science.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&scienceLevel=${scienceLevel}&scienceTime=${scienceTime}&scienceType=${scienceType}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
