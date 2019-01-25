@@ -15,8 +15,10 @@ import java.net.URLEncoder;
 @Controller
 public class DownloadController
 {
+
     @Autowired
     private DownloadService downloadService;
+
     @RequestMapping(value="/download_contest")
     public @ResponseBody
     String downloadContest(HttpServletResponse response, @RequestParam("name") String name){
@@ -25,7 +27,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
@@ -46,7 +48,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
@@ -67,7 +69,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
@@ -88,7 +90,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
@@ -109,7 +111,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
@@ -130,7 +132,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
@@ -151,7 +153,7 @@ public class DownloadController
             ServletOutputStream out=response.getOutputStream();
             try {
                 //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
