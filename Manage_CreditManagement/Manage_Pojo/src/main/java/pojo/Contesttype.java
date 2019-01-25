@@ -30,4 +30,14 @@ public class Contesttype {
     public void setContestname(String contestname) {
         this.contestname = contestname == null ? null : contestname.trim();
     }
+
+    @Override
+    public String toString()
+    {
+        return "Contesttype{" +
+                "id=" + id +
+                ", contesttime='" + contesttime + '\'' +
+                ", contestname='" + contestname + '\'' +
+                '}';
+    }
 }

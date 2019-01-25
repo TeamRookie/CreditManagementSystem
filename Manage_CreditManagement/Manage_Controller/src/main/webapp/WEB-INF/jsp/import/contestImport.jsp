@@ -306,7 +306,24 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" name="importButton" id="importButton">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="download();" name="" id="DownloadButton">
+                            <span class="ace-icon fa fa-download icon-on-right bigger-110">
+                                模板下载
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-sm-1 no-padding-right">
+
+                        <form method="POST"  enctype="multipart/form-data" id="form1" action="${pageContext.request.contextPath}/form.action">
+
+                            <label>上传文件: </label>
+                            <input id="upfile" type="file" name="upfile"><br> <br>
+
+                            <input type="submit" value="表单提交" onclick="return checkData()">
+                            <input type="button" value="ajax提交" id="btn" name="btn" >
+
+                        </form>
+                        <button type="button" class="btn btn-sm btn-primary" onclick="" name="importButton" id="importButton">
                             <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
                                 批量导入
                             </span>
@@ -493,6 +510,22 @@ ${message}
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
     $(function(){
+        $("#btn").click(function(){ if(checkData()){
+            $('#form1').ajaxSubmit({
+                url:'uploadExcel/ajax',
+                dataType: 'text',
+                success: resutlMsg,
+                error: errorMsg
+            });
+            function resutlMsg(msg){
+                alert(msg);
+                $("#upfile").val("");
+            }
+            function errorMsg(){
+                alert("导入excel出错！");
+            }
+        }
+        });
         $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getType.action",
@@ -554,6 +587,19 @@ ${message}
             }
         });
     });
+    function checkData(){
+        var fileDir = $("#upfile").val();
+        var suffix = fileDir.substr(fileDir.lastIndexOf("."));
+        if("" == fileDir){
+            alert("选择需要导入的Excel文件！");
+            return false;
+        }
+        if(".xls" != suffix && ".xlsx" != suffix ){
+            alert("选择Excel格式的文件导入！");
+            return false;
+        }
+        return true;
+    }
     function addContestType() {
         $("#addForm").toggle();
         $("#searchForm").hide();
@@ -561,6 +607,10 @@ ${message}
     function  searchButtonClick() {
         $("#addForm").hide();
         $("#searchForm").toggle();
+    }
+    function download(){
+        var url="download_contest.action?id=10&name=创新创业竞赛导入信息表";
+        window.open(url);
     }
 </script>
 </body>

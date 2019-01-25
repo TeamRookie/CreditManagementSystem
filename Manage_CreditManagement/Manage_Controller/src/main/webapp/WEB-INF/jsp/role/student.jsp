@@ -270,9 +270,9 @@ ${message}
                     </li>
 
                     <li>
-                        <a href="#">项目信息管理</a>
+                        <a href="#">用户管理</a>
                     </li>
-                    <li class="active">主持学术活动类</li>
+                    <li class="active">学生管理</li>
                 </ul>
 
             </div>

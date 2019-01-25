@@ -305,6 +305,13 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="download();" name="importButton" id="DownloadButton">
+                            <span class="ace-icon fa fa-download icon-on-right bigger-110">
+                                模板下载
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-sm-1 no-padding-right">
                         <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" name="importButton" id="importButton">
                             <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
                                 批量导入
@@ -583,6 +590,10 @@ ${message}
     function  searchButtonClick() {
         $("#addForm").hide();
         $("#searchForm").toggle();
+    }
+    function download(){
+        var url="download_project.action?id=10&name=大创项目信息导入";
+        window.open(url);
     }
 </script>
 </body>

@@ -305,6 +305,13 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="download();" name="importButton" id="DownloadButton">
+                            <span class="ace-icon fa fa-download icon-on-right bigger-110">
+                                模板下载
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-sm-1 no-padding-right">
                         <button type="button" class="btn btn-sm btn-primary" onclick="" name="importButton" id="importButton">
                             <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
                                 批量导入
@@ -407,8 +414,9 @@ ${message}
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
                     <tr>
-                        <th class="center">工作室等级</th>
+
                         <th class="center">工作室名称</th>
+                        <th class="center">工作室等级</th>
                         <th class="center">所属部门</th>
                         <th class="center">操作</th>
                     </tr>
@@ -625,6 +633,10 @@ ${message}
     function  searchButtonClick() {
         $("#addForm").hide();
         $("#searchForm").toggle();
+    }
+    function download(){
+        var url="download_studio.action?id=10&name=大学生创新工作室信息导入";
+        window.open(url);
     }
 </script>
 </body>
