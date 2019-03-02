@@ -77,7 +77,7 @@ ${message}
             <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    创新楼教室预约系统
+                    创新创业学分系统
                 </small>
             </a>
         </div>
@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${student.sname}
+									${admin.sname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -99,23 +99,17 @@ ${message}
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/passwordChange.html">
+                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
                         </li>
 
-                        <li>
-                            <a href="${pageContext.request.contextPath}/student/userInfo.html">
-                                <i class="ace-icon fa fa-user"></i>
-                                个人详情
-                            </a>
-                        </li>
 
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/logout.html">
+                            <a href="${pageContext.request.contextPath}/exist.action">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出
                             </a>
@@ -312,7 +306,7 @@ ${message}
                     </div>
 
                     <div class="col-sm-1 no-padding-right">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="" name="importButton" id="importButton">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="importFile();" name="importButton" id="importButton">
                             <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
                                 批量导入
                             </span>
@@ -394,10 +388,29 @@ ${message}
 
                         </form>
                     </div>
+                    <div class="col-xs-12" id="importForm" style="display: none">
+                        <h4 class="pink" style="height: 20px"></h4>
+                        <form class="form-horizontal" role="form"
+                              action="${pageContext.request.contextPath}/associationExcelImport.action"  method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-1 no-padding-top">
+                                    <input id="upfile" type="file" name="upfile" >
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-1 no-padding-top">
+                                    <button type="submit" onclick="return checkData();" class="btn btn-sm btn-primary " >
+                                        <span class="ace-icon fa fa-upload icon-on-right bigger-110 ">上传文件</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
 
             </div>
-            <!-- div.table-responsive
+
 
             <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
@@ -579,18 +592,39 @@ ${message}
             }
         });
     });
+    function checkData(){
+        var fileDir = $("#upfile").val();
+        var suffix = fileDir.substr(fileDir.lastIndexOf("."));
+        if("" == fileDir){
+            alert("选择需要导入的Excel文件！");
+            return false;
+        }
+        if(".xls" != suffix && ".xlsx" != suffix ){
+            alert("选择Excel格式的文件导入！");
+            return false;
+        }
+        return true;
+    }
     function addType() {
         $("#addForm").toggle();
         $("#searchForm").hide();
+        $("#importForm").hide();
     }
     function  searchButtonClick() {
         $("#addForm").hide();
+        $("#importForm").hide();
         $("#searchForm").toggle();
+    }
+    function importFile() {
+        $("#importForm").toggle();
+        $("#addForm").hide();
+        $("#searchForm").hide();
     }
     function download(){
         var url="download_association.action?id=10&name=学生社团信息导入";
         window.open(url);
     }
+
 </script>
 </body>
 </html>

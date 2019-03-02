@@ -13,7 +13,9 @@ public interface SafetyItemMapper
    int getTotalCount();
    List<Safetyrules> getPageBean(PageBean pageBean);
 
-    Integer getSafetyTotalCount(@Param("studentNumber")String studentNumber,@Param("safetyTime") String safetyTime);
+    Integer getSafetyTotalCount(@Param("studentNumber")String studentNumber,@Param("faculty")String faculty,@Param("major")String major,@Param("grade")String grade,@Param("safetyTime") String safetyTime);
 
     List<Safety> getSafetyPageBean(HashMap map);
+
+    List<Safety> getSafetyDownload(@Param("faculty") String faculty,@Param("major") String major,@Param("grade") String grade,@Param("safetyTime") String date);
 }

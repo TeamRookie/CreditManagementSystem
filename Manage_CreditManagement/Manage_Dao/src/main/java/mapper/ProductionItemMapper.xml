@@ -19,21 +19,59 @@
       <if test="productionType != null and productionType != ''">
         AND  productiontype = #{productionType}
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
   </select>
   <select id="getProductionPageBean" parameterType="hashMap" resultType="pojo.Production">
+  select * from production
+  <where>
+    <if test="studentNumber !=null and studentNumber != ''">
+      #{studentNumber} = stunum
+    </if>
+    <if test="productionTime !=null and productionTime!=''">
+      AND  productiontime LIKE  CONCAT('${productionTime}','%')
+    </if>
+    <if test="productionType != null and productionType != ''">
+      AND  productiontype = #{productionType}
+    </if>
+    <if test="faculty != null and faculty!=''">
+      AND  #{faculty} = facultyname
+    </if>
+    <if test="major != null and major!=''">
+      AND  #{major} = majorname
+    </if>
+    <if test="grade != null and grade!=''">
+      AND  #{grade} = gradename
+    </if>
+  </where>
+  limit #{pageBean.start},#{pageBean.pageSize}
+</select>
+  <select id="getProductionDownload" resultType="pojo.Production">
     select * from production
     <where>
-      <if test="studentNumber !=null and studentNumber != ''">
-        #{studentNumber} = stunum
-      </if>
       <if test="productionTime !=null and productionTime!=''">
         AND  productiontime LIKE  CONCAT('${productionTime}','%')
       </if>
       <if test="productionType != null and productionType != ''">
         AND  productiontype = #{productionType}
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
-    limit #{pageBean.start},#{pageBean.pageSize}
   </select>
 </mapper>

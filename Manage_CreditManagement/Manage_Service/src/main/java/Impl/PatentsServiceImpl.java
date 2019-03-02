@@ -29,9 +29,9 @@ public class PatentsServiceImpl implements PatentsService
     }
 
     @Override
-    public PageBean getPatentsPageBean(String studentNumber,String patentsType, Integer currentPage, Integer pageSize)
+    public PageBean getPatentsPageBean(String studentNumber, String faculty, String major, String grade,String patentsType, Integer currentPage, Integer pageSize)
     {
-        Integer totalCount=patentsItemMapper.getPatentsTotalCount(studentNumber,patentsType);
+        Integer totalCount=patentsItemMapper.getPatentsTotalCount(studentNumber,faculty,major,grade,patentsType);
         PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
@@ -39,6 +39,9 @@ public class PatentsServiceImpl implements PatentsService
         map.put("pageBean",pageBean);
         map.put("studentNumber",studentNumber);
         map.put("patentsType",patentsType);
+        map.put("faculty",faculty);
+        map.put("major",major);
+        map.put("grade",grade);
         List<Patents> patentsList = patentsItemMapper.getPatentsPageBean(map);
         pageBean.setPageList(patentsList);
         return  pageBean;

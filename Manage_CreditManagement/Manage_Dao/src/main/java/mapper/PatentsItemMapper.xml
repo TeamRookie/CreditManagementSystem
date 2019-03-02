@@ -21,6 +21,15 @@
             <if test="patentsType != null and patentsType != ''">
                 AND  patentstype = #{patentsType}
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
     </select>
     <select id="getPatentsPageBean" parameterType="hashMap" resultType="pojo.Patents">
@@ -32,6 +41,15 @@
 
             <if test="patentsType != null and patentsType != ''">
                 AND  patentstype = #{patentsType}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
             </if>
         </where>
         limit #{pageBean.start},#{pageBean.pageSize}

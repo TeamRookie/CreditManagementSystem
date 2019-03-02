@@ -16,9 +16,11 @@ public interface CredentialItemMapper
    int getCredentialImportTotalCount(@Param("information") String information);
    List<Credentialtype> getCredentialImportPageBean(HashMap map);
 
-    Integer getCredentialTotalCount(@Param("studentNumber") String studentNumber,@Param("credentialTime") String credentialTime,@Param("credentialType") String credentialType);
+    Integer getCredentialTotalCount(@Param("studentNumber") String studentNumber,@Param("faculty")String faculty,@Param("major")String major,@Param("grade")String grade,@Param("credentialTime") String credentialTime,@Param("credentialType") String credentialType);
 
     List<Credential> getCredentialPageBean(HashMap map);
 
     List<Credentialtype> getAllCredentialType();
+
+    List<Credential> getCredentialDownload(@Param("faculty") String faculty, @Param("major") String major,@Param("grade") String grade,@Param("credentialTime") String date,@Param("credentialType") String type);
 }

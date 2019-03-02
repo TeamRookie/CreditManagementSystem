@@ -1,6 +1,8 @@
 package pojo;
 
-public class Train {
+import java.io.Serializable;
+
+public class Train implements Serializable {
     private Integer id;
 
     private String trainname;
@@ -10,6 +12,10 @@ public class Train {
     private String trainsite;
 
     private String organizationunit;
+
+    private String trainstarttime;
+
+    private String trainendtime;
 
     private String teachername;
 
@@ -26,6 +32,8 @@ public class Train {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;
@@ -65,6 +73,22 @@ public class Train {
 
     public void setOrganizationunit(String organizationunit) {
         this.organizationunit = organizationunit == null ? null : organizationunit.trim();
+    }
+
+    public String getTrainstarttime() {
+        return trainstarttime;
+    }
+
+    public void setTrainstarttime(String trainstarttime) {
+        this.trainstarttime = trainstarttime == null ? null : trainstarttime.trim();
+    }
+
+    public String getTrainendtime() {
+        return trainendtime;
+    }
+
+    public void setTrainendtime(String trainendtime) {
+        this.trainendtime = trainendtime == null ? null : trainendtime.trim();
     }
 
     public String getTeachername() {

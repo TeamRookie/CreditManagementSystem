@@ -1,6 +1,8 @@
 package pojo;
 
-public class Contest {
+import java.io.Serializable;
+
+public class Contest implements Serializable {
     private Integer id;
 
     private String workname;
@@ -34,6 +36,8 @@ public class Contest {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

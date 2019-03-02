@@ -1,6 +1,8 @@
 package pojo;
 
-public class Project {
+import java.io.Serializable;
+
+public class Project implements Serializable {
     private Integer id;
 
     private String projecttime;
@@ -32,6 +34,8 @@ public class Project {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

@@ -1,6 +1,8 @@
 package pojo;
 
-public class Credential {
+import java.io.Serializable;
+
+public class Credential implements Serializable {
     private Integer id;
 
     private String credentialtime;
@@ -22,6 +24,8 @@ public class Credential {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

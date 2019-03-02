@@ -1,6 +1,8 @@
 package pojo;
 
-public class Sciencerules {
+import java.io.Serializable;
+
+public class Sciencerules implements Serializable {
     private Integer id;
 
     private String sciencelevel;
@@ -8,6 +10,8 @@ public class Sciencerules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

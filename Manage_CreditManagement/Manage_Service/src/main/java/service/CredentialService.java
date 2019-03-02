@@ -4,6 +4,7 @@ import pojo.Credentialrules;
 import pojo.Credentialtype;
 import pojo.PageBean;
 
+import javax.servlet.ServletOutputStream;
 import java.util.List;
 
 public interface CredentialService
@@ -17,7 +18,9 @@ public interface CredentialService
 
     void deleteCredentialTypeById(Integer id);
 
-    PageBean getCredentialPageBean(String studentNumber,String credentialTime, String credentialType, Integer currentPage, Integer pageSize);
+    PageBean getCredentialPageBean(String studentNumber, String faculty, String major, String grade,String credentialTime, String credentialType, Integer currentPage, Integer pageSize);
 
     List<Credentialtype> getAllCredentialType();
+
+    void credentialExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String type);
 }

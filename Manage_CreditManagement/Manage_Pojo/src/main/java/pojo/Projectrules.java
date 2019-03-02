@@ -1,6 +1,8 @@
 package pojo;
 
-public class Projectrules {
+import java.io.Serializable;
+
+public class Projectrules implements Serializable {
     private Integer id;
 
     private String projectlevel;
@@ -10,6 +12,8 @@ public class Projectrules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

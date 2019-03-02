@@ -1,9 +1,13 @@
 package pojo;
 
-public class Academicrules {
+import java.io.Serializable;
+
+public class Academicrules implements Serializable {
     private Integer id;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

@@ -27,8 +27,8 @@
       <if test="majorname != null and majorname != ''">
         AND  majorname = #{majorname}
       </if>
-      <if test="grade !=null and grade!=''">
-        AND  grade = #{grade}
+      <if test="gradename !=null and gradename!=''">
+        AND  gradename = #{gradename}
       </if>
       <if test="status != null and status != ''">
         AND  status = #{status}
@@ -50,8 +50,8 @@
       <if test="student.majorname != null and student.majorname != ''">
         AND  majorname = #{student.majorname}
       </if>
-      <if test="student.grade !=null and student.grade!=''">
-        AND  grade = #{student.grade}
+      <if test="student.gradename !=null and student.gradename!=''">
+        AND  gradename = #{student.grade}
       </if>
       <if test="student.status != null and student.status != ''">
         AND  status = #{status}

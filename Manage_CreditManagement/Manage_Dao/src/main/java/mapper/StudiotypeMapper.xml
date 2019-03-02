@@ -3,6 +3,7 @@
 <mapper namespace="mapper.StudiotypeMapper" >
   <resultMap id="BaseResultMap" type="pojo.Studiotype" >
     <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="studiotime" property="studiotime" jdbcType="VARCHAR" />
     <result column="department" property="department" jdbcType="VARCHAR" />
     <result column="studioname" property="studioname" jdbcType="VARCHAR" />
     <result column="studiolevel" property="studiolevel" jdbcType="VARCHAR" />
@@ -66,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, department, studioname, studiolevel
+    id, studiotime, department, studioname, studiolevel
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.StudiotypeExample" >
     select
@@ -99,16 +100,19 @@
     </if>
   </delete>
   <insert id="insert" parameterType="pojo.Studiotype" >
-    insert into studiotype (id, department, studioname, 
-      studiolevel)
-    values (#{id,jdbcType=INTEGER}, #{department,jdbcType=VARCHAR}, #{studioname,jdbcType=VARCHAR}, 
-      #{studiolevel,jdbcType=VARCHAR})
+    insert into studiotype (id, studiotime, department, 
+      studioname, studiolevel)
+    values (#{id,jdbcType=INTEGER}, #{studiotime,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, 
+      #{studioname,jdbcType=VARCHAR}, #{studiolevel,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Studiotype" >
     insert into studiotype
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
+      </if>
+      <if test="studiotime != null" >
+        studiotime,
       </if>
       <if test="department != null" >
         department,
@@ -123,6 +127,9 @@
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
+      </if>
+      <if test="studiotime != null" >
+        #{studiotime,jdbcType=VARCHAR},
       </if>
       <if test="department != null" >
         #{department,jdbcType=VARCHAR},
@@ -147,6 +154,9 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
       </if>
+      <if test="record.studiotime != null" >
+        studiotime = #{record.studiotime,jdbcType=VARCHAR},
+      </if>
       <if test="record.department != null" >
         department = #{record.department,jdbcType=VARCHAR},
       </if>
@@ -164,6 +174,7 @@
   <update id="updateByExample" parameterType="map" >
     update studiotype
     set id = #{record.id,jdbcType=INTEGER},
+      studiotime = #{record.studiotime,jdbcType=VARCHAR},
       department = #{record.department,jdbcType=VARCHAR},
       studioname = #{record.studioname,jdbcType=VARCHAR},
       studiolevel = #{record.studiolevel,jdbcType=VARCHAR}
@@ -174,6 +185,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="pojo.Studiotype" >
     update studiotype
     <set >
+      <if test="studiotime != null" >
+        studiotime = #{studiotime,jdbcType=VARCHAR},
+      </if>
       <if test="department != null" >
         department = #{department,jdbcType=VARCHAR},
       </if>
@@ -188,7 +202,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Studiotype" >
     update studiotype
-    set department = #{department,jdbcType=VARCHAR},
+    set studiotime = #{studiotime,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR},
       studioname = #{studioname,jdbcType=VARCHAR},
       studiolevel = #{studiolevel,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

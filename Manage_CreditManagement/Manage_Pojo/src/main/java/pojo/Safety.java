@@ -1,6 +1,8 @@
 package pojo;
 
-public class Safety {
+import java.io.Serializable;
+
+public class Safety implements Serializable {
     private Integer id;
 
     private String safetytime;
@@ -22,6 +24,8 @@ public class Safety {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

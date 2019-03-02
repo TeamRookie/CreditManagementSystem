@@ -443,6 +443,66 @@ public class TypeExample {
             addCriterion("importType not between", value1, value2, "importtype");
             return (Criteria) this;
         }
+
+        public Criteria andDisableIsNull() {
+            addCriterion("disable is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableIsNotNull() {
+            addCriterion("disable is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableEqualTo(Integer value) {
+            addCriterion("disable =", value, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableNotEqualTo(Integer value) {
+            addCriterion("disable <>", value, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableGreaterThan(Integer value) {
+            addCriterion("disable >", value, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableGreaterThanOrEqualTo(Integer value) {
+            addCriterion("disable >=", value, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableLessThan(Integer value) {
+            addCriterion("disable <", value, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableLessThanOrEqualTo(Integer value) {
+            addCriterion("disable <=", value, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableIn(List<Integer> values) {
+            addCriterion("disable in", values, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableNotIn(List<Integer> values) {
+            addCriterion("disable not in", values, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableBetween(Integer value1, Integer value2) {
+            addCriterion("disable between", value1, value2, "disable");
+            return (Criteria) this;
+        }
+
+        public Criteria andDisableNotBetween(Integer value1, Integer value2) {
+            addCriterion("disable not between", value1, value2, "disable");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

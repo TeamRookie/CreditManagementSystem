@@ -1,6 +1,8 @@
 package pojo;
 
-public class Association {
+import java.io.Serializable;
+
+public class Association implements Serializable {
     private Integer id;
 
     private String associationtime;
@@ -26,6 +28,8 @@ public class Association {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

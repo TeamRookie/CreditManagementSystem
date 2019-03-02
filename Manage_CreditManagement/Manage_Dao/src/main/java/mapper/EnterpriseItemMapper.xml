@@ -23,6 +23,15 @@
             <if test="enterpriseType != null and enterpriseType != ''">
                 AND  enterprisetype = #{enterpriseType}
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
     </select>
     <select id="getEnterprisePageBean" parameterType="hashMap" resultType="pojo.Enterprise">
@@ -37,7 +46,35 @@
             <if test="enterpriseType != null and enterpriseType != ''">
                 AND  enterprisetype = #{enterpriseType}
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
         limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getEnterpriseDownload"  resultType="pojo.Enterprise">
+        select * from enterprise
+        <where>
+
+            <if test="enterpriseTime !=null and enterpriseTime!=''">
+                  enterprisetime LIKE  CONCAT('${enterpriseTime}','%')
+            </if>
+
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
     </select>
 </mapper>

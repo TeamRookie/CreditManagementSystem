@@ -12,13 +12,5 @@
         <module name="Manage_Service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Manage_Controller" target="1.7" />
-      <module name="Manage_CreditManagement" target="1.5" />
-      <module name="Manage_Dao" target="1.7" />
-      <module name="Manage_Pojo" target="1.7" />
-      <module name="Manage_Service" target="1.7" />
-      <module name="ManageController" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

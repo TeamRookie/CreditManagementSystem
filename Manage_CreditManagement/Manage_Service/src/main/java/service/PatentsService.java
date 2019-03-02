@@ -8,5 +8,5 @@ public interface PatentsService
 
 
 
-    PageBean getPatentsPageBean(String studentNumber,String patentType, Integer currentPage, Integer pageSize);
+    PageBean getPatentsPageBean(String studentNumber, String faculty, String major, String grade,String patentType, Integer currentPage, Integer pageSize);
 }

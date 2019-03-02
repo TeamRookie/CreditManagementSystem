@@ -1,6 +1,8 @@
 package pojo;
 
-public class Contestrules {
+import java.io.Serializable;
+
+public class Contestrules implements Serializable {
     private Integer id;
 
     private String contestlevel;
@@ -8,6 +10,8 @@ public class Contestrules {
     private String rank;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

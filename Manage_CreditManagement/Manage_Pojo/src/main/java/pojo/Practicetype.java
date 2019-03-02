@@ -1,6 +1,8 @@
 package pojo;
 
-public class Practicetype {
+import java.io.Serializable;
+
+public class Practicetype implements Serializable {
     private Integer id;
 
     private String practicetime;
@@ -8,6 +10,8 @@ public class Practicetype {
     private String practicename;
 
     private String type;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

@@ -18,7 +18,9 @@ public interface ContestItemMapper
     int getContestImportTotalCount(@Param("contestName")String contestName,@Param("contestDate")String contestDate);
     List<Contesttype> getContestImportPageBean(Map map);
 
-    int getContestTotalCount(@Param("studentNumber")String studentNumber,@Param("contestTime") String contestTime,@Param("contestLevel") String contestLevel,@Param("contestName") String contestName,@Param("contestRank") String contestRank);
+    int getContestTotalCount(@Param("studentNumber")String studentNumber,@Param("faculty")String faculty,@Param("major")String major,@Param("grade")String grade,@Param("contestTime") String contestTime,@Param("contestLevel") String contestLevel,@Param("contestName") String contestName,@Param("contestRank") String contestRank);
 
     List<Contest> getContestPageBean(HashMap map);
+
+    List<Contest> getContestDownload(@Param("faculty") String faculty,@Param("major") String major,@Param("grade") String grade, @Param("contestLevel") String contestLevel,@Param("contestName") String contestName,@Param("contestRank") String contestRank,@Param("contestTime") String contestTime);
 }

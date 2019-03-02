@@ -1,11 +1,15 @@
 package pojo;
 
-public class Credentialtype {
+import java.io.Serializable;
+
+public class Credentialtype implements Serializable {
     private Integer id;
 
     private String information;
 
     private Integer type;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

@@ -53,6 +53,15 @@
             <if test="contestLevel != null and contestLevel !=''">
                 AND  contestlevel =#{contestLevel}
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
     </select>
     <select id="getContestPageBean" parameterType="hashMap" resultType="pojo.Contest">
@@ -84,7 +93,53 @@
             <if test="contestLevel != null and contestLevel !=''">
                 AND  contestlevel =#{contestLevel}
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
         limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getContestDownload" resultType="pojo.Contest">
+        select * from contest
+        <where>
+            <if test="contestTime !=null and contestTime != ''">
+                #{contestTime} = contesttime
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  contestname = #{contestName}
+            </if>
+            <if test="contestRank != null and contestRank !=''">
+                <if test="contestRank == '一等奖,金奖'">
+                    AND  ( rank='一等奖' or rank ='金奖')
+                </if>
+                <if test="contestRank == '二等奖,银奖'">
+                    AND  ( rank='二等奖' or rank ='银奖')
+                </if>
+                <if test="contestRank == '三等奖,铜奖'">
+                    AND  ( rank='三等奖' or rank ='铜奖')
+                </if>
+                <if test="contestRank != '一等奖,金奖' and contestRank != '二等奖,银奖' and  contestRank != '三等奖,铜奖'">
+                    AND  rank=#{contestRank}
+                </if>
+            </if>
+            <if test="contestLevel != null and contestLevel !=''">
+                AND  contestlevel =#{contestLevel}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
     </select>
 </mapper>

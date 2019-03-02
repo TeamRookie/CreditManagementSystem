@@ -51,8 +51,46 @@
       <if test="projectScore !=null and projectScore != ''">
         AND #{projectScore} = score
       </if>
+        <if test="faculty != null and faculty!=''">
+            AND  #{faculty} = facultyname
+        </if>
+        <if test="major != null and major!=''">
+            AND  #{major} = majorname
+        </if>
+        <if test="grade != null and grade!=''">
+            AND  #{grade} = gradename
+        </if>
     </where>
   </select>
+    <select id="getProjectDownload" resultType="pojo.Project">
+        select * from project
+        <where>
+            <if test="projectTime !=null and projectTime != ''">
+                #{projectTime} = projecttime
+            </if>
+            <if test="projectType !=null and projectType != ''">
+                AND #{projectType} = type
+            </if>
+            <if test="projectId !=null and projectId != ''">
+                AND  #{projectId} = projectid
+            </if>
+            <if test="projectLevel !=null and projectLevel != ''">
+                AND #{projectLevel} = projectlevel
+            </if>
+            <if test="projectScore !=null and projectScore != ''">
+                AND #{projectScore} = score
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+    </select>
   <select id="getProjectPageBean" parameterType="hashMap" resultType="pojo.Project">
     select * from project
    <where>
@@ -75,6 +113,15 @@
     <if test="projectScore !=null and projectScore != ''">
       AND  #{projectScore} = score
     </if>
+       <if test="faculty != null and faculty!=''">
+           AND  #{faculty} = facultyname
+       </if>
+       <if test="major != null and major!=''">
+           AND  #{major} = majorname
+       </if>
+       <if test="grade != null and grade!=''">
+           AND  #{grade} = gradename
+       </if>
   </where>
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>

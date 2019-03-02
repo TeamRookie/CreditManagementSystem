@@ -77,7 +77,7 @@ ${message}
             <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    创新楼教室预约系统
+                    创新创业学分系统
                 </small>
             </a>
         </div>
@@ -99,23 +99,16 @@ ${message}
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/passwordChange.html">
+                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="${pageContext.request.contextPath}/student/userInfo.html">
-                                <i class="ace-icon fa fa-user"></i>
-                                个人详情
                             </a>
                         </li>
 
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/logout.html">
+                            <a href="${pageContext.request.contextPath}/exist.action">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出
                             </a>
@@ -296,7 +289,7 @@ ${message}
                             </button></a>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-sm btn-primary" id="importButton">
+                        <button onclick="importInformation();" type="button" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
                                 项目信息导出
                             </span>
@@ -312,18 +305,35 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/practice.action">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right"  for="number">
-                                    学号
+                                <label class="col-sm-1 control-label no-padding-right"  for="faculty">
+                                    学院
+                                </label>
+                                <div class="col-sm-1">
+                                    <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right"  for="major">
+                                    专业
                                 </label>
                                 <div class="col-sm-2">
-                                    <input onkeyup="value=value.replace(/[^\d]/g,'')" class="form-control"  name="studentNumber" id="number" type="text" placeholder="学号" />
+                                    <select id="major" class="form-control" onchange="getGrade();"  name="major" readonly>
+                                    </select>
                                 </div>
+                                <label class="col-sm-1 control-label no-padding-right"  for="grade">
+                                    班级
+                                </label>
+                                <div class="col-sm-1">
+                                    <select id="grade" class="form-control"   name="grade" readonly>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
 
-                                <label class="col-sm-1 control-label no-padding-right"  for="contestName">
+                                <label class="col-sm-1 control-label no-padding-right"  for="practiceName">
                                     项目名称
                                 </label>
                                 <div class="col-sm-2">
-                                    <input   class="form-control" name="practiceName" id="contestName" type="text" placeholder="竞赛名称"  />
+                                    <input   class="form-control" name="practiceName" id="practiceName" type="text" placeholder="竞赛名称"  />
                                 </div>
 
                                 <label class="col-sm-1 control-label no-padding-right " for="date">项目时间</label>
@@ -342,18 +352,18 @@ ${message}
                             </div>
                             <div class="form-group">
 
-                                <label class="col-sm-1 control-label no-padding-right " for="contestLevel">项目类别</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="practiceType">项目类别</label>
                                 <div class="col-sm-1">
-                                    <select id="contestLevel" class="form-control"   name="practiceType" readonly>
+                                    <select id="practiceType" class="form-control"   name="practiceType" readonly>
                                         <option value="">请选择</option>
                                         <option value="调研">调研</option>
                                         <option value="服务">服务</option>
                                         <option value="综合">综合</option>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="contestRank">项目级别</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="practiceLevel">项目级别</label>
                                 <div class="col-sm-2">
-                                    <select id="contestRank" class="form-control"   name="practiceLevel" readonly>
+                                    <select id="practiceLevel" class="form-control"   name="practiceLevel" readonly>
                                         <option value="">请选择</option>
                                         <option value="国家级">国家级</option>
                                         <option value="省级">省级</option>
@@ -361,9 +371,9 @@ ${message}
                                         <option value="校级">校级</option>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="score">结题成绩</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="practiceScore">结题成绩</label>
                                 <div class="col-sm-2">
-                                    <select id="score" class="form-control"   name="practiceScore" readonly>
+                                    <select id="practiceScore" class="form-control"   name="practiceScore" readonly>
                                         <option value="">请选择</option>
                                         <option value="结题合格">结题合格</option>
                                         <option value="结题优秀">结题优秀</option>
@@ -376,15 +386,16 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
                     <tr>
                         <th class="center">学号</th>
                         <th class="center">姓名</th>
+                        <th class="center">学院</th>
+                        <th class="center">专业</th>
+                        <th class="center">班级</th>
                         <th class="center">项目时间</th>
                         <th class="center">项目类别</th>
 
@@ -405,6 +416,9 @@ ${message}
                                         ${item.stunum}
                                 </td>
                                 <td class="center">${item.stuname}</td>
+                                <td class="center">${item.facultyname}</td>
+                                <td class="center">${item.majorname}</td>
+                                <td class="center">${item.gradename}</td>
                                 <td class="center">${item.practicetime}</td>
                                 <td class="center">${item.practicetype}</td>
 
@@ -544,7 +558,7 @@ ${message}
                 $("#typeListRulesUrl").html(contentRules);
                 $("#typeImport").html(contentImport);
             },
-            fail:function () {
+            error:function () {
                 alert("获取信息列表失败!");
             }
         });
@@ -561,13 +575,96 @@ ${message}
                 }
                 $("#date").html(content);
             },
-            fail:function () {
+            error:function () {
                 alert("获取年份列表失败!");
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getFaculty.action",
+            success: function(data)
+            {
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].facultyname+"'>"+data[i].facultyname+"</option>";
+                }
+                $("#faculty").html(content);
+            },
+            error:function () {
+                alert("获取学院列表失败!");
             }
         });
     });
     function  searchButtonClick() {
         $("#searchForm").toggle();
+    }
+    function  getMajor() {
+        var faculty=$("#faculty").val();
+
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getMajor.action",
+            data:"faculty="+faculty,
+            success: function(data)
+            {
+
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].majorname+"'>"+data[i].majorname+"</option>";
+                }
+                $("#major").html(content);
+            },
+            error:function () {
+                alert("获取班级列表失败!");
+            }
+        });
+    }
+    function  getGrade() {
+        var major=$("#major").val();
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getGrade.action",
+            data:"major="+major,
+            success: function(data)
+            {
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].gradename+"'>"+data[i].gradename+"</option>";
+                }
+                $("#grade").html(content);
+            },
+            error:function () {
+                alert("获取专业列表失败!");
+            }
+        });
+    }
+    function importInformation()
+    {
+        var faculty=$("#faculty").val();
+        var  major=$("#major").val();
+        if (major==null)
+        {
+            major="";
+        }
+
+        var grade=$("#grade").val();
+        if(grade==null)
+        {
+            grade="";
+        }
+        var  practiceLevel=$("#practiceLevel").val();
+        var  date=$("#date").val();
+        var practiceType=$("#practiceType").val();
+        var  practiceScore=$("#practiceScore").val();
+        var  practiceName=$("#practiceName").val();
+        var url="practiceDownload.action?"+"faculty="+faculty+"&"+"major="+major+"&"+"grade="+grade+"&"+"date="+date+"&"+"name=大学生创新创业训练项目"+"&"+"practiceName="+practiceName+"&"+"practiceLevel="+practiceLevel+"&"+"practiceType="+practiceType+"&"+"practiceScore="+practiceScore;
+        window.open(url);
     }
 </script>
 </body>

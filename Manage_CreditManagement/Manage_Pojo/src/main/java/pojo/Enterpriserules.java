@@ -1,11 +1,15 @@
 package pojo;
 
-public class Enterpriserules {
+import java.io.Serializable;
+
+public class Enterpriserules implements Serializable {
     private Integer id;
 
     private String enterpriselevel;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

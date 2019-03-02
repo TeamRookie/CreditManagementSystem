@@ -77,7 +77,7 @@ ${message}
             <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    创新楼教室预约系统
+                    创新创业学分系统
                 </small>
             </a>
         </div>
@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${student.sname}
+									${admin.sname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -99,23 +99,17 @@ ${message}
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/passwordChange.html">
+                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
                         </li>
 
-                        <li>
-                            <a href="${pageContext.request.contextPath}/student/userInfo.html">
-                                <i class="ace-icon fa fa-user"></i>
-                                个人详情
-                            </a>
-                        </li>
 
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/logout.html">
+                            <a href="${pageContext.request.contextPath}/exist.action">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出
                             </a>
@@ -312,7 +306,7 @@ ${message}
                         </button>
                     </div>
                     <div class="col-sm-1 no-padding-right">
-                        <button type="button" class="btn btn-sm btn-primary" onclick="" name="importButton" id="importButton">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="importFile();" name="importButton" id="importButton">
                             <span class="ace-icon fa fa-adjust icon-on-right bigger-110">
                                 批量导入
                             </span>
@@ -327,6 +321,7 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/trainImport.action" method="post">
                             <div class="form-group">
+
                                 <label class="col-sm-2 control-label no-padding-right"  for="name">
                                     培训内容
                                 </label>
@@ -350,7 +345,11 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/addTrainType.action" method="post">
                             <div class="form-group">
-
+                                <label class="col-sm-1 control-label no-padding-right " for="date">培训时间</label>
+                                <div class="col-sm-1">
+                                    <select id="addDate" class="form-control"   name="trainTime" readonly>
+                                    </select>
+                                </div>
                                 <label class="col-sm-1 control-label no-padding-right"  for="addProjectName">
                                     培训内容
                                 </label>
@@ -370,6 +369,25 @@ ${message}
 
                         </form>
                     </div>
+                    <div class="col-xs-12" id="importForm" style="display: none">
+                        <h4 class="pink" style="height: 20px"></h4>
+                        <form class="form-horizontal" role="form"
+                              action="${pageContext.request.contextPath}/trainExcelImport.action"  method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-1 no-padding-top">
+                                    <input id="upfile" type="file" name="upfile" >
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-1 no-padding-top">
+                                    <button type="submit" onclick="return checkData();" class="btn btn-sm btn-primary " >
+                                        <span class="ace-icon fa fa-upload icon-on-right bigger-110 ">上传文件</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
 
             </div>
@@ -380,6 +398,7 @@ ${message}
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
                     <tr>
+                        <th class="center">培训时间</th>
                         <th class="center">培训内容</th>
                         <th class="center">操作</th>
                     </tr>
@@ -387,6 +406,7 @@ ${message}
                     <tbody>
                     <c:forEach items="${pageBean.pageList}" var="item">
                             <tr>
+                                <td class="center">${item.traintime}</td>
                                 <td class="center">
                                         ${item.traincontent}
                                 </td>
@@ -551,18 +571,39 @@ ${message}
             }
         });
     });
+    function checkData(){
+        var fileDir = $("#upfile").val();
+        var suffix = fileDir.substr(fileDir.lastIndexOf("."));
+        if("" == fileDir){
+            alert("选择需要导入的Excel文件！");
+            return false;
+        }
+        if(".xls" != suffix && ".xlsx" != suffix ){
+            alert("选择Excel格式的文件导入！");
+            return false;
+        }
+        return true;
+    }
     function addType() {
         $("#addForm").toggle();
         $("#searchForm").hide();
+        $("#importForm").hide();
     }
     function  searchButtonClick() {
         $("#addForm").hide();
+        $("#importForm").hide();
         $("#searchForm").toggle();
+    }
+    function importFile() {
+        $("#importForm").toggle();
+        $("#addForm").hide();
+        $("#searchForm").hide();
     }
     function download(){
         var url="download_train.action?id=10&name=参加创业类培训信息导入";
         window.open(url);
     }
+
 </script>
 </body>
 </html>

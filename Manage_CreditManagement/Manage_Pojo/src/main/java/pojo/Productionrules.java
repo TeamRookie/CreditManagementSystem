@@ -1,6 +1,8 @@
 package pojo;
 
-public class Productionrules {
+import java.io.Serializable;
+
+public class Productionrules implements Serializable {
     private Integer id;
 
     private String productionlevel;
@@ -8,6 +10,8 @@ public class Productionrules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

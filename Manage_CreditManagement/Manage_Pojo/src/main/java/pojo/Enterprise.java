@@ -1,6 +1,8 @@
 package pojo;
 
-public class Enterprise {
+import java.io.Serializable;
+
+public class Enterprise implements Serializable {
     private Integer id;
 
     private String enterpriseid;
@@ -14,8 +16,6 @@ public class Enterprise {
     private String representative;
 
     private String enterprisetime;
-
-    private String businessscope;
 
     private String rank;
 
@@ -34,6 +34,10 @@ public class Enterprise {
     private String stuname;
 
     private String url;
+
+    private String businessscope;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;
@@ -89,14 +93,6 @@ public class Enterprise {
 
     public void setEnterprisetime(String enterprisetime) {
         this.enterprisetime = enterprisetime == null ? null : enterprisetime.trim();
-    }
-
-    public String getBusinessscope() {
-        return businessscope;
-    }
-
-    public void setBusinessscope(String businessscope) {
-        this.businessscope = businessscope == null ? null : businessscope.trim();
     }
 
     public String getRank() {
@@ -169,5 +165,13 @@ public class Enterprise {
 
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
+    }
+
+    public String getBusinessscope() {
+        return businessscope;
+    }
+
+    public void setBusinessscope(String businessscope) {
+        this.businessscope = businessscope == null ? null : businessscope.trim();
     }
 }

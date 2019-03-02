@@ -1,6 +1,8 @@
 package pojo;
 
-public class Associationrules {
+import java.io.Serializable;
+
+public class Associationrules implements Serializable {
     private Integer id;
 
     private String associationlevel;
@@ -8,6 +10,8 @@ public class Associationrules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

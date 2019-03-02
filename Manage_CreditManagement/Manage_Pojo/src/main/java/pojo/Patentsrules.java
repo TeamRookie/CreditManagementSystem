@@ -1,6 +1,8 @@
 package pojo;
 
-public class Patentsrules {
+import java.io.Serializable;
+
+public class Patentsrules implements Serializable {
     private Integer id;
 
     private String rank;
@@ -8,6 +10,8 @@ public class Patentsrules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

@@ -1,6 +1,8 @@
 package pojo;
 
-public class Patents {
+import java.io.Serializable;
+
+public class Patents implements Serializable {
     private Integer id;
 
     private String patentstype;
@@ -30,6 +32,8 @@ public class Patents {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

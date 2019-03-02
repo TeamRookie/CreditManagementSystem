@@ -16,6 +16,15 @@
       <if test="scienceLevel != null and scienceLevel != ''">
         AND  sciencelevel = #{scienceLevel}
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
 
   </select>
@@ -34,7 +43,23 @@
       <if test="scienceLevel != null and scienceLevel != ''">
         AND  sciencelevel = #{scienceLevel}
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
+  <select id="getScienceRulesTotalCount" parameterType="java.lang.String" resultType="java.lang.Integer">
+    select count(*) from sciencerules
+  </select>
+    <select id="getScienceRulesPageBean" parameterType="hashMap" resultType="pojo.Sciencerules">
+    select * from sciencerules
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>
 </mapper>

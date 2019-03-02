@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.PageBean;
 import pojo.Science;
+import pojo.Sciencerules;
 import service.ScienceService;
 
 import java.util.HashMap;
@@ -16,9 +17,9 @@ public class ScienceServiceImpl implements ScienceService
     @Autowired
     private ScienceItemMapper scienceItemMapper;
     @Override
-    public PageBean getSciencePageBean(String studentNumber, String scienceType, String scienceTime, String scienceLevel, Integer pageSize, Integer currentPage)
+    public PageBean getSciencePageBean(String studentNumber, String faculty, String major, String grade, String scienceType, String scienceTime, String scienceLevel, Integer pageSize, Integer currentPage)
     {
-        Integer totalCount=scienceItemMapper.getScienceTotalCount(studentNumber,scienceType,scienceTime,scienceLevel);
+        Integer totalCount=scienceItemMapper.getScienceTotalCount(studentNumber,faculty,major,grade,scienceType,scienceTime,scienceLevel);
         PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
@@ -28,7 +29,24 @@ public class ScienceServiceImpl implements ScienceService
         map.put("scienceTime",scienceTime);
         map.put("scienceLevel",scienceLevel);
         map.put("studentNumber",studentNumber);
+        map.put("faculty",faculty);
+        map.put("major",major);
+        map.put("grade",grade);
         List<Science> scienceList=scienceItemMapper.getSciencePageBean(map);
+        pageBean.setPageList(scienceList);
+        return pageBean;
+    }
+
+    @Override
+    public PageBean getScienceRulesPageBean(Integer currentPage, Integer pageSize)
+    {
+        Integer totalCount=scienceItemMapper.getScienceRulesTotalCount();
+        PageBean pageBean=new PageBean(pageSize,currentPage,totalCount);
+        Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
+        pageBean.setStart(start);
+        HashMap map=new HashMap();
+        map.put("pageBean",pageBean);
+        List<Sciencerules> scienceList=scienceItemMapper.getScienceRulesPageBean(map);
         pageBean.setPageList(scienceList);
         return pageBean;
     }

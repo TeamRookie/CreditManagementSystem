@@ -1,11 +1,15 @@
 package pojo;
 
-public class Teacher {
+import java.io.Serializable;
+
+public class Teacher implements Serializable {
     private String teachernum;
 
     private String teachername;
 
     private String department;
+
+    private static final long serialVersionUID = 1L;
 
     public String getTeachernum() {
         return teachernum;

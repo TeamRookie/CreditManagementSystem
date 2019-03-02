@@ -3,7 +3,11 @@ package controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import pojo.Faculty;
 import service.FacultyService;
+
+import java.util.List;
 
 @Controller
 public class FacultyController
@@ -11,8 +15,11 @@ public class FacultyController
     @Autowired
     private  FacultyService  facultyService;
     @RequestMapping("/getFaculty")
-    public  String getFaculty()
+    @ResponseBody
+    public  List<Faculty> getFaculty()
     {
-        return "facultyInformation";
+        List<Faculty> facultyList=facultyService.getFaculty();
+        System.out.println(facultyList.size());
+        return facultyList;
     }
 }

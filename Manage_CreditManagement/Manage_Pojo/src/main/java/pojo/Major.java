@@ -1,11 +1,15 @@
 package pojo;
 
-public class Major {
+import java.io.Serializable;
+
+public class Major implements Serializable {
     private Integer id;
 
     private String majorname;
 
     private String facultyname;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

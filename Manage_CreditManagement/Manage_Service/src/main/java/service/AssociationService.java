@@ -4,6 +4,7 @@ import pojo.Associationrules;
 import pojo.Associationtype;
 import pojo.PageBean;
 
+import javax.servlet.ServletOutputStream;
 import java.util.List;
 
 public interface AssociationService
@@ -17,5 +18,7 @@ public interface AssociationService
 
     void deleteAssociationTypeById(Integer id);
 
-    PageBean getAssociationPageBean(String studentNumber, String associationTime, String associationName, String associationLevel, Integer currentPage, Integer pageSize);
+    PageBean getAssociationPageBean(String studentNumber, String faculty, String major, String grade, String associationTime, String associationName, String associationLevel, Integer currentPage, Integer pageSize);
+
+    void associationExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String associationName, String associationTime, String associationLevel);
 }

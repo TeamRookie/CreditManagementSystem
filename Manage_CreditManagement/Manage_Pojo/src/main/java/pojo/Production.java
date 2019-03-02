@@ -1,6 +1,8 @@
 package pojo;
 
-public class Production {
+import java.io.Serializable;
+
+public class Production implements Serializable {
     private Integer id;
 
     private String productiontime;
@@ -30,6 +32,8 @@ public class Production {
     private String url;
 
     private String productiontype;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

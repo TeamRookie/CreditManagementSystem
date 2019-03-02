@@ -1,11 +1,15 @@
 package pojo;
 
-public class Contesttype {
+import java.io.Serializable;
+
+public class Contesttype implements Serializable {
     private Integer id;
 
     private String contesttime;
 
     private String contestname;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;
@@ -29,15 +33,5 @@ public class Contesttype {
 
     public void setContestname(String contestname) {
         this.contestname = contestname == null ? null : contestname.trim();
-    }
-
-    @Override
-    public String toString()
-    {
-        return "Contesttype{" +
-                "id=" + id +
-                ", contesttime='" + contesttime + '\'' +
-                ", contestname='" + contestname + '\'' +
-                '}';
     }
 }

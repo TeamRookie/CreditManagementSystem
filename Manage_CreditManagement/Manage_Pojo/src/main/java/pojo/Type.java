@@ -1,6 +1,8 @@
 package pojo;
 
-public class Type {
+import java.io.Serializable;
+
+public class Type implements Serializable {
     private Integer id;
 
     private String typename;
@@ -10,6 +12,10 @@ public class Type {
     private String rulesurl;
 
     private String importtype;
+
+    private Integer disable;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;
@@ -49,5 +55,13 @@ public class Type {
 
     public void setImporttype(String importtype) {
         this.importtype = importtype == null ? null : importtype.trim();
+    }
+
+    public Integer getDisable() {
+        return disable;
+    }
+
+    public void setDisable(Integer disable) {
+        this.disable = disable;
     }
 }

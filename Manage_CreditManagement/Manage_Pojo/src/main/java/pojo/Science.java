@@ -1,6 +1,8 @@
 package pojo;
 
-public class Science {
+import java.io.Serializable;
+
+public class Science implements Serializable {
     private Integer id;
 
     private String sciencename;
@@ -30,6 +32,8 @@ public class Science {
     private String stuname;
 
     private String url;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

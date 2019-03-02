@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
-    <title>个人预订 - 创新楼教室预约系统</title>
+    <title>项目信息管理</title>
 
     <meta name="description" content="Common form elements and layouts"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -77,7 +77,7 @@ ${message}
             <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    创新楼教室预约系统
+                    创新创业学分系统
                 </small>
             </a>
         </div>
@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${student.sname}
+									${admin.sname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -99,23 +99,17 @@ ${message}
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/passwordChange.html">
+                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
                         </li>
 
-                        <li>
-                            <a href="${pageContext.request.contextPath}/student/userInfo.html">
-                                <i class="ace-icon fa fa-user"></i>
-                                个人详情
-                            </a>
-                        </li>
 
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/student/logout.html">
+                            <a href="${pageContext.request.contextPath}/exist.action">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出
                             </a>
@@ -312,18 +306,25 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/science.action">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right"  for="number">
-                                    学号
+                                <label class="col-sm-1 control-label no-padding-right"  for="faculty">
+                                    学院
+                                </label>
+                                <div class="col-sm-1">
+                                    <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right"  for="major">
+                                    专业
                                 </label>
                                 <div class="col-sm-2">
-                                    <input onkeyup="value=value.replace(/[^\d]/g,'')" class="form-control"  name="studentNumber" id="number" type="text" placeholder="学号" />
+                                    <select id="major" class="form-control" onchange="getGrade();"  name="major" readonly>
+                                    </select>
                                 </div>
-
-
-
-                                <label class="col-sm-1 control-label no-padding-right " for="date">课题开始时间</label>
+                                <label class="col-sm-1 control-label no-padding-right"  for="grade">
+                                    班级
+                                </label>
                                 <div class="col-sm-1">
-                                    <select id="date" class="form-control"   name="scienceTime" readonly>
+                                    <select id="grade" class="form-control"   name="grade" readonly>
                                     </select>
                                 </div>
                                 <div class="col-sm-1"></div>
@@ -333,10 +334,14 @@ ${message}
                                         搜索
                                     </button>
                                 </div>
-
                             </div>
-                            <div class="form-group">
 
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right " for="date">课题开始时间</label>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="scienceTime" readonly>
+                                    </select>
+                                </div>
                                 <label class="col-sm-1 control-label no-padding-right " for="contestLevel">课题级别</label>
                                 <div class="col-sm-1">
                                     <select id="contestLevel" class="form-control"   name="scienceLevel" readonly>
@@ -374,6 +379,9 @@ ${message}
                     <tr>
                         <th class="center">学号</th>
                         <th class="center">姓名</th>
+                        <th class="center">学院</th>
+                        <th class="center">专业</th>
+                        <th class="center">班级</th>
                         <th class="center">科研项目名称</th>
                         <th class="center">课题类型</th>
                         <th class="center">课题级别</th>
@@ -393,6 +401,9 @@ ${message}
                                         ${item.stunum}
                                 </td>
                                 <td class="center">${item.stuname}</td>
+                                <td class="center">${item.facultyname}</td>
+                                <td class="center">${item.majorname}</td>
+                                <td class="center">${item.gradename}</td>
                                 <td class="center">${item.sciencename}</td>
                                 <td class="center">${item.sciencetype}</td>
                                 <td class="center">${item.sciencelevel}</td>
@@ -531,7 +542,7 @@ ${message}
                 $("#typeListRulesUrl").html(contentRules);
                 $("#typeImport").html(contentImport);
             },
-            fail:function () {
+            error:function () {
                 alert("获取信息列表失败!");
             }
         });
@@ -548,13 +559,74 @@ ${message}
                 }
                 $("#date").html(content);
             },
-            fail:function () {
+            error:function () {
                 alert("获取年份列表失败!");
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getFaculty.action",
+            success: function(data)
+            {
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].facultyname+"'>"+data[i].facultyname+"</option>";
+                }
+                $("#faculty").html(content);
+            },
+            error:function () {
+                alert("获取学院列表失败!");
             }
         });
     });
     function  searchButtonClick() {
         $("#searchForm").toggle();
+    }
+    function  getMajor() {
+        var faculty=$("#faculty").val();
+
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getMajor.action",
+            data:"faculty="+faculty,
+            success: function(data)
+            {
+
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].majorname+"'>"+data[i].majorname+"</option>";
+                }
+                $("#major").html(content);
+            },
+            error:function () {
+                alert("获取班级列表失败!");
+            }
+        });
+    }
+    function  getGrade() {
+        var major=$("#major").val();
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getGrade.action",
+            data:"major="+major,
+            success: function(data)
+            {
+                var content="";
+                content="<option  value=''>请选择</option>";
+                for (var i=0;i<data.length;i++)
+                {
+                    content+="<option  value='"+data[i].gradename+"'>"+data[i].gradename+"</option>";
+                }
+                $("#grade").html(content);
+            },
+            error:function () {
+                alert("获取专业列表失败!");
+            }
+        });
     }
 </script>
 </body>

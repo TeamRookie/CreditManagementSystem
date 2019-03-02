@@ -1,7 +1,11 @@
 package pojo;
 
-public class Studiotype {
+import java.io.Serializable;
+
+public class Studiotype implements Serializable {
     private Integer id;
+
+    private String studiotime;
 
     private String department;
 
@@ -9,12 +13,22 @@ public class Studiotype {
 
     private String studiolevel;
 
+    private static final long serialVersionUID = 1L;
+
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getStudiotime() {
+        return studiotime;
+    }
+
+    public void setStudiotime(String studiotime) {
+        this.studiotime = studiotime == null ? null : studiotime.trim();
     }
 
     public String getDepartment() {

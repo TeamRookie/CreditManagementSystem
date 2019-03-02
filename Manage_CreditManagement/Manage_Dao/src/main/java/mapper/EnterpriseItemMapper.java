@@ -14,7 +14,9 @@ public interface EnterpriseItemMapper
    int getTotalCount();
    List<Enterpriserules> getPageBean(PageBean pageBean);
 
-    Integer getEnterpriseTotalCount(@Param("studentNumber") String studentNumber,@Param("enterpriseType") String enterpriseType,@Param("enterpriseTime") String enterpriseTime);
+    Integer getEnterpriseTotalCount(@Param("studentNumber") String studentNumber,@Param("faculty")String faculty,@Param("major")String major,@Param("grade")String grade,@Param("enterpriseType") String enterpriseType,@Param("enterpriseTime") String enterpriseTime);
 
     List<Enterprise> getEnterprisePageBean(HashMap map);
+
+    List<Enterprise> getEnterpriseDownload(@Param("faculty") String faculty,@Param("major") String major, @Param("grade") String grade,@Param("enterpriseTime") String date);
 }

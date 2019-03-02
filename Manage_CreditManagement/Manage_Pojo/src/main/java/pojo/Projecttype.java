@@ -1,6 +1,8 @@
 package pojo;
 
-public class Projecttype {
+import java.io.Serializable;
+
+public class Projecttype implements Serializable {
     private Integer id;
 
     private String projecttime;
@@ -10,6 +12,8 @@ public class Projecttype {
     private String projectname;
 
     private String projectid;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

@@ -48,6 +48,15 @@
       <if test="practiceScore !=null and practiceScore !=''">
         AND  #{practiceScore}= score
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
   </select>
   <select id="getPracticePageBean" parameterType="hashMap" resultType="pojo.Practice">
@@ -68,7 +77,45 @@
       <if test="practiceScore !=null and practiceScore !=''">
         AND  #{practiceScore}= score
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
+  <select id="getPracticeDownload" resultType="pojo.Practice">
+    select  * from practice
+    <where>
+      <if test="practiceTime !=null and practiceTime != ''">
+        #{practiceTime} = practicetime
+      </if>
+      <if test="practiceName != null and practiceName != ''">
+        AND  #{practiceName} = practicename
+      </if>
+      <if test="practiceType !=null and practiceType !=''">
+        AND  #{practiceType}= practicetype
+      </if>
+      <if test="practiceLevel !=null and practiceLevel !=''">
+        AND  #{practiceLevel}= practicelevel
+      </if>
+      <if test="practiceScore !=null and practiceScore !=''">
+        AND  #{practiceScore}= score
+      </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
+    </where>
   </select>
 </mapper>

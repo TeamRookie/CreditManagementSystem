@@ -164,6 +164,76 @@ public class TraintypeExample {
             return (Criteria) this;
         }
 
+        public Criteria andTraintimeIsNull() {
+            addCriterion("traintime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeIsNotNull() {
+            addCriterion("traintime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeEqualTo(String value) {
+            addCriterion("traintime =", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeNotEqualTo(String value) {
+            addCriterion("traintime <>", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeGreaterThan(String value) {
+            addCriterion("traintime >", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeGreaterThanOrEqualTo(String value) {
+            addCriterion("traintime >=", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeLessThan(String value) {
+            addCriterion("traintime <", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeLessThanOrEqualTo(String value) {
+            addCriterion("traintime <=", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeLike(String value) {
+            addCriterion("traintime like", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeNotLike(String value) {
+            addCriterion("traintime not like", value, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeIn(List<String> values) {
+            addCriterion("traintime in", values, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeNotIn(List<String> values) {
+            addCriterion("traintime not in", values, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeBetween(String value1, String value2) {
+            addCriterion("traintime between", value1, value2, "traintime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTraintimeNotBetween(String value1, String value2) {
+            addCriterion("traintime not between", value1, value2, "traintime");
+            return (Criteria) this;
+        }
+
         public Criteria andTraincontentIsNull() {
             addCriterion("traincontent is null");
             return (Criteria) this;

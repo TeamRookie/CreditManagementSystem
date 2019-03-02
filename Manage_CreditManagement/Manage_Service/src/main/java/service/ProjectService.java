@@ -4,6 +4,7 @@ import pojo.PageBean;
 import pojo.Projectrules;
 import pojo.Projecttype;
 
+import javax.servlet.ServletOutputStream;
 import java.util.List;
 
 public interface ProjectService
@@ -14,5 +15,7 @@ public interface ProjectService
     void deleteProjectTypeById(Integer id);
 
     void addProjectType(Projecttype projecttype);
-    PageBean getProjectPageBean(String studentNumber, String projectTime, String projectType, String projectId, String projectLevel, String projectScore, Integer currentPage, Integer pageSize);
+    PageBean getProjectPageBean(String studentNumber, String faculty, String major, String grade, String projectTime, String projectType, String projectId, String projectLevel, String projectScore, Integer currentPage, Integer pageSize);
+
+    void projectExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String projectLevel, String projectId, String score, String projectType);
 }

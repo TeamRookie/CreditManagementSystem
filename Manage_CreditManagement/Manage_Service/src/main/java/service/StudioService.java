@@ -4,6 +4,7 @@ import pojo.PageBean;
 import pojo.Studiorules;
 import pojo.Studiotype;
 
+import javax.servlet.ServletOutputStream;
 import java.util.List;
 
 public interface StudioService
@@ -17,7 +18,9 @@ public interface StudioService
 
     void addStudioType(Studiotype studiotype);
 
-    PageBean getStudioPageBean(String studentNumber, String studioTime, String studioDepartment, String studioName, String studioLevel, Integer currentPage, Integer pageSize);
+    PageBean getStudioPageBean(String studentNumber, String faculty, String major, String grade, String studioTime, String studioDepartment, String studioName, String studioLevel, Integer currentPage, Integer pageSize);
 
     List<String> getAllStudioName();
+
+    void studioExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String studioName, String studioLevel, String studioTime, String department);
 }

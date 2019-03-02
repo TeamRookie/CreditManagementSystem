@@ -1,6 +1,8 @@
 package pojo;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private String num;
 
     private String stuname;
@@ -24,6 +26,14 @@ public class Student {
     private String password;
 
     private String studenttime;
+
+    private Float creditSum;
+
+    public void setCreditSum(Float creditSum){
+        this.creditSum = creditSum;
+    }
+    public Float getCreditSum(){return creditSum;}
+    private static final long serialVersionUID = 1L;
 
     public String getNum() {
         return num;

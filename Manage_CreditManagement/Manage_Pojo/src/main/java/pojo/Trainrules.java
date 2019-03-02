@@ -1,11 +1,15 @@
 package pojo;
 
-public class Trainrules {
+import java.io.Serializable;
+
+public class Trainrules implements Serializable {
     private Integer id;
 
     private String rank;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

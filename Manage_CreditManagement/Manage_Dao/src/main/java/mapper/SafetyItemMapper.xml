@@ -16,6 +16,32 @@
       <if test="studentNumber !=null and studentNumber != ''">
         AND  #{studentNumber} = stunum
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
+    </where>
+  </select>
+  <select id="getSafetyDownload" resultType="pojo.Safety">
+    select * from safety
+    <where>
+      <if test="safetyTime !=null and safetyTime != ''">
+        #{safetyTime} = safetytime
+      </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
   </select>
   <select id="getSafetyPageBean" parameterType="hashMap" resultType="pojo.Safety">
@@ -26,6 +52,15 @@
       </if>
       <if test="studentNumber !=null and studentNumber != ''">
         AND  #{studentNumber} = stunum
+      </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
       </if>
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}

@@ -43,6 +43,15 @@
             <if test="trainTime !=null and trainTime!=''">
                 AND  traintime LIKE  CONCAT('${trainTime}','%')
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
     </select>
     <select id="getTrainPageBean" parameterType="hashMap" resultType="pojo.Train">
@@ -52,7 +61,7 @@
                 #{trainDepartment} = department
             </if>
             <if test="trainContent != null and trainContent != ''">
-                AND  traincontent = #{trainContent}
+                AND  trainname = #{trainContent}
             </if>
             <if test="studentNumber != null and studentNumber != ''">
                 AND  stunum = #{studentNumber}
@@ -60,10 +69,39 @@
             <if test="trainTime !=null and trainTime!=''">
                 AND  traintime LIKE  CONCAT('${trainTime}','%')
             </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
         </where>
         limit #{pageBean.start},#{pageBean.pageSize}
     </select>
     <select id="getTrainContent" resultType="java.lang.String">
-        select  traincontent from  traintype ;
+        select  distinct traincontent from  traintype ;
+    </select>
+    <select id="getTrainDownload" resultType="pojo.Train">
+        select * from train
+        <where>
+            <if test="trainContent != null and trainContent != ''">
+                AND  trainname = #{trainContent}
+            </if>
+            <if test="trainTime !=null and trainTime!=''">
+                AND  traintime LIKE  CONCAT('${trainTime}','%')
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
     </select>
 </mapper>

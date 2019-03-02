@@ -9,7 +9,6 @@
     <result column="residence" property="residence" jdbcType="VARCHAR" />
     <result column="representative" property="representative" jdbcType="VARCHAR" />
     <result column="enterprisetime" property="enterprisetime" jdbcType="VARCHAR" />
-    <result column="businessscope" property="businessscope" jdbcType="VARCHAR" />
     <result column="rank" property="rank" jdbcType="VARCHAR" />
     <result column="shareholder" property="shareholder" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
@@ -19,6 +18,9 @@
     <result column="gradename" property="gradename" jdbcType="VARCHAR" />
     <result column="stuname" property="stuname" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="pojo.Enterprise" extends="BaseResultMap" >
+    <result column="businessscope" property="businessscope" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -80,9 +82,27 @@
   </sql>
   <sql id="Base_Column_List" >
     id, enterpriseid, enterprisename, enterprisetype, residence, representative, enterprisetime, 
-    businessscope, rank, shareholder, stunum, credit, facultyname, majorname, gradename, 
-    stuname, url
+    rank, shareholder, stunum, credit, facultyname, majorname, gradename, stuname, url
   </sql>
+  <sql id="Blob_Column_List" >
+    businessscope
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="pojo.EnterpriseExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from enterprise
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.EnterpriseExample" >
     select
     <if test="distinct" >
@@ -97,9 +117,11 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from enterprise
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -116,16 +138,16 @@
   <insert id="insert" parameterType="pojo.Enterprise" >
     insert into enterprise (id, enterpriseid, enterprisename, 
       enterprisetype, residence, representative, 
-      enterprisetime, businessscope, rank, 
-      shareholder, stunum, credit, 
-      facultyname, majorname, gradename, 
-      stuname, url)
+      enterprisetime, rank, shareholder, 
+      stunum, credit, facultyname, 
+      majorname, gradename, stuname, 
+      url, businessscope)
     values (#{id,jdbcType=INTEGER}, #{enterpriseid,jdbcType=VARCHAR}, #{enterprisename,jdbcType=VARCHAR}, 
       #{enterprisetype,jdbcType=VARCHAR}, #{residence,jdbcType=VARCHAR}, #{representative,jdbcType=VARCHAR}, 
-      #{enterprisetime,jdbcType=VARCHAR}, #{businessscope,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, 
-      #{shareholder,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, 
-      #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, 
-      #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
+      #{enterprisetime,jdbcType=VARCHAR}, #{rank,jdbcType=VARCHAR}, #{shareholder,jdbcType=VARCHAR}, 
+      #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultyname,jdbcType=VARCHAR}, 
+      #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR}, #{businessscope,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Enterprise" >
     insert into enterprise
@@ -150,9 +172,6 @@
       </if>
       <if test="enterprisetime != null" >
         enterprisetime,
-      </if>
-      <if test="businessscope != null" >
-        businessscope,
       </if>
       <if test="rank != null" >
         rank,
@@ -181,6 +200,9 @@
       <if test="url != null" >
         url,
       </if>
+      <if test="businessscope != null" >
+        businessscope,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -203,9 +225,6 @@
       </if>
       <if test="enterprisetime != null" >
         #{enterprisetime,jdbcType=VARCHAR},
-      </if>
-      <if test="businessscope != null" >
-        #{businessscope,jdbcType=VARCHAR},
       </if>
       <if test="rank != null" >
         #{rank,jdbcType=VARCHAR},
@@ -233,6 +252,9 @@
       </if>
       <if test="url != null" >
         #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="businessscope != null" >
+        #{businessscope,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -266,9 +288,6 @@
       <if test="record.enterprisetime != null" >
         enterprisetime = #{record.enterprisetime,jdbcType=VARCHAR},
       </if>
-      <if test="record.businessscope != null" >
-        businessscope = #{record.businessscope,jdbcType=VARCHAR},
-      </if>
       <if test="record.rank != null" >
         rank = #{record.rank,jdbcType=VARCHAR},
       </if>
@@ -296,7 +315,33 @@
       <if test="record.url != null" >
         url = #{record.url,jdbcType=VARCHAR},
       </if>
+      <if test="record.businessscope != null" >
+        businessscope = #{record.businessscope,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update enterprise
+    set id = #{record.id,jdbcType=INTEGER},
+      enterpriseid = #{record.enterpriseid,jdbcType=VARCHAR},
+      enterprisename = #{record.enterprisename,jdbcType=VARCHAR},
+      enterprisetype = #{record.enterprisetype,jdbcType=VARCHAR},
+      residence = #{record.residence,jdbcType=VARCHAR},
+      representative = #{record.representative,jdbcType=VARCHAR},
+      enterprisetime = #{record.enterprisetime,jdbcType=VARCHAR},
+      rank = #{record.rank,jdbcType=VARCHAR},
+      shareholder = #{record.shareholder,jdbcType=VARCHAR},
+      stunum = #{record.stunum,jdbcType=VARCHAR},
+      credit = #{record.credit,jdbcType=REAL},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
+      stuname = #{record.stuname,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR},
+      businessscope = #{record.businessscope,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -310,7 +355,6 @@
       residence = #{record.residence,jdbcType=VARCHAR},
       representative = #{record.representative,jdbcType=VARCHAR},
       enterprisetime = #{record.enterprisetime,jdbcType=VARCHAR},
-      businessscope = #{record.businessscope,jdbcType=VARCHAR},
       rank = #{record.rank,jdbcType=VARCHAR},
       shareholder = #{record.shareholder,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
@@ -345,9 +389,6 @@
       <if test="enterprisetime != null" >
         enterprisetime = #{enterprisetime,jdbcType=VARCHAR},
       </if>
-      <if test="businessscope != null" >
-        businessscope = #{businessscope,jdbcType=VARCHAR},
-      </if>
       <if test="rank != null" >
         rank = #{rank,jdbcType=VARCHAR},
       </if>
@@ -375,7 +416,30 @@
       <if test="url != null" >
         url = #{url,jdbcType=VARCHAR},
       </if>
+      <if test="businessscope != null" >
+        businessscope = #{businessscope,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="pojo.Enterprise" >
+    update enterprise
+    set enterpriseid = #{enterpriseid,jdbcType=VARCHAR},
+      enterprisename = #{enterprisename,jdbcType=VARCHAR},
+      enterprisetype = #{enterprisetype,jdbcType=VARCHAR},
+      residence = #{residence,jdbcType=VARCHAR},
+      representative = #{representative,jdbcType=VARCHAR},
+      enterprisetime = #{enterprisetime,jdbcType=VARCHAR},
+      rank = #{rank,jdbcType=VARCHAR},
+      shareholder = #{shareholder,jdbcType=VARCHAR},
+      stunum = #{stunum,jdbcType=VARCHAR},
+      credit = #{credit,jdbcType=REAL},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
+      stuname = #{stuname,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      businessscope = #{businessscope,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="pojo.Enterprise" >
@@ -386,7 +450,6 @@
       residence = #{residence,jdbcType=VARCHAR},
       representative = #{representative,jdbcType=VARCHAR},
       enterprisetime = #{enterprisetime,jdbcType=VARCHAR},
-      businessscope = #{businessscope,jdbcType=VARCHAR},
       rank = #{rank,jdbcType=VARCHAR},
       shareholder = #{shareholder,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},

@@ -19,7 +19,9 @@ public interface AssociationItemMapper
 
     List<Associationtype> getAssociationImportPageBean(HashMap map);
 
-    Integer getAssociationTotalCount(@Param("studentNumber") String studentNumber,@Param("associationTime") String associationTime,@Param("associationName") String associationName,@Param("associationLevel") String associationLevel);
+    Integer getAssociationTotalCount(@Param("studentNumber") String studentNumber,@Param("faculty")String faculty,@Param("major")String major,@Param("grade")String grade,@Param("associationTime") String associationTime,@Param("associationName") String associationName,@Param("associationLevel") String associationLevel);
 
     List<Association> getAssociationPageBean(HashMap map);
+
+    List<Association> getAssociationDownload(@Param("faculty") String faculty,@Param("major") String major,@Param("grade") String grade,@Param("date") String date,@Param("associationName") String associationName,@Param("associationTime") String associationTime,@Param("associationLevel") String associationLevel);
 }

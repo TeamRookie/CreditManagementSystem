@@ -444,6 +444,146 @@ public class TrainExample {
             return (Criteria) this;
         }
 
+        public Criteria andTrainstarttimeIsNull() {
+            addCriterion("trainstarttime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeIsNotNull() {
+            addCriterion("trainstarttime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeEqualTo(String value) {
+            addCriterion("trainstarttime =", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeNotEqualTo(String value) {
+            addCriterion("trainstarttime <>", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeGreaterThan(String value) {
+            addCriterion("trainstarttime >", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeGreaterThanOrEqualTo(String value) {
+            addCriterion("trainstarttime >=", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeLessThan(String value) {
+            addCriterion("trainstarttime <", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeLessThanOrEqualTo(String value) {
+            addCriterion("trainstarttime <=", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeLike(String value) {
+            addCriterion("trainstarttime like", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeNotLike(String value) {
+            addCriterion("trainstarttime not like", value, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeIn(List<String> values) {
+            addCriterion("trainstarttime in", values, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeNotIn(List<String> values) {
+            addCriterion("trainstarttime not in", values, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeBetween(String value1, String value2) {
+            addCriterion("trainstarttime between", value1, value2, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainstarttimeNotBetween(String value1, String value2) {
+            addCriterion("trainstarttime not between", value1, value2, "trainstarttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeIsNull() {
+            addCriterion("trainendtime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeIsNotNull() {
+            addCriterion("trainendtime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeEqualTo(String value) {
+            addCriterion("trainendtime =", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeNotEqualTo(String value) {
+            addCriterion("trainendtime <>", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeGreaterThan(String value) {
+            addCriterion("trainendtime >", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeGreaterThanOrEqualTo(String value) {
+            addCriterion("trainendtime >=", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeLessThan(String value) {
+            addCriterion("trainendtime <", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeLessThanOrEqualTo(String value) {
+            addCriterion("trainendtime <=", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeLike(String value) {
+            addCriterion("trainendtime like", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeNotLike(String value) {
+            addCriterion("trainendtime not like", value, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeIn(List<String> values) {
+            addCriterion("trainendtime in", values, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeNotIn(List<String> values) {
+            addCriterion("trainendtime not in", values, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeBetween(String value1, String value2) {
+            addCriterion("trainendtime between", value1, value2, "trainendtime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTrainendtimeNotBetween(String value1, String value2) {
+            addCriterion("trainendtime not between", value1, value2, "trainendtime");
+            return (Criteria) this;
+        }
+
         public Criteria andTeachernameIsNull() {
             addCriterion("teachername is null");
             return (Criteria) this;

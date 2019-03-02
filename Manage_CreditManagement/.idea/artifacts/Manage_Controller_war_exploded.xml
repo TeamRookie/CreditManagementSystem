@@ -1,23 +1,30 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="Manage_Controller:war exploded">
-    <output-path>$PROJECT_DIR$/Manage_Controller/target/Manage_Controller</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/Manage_Controller_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Manage_Controller" />
+          <element id="module-output" name="Manage_Pojo" />
+          <element id="module-output" name="Manage_Service" />
+          <element id="module-output" name="Manage_Dao" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="Manage_Service-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="Manage_Service" />
-          </element>
-          <element id="archive" name="Manage_Dao-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="Manage_Dao" />
-          </element>
-          <element id="archive" name="Manage_Pojo-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="Manage_Pojo" />
-          </element>
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.22" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.3" />
+          <element id="library" level="project" name="Maven: org.xhtmlrenderer:flying-saucer-pdf:9.0.3" />
+          <element id="library" level="project" name="Maven: com.lowagie:itext:2.1.7" />
+          <element id="library" level="project" name="Maven: bouncycastle:bcmail-jdk14:138" />
+          <element id="library" level="project" name="Maven: bouncycastle:bcprov-jdk14:138" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bctsp-jdk14:1.38" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk14:1.38" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcmail-jdk14:1.38" />
+          <element id="library" level="project" name="Maven: org.xhtmlrenderer:flying-saucer-core:9.0.3" />
           <element id="library" level="project" name="Maven: org.apache.poi:poi-ooxml:3.17" />
           <element id="library" level="project" name="Maven: org.apache.poi:poi:3.17" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
@@ -44,14 +51,12 @@
           <element id="library" level="project" name="Maven: com.github.miemiedev:mybatis-paginator:1.2.15" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.32" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.9" />
+          <element id="library" level="module" name="Maven: com.alibaba:jconsole:1.8.0" module-name="Manage_Controller" />
+          <element id="library" level="module" name="Maven: com.alibaba:tools:1.8.0" module-name="Manage_Controller" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" />
-          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.2.4.RELEASE" />
@@ -60,10 +65,14 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Manage_Dao-1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Manage_Pojo-1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Manage_Service-1.0-SNAPSHOT" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/Manage_Controller/target/Manage_Controller/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="Manage_Controller/web/Web" />
     </root>

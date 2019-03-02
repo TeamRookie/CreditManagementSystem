@@ -1,6 +1,8 @@
 package pojo;
 
-public class Practicerules {
+import java.io.Serializable;
+
+public class Practicerules implements Serializable {
     private Integer id;
 
     private String practicelevel;
@@ -10,6 +12,8 @@ public class Practicerules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

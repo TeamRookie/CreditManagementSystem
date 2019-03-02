@@ -164,6 +164,76 @@ public class StudiotypeExample {
             return (Criteria) this;
         }
 
+        public Criteria andStudiotimeIsNull() {
+            addCriterion("studiotime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeIsNotNull() {
+            addCriterion("studiotime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeEqualTo(String value) {
+            addCriterion("studiotime =", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeNotEqualTo(String value) {
+            addCriterion("studiotime <>", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeGreaterThan(String value) {
+            addCriterion("studiotime >", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeGreaterThanOrEqualTo(String value) {
+            addCriterion("studiotime >=", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeLessThan(String value) {
+            addCriterion("studiotime <", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeLessThanOrEqualTo(String value) {
+            addCriterion("studiotime <=", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeLike(String value) {
+            addCriterion("studiotime like", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeNotLike(String value) {
+            addCriterion("studiotime not like", value, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeIn(List<String> values) {
+            addCriterion("studiotime in", values, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeNotIn(List<String> values) {
+            addCriterion("studiotime not in", values, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeBetween(String value1, String value2) {
+            addCriterion("studiotime between", value1, value2, "studiotime");
+            return (Criteria) this;
+        }
+
+        public Criteria andStudiotimeNotBetween(String value1, String value2) {
+            addCriterion("studiotime not between", value1, value2, "studiotime");
+            return (Criteria) this;
+        }
+
         public Criteria andDepartmentIsNull() {
             addCriterion("department is null");
             return (Criteria) this;

@@ -7,6 +7,8 @@
     <result column="traintime" property="traintime" jdbcType="VARCHAR" />
     <result column="trainsite" property="trainsite" jdbcType="VARCHAR" />
     <result column="organizationunit" property="organizationunit" jdbcType="VARCHAR" />
+    <result column="trainstarttime" property="trainstarttime" jdbcType="VARCHAR" />
+    <result column="trainendtime" property="trainendtime" jdbcType="VARCHAR" />
     <result column="teachername" property="teachername" jdbcType="VARCHAR" />
     <result column="stunum" property="stunum" jdbcType="VARCHAR" />
     <result column="credit" property="credit" jdbcType="REAL" />
@@ -75,8 +77,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, trainname, traintime, trainsite, organizationunit, teachername, stunum, credit, 
-    facultyname, majorname, gradename, stuname, url
+    id, trainname, traintime, trainsite, organizationunit, trainstarttime, trainendtime, 
+    teachername, stunum, credit, facultyname, majorname, gradename, stuname, url
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.TrainExample" >
     select
@@ -110,15 +112,17 @@
   </delete>
   <insert id="insert" parameterType="pojo.Train" >
     insert into train (id, trainname, traintime, 
-      trainsite, organizationunit, teachername, 
-      stunum, credit, facultyname, 
-      majorname, gradename, stuname, 
-      url)
+      trainsite, organizationunit, trainstarttime, 
+      trainendtime, teachername, stunum, 
+      credit, facultyname, majorname, 
+      gradename, stuname, url
+      )
     values (#{id,jdbcType=INTEGER}, #{trainname,jdbcType=VARCHAR}, #{traintime,jdbcType=VARCHAR}, 
-      #{trainsite,jdbcType=VARCHAR}, #{organizationunit,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR}, 
-      #{stunum,jdbcType=VARCHAR}, #{credit,jdbcType=REAL}, #{facultyname,jdbcType=VARCHAR}, 
-      #{majorname,jdbcType=VARCHAR}, #{gradename,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, 
-      #{url,jdbcType=VARCHAR})
+      #{trainsite,jdbcType=VARCHAR}, #{organizationunit,jdbcType=VARCHAR}, #{trainstarttime,jdbcType=VARCHAR}, 
+      #{trainendtime,jdbcType=VARCHAR}, #{teachername,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, 
+      #{gradename,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="pojo.Train" >
     insert into train
@@ -137,6 +141,12 @@
       </if>
       <if test="organizationunit != null" >
         organizationunit,
+      </if>
+      <if test="trainstarttime != null" >
+        trainstarttime,
+      </if>
+      <if test="trainendtime != null" >
+        trainendtime,
       </if>
       <if test="teachername != null" >
         teachername,
@@ -178,6 +188,12 @@
       </if>
       <if test="organizationunit != null" >
         #{organizationunit,jdbcType=VARCHAR},
+      </if>
+      <if test="trainstarttime != null" >
+        #{trainstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="trainendtime != null" >
+        #{trainendtime,jdbcType=VARCHAR},
       </if>
       <if test="teachername != null" >
         #{teachername,jdbcType=VARCHAR},
@@ -229,6 +245,12 @@
       <if test="record.organizationunit != null" >
         organizationunit = #{record.organizationunit,jdbcType=VARCHAR},
       </if>
+      <if test="record.trainstarttime != null" >
+        trainstarttime = #{record.trainstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trainendtime != null" >
+        trainendtime = #{record.trainendtime,jdbcType=VARCHAR},
+      </if>
       <if test="record.teachername != null" >
         teachername = #{record.teachername,jdbcType=VARCHAR},
       </if>
@@ -265,6 +287,8 @@
       traintime = #{record.traintime,jdbcType=VARCHAR},
       trainsite = #{record.trainsite,jdbcType=VARCHAR},
       organizationunit = #{record.organizationunit,jdbcType=VARCHAR},
+      trainstarttime = #{record.trainstarttime,jdbcType=VARCHAR},
+      trainendtime = #{record.trainendtime,jdbcType=VARCHAR},
       teachername = #{record.teachername,jdbcType=VARCHAR},
       stunum = #{record.stunum,jdbcType=VARCHAR},
       credit = #{record.credit,jdbcType=REAL},
@@ -291,6 +315,12 @@
       </if>
       <if test="organizationunit != null" >
         organizationunit = #{organizationunit,jdbcType=VARCHAR},
+      </if>
+      <if test="trainstarttime != null" >
+        trainstarttime = #{trainstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="trainendtime != null" >
+        trainendtime = #{trainendtime,jdbcType=VARCHAR},
       </if>
       <if test="teachername != null" >
         teachername = #{teachername,jdbcType=VARCHAR},
@@ -325,6 +355,8 @@
       traintime = #{traintime,jdbcType=VARCHAR},
       trainsite = #{trainsite,jdbcType=VARCHAR},
       organizationunit = #{organizationunit,jdbcType=VARCHAR},
+      trainstarttime = #{trainstarttime,jdbcType=VARCHAR},
+      trainendtime = #{trainendtime,jdbcType=VARCHAR},
       teachername = #{teachername,jdbcType=VARCHAR},
       stunum = #{stunum,jdbcType=VARCHAR},
       credit = #{credit,jdbcType=REAL},

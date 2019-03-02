@@ -1,9 +1,13 @@
 package pojo;
 
-public class Years {
+import java.io.Serializable;
+
+public class Years implements Serializable {
     private Integer id;
 
     private String schoolyear;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

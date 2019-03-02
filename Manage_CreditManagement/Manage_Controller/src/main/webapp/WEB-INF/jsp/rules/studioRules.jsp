@@ -70,7 +70,7 @@
             <a href="${pageContext.request.contextPath}/admin/activity.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    创新楼教室预约系统
+                    创新创业学分系统
                 </small>
             </a>
         </div>
@@ -93,18 +93,19 @@
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/admin/changePassword.html">
+                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
                         </li>
 
+
                         <li class="divider"></li>
 
                         <li>
-                            <a href="${pageContext.request.contextPath}/admin/existAdmin.html">
+                            <a href="${pageContext.request.contextPath}/exist.action">
                                 <i class="ace-icon fa fa-power-off"></i>
-                                退出账号
+                                退出
                             </a>
                         </li>
                     </ul>

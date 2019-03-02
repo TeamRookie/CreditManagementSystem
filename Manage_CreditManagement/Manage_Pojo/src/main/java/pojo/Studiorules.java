@@ -1,6 +1,8 @@
 package pojo;
 
-public class Studiorules {
+import java.io.Serializable;
+
+public class Studiorules implements Serializable {
     private Integer id;
 
     private String score;
@@ -8,6 +10,8 @@ public class Studiorules {
     private String responsibility;
 
     private Float credit;
+
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

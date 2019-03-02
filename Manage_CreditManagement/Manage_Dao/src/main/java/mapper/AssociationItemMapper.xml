@@ -49,6 +49,15 @@
       <if test="associationLevel != null and associationLevel != ''">
         AND  associationlevel = #{associationLevel}
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
   </select>
   <select id="getAssociationPageBean" parameterType="hashMap" resultType="pojo.Association">
@@ -66,7 +75,39 @@
       <if test="associationLevel != null and associationLevel != ''">
         AND  associationlevel = #{associationLevel}
       </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
+  <select id="getAssociationDownload" resultType="pojo.Association">
+    select * from association
+    <where>
+      <if test="associationTime !=null and associationTime != ''">
+        #{associationTime} = associationtime
+      </if>
+      <if test="associationName != null and associationName != ''">
+        AND  associationname = #{associationName}
+      </if>
+      <if test="associationLevel != null and associationLevel != ''">
+        AND  associationlevel = #{associationLevel}
+      </if>
+      <if test="faculty != null and faculty!=''">
+        AND  #{faculty} = facultyname
+      </if>
+      <if test="major != null and major!=''">
+        AND  #{major} = majorname
+      </if>
+      <if test="grade != null and grade!=''">
+        AND  #{grade} = gradename
+      </if>
+    </where>
   </select>
 </mapper>
