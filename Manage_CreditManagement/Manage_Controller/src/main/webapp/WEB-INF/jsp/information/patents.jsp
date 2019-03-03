@@ -291,7 +291,7 @@ ${message}
                             </button></a>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-sm btn-primary" id="importButton">
+                        <button type="button" onclick="importInformation();" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
                                 项目信息导出
                             </span>
@@ -310,7 +310,7 @@ ${message}
                                 <label class="col-sm-1 control-label no-padding-right"  for="faculty">
                                     学院
                                 </label>
-                                <div class="col-sm-1">
+                                <div class="col-sm-2">
                                     <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
                                     </select>
                                 </div>
@@ -357,9 +357,7 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
@@ -615,6 +613,25 @@ ${message}
                 alert("获取专业列表失败!");
             }
         });
+    }
+    function importInformation()
+    {
+        var faculty=$("#faculty").val();
+        var  major=$("#major").val();
+        if (major==null)
+        {
+            major="";
+        }
+
+        var grade=$("#grade").val();
+        if(grade==null)
+        {
+            grade="";
+        }
+        var  patentsType=$("#patentsType").val();
+        var  date=$("#date").val();
+        var url="patentsDownload.action?"+"faculty="+faculty+"&"+"major="+major+"&"+"grade="+grade+"&"+"patentsType="+patentsType+"&"+"date="+date+"&"+"name=获得专利";
+        window.open(url);
     }
 </script>
 </body>

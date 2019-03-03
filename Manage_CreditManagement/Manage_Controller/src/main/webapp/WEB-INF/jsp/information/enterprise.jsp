@@ -308,7 +308,7 @@ ${message}
                                 <label class="col-sm-1 control-label no-padding-right"  for="faculty">
                                     学院
                                 </label>
-                                <div class="col-sm-1">
+                                <div class="col-sm-2">
                                     <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
                                     </select>
                                 </div>
@@ -349,9 +349,7 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.ContestItemMapper" >
+  <select id="getTotalCount" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM contestrules;
+  </select>
+  <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Contestrules">
+    SELECT
+    *
+    FROM
+    contestrules
+    limit #{start},#{pageSize};
+  </select>
+  <select id="getContestImportTotalCount" resultType="java.lang.Integer">
+    select count(*) from contesttype
+    <where>
+        <if test="contestDate !=null and contestDate != ''">
+            #{contestDate} = contesttime
+        </if>
+        <if test="contestName != null and contestName != ''">
+            AND  contesttype.contestname = #{contestName}
+        </if>
+    </where>
+</select>
+    <select id="getContestImportPageBean" parameterType="hashMap" resultType="pojo.Contesttype">
+        select * from contesttype
+        <where>
+            <if test="contestDate !=null and contestDate != ''">
+                #{contestDate} = contesttime
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  #{contestName} = contestname
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getContestTotalCount" resultType="java.lang.Integer">
+        select count(*) from contest
+        <where>
+
+            <if test="contestTime !=null and contestTime != ''">
+                #{contestTime} = contesttime
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  contestname = #{contestName}
+            </if>
+            <if test="contestRank != null and contestRank !=''">
+                AND  rank = #{contestRank}
+            </if>
+            <if test="contestLevel != null and contestLevel !=''">
+                AND  contestlevel =#{contestLevel}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+    </select>
+    <select id="getContestPageBean" parameterType="hashMap" resultType="pojo.Contest">
+        select * from contest
+        <where>
+            <if test="contestTime !=null and contestTime != ''">
+                #{contestTime} = contesttime
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  contestname = #{contestName}
+            </if>
+            <if test="contestRank != null and contestRank !=''">
+                <if test="contestRank == '一等奖,金奖'">
+                  AND  ( rank='一等奖' or rank ='金奖')
+                </if>
+                <if test="contestRank == '二等奖,银奖'">
+                    AND  ( rank='二等奖' or rank ='银奖')
+                </if>
+                <if test="contestRank == '三等奖,铜奖'">
+                    AND  ( rank='三等奖' or rank ='铜奖')
+                </if>
+                <if test="contestRank != '一等奖,金奖' and contestRank != '二等奖,银奖' and  contestRank != '三等奖,铜奖'">
+                    AND  rank=#{contestRank}
+                </if>
+            </if>
+            <if test="contestLevel != null and contestLevel !=''">
+                AND  contestlevel =#{contestLevel}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getContestDownload" resultType="pojo.Contest">
+        select * from contest
+        <where>
+            <if test="contestTime !=null and contestTime != ''">
+                #{contestTime} = contesttime
+            </if>
+            <if test="contestName != null and contestName != ''">
+                AND  contestname = #{contestName}
+            </if>
+            <if test="contestRank != null and contestRank !=''">
+                <if test="contestRank == '一等奖,金奖'">
+                    AND  ( rank='一等奖' or rank ='金奖')
+                </if>
+                <if test="contestRank == '二等奖,银奖'">
+                    AND  ( rank='二等奖' or rank ='银奖')
+                </if>
+                <if test="contestRank == '三等奖,铜奖'">
+                    AND  ( rank='三等奖' or rank ='铜奖')
+                </if>
+                <if test="contestRank != '一等奖,金奖' and contestRank != '二等奖,银奖' and  contestRank != '三等奖,铜奖'">
+                    AND  rank=#{contestRank}
+                </if>
+            </if>
+            <if test="contestLevel != null and contestLevel !=''">
+                AND  contestlevel =#{contestLevel}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+    </select>
+</mapper>

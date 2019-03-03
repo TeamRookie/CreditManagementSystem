@@ -311,7 +311,7 @@ ${message}
                                 <label class="col-sm-1 control-label no-padding-right"  for="faculty">
                                     学院
                                 </label>
-                                <div class="col-sm-1">
+                                <div class="col-sm-2">
                                     <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
                                     </select>
                                 </div>
@@ -545,7 +545,7 @@ ${message}
                 alert("获取年份列表失败!");
             }
         });
-        $.ajax({
+       /* $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getTrainContent.action",
             success: function(data)
@@ -561,7 +561,7 @@ ${message}
             error:function () {
                 alert("获取培训内容列表失败!");
             }
-        });
+        });*/
         $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getFaculty.action",

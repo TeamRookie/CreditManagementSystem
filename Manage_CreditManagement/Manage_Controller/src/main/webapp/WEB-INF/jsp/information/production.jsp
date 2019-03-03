@@ -308,7 +308,7 @@ ${message}
                                 <label class="col-sm-1 control-label no-padding-right"  for="faculty">
                                     学院
                                 </label>
-                                <div class="col-sm-1">
+                                <div class="col-sm-2">
                                     <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
                                     </select>
                                 </div>
@@ -340,7 +340,7 @@ ${message}
                                         <option value="">请选择</option>
                                         <option value="会议论文">会议论文</option>
                                         <option value="核心期刊">核心期刊</option>
-                                        <option value="一般学术刊物">一般学术刊物</option>
+                                        <option value="一般学术期刊">一般学术期刊</option>
                                         <option value="公开刊物发表">公开刊物发表</option>
                                         <option value="报纸">报纸</option>
                                         <option value="大连大学报">大连大学报</option>

@@ -34,6 +34,7 @@ public class StudentController
     @RequestMapping("/getStudent")
     public  String getStudent(Model model, Student student, Integer currentPage)
     {
+
         PageBean pageBean=studentService.getStudentPageBean(student,currentPage,pageSize);
         model.addAttribute("student",student);
         model.addAttribute("pageBean",pageBean);

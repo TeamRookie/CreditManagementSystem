@@ -17,4 +17,6 @@ public interface PatentsItemMapper
     Integer getPatentsTotalCount(@Param("studentNumber") String studentNumber,@Param("faculty")String faculty,@Param("major")String major,@Param("grade")String grade,@Param("patentsType") String patentsType);
 
     List<Patents> getPatentsPageBean(HashMap map);
+
+    List<Patents> getPatentsDownload(@Param("faculty") String faculty,@Param("major") String major,@Param("grade") String grade,@Param("patentsTime") String date, @Param("patentsType") String patentsType);
 }

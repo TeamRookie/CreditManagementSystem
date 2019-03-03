@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
-    <title>项目信息管理</title>
+    <title>用户管理</title>
 
     <meta name="description" content="Common form elements and layouts"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -254,204 +254,181 @@ ${message}
         <div class="main-content-inner">
             <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                 <ul class="breadcrumb">
-                    <li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">首页</a>
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="#">首页</a>
                     </li>
-                    <li><a href="#">查看</a></li>
-                    <li class="active"><a href="#">查看学生填写情况 </a></li>
+
+                    <li>
+                        <a href="#">项目信息管理</a>
+                    </li>
+                    <li class="active">     <a href="#">主持学术活动类</a></li>
                 </ul>
-                <!-- /.breadcrumb -->
+
             </div>
+
 
             <div class="page-content">
 
                 <div class="col-xs-12">
-                    <div class="clearfix">
-                        <div class="pull-right tableTools-container"></div>
+
+                    <div class="col-sm-1">
+                        <button type="button" class="btn btn-sm btn-primary" onclick="searchButtonClick();" id="searchButton">
+                            <span class="ace-icon fa fa-search icon-on-right bigger-110">
+                                搜索
+                            </span>
+                        </button>
                     </div>
-                    <div class="page-header">
-                        <h1>学生填写情况</h1>
+                    <div class="col-sm-1 no-padding-right">
+                        <a  class="white" href="${pageContext.request.contextPath}/getStudent.action">
+                            <button type="button" class="btn btn-sm btn-primary"  name="addButton" id="back">
+                                <span class="ace-icon fa fa-backward icon-on-right bigger-110">返回</span>
+                            </button></a>
                     </div>
+                    <div class="col-sm-1">
+                        <button onclick="importInformation();" type="button" class="btn btn-sm btn-primary" id="importButton">
+                            <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
+                                项目信息导出
+                            </span>
+                        </button>
+                    </div>
+
                 </div>
-                <!-- /.page-header -->
+
 
                 <div class="row">
-                    <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
-                        <form id="conditionFrom" class="form-horizontal" role="form"method="post">
-
-                            <div class="row">
-
-                                <div class="form-group">
-                                    <label class="col-sm-1 control-label no-padding-right">班级</label><!-- 自填  -->
-                                    <div class="col-sm-3">
-                                        <select name="undertake" id="undertake" required>
-                                            <option value="">请选择</option>
-                                        </select>
-                                        <span id="undertakeError"></span>
-                                    </div>
-
-                                    <label class="col-sm-1 control-label no-padding-right">学号</label><!-- 自填 -->
-                                    <div class="col-sm-3">
-                                        <div class="clearfix">
-                                            <input type="text" name="amount" id="amount"
-                                                   style="width: auto;" required />
-                                            <span id="amountError"></span>
-                                        </div>
-                                        <span id="amountError"></span>
-                                    </div>
-
-                                    <label class="col-sm-1 control-label no-padding-right">姓名</label><!-- 自填 -->
-                                    <div class="col-sm-3">
-                                        <div class="clearfix">
-                                            <input type="text" name="amount" id="amount"
-                                                   style="width: auto;" required />
-                                            <span id="amountError"></span>
-                                        </div>
-                                        <span id="amountError"></span>
-                                    </div>
+                    <div class="col-xs-12" id="searchForm" style="display: none">
+                        <h4 class="pink" style="height: 20px"></h4>
+                        <form class="form-horizontal" role="form"
+                              action="${pageContext.request.contextPath}/getStudent.action">
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right"  for="faculty">
+                                    学院
+                                </label>
+                                <div class="col-sm-2">
+                                    <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
+                                    </select>
                                 </div>
-
-                                <div class="space-4"></div>
-
-                                <div class="col-xs-12">
-                                    <!--右-->
-
-                                    <div class="clearfix form-actions">
-                                        <div class="col-md-offset-3 col-md-9">
-                                            <button class="btn btn-info" type="submit" id="academicButton">
-                                                <i class="ace-icon fa fa-check bigger-110"></i> 搜索
-                                            </button>
-
-                                            &nbsp; &nbsp; &nbsp;
-                                            <button class="btn" type="reset">
-                                                <i class="ace-icon fa fa-undo bigger-110"></i> 重置
-                                            </button>
-                                        </div>
-                                    </div>
-
+                                <label class="col-sm-1 control-label no-padding-right"  for="major">
+                                    专业
+                                </label>
+                                <div class="col-sm-2">
+                                    <select id="major" class="form-control" onchange="getGrade();"  name="major" readonly>
+                                    </select>
                                 </div>
-                                <script type="text/javascript">
-                                    $("#conditionFrom").submit(function () {
-                                        var form = new FormData(document.getElementById("academicFrom"));
-                                        $.ajax({
-                                            url:"${pageContext.request.contextPath}/faculty/condition.action",
-                                            type: "POST",   //提交的方法
-                                            async:true,
-                                            contentType: false,
-                                            processData: false,
-                                            data:form,// 序列化表单值
-                                            success:function(result){
-                                                if(result == 'success'){
-                                                    alert('添加成功');
-                                                    $("#centerBody").load("${pageContext.request.contextPath}/student/conditionUI.action");
-                                                }else{
-                                                    alert('添加失败');
-                                                }
-                                            },
-                                            error:function(){
-                                                alert('请求失败');
-                                                $("#centerBody").load("${pageContext.request.contextPath}/student/academicUI.action");
-                                            },
-                                            dataType:"text"
-                                        });
-                                        return false;
-                                    });
-                                </script>
+                                <label class="col-sm-1 control-label no-padding-right"  for="grade">
+                                    班级
+                                </label>
+                                <div class="col-sm-1">
+                                    <select id="grade" class="form-control"   name="grade" readonly>
+                                    </select>
+                                </div>
                             </div>
+                            <div class="form-group">
+
+
+                                <label class="col-sm-1 control-label no-padding-right " for="studentNumber">学号</label>
+                                <div class="col-sm-2">
+                                    <input  class="form-control" name="num" id="studentNumber" type="text" placeholder="学号"  />
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="studentName">姓名</label>
+
+                                <div class="col-sm-2">
+                                <input  class="form-control" name="stuname" id="studentName" type="text" placeholder="姓名"  />
+                              </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2 no-padding-top">
+                                    <button type="submit" class="btn btn-sm btn-primary ">
+                                        <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
+                                        搜索
+                                    </button>
+                                </div>
+
+                            </div>
+
                         </form>
                     </div>
-
-                    <div>
-                        <table id="dynamic-table"
-                               class="table table-striped table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th class="center">学号</th>
-                                <th class="center">姓名</th>
-                                <th class="center">班级</th>
-                                <th class="center">学分</th>
-                                <th class="center" style="width:100px;">查看成绩单</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-
-                             <C:forEach items="${pageBean.pageList}" var="item">
-                                <tr>
-                                    <td class="center">${academic.academictime}</td>
-                                    <td class="center">${academic.theme }</td>
-                                    <td class="center">${academic.address }</td>
-                                    <td class="center">${academic.undertake }</td>
-                                    <td class="center">${academic.amount }</td>
-                                    <td class="center">${academic.teachername }</td>
-                                    <td class="center">
-                                        <div class="action-buttons">
-                                            <a class="blue" href="#"onclick="delContest(${academic.id})">
-                                                <span class="label label-sm label-danger arrowed-in">删除</span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </C:forEach>
-                            </tbody>
-                        </table>
-                        <script type="text/javascript">
-                            function delContest(num){
-                                $.ajax({
-                                    url:"${pageContext.request.contextPath}/student/academicDel.action",
-                                    type: "POST",   //提交的方法
-                                    async:true,
-                                    data:{"num":num},
-                                    success:function(result){
-                                        if(result == 'success'){
-                                            alert('删除成功');
-                                            $("#centerBody").load("${pageContext.request.contextPath}/student/academicUI.action");
-                                        }else{
-                                            alert('违法操作警告!');
-                                        }
-                                    },
-                                    error:function(){
-                                        alert("请求失败");
-                                        $("#centerBody").load("${pageContext.request.contextPath}/student/academicUI.action");
-                                    },
-                                    dataType:"text"
-                                });
-                            }
-                        </script>
-                        <div class="message-footer clearfix">
-                            <div class="pull-right">
-
-                                &nbsp; &nbsp;
-                                <ul class="pagination middle">
-                                    <li><a
-                                            href="#">
-                                        <i class="ace-icon fa fa-step-backward middle"></i>
-                                    </a></li>
-
-                                    <li><a
-                                            href="#">
-                                        <i class="ace-icon fa fa-caret-left bigger-140 middle"></i>
-                                    </a></li>
-
-                                    <li><span> <input readonly="readonly"
-                                                      value="1" maxlength="3" type="text" />
-							</span></li>
-
-                                    <li><a
-                                            href="#">
-                                        <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
-                                    </a></li>
-
-                                    <li><a
-                                            href="#">
-                                        <i class="ace-icon fa fa-step-forward middle"></i>
-                                    </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+
+            </div>
+            <!-- div.dataTables_borderWrap -->
+            <div class="table-responsive">
+                <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
+                    <thead>
+                    <tr>
+                        <th class="center">学号</th>
+                        <th class="center">姓名</th>
+                        <th class="center">学院</th>
+                        <th class="center">专业</th>
+                        <th class="center">班级</th>
+                        <th class="center">总学分</th>
+                        <th class="center">操作</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <c:forEach items="${pageBean.pageList}" var="item">
+                            <tr>
+                                <td class="center">
+                                        ${item.num}
+                                </td>
+                                <td class="center">${item.stuname}</td>
+                                <td class="center">${item.facultyname}</td>
+                                <td class="center">${item.majorname}</td>
+                                <td class="center">${item.gradename}</td>
+                                <td class="center">${item.creditSum}</td>
+                                <td class="center">
+                                    <div class="hidden-sm hidden-xs action-buttons">
+                                        <a class="blue" href="${pageContext.request.contextPath}/credit.action?id=${item.num}">
+                                            <span class="label label-sm label-inverse arrowed-in">查看成绩单</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                    </c:forEach>
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="message-footer clearfix">
+                <%--<div class="pull-left"> ${orderCount} messages total</div>--%>
+
+                    <div class="pull-right">
+
+
+                        &nbsp; &nbsp;
+                        <ul class="pagination middle">
+                            <li>
+                                <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=1&num=${student.num}&faculty=${student.facultyname}&academicDepartment=${academicDepartment}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                            </li>
+
+                            <li >
+
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+
+                            </li>
+
+                            <li>
+													<span>
+														<input value="1" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+
+                            <li>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}">
+                                    <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}">
+                                    <i class="ace-icon fa fa-step-forward middle"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
             </div>
         </div>
     </div>
@@ -658,7 +635,6 @@ ${message}
         var  department=$("#academicDepartment").val();
         var  date=$("#date").val();
         var url="academicDownload.action?"+"faculty="+faculty+"&"+"major="+major+"&"+"grade="+grade+"&"+"department="+department+"&"+"date="+date+"&"+"name=主持学术活动";
-        alert(url);
         window.open(url);
     }
 </script>

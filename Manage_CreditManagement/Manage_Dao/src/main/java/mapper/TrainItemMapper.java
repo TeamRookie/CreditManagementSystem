@@ -19,5 +19,5 @@ public interface TrainItemMapper
     List<Train> getTrainPageBean(HashMap map);
     List<String> getTrainContent();
 
-    List<Train> getTrainDownload(@Param("faculty") String faculty ,@Param("major") String major,@Param("grade") String grade,@Param("date") String date,@Param("trainName") String trainContent,@Param("trainTime") String trainTime);
+    List<Train> getTrainDownload(@Param("faculty") String faculty ,@Param("major") String major,@Param("grade") String grade,@Param("date") String date,@Param("trainName") String trainName,@Param("trainTime") String trainTime);
 }
