@@ -129,4 +129,5 @@
     <select id="getAllStudioName" resultType="java.lang.String">
       select DISTINCT studioname from studiotype ;
     </select>
+
 </mapper>

@@ -17,4 +17,6 @@ public interface ScienceItemMapper
     Integer getScienceRulesTotalCount();
 
     List<Sciencerules> getScienceRulesPageBean(HashMap map);
+
+    List<Science> getScienceDownload(@Param("faculty") String faculty,@Param("major") String major,@Param("grade") String grade,@Param("scienceTime") String startTime,@Param("scienceLevel") String scienceLevel,@Param("scienceType") String scienceType);
 }

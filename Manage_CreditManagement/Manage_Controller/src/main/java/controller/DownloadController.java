@@ -137,7 +137,7 @@ public class DownloadController
                 e1.printStackTrace();
             }
 
-            String[] titles = {"时间","工作室等级","工作室名称","所属部门"};
+            String[] titles = {"时间","工作室等级","工作室名称"};
             downloadService.export(titles, out);
             return "success";
         } catch(Exception e){

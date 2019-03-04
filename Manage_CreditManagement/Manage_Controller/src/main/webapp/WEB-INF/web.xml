@@ -5,8 +5,23 @@
          version="2.5">
   <display-name>CreditManagementSystem</display-name>
   <welcome-file-list>
-    <welcome-file>index.action</welcome-file>
+    <welcome-file>login.action</welcome-file>
   </welcome-file-list>
+  <error-page>
+
+    <error-code>404</error-code>
+
+    <location>/WEB-INF/jsp/error-404.jsp</location>
+
+  </error-page>
+
+  <error-page>
+
+    <error-code>500</error-code>
+
+    <location>/WEB-INF/jsp/error-500.jsp</location>
+
+  </error-page>
   <!-- 解决post乱码 -->
   <filter>
     <filter-name>CharacterEncodingFilter</filter-name>

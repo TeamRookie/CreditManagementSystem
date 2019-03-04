@@ -67,7 +67,7 @@
             </button>
 
             <div class="navbar-header pull-left">
-                <a href="${pageContext.request.contextPath}/admin/activity.html" class="navbar-brand">
+                <a href="${pageContext.request.contextPath}/index.action" class="navbar-brand">
                     <small>
 							<i class="fa fa-leaf"></i>
                         创新学分管理系统
@@ -86,7 +86,7 @@
                             <img class="nav-user-photo" src="${pageContext.request.contextPath}/assets/images/avatars/user.jpg" alt="Jason's Photo" />
                             <span class="user-info">
 									<small>管理员</small>
-                                <input type="hidden" value="${admin.aid}" id="adminId">
+                                <input type="hidden" value="${admin.adminname}" id="adminId">
 								</span>
 
                             <i class="ace-icon fa fa-caret-down"></i>

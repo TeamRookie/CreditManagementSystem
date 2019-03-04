@@ -262,7 +262,7 @@
                         <a href="#">学分规则</a>
                     </li>
                     <li class="active">
-                        <a href="#">学生社员</a>
+                        <a href="#">学生社团</a>
                     </li>
                 </ul>
 

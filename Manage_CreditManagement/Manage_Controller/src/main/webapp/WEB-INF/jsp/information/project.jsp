@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${admin.sname}
+									${admin.adminnname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -266,7 +266,7 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">               <a href="#">暑期社会实践</a></li>
+                    <li class="active">               <a href="#">大创项目</a></li>
                 </ul>
 
             </div>

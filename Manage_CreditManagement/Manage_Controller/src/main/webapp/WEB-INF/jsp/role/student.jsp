@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${admin.sname}
+									${admin.adminname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -288,11 +288,26 @@ ${message}
                     <div class="col-sm-1">
                         <button onclick="importInformation();" type="button" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
-                                项目信息导出
+                                学生信息导出
                             </span>
                         </button>
                     </div>
-
+                    <div class="col-md-1"></div>
+                    <div class="col-sm-1">
+                        <button onclick="importInformation();" type="button" class="btn btn-sm btn-primary" id="download">
+                            <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
+                                模板下载
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-sm-1">
+                        <button onclick="importFile();" type="button" class="btn btn-sm btn-primary" id="fileImport">
+                            <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
+                                学生信息导入
+                            </span>
+                        </button>
+                    </div>
                 </div>
 
 
@@ -352,7 +367,28 @@ ${message}
 
 
             </div>
-            <!-- div.dataTables_borderWrap -->
+            <div class="row">
+            <div class="col-xs-12" id="importForm" style="display: none">
+
+                <form class="form-horizontal" role="form"
+                      action="${pageContext.request.contextPath}/associationExcelImport.action"  method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1 no-padding-top">
+                            <input id="upfile" type="file" name="upfile" >
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1 no-padding-top">
+                             <button type="submit" onclick="return checkData();" class="btn btn-sm btn-primary " >
+                                <span class="ace-icon fa fa-upload icon-on-right bigger-110 ">上传文件</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            </div>
+        <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
@@ -380,7 +416,7 @@ ${message}
                                 <td class="center">${item.creditSum}</td>
                                 <td class="center">
                                     <div class="hidden-sm hidden-xs action-buttons">
-                                        <a class="blue" href="${pageContext.request.contextPath}/credit.action?id=${item.num}">
+                                        <a class="blue" href="${pageContext.request.contextPath}/credit.action?num=${item.num}">
                                             <span class="label label-sm label-inverse arrowed-in">查看成绩单</span>
                                         </a>
                                     </div>
@@ -573,6 +609,7 @@ ${message}
     });
     function  searchButtonClick() {
         $("#searchForm").toggle();
+        $("#importForm").hide();
     }
 
     function  getMajor() {
@@ -618,24 +655,25 @@ ${message}
             }
         });
     }
-    function importInformation()
-    {
-        var faculty=$("#faculty").val();
-        var  major=$("#major").val();
-        if (major==null)
-        {
-            major="";
+    function importInformation() {
+        var faculty = $("#faculty").val();
+        var major = $("#major").val();
+        if (major == null) {
+            major = "";
         }
 
-        var grade=$("#grade").val();
-        if(grade==null)
-        {
-            grade="";
+        var grade = $("#grade").val();
+        if (grade == null) {
+            grade = "";
         }
-        var  department=$("#academicDepartment").val();
-        var  date=$("#date").val();
-        var url="academicDownload.action?"+"faculty="+faculty+"&"+"major="+major+"&"+"grade="+grade+"&"+"department="+department+"&"+"date="+date+"&"+"name=主持学术活动";
+        var department = $("#academicDepartment").val();
+        var date = $("#date").val();
+        var url = "academicDownload.action?" + "faculty=" + faculty + "&" + "major=" + major + "&" + "grade=" + grade + "&" + "department=" + department + "&" + "date=" + date + "&" + "name=主持学术活动";
         window.open(url);
+    }
+    function importFile() {
+        $("#importForm").toggle();
+        $("#searchForm").hide();
     }
 </script>
 </body>

@@ -45,7 +45,7 @@
                 AND  stunum = #{studentNumber}
             </if>
             <if test="contestName != null and contestName != ''">
-                AND  contestname = #{contestName}
+               AND  contesttime LIKE  CONCAT('${contestTime}','%')
             </if>
             <if test="contestRank != null and contestRank !=''">
                 AND  rank = #{contestRank}
@@ -68,7 +68,7 @@
         select * from contest
         <where>
             <if test="contestTime !=null and contestTime != ''">
-                #{contestTime} = contesttime
+                AND  contesttime LIKE  CONCAT('${contestTime}','%')
             </if>
             <if test="studentNumber != null and studentNumber != ''">
                 AND  stunum = #{studentNumber}

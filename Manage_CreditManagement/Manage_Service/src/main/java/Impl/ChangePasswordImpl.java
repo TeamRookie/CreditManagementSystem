@@ -66,7 +66,7 @@ public class ChangePasswordImpl implements ChangePasswordService
         int check = checkPassword(name, password);
         admin.setAdminname(name);
         admin.setPassword(newPassword);
-        admin.setRole("1");
+        admin.setRole(1);
         int updateCheck=0;
         if(check==1)
         {

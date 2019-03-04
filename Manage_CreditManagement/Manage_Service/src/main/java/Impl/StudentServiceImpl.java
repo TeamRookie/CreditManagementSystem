@@ -46,8 +46,9 @@ public class StudentServiceImpl implements StudentService
             List<Credit> creditList = new ArrayList<Credit>();
             List<Type> typeList = typeService.getAllType();
             /*获取总分*/
-            Float sum = UtilController.creditData(creditService, student.getNum(), typeList, creditList);
+            Float sum = UtilController.creditData(creditService, st.getNum(), typeList, creditList);
             st.setCreditSum(sum);
+            System.out.println(st.getNum() +"的总分是:"+sum);
         }
         pageBean.setPageList(studentList);
         return  pageBean;

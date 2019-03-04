@@ -53,18 +53,18 @@
                                 <div class="widget-main">
                                     <h4 class="header blue lighter bigger">
                                         <i class="ace-icon fa fa-coffee green"></i>
-                                        创新楼教室预约系统
+                                        创新创业学分系统
                                     </h4>
 
                                     <div class="space-6"></div>
 
                                     <span id="errorMessage" style="color:red;">${errorMessage}</span>
-                                    <form action="${pageContext.request.contextPath}/admin/login.html"
+                                    <form action="${pageContext.request.contextPath}/login.action"
                                           method="post">
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" name="aid"
+															<input type="text" class="form-control" name="adminname"
                                                                    placeholder="账号" required/>
 															<i class="ace-icon fa fa-user"></i>
 														</span>
@@ -72,7 +72,7 @@
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" name="apwd"
+															<input type="password" class="form-control" name="password"
                                                                    placeholder="密码" required/>
 															<i class="ace-icon fa fa-lock"></i>
 														</span>

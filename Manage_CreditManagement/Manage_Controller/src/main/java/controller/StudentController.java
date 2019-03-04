@@ -46,7 +46,6 @@ public class StudentController
 	public String credit(Model model, HttpSession session, String num) {
 		
 		List<Credit> creditList = new ArrayList<Credit>();
-		
 		List<Type> typeList = typeService.getAllType();
 		Student student = studentService.selectByPrimaryKey(num);
 		
@@ -54,8 +53,8 @@ public class StudentController
 		
 		model.addAttribute("creditList", creditList);
 		model.addAttribute("totalCredit", sum);
-
-		return "credit";
+        model.addAttribute("student",student);
+		return "role/credit";
 	}
 
 }

@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${admin.sname}
+									${admin.adminname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>
@@ -266,7 +266,7 @@ ${message}
                     <li>
                         <a href="#">项目信息管理</a>
                     </li>
-                    <li class="active">      <a href="#">创新创业竞赛类</a></li>
+                    <li class="active">      <a href="#">参与教师科研项目</a></li>
                 </ul>
 
             </div>
@@ -290,7 +290,7 @@ ${message}
                             </button></a>
                     </div>
                     <div class="col-sm-1">
-                        <button type="button" class="btn btn-sm btn-primary" id="importButton">
+                        <button type="button" onclick="importInformation();" class="btn btn-sm btn-primary" id="importButton">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
                                 项目信息导出
                             </span>
@@ -342,9 +342,9 @@ ${message}
                                     <select id="date" class="form-control"   name="scienceTime" readonly>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="contestLevel">课题级别</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="scienceLevel">课题级别</label>
                                 <div class="col-sm-1">
-                                    <select id="contestLevel" class="form-control"   name="scienceLevel" readonly>
+                                    <select id="scienceLevel" class="form-control"   name="scienceLevel" readonly>
                                         <option value="">请选择</option>
                                         <option value="国际">国际</option>
                                         <option value="国家">国家</option>
@@ -354,9 +354,9 @@ ${message}
                                         <option value="校级">校级</option>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="contestRank">课题类型</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="scienceType">课题类型</label>
                                 <div class="col-sm-2">
-                                    <select id="contestRank" class="form-control"   name="scienceType" readonly>
+                                    <select id="scienceType" class="form-control"   name="scienceType" readonly>
                                         <option value="">请选择</option>
                                         <option value="横向科研项目">横向科研项目</option>
                                         <option value="纵向科研项目">纵向科研项目</option>
@@ -370,9 +370,7 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
@@ -627,6 +625,27 @@ ${message}
                 alert("获取专业列表失败!");
             }
         });
+    }
+    function importInformation()
+    {
+        var faculty=$("#faculty").val();
+        var  major=$("#major").val();
+        if (major==null)
+        {
+            major="";
+        }
+
+        var grade=$("#grade").val();
+        if(grade==null)
+        {
+            grade="";
+        }
+        var  scienceLevel=$("#scienceLevel").val();
+        var  date=$("#date").val();
+        var scienceType=$("#scienceType").val();
+
+        var url="scienceDownload.action?"+"faculty="+faculty+"&"+"major="+major+"&"+"grade="+grade+"&"+"startTime="+date+"&"+"name=参与教师科研项目"+"&"+"scienceLevel="+scienceLevel+"&"+"scienceType="+scienceType;
+        window.open(url);
     }
 </script>
 </body>

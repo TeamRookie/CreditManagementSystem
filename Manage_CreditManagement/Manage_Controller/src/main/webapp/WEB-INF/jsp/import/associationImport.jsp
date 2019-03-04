@@ -74,7 +74,7 @@ ${message}
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/index.html" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     创新创业学分系统
@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${admin.sname}
+									${admin.adminname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>

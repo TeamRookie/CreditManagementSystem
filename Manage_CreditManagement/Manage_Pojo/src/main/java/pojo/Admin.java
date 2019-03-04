@@ -2,12 +2,13 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Admin implements Serializable {
+public class Admin implements Serializable
+{
     private String adminname;
 
     private String password;
 
-    private String role;
+    private Integer role;
 
     private static final long serialVersionUID = 1L;
 
@@ -27,11 +28,11 @@ public class Admin implements Serializable {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getRole() {
+    public Integer getRole() {
         return role;
     }
 
-    public void setRole(String role) {
-        this.role = role == null ? null : role.trim();
+    public void setRole(Integer role) {
+        this.role = role;
     }
 }

@@ -50,11 +50,5 @@ public class AdminController
         else
             return "fail";
     }
-    @RequestMapping("/exist")
-    public  String existSystem(HttpServletRequest request)
-    {
-        HttpSession session = request.getSession();
-        session.setAttribute("admin",null);
-        return "login";
-    }
+
 }

@@ -91,7 +91,7 @@ ${message}
                              alt="User's Photo"/>
                         <span class="user-info">
 									<small>Welcome,</small>
-									${admin.sname}
+									${admin.adminname}
 								</span>
 
                         <i class="ace-icon fa fa-caret-down"></i>

@@ -262,7 +262,7 @@
                         <a href="#">学分规则</a>
                     </li>
                     <li class="active">
-                        <a href="#">主持学术活动类</a>
+                        <a href="#">暑期社会实践</a>
                     </li>
                 </ul>
 

@@ -178,12 +178,11 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Studiotype studiotype=new Studiotype();
-            if (lo!=null&&lo.get(0)!=null&&lo.get(1)!=null&lo.get(2)!=null&&lo.get(3)!=null)
+            if (lo!=null&&lo.get(0)!=null&&lo.get(1)!=null)
             {
                 studiotype.setStudiotime(String.valueOf(lo.get(0)));
                 studiotype.setStudiolevel(String.valueOf(lo.get(1)));
                 studiotype.setStudioname(String.valueOf(lo.get(2)));
-                studiotype.setDepartment(String.valueOf(lo.get(3)));
                 studioService.addStudioType(studiotype);
             }
         }

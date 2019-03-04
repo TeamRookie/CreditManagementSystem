@@ -262,7 +262,7 @@
                         <a href="#">学分规则</a>
                     </li>
                     <li class="active">
-                        <a href="#">主持学术活动类</a>
+                        <a href="#">大学生创新工作室</a>
                     </li>
                 </ul>
 
@@ -276,7 +276,7 @@
                     </div>
                     <div class="page-header">
                         <h1>
-                            主持学术活动类
+                            大学生创新工作室
                         </h1>
                     </div>
 
