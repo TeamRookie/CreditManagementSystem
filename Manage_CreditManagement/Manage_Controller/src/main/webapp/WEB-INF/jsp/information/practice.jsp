@@ -74,7 +74,7 @@ ${message}
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/getStudent.action" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     创新创业学分系统
@@ -93,13 +93,13 @@ ${message}
 									<small>Welcome,</small>
 									${admin.adminname}
 								</span>
-
+A
                         <i class="ace-icon fa fa-caret-down"></i>
                     </a>
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
+                            <a href="${pageContext.request.contextPath}/changePassword.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
@@ -214,13 +214,7 @@ ${message}
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="">
-                        <a href="${pageContext.request.contextPath}/getFaculty.action.html">
-                            <i class="menu-icon fa fa-caret-right"></i> 学院信息管理
-                        </a>
 
-                        <b class="arrow"></b>
-                    </li>
                 </ul>
             </li>
             <li class="">

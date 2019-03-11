@@ -74,7 +74,7 @@ ${message}
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/getStudent.action" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     创新创业学分系统
@@ -99,7 +99,7 @@ ${message}
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
+                            <a href="${pageContext.request.contextPath}/changePassword.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
@@ -215,13 +215,7 @@ ${message}
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="">
-                        <a href="${pageContext.request.contextPath}/getFaculty.action.html">
-                            <i class="menu-icon fa fa-caret-right"></i> 学院信息管理
-                        </a>
 
-                        <b class="arrow"></b>
-                    </li>
                 </ul>
             </li>
             <li class="">
@@ -361,11 +355,7 @@ ${message}
                                         <option value="注册工作室">注册工作室</option>
                                     </select>
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="studioDepartment">所属部门</label>
-                                <div class="col-sm-2">
-                                    <select id="studioDepartment" class="form-control"   name="studioDepartment" readonly>
-                                    </select>
-                                </div>
+
 
                             </div>
                         </form>
@@ -562,7 +552,7 @@ ${message}
                 alert("获取年份列表失败!");
             }
         });
-        $.ajax({
+/*        $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getExistStudioDepartment.action",
             success: function(data)
@@ -578,7 +568,7 @@ ${message}
             error:function () {
                 alert("获取部门列表失败!");
             }
-        });
+        });*/
         $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getAllStudioName.action",

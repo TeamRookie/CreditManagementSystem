@@ -210,13 +210,7 @@
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="">
-                        <a href="${pageContext.request.contextPath}/getFaculty.action.html">
-                            <i class="menu-icon fa fa-caret-right"></i> 学院信息管理
-                        </a>
 
-                        <b class="arrow"></b>
-                    </li>
                 </ul>
             </li>
             <li class="">

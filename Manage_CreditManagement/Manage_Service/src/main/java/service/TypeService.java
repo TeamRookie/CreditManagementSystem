@@ -8,4 +8,7 @@ public interface TypeService
 {
     List<Type> getAllType();
 
+    int getTypeState();
+
+    int reverseTypeState();
 }

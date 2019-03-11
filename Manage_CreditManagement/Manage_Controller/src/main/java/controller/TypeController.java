@@ -21,4 +21,18 @@ public class TypeController
         List<Type> typeList = typeService.getAllType();
         return  typeList;
     }
+    @RequestMapping("/getTypeState")
+    @ResponseBody
+    public  Integer getTypeState()
+    {
+        int data=typeService.getTypeState();
+        return data;
+    }
+    @RequestMapping("/reverseTypeState")
+    @ResponseBody
+    public  Integer reverseTypeState()
+    {
+        int data=typeService.reverseTypeState();
+        return  data;
+    }
 }

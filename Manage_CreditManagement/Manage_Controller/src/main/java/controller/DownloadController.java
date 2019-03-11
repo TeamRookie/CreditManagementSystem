@@ -166,5 +166,26 @@ public class DownloadController
             return "导出信息失败";
         }
     }
+    @RequestMapping(value="/download_student")
+    public @ResponseBody
+    String downStudent(HttpServletResponse response, @RequestParam("name") String name){
+        response.setContentType("application/binary;charset=UTF-8");
+        try{
+            ServletOutputStream out=response.getOutputStream();
+            try {
+                //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xlsx", "UTF-8"));
+            } catch (UnsupportedEncodingException e1) {
+                e1.printStackTrace();
+            }
+
+            String[] titles = {"学号","姓名","身份证号","学院","专业","班级","入学日期"};
+            downloadService.export(titles, out);
+            return "success";
+        } catch(Exception e){
+            e.printStackTrace();
+            return "导出信息失败";
+        }
+    }
 }
 

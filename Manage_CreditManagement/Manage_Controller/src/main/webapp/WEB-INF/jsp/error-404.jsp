@@ -61,10 +61,10 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/admin/login.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/login.action" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
-                    创新楼教室预约系统
+                    创新创业学分系统
                 </small>
             </a>
         </div>
@@ -110,7 +110,7 @@
                                 <h3 class="lighter smaller">如果想要登录系统请点击首页，如果已经登录系统出现此页面其联系管理员</h3>
                                 <br>
                                 <hr/>
-                                <h3 class="lighter smaller">管理员QQ : 874492787 or 1115810371</h3>
+                                <h3 class="lighter smaller">管理员QQ : 874492787</h3>
                                 <br>
                                 <div>
                                     <%--<form class="form-search">--%>
@@ -153,7 +153,7 @@
                                         返回
                                     </a>
 
-                                    <a href="${pageContext.request.contextPath}/admin/login.html" class="btn btn-primary">
+                                    <a href="${pageContext.request.contextPath}/login.action" class="btn btn-primary">
                                         <i class="ace-icon fa fa-newspaper-o"></i>
                                         首页
                                     </a>

@@ -67,7 +67,7 @@
             </button>
 
             <div class="navbar-header pull-left">
-                <a href="${pageContext.request.contextPath}/index.action" class="navbar-brand">
+                <a href="${pageContext.request.contextPath}/getStudent.action" class="navbar-brand">
                     <small>
 							<i class="fa fa-leaf"></i>
                         创新学分管理系统
@@ -210,13 +210,7 @@
                             <b class="arrow"></b>
                         </li>
 
-                        <li class="">
-                            <a href="${pageContext.request.contextPath}/getFaculty.action.html">
-                                <i class="menu-icon fa fa-caret-right"></i> 学院信息管理
-                            </a>
 
-                            <b class="arrow"></b>
-                        </li>
                     </ul>
                 </li>
                 <li class="">

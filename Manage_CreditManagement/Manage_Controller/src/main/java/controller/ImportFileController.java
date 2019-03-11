@@ -77,7 +77,7 @@ public class ImportFileController
                 projecttype.setType(String.valueOf(lo.get(1)));
                 projecttype.setProjectname(String.valueOf(lo.get(2)));
                 projecttype.setProjectid(String.valueOf(lo.get(3)));
-                System.out.println("projectType = "+listob.size());
+                /*     System.out.println("projectType = "+listob.size());*/
                 projectService.addProjectType(projecttype);
             }
         }
@@ -103,8 +103,8 @@ public class ImportFileController
             if(lo!=null&&lo.get(0)!=null&&lo.get(1)!=null&&lo.get(2)!=null)
             {
                 practicetype.setPracticetime(String.valueOf(lo.get(0)));
-                practicetype.setType(String.valueOf(lo.get(1)));
-                practicetype.setPracticename(String.valueOf(lo.get(2)));
+                practicetype.setPracticename(String.valueOf(lo.get(1)));
+                practicetype.setType(String.valueOf(lo.get(2)));
                 practiceService.addPracticeType(practicetype);
             }
         }

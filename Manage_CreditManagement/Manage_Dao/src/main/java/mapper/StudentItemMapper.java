@@ -11,4 +11,6 @@ public interface StudentItemMapper
     List<Student> getStudentPageBean(HashMap map);
 
     Integer getStudentTotalCount(Student student);
+
+    List<Student> getStudentDownload(Student student);
 }

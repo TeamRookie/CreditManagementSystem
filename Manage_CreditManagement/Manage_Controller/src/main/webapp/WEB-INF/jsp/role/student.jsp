@@ -74,7 +74,7 @@ ${message}
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/student/index.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/getStudent.action" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     创新创业学分系统
@@ -99,10 +99,18 @@ ${message}
 
                     <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="${pageContext.request.contextPath}/changePasswordById.action">
+                            <a href="${pageContext.request.contextPath}/changePassword.action">
                                 <i class="ace-icon fa fa-cog"></i>
                                 修改密码
                             </a>
+                        </li>
+                        <li>
+                            <a onclick="reverseType();">
+                                <i class="ace-icon fa fa-github-alt"></i>
+                                学生状态
+                                <span id="systemState"></span>
+                            </a>
+
                         </li>
                         <li>
                             <a href="${pageContext.request.contextPath}/exist.action">
@@ -211,13 +219,7 @@ ${message}
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="">
-                        <a href="${pageContext.request.contextPath}/getFaculty.action.html">
-                            <i class="menu-icon fa fa-caret-right"></i> 学院信息管理
-                        </a>
 
-                        <b class="arrow"></b>
-                    </li>
                 </ul>
             </li>
             <li class="">
@@ -260,9 +262,9 @@ ${message}
                     </li>
 
                     <li>
-                        <a href="#">项目信息管理</a>
+                        <a href="#">用户管理</a>
                     </li>
-                    <li class="active">     <a href="#">主持学术活动类</a></li>
+                    <li class="active">     <a href="#">学生信息管理</a></li>
                 </ul>
 
             </div>
@@ -294,7 +296,7 @@ ${message}
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-sm-1">
-                        <button onclick="importInformation();" type="button" class="btn btn-sm btn-primary" id="download">
+                        <button onclick="download();" type="button" class="btn btn-sm btn-primary" id="download">
                             <span class="ace-icon fa fa-outdent icon-on-right bigger-110">
                                 模板下载
                             </span>
@@ -321,21 +323,21 @@ ${message}
                                     学院
                                 </label>
                                 <div class="col-sm-2">
-                                    <select id="faculty" class="form-control"  onchange="getMajor();" name="faculty" readonly>
+                                    <select id="faculty" class="form-control"  onchange="getMajor();" name="facultyname" readonly>
                                     </select>
                                 </div>
                                 <label class="col-sm-1 control-label no-padding-right"  for="major">
                                     专业
                                 </label>
                                 <div class="col-sm-2">
-                                    <select id="major" class="form-control" onchange="getGrade();"  name="major" readonly>
+                                    <select id="major" class="form-control" onchange="getGrade();"  name="majorname" readonly>
                                     </select>
                                 </div>
                                 <label class="col-sm-1 control-label no-padding-right"  for="grade">
                                     班级
                                 </label>
-                                <div class="col-sm-1">
-                                    <select id="grade" class="form-control"   name="grade" readonly>
+                                <div class="col-sm-2">
+                                    <select id="grade" class="form-control"   name="gradename" readonly>
                                     </select>
                                 </div>
                             </div>
@@ -351,7 +353,13 @@ ${message}
                                 <div class="col-sm-2">
                                 <input  class="form-control" name="stuname" id="studentName" type="text" placeholder="姓名"  />
                               </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="date">时间</label>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="studentname" readonly>
+                                    </select>
+                                </div>
                                 <div class="col-sm-1"></div>
+
                                 <div class="col-sm-2 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
                                         <span class="ace-icon fa fa-search icon-on-right bigger-150 "></span>
@@ -371,7 +379,7 @@ ${message}
             <div class="col-xs-12" id="importForm" style="display: none">
 
                 <form class="form-horizontal" role="form"
-                      action="${pageContext.request.contextPath}/associationExcelImport.action"  method="post" enctype="multipart/form-data">
+                      action="${pageContext.request.contextPath}/studentImport.action"  method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-1 no-padding-top">
@@ -419,6 +427,9 @@ ${message}
                                         <a class="blue" href="${pageContext.request.contextPath}/credit.action?num=${item.num}">
                                             <span class="label label-sm label-inverse arrowed-in">查看成绩单</span>
                                         </a>
+                                        <a  class="blue" href="${pageContext.request.contextPath}/deleteStudent.action?num=${item.num}">
+                                            <span class="label label-sm label-danger arrowed-in">删除</span>
+                                        </a>
                                     </div>
                                 </td>
                             </tr>
@@ -437,12 +448,12 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
-                                <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=1&num=${student.num}&faculty=${student.facultyname}&academicDepartment=${academicDepartment}"><i class="ace-icon fa fa-step-backward middle"></i></a>
+                                <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=1&num=${student.num}&facultyname=${student.facultyname}&majorname=${student.majorname}&gradename=${student.gradename}&stuname=${student.stuname}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
                             <li >
 
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage-1}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
+                                <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=${pageBean.currentPage-1}&num=${student.num}&facultyname=${student.facultyname}&majorname=${student.majorname}&gradename=${student.gradename}&stuname=${student.stuname}"> <i class="ace-icon fa fa-caret-left bigger-140 middle"></i> </a>
 
                             </li>
 
@@ -453,13 +464,13 @@ ${message}
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.currentPage+1}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}">
+                                <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=${pageBean.currentPage+1}&num=${student.num}&facultyname=${student.facultyname}&majorname=${student.majorname}&gradename=${student.gradename}&stuname=${student.stuname}">
                                     <i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/academic.action?currentPage=${pageBean.totalPage}&studentNumber=${studentNumber}&academicTime=${academicTime}&academicDepartment=${academicDepartment}">
+                                <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=${pageBean.totalPage}&num=${student.num}&facultyname=${student.facultyname}&majorname=${student.majorname}&gradename=${student.gradename}&stuname=${student.stuname}">
                                     <i class="ace-icon fa fa-step-forward middle"></i>
                                 </a>
                             </li>
@@ -513,6 +524,23 @@ ${message}
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
     $(function(){
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/getTypeState.action",
+            success: function(data)
+            {
+                if (data==1)
+                {
+                    $("#systemState").html("开");
+                }
+                else
+                    $("#systemState").html("关");
+
+            },
+            error:function () {
+                alert("获取填写状态失败!");
+            }
+        });
         $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getType.action",
@@ -666,14 +694,41 @@ ${message}
         if (grade == null) {
             grade = "";
         }
-        var department = $("#academicDepartment").val();
+        var num=$("#studentNumber").val();
+        var stuname=$("#studentName").val();
         var date = $("#date").val();
-        var url = "academicDownload.action?" + "faculty=" + faculty + "&" + "major=" + major + "&" + "grade=" + grade + "&" + "department=" + department + "&" + "date=" + date + "&" + "name=主持学术活动";
+        var url = "studentDownload.action?" + "facultyname=" + faculty + "&" + "majorname=" + major + "&" + "gradename=" + grade + "&" + "stuname=" + stuname + "&" + "num=" + num + "&" + "name=学生表"+"&"+"studenttime="+date;
         window.open(url);
     }
     function importFile() {
         $("#importForm").toggle();
         $("#searchForm").hide();
+    }
+
+    function download(){
+        var url="download_student.action?id=10&name=学生信息导入";
+        window.open(url);
+    }
+    function  reverseType() {
+        $.ajax({
+            type: "POST",
+            url: "${pageContext.request.contextPath}/reverseTypeState.action",
+            success: function(data)
+            {
+                if (data==1)
+                {
+                    $("#systemState").html("开");
+                }
+               if (data==0)
+               {
+                   $("#systemState").html("关");
+               }
+                alert("修改填写状态成功")
+            },
+            error:function () {
+                alert("修改填写状态失败!");
+            }
+        });
     }
 </script>
 </body>

@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="mapper.StudentItemMapper" >
-    <resultMap id="BaseResultMap" type="pojo.Student" >
-        <id column="num" property="num" jdbcType="VARCHAR" />
-        <result column="stuname" property="stuname" jdbcType="VARCHAR" />
-        <result column="id" property="id" jdbcType="VARCHAR" />
-        <result column="telphone" property="telphone" jdbcType="VARCHAR" />
-        <result column="status" property="status" jdbcType="INTEGER" />
-        <result column="role" property="role" jdbcType="INTEGER" />
-        <result column="bankcard" property="bankcard" jdbcType="VARCHAR" />
-        <result column="password" property="password" jdbcType="VARCHAR" />
-        <result column="studenttime" property="studenttime" jdbcType="VARCHAR" />
-        <association property="faculty" column="facultynum" javaType="pojo.Faculty"  select="mapper.FacultyMapper.selectByPrimaryKey"/>
-        <association property="major" column="majornum" javaType="pojo.Major"  select="mapper.MajorMapper.selectByPrimaryKey"/>
-        <association property="grade" column="gradenum" javaType="pojo.Grade"  select="mapper.GradeMapper.selectByPrimaryKey"/>
-    </resultMap>
+
   <select id="getStudentTotalCount" resultType="java.lang.Integer" parameterType="pojo.Student">
     select count(*) from student
     <where>
@@ -62,4 +49,28 @@
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>
+    <select id="getStudentDownload" resultType="pojo.Student">
+        select * from student
+        <where>
+            <if test="studenttime !=null and studenttime!=''">
+                studenttime LIKE  CONCAT('${studenttime}','%')
+            </if>
+            <if test="facultyname != null and facultyname != ''">
+                AND  facultyname = #{facultyname}
+            </if>
+            <if test="majorname != null and majorname != ''">
+                AND  majorname = #{majorname}
+            </if>
+            <if test="gradename != null and gradename != ''">
+                AND  gradename = #{gradename}
+            </if>
+            <if test="num != null and num!=''">
+                AND  #{num} = num
+            </if>
+            <if test="stuname != null and stuname!=''">
+                AND  #{stuname} = stuname
+            </if>
+        </where>
+
+    </select>
 </mapper>

@@ -61,7 +61,7 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="${pageContext.request.contextPath}/admin/login.html" class="navbar-brand">
+            <a href="${pageContext.request.contextPath}/login.action" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     创新楼教室预约系统
@@ -116,7 +116,7 @@
                                 <div class="space"></div>
 
                                 <div>
-                                    <h4 class="lighter smaller">管理员QQ : 874492787 or 1115810371</h4>
+                                    <h4 class="lighter smaller">管理员QQ : 874492787</h4>
 
                                     <ul class="list-unstyled spaced inline bigger-110 margin-15">
                                         <li>
@@ -140,7 +140,7 @@
                                         返回
                                     </a>
 
-                                    <a href="${pageContext.request.contextPath}/admin/login.html" class="btn btn-primary">
+                                    <a href="${pageContext.request.contextPath}/login.action" class="btn btn-primary">
                                         <i class="ace-icon fa fa-newspaper-o"></i>
                                         首页
                                     </a>
