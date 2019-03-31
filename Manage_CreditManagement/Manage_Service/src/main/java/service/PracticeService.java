@@ -12,7 +12,7 @@ public interface PracticeService
     List<Practicerules> getPracticeRules();
     PageBean getPageBean(Integer pageSize, Integer currentPage);
 
-    PageBean getPracticeImportPageBean(String practiceTime, String practiceName, Integer currentPage, Integer pageSize);
+    PageBean getPracticeImportPageBean(String practiceTime, String practiceName, String practiceType, String practiceLevel, String practiceScore, Integer currentPage, Integer pageSize);
 
     void addPracticeType(Practicetype practicetype);
 

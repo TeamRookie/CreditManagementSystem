@@ -49,7 +49,7 @@ public class ImportFileController
             List<Object> lo = listob.get(i);
             if(lo!=null&&lo.size()==2&&lo.get( 0 )!=null&&lo.get( 1 )!=null)
             {
-                contestService.addContestType(String.valueOf(lo.get(0)), String.valueOf(lo.get(1)));
+                contestService.addContestType(String.valueOf(lo.get(0)).replaceAll( ".00","" ), String.valueOf(lo.get(1)));
             }
         }
         return "redirect:contestImport.action";
@@ -73,13 +73,13 @@ public class ImportFileController
             Projecttype projecttype=new Projecttype();
             if(lo!=null&&lo.size()==6&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null&&lo.get( 4 )!=null&&lo.get( 5) !=null)
             {
-                projecttype.setProjecttime(String.valueOf(lo.get(0)));
+                projecttype.setProjecttime(String.valueOf(lo.get(0)).replaceAll( ".00","" ));
                 projecttype.setType(String.valueOf(lo.get(1)));
                 projecttype.setProjectname(String.valueOf(lo.get(2)));
                 projecttype.setProjectid(String.valueOf(lo.get(3)));
                 projecttype.setProjectlevel( String.valueOf( lo.get( 4 ) ) );
                 projecttype.setScore( String.valueOf( lo.get( 5 ) ) );
-                /*     System.out.println("projectType = "+listob.size());*/
+                     System.out.println("projectType = "+listob.size());
                 projectService.addProjectType(projecttype);
             }
         }
@@ -102,13 +102,14 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Practicetype practicetype=new Practicetype();
-            if(lo!=null&&lo.size()==5&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null&&lo.get( 4 )!=null)
+            if(lo!=null&&lo.size()==6&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null&&lo.get( 4 )!=null)
             {
-                practicetype.setPracticetime(String.valueOf(lo.get(0)));
+                practicetype.setPracticetime(String.valueOf(lo.get(0)).replaceAll( ".00","" ));
                 practicetype.setPracticename(String.valueOf(lo.get(1)));
                 practicetype.setType(String.valueOf(lo.get(2)));
                 practicetype.setPracticelevel( String.valueOf( lo.get( 3 ) ) );
                 practicetype.setScore( String.valueOf( lo.get( 4 ) ) );
+
                 practiceService.addPracticeType(practicetype);
             }
         }
@@ -134,7 +135,7 @@ public class ImportFileController
 
             if(lo!=null&&lo.size()==3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
             {
-                    associationtype.setAssociationtime(String.valueOf(lo.get(0)));
+                    associationtype.setAssociationtime(String.valueOf(lo.get(0)).replaceAll( ".00","" ));
                     associationtype.setAssociationname(String.valueOf(lo.get(1)));
                     associationtype.setAssociationlevel(String.valueOf(lo.get(2)));
                     associationService.addAssociationType(associationtype);
@@ -161,7 +162,7 @@ public class ImportFileController
             List<Object> lo = listob.get(i);
             if (lo.size()==1&&lo.get(0)!=null)
             {
-                credentialService.addCredentialType(String.valueOf(lo.get(0)));
+                credentialService.addCredentialType(String.valueOf(lo.get(0)).replaceAll( ".00","" ));
             }
 
         }
@@ -186,7 +187,7 @@ public class ImportFileController
             Studiotype studiotype=new Studiotype();
             if (lo!=null&&lo.size()==3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
             {
-                studiotype.setStudiotime(String.valueOf(lo.get(0)));
+                studiotype.setStudiotime(String.valueOf(lo.get(0)).replaceAll( ".00","" ));
                 studiotype.setStudiolevel(String.valueOf(lo.get(1)));
                 studiotype.setStudioname(String.valueOf(lo.get(2)));
                 studioService.addStudioType(studiotype);
@@ -213,7 +214,7 @@ public class ImportFileController
             List<Object> lo = listob.get(i);
             if(lo!=null&&lo.size()==2&&lo.get(0)!=null&&lo.get(1)!=null)
             {
-                trainService.addTrainImport(String.valueOf(lo.get(0)),String.valueOf(lo.get(1)));
+                trainService.addTrainImport(String.valueOf(lo.get(0)).replaceAll( ".00","" ),String.valueOf(lo.get(1)));
             }
 
         }

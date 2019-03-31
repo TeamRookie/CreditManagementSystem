@@ -50,18 +50,21 @@ public class PracticeController
         return  "information/practice";
     }
     @RequestMapping("/practiceImport")
-    public  String getPracticeImport(Model model,String practiceTime,String practiceName,Integer currentPage)
+    public  String getPracticeImport(Model model,String practiceTime,String practiceName,Integer currentPage,String practiceType,String practiceLevel,String practiceScore)
     {
-        PageBean pageBean = practiceService.getPracticeImportPageBean(practiceTime, practiceName, currentPage, pageSize);
+        PageBean pageBean = practiceService.getPracticeImportPageBean(practiceTime, practiceName,practiceType,practiceLevel,practiceScore, currentPage, pageSize);
         model.addAttribute("pageBean",pageBean);
         model.addAttribute("practiceName",practiceName);
         model.addAttribute("practiceTime",practiceTime);
+        model.addAttribute( "practiceLevel",practiceLevel );
+        model.addAttribute( "practiceType",practiceType );
+        model.addAttribute( "practiceScore",practiceScore );
         return "import/practiceImport";
     }
     @RequestMapping(value = "/addPracticeType",method = RequestMethod.POST)
     public  String addPracticeType(Practicetype practicetype)
     {
-        if(practicetype!=null&&practicetype.getPracticename()!=null&&!practicetype.getPracticename().isEmpty()&&practicetype.getPracticetime()!=null&&!practicetype.getPracticetime().isEmpty()&&practicetype.getType()!=null&&!practicetype.getType().isEmpty())
+        if(practicetype!=null&&practicetype.getPracticename()!=null&&!practicetype.getPracticename().isEmpty()&&practicetype.getPracticetime()!=null&&!practicetype.getPracticetime().isEmpty()&&practicetype.getType()!=null&&!practicetype.getType().isEmpty()&&!practicetype.getPracticelevel().isEmpty()&&!practicetype.getScore().isEmpty())
         {
             practiceService.addPracticeType(practicetype);
         }

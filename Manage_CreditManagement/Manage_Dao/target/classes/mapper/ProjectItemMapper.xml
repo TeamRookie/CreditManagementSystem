@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.ProjectItemMapper" >
+  <select id="getTotalCount" resultType="java.lang.Integer">
+    select count(*) from projectrules;
+  </select>
+  <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Projectrules">
+    select * from projectrules limit #{start},#{pageSize};
+  </select>
+  <select id="getProjectImportTotalCount" resultType="java.lang.Integer">
+    select count(*) from projecttype
+    <where>
+      <if test="projectTime !=null and projectTime != ''">
+        #{projectTime} = projecttime
+      </if>
+      <if test="projectName != null and projectName != ''">
+        AND  #{projectName} = projectname
+      </if>
+    </where>
+  </select>
+  <select id="getProjectImportPageBean" parameterType="hashMap" resultType="pojo.Projecttype">
+    select * from projecttype
+    <where>
+      <if test="projectTime !=null and projectTime != ''">
+        #{projectTime} = projecttime
+      </if>
+      <if test="projectName != null and projectName != ''">
+        AND  #{projectName} = projectname
+      </if>
+    </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
+  <select id="getProjectTotalCount" resultType="java.lang.Integer">
+    select count(*) from project
+    <where>
+      <if test="projectTime !=null and projectTime != ''">
+        #{projectTime} = projecttime
+      </if>
+      <if test="studentNumber !=null and studentNumber != ''">
+       AND #{studentNumber} = stunum
+      </if>
+      <if test="projectType !=null and projectType != ''">
+       AND #{projectType} = type
+      </if>
+      <if test="projectId !=null and projectId != ''">
+        AND  #{projectId} = projectid
+      </if>
+      <if test="projectLevel !=null and projectLevel != ''">
+       AND #{projectLevel} = projectlevel
+      </if>
+      <if test="projectScore !=null and projectScore != ''">
+        AND #{projectScore} = score
+      </if>
+        <if test="faculty != null and faculty!=''">
+            AND  #{faculty} = facultyname
+        </if>
+        <if test="major != null and major!=''">
+            AND  #{major} = majorname
+        </if>
+        <if test="grade != null and grade!=''">
+            AND  #{grade} = gradename
+        </if>
+    </where>
+  </select>
+    <select id="getProjectDownload" resultType="pojo.Project">
+        select * from project
+        <where>
+            <if test="projectTime !=null and projectTime != ''">
+                #{projectTime} = projecttime
+            </if>
+            <if test="projectType !=null and projectType != ''">
+                AND #{projectType} = type
+            </if>
+            <if test="projectId !=null and projectId != ''">
+                AND  #{projectId} = projectid
+            </if>
+            <if test="projectLevel !=null and projectLevel != ''">
+                AND #{projectLevel} = projectlevel
+            </if>
+            <if test="projectScore !=null and projectScore != ''">
+                AND #{projectScore} = score
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+    </select>
+  <select id="getProjectPageBean" parameterType="hashMap" resultType="pojo.Project">
+    select * from project
+   <where>
+    <if test="projectTime !=null and projectTime != ''">
+      #{projectTime} = projecttime
+    </if>
+
+    <if test="studentNumber !=null and studentNumber != ''">
+      AND #{studentNumber} = stunum
+    </if>
+    <if test="projectType !=null and projectType != ''">
+     AND #{projectType} = type
+    </if>
+    <if test="projectId !=null and projectId != ''">
+      AND  #{projectId} = projectid
+    </if>
+    <if test="projectLevel !=null and projectLevel != ''">
+     AND  #{projectLevel} = projectlevel
+    </if>
+    <if test="projectScore !=null and projectScore != ''">
+      AND  #{projectScore} = score
+    </if>
+       <if test="faculty != null and faculty!=''">
+           AND  #{faculty} = facultyname
+       </if>
+       <if test="major != null and major!=''">
+           AND  #{major} = majorname
+       </if>
+       <if test="grade != null and grade!=''">
+           AND  #{grade} = gradename
+       </if>
+  </where>
+    limit #{pageBean.start},#{pageBean.pageSize}
+  </select>
+</mapper>

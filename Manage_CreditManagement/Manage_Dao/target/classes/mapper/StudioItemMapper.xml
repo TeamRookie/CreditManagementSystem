@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.StudioItemMapper" >
+  <select id="getTotalCount" resultType="java.lang.Integer">
+    select COUNT(*) from studiorules ;
+  </select>
+  <select id="getPageBean" parameterType="pojo.PageBean" resultType="pojo.Studiorules">
+    SELECT
+    *
+    FROM
+    studiorules
+    limit #{start},#{pageSize}
+  </select>
+    <select id="getStudioImportTotalCount" resultType="java.lang.Integer">
+        select count(*) from studiotype
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+        </where>
+    </select>
+    <select id="getStudioImportPageBean" parameterType="hashMap" resultType="pojo.Studiotype">
+        select * from studiotype
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+            <if test="studioTime != null and studioTime != ''">
+                AND  studioTime = #{studiotime}
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getStudioTotalCount" resultType="java.lang.Integer">
+        select count(*) from studio
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+            <if test="studioTime != null and studioTime != ''">
+                AND  studiotime = #{studioTime}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+    </select>
+    <select id="getStudioDownload" resultType="pojo.Studio">
+        select * from studio
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+            <if test="studioTime != null and studioTime != ''">
+                AND  studiotime = #{studioTime}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+    </select>
+    <select id="getStudioPageBean" parameterType="hashMap" resultType="pojo.Studio">
+        select * from studio
+        <where>
+            <if test="studioName !=null and studioName != ''">
+                #{studioName} = studioname
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND  stunum = #{studentNumber}
+            </if>
+            <if test="studioLevel != null and studioLevel != ''">
+                AND  studiolevel = #{studioLevel}
+            </if>
+            <if test="studioDepartment != null and studioDepartment != ''">
+                AND  department = #{studioDepartment}
+            </if>
+            <if test="studioTime != null and studioTime != ''">
+                AND  studiotime = #{studioTime}
+            </if>
+            <if test="faculty != null and faculty!=''">
+                AND  #{faculty} = facultyname
+            </if>
+            <if test="major != null and major!=''">
+                AND  #{major} = majorname
+            </if>
+            <if test="grade != null and grade!=''">
+                AND  #{grade} = gradename
+            </if>
+        </where>
+        limit #{pageBean.start},#{pageBean.pageSize}
+    </select>
+    <select id="getAllStudioName" resultType="java.lang.String">
+      select DISTINCT studioname from studiotype ;
+    </select>
+
+</mapper>

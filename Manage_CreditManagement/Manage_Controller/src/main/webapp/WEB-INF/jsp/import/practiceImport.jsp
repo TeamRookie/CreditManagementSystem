@@ -315,7 +315,7 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/practiceImport.action" method="post">
                             <div class="form-group">
-                                <label class="col-sm-2 control-label no-padding-right"  for="name">
+                                <label class="col-sm-1 control-label no-padding-right"  for="name">
                                     项目名称
                                 </label>
                                 <div class="col-sm-2">
@@ -364,6 +364,8 @@ ${message}
                                         <option value="综合">综合</option>
                                     </select>
                                 </div>
+
+
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-1 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
@@ -372,6 +374,37 @@ ${message}
                                     </button>
                                 </div>
                             </div>
+                            <div class="form-group">
+
+                                <label class="col-sm-1 control-label no-padding-right " for="practiceType">项目类别</label>
+                                <div class="col-sm-1">
+                                    <select id="practiceType" class="form-control"   name="practicetype" readonly>
+
+                                        <option value="调研">调研</option>
+                                        <option value="服务">服务</option>
+                                        <option value="综合">综合</option>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="practiceLevel">项目级别</label>
+                                <div class="col-sm-2">
+                                    <select id="practiceLevel" class="form-control"   name="practicelevel" readonly>
+
+                                        <option value="国家级">国家级</option>
+                                        <option value="省级">省级</option>
+                                        <option value="市级">市级</option>
+                                        <option value="校级">校级</option>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="practiceScore">结题成绩</label>
+                                <div class="col-sm-2">
+                                    <select id="practiceScore" class="form-control"   name="score" readonly>
+
+                                        <option value="结题合格">结题合格</option>
+                                        <option value="结题优秀">结题优秀</option>
+                                    </select>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                     <div class="col-xs-12" id="importForm" style="display: none">
@@ -404,6 +437,8 @@ ${message}
                         <th class="center">项目时间</th>
                         <th class="center">项目名称</th>
                         <th class="center">项目类型</th>
+                        <th class="center">项目级别</th>
+                        <th class="center">结题成绩e</th>
                         <th class="center">操作</th>
                     </tr>
                     </thead>
@@ -414,7 +449,9 @@ ${message}
                                         ${item.practicetime}
                                 </td>
                                 <td class="center">${item.practicename}</td>
-                                <td class="center">${item.type}</td>
+                                <th class="center">${item.type}</th>
+                                <th class="center">${item.practicelevel}</th>
+                                <td class="center">${item.score}</td>
                                 <td class="center">
                                     <div class="hidden-sm hidden-xs action-buttons">
                                             <a class="blue" href="${pageContext.request.contextPath}/deletePracticeType.action?id=${item.id}">

@@ -49,7 +49,7 @@ public class PracticeServiceImpl implements PracticeService
     }
 
     @Override
-    public PageBean getPracticeImportPageBean(String practiceTime, String practiceName, Integer currentPage, Integer pageSize)
+    public PageBean getPracticeImportPageBean(String practiceTime, String practiceName, String practiceType, String practiceLevel, String practiceScore, Integer currentPage, Integer pageSize)
     {
         Integer totalCount=0;
         totalCount=practiceItemMapper.getPracticeImportTotalCount(practiceTime,practiceName);
@@ -60,6 +60,9 @@ public class PracticeServiceImpl implements PracticeService
         map.put("pageBean",pageBean);
         map.put("practiceName",practiceName);
         map.put("practiceTime",practiceTime);
+        map.put( "practiceLevel",practiceLevel );
+        map.put( "practiceScore",practiceScore );
+        map.put( "practiceType",practiceTime );
         List<Practicetype> practiceTypeList = practiceItemMapper.getPracticeImportPageBean(map);
         pageBean.setPageList(practiceTypeList);
         return  pageBean;
