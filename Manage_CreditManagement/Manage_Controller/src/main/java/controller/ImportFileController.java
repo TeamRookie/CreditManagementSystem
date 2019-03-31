@@ -47,7 +47,7 @@ public class ImportFileController
         //该处可调用service相应方法进行数据保存到数据库中，现只对数据输出
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
-            if(lo!=null&&lo.size()>=2&&lo.get( 0 )!=null&&lo.get( 1 )!=null)
+            if(lo!=null&&lo.size()==2&&lo.get( 0 )!=null&&lo.get( 1 )!=null)
             {
                 contestService.addContestType(String.valueOf(lo.get(0)), String.valueOf(lo.get(1)));
             }
@@ -71,12 +71,14 @@ public class ImportFileController
         for (int i = 0; i <listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Projecttype projecttype=new Projecttype();
-            if(lo!=null&&lo.size()>=4&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null)
+            if(lo!=null&&lo.size()==6&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null&&lo.get( 4 )!=null&&lo.get( 5) !=null)
             {
                 projecttype.setProjecttime(String.valueOf(lo.get(0)));
                 projecttype.setType(String.valueOf(lo.get(1)));
                 projecttype.setProjectname(String.valueOf(lo.get(2)));
                 projecttype.setProjectid(String.valueOf(lo.get(3)));
+                projecttype.setProjectlevel( String.valueOf( lo.get( 4 ) ) );
+                projecttype.setScore( String.valueOf( lo.get( 5 ) ) );
                 /*     System.out.println("projectType = "+listob.size());*/
                 projectService.addProjectType(projecttype);
             }
@@ -100,11 +102,13 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Practicetype practicetype=new Practicetype();
-            if(lo!=null&&lo.size()>=3&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null)
+            if(lo!=null&&lo.size()==5&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null&&lo.get( 4 )!=null)
             {
                 practicetype.setPracticetime(String.valueOf(lo.get(0)));
                 practicetype.setPracticename(String.valueOf(lo.get(1)));
                 practicetype.setType(String.valueOf(lo.get(2)));
+                practicetype.setPracticelevel( String.valueOf( lo.get( 3 ) ) );
+                practicetype.setScore( String.valueOf( lo.get( 4 ) ) );
                 practiceService.addPracticeType(practicetype);
             }
         }
@@ -128,7 +132,7 @@ public class ImportFileController
             List<Object> lo = listob.get(i);
             Associationtype associationtype=new Associationtype();
 
-            if(lo!=null&&lo.size()>=3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
+            if(lo!=null&&lo.size()==3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
             {
                     associationtype.setAssociationtime(String.valueOf(lo.get(0)));
                     associationtype.setAssociationname(String.valueOf(lo.get(1)));
@@ -155,7 +159,7 @@ public class ImportFileController
         //该处可调用service相应方法进行数据保存到数据库中，现只对数据输出
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
-            if (lo.get(0)!=null)
+            if (lo.size()==1&&lo.get(0)!=null)
             {
                 credentialService.addCredentialType(String.valueOf(lo.get(0)));
             }
@@ -180,7 +184,7 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Studiotype studiotype=new Studiotype();
-            if (lo!=null&&lo.size()>=3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
+            if (lo!=null&&lo.size()==3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
             {
                 studiotype.setStudiotime(String.valueOf(lo.get(0)));
                 studiotype.setStudiolevel(String.valueOf(lo.get(1)));
@@ -207,7 +211,7 @@ public class ImportFileController
         //该处可调用service相应方法进行数据保存到数据库中，现只对数据输出
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
-            if(lo!=null&&lo.size()>=2&&lo.get(0)!=null&&lo.get(1)!=null)
+            if(lo!=null&&lo.size()==2&&lo.get(0)!=null&&lo.get(1)!=null)
             {
                 trainService.addTrainImport(String.valueOf(lo.get(0)),String.valueOf(lo.get(1)));
             }

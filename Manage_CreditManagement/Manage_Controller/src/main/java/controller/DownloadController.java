@@ -116,7 +116,7 @@ public class DownloadController
                 e1.printStackTrace();
             }
 
-            String[] titles = {"项目时间","项目类别","项目名称","项目编号"};
+            String[] titles = {"项目时间","项目类别","项目名称","项目编号","项目级别","结题成绩"};
             downloadService.export(titles, out);
             return "success";
         } catch(Exception e){

@@ -67,7 +67,7 @@ public class ProjectController
     @RequestMapping(value = "/addProjectType",method = RequestMethod.POST)
     public  String addProjectType(Projecttype projecttype)
     {
-        if (projecttype!=null&&projecttype.getProjectid()!=null&&projecttype.getProjectname()!=null&&projecttype.getProjecttime()!=null)
+        if (projecttype!=null&&projecttype.getProjectid()!=null&&projecttype.getProjectname()!=null&&projecttype.getProjecttime()!=null&&projecttype.getProjectlevel()!=null&&projecttype.getScore()!=null)
         {
             projectService.addProjectType(projecttype);
         }

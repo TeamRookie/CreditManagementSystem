@@ -7,131 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc24588e-d67c-42de-ae31-6645566f1f46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Manage_Controller_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Manage_Controller_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcmail_jdk14_138.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcprov_jdk14_138.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcmail_jdk14_1_38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk14_1_38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bctsp_jdk14_1_38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xhtmlrenderer_flying_saucer_core_9_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xhtmlrenderer_flying_saucer_pdf_9_0_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/CredentialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/CredentialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/FacultyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/FacultyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/resource/mybatis/SqlMapConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/resource/mybatis/SqlMapConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/contestImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/contestImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/studioImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/studioImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/trainImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/trainImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/studio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/studio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AcademicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AcademicMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AcademicrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AcademicrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AssociationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AssociationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AssociationrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AssociationrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AssociationtypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AssociationtypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ContestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ContestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ContestrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ContestrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ContesttypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ContesttypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialtypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialtypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/DepartmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/DepartmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/EnterpriseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/EnterpriseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/EnterpriserulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/EnterpriserulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/FacultyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/FacultyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/GradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/GradeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/MajorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/MajorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PatentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PatentsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PatentsrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PatentsrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticerulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticerulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProductionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProductionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProductionrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProductionrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjectrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjectrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjecttypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjecttypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/project.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AdminMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjecttypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjecttypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SafetyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SafetyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SafetyrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SafetyrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ScienceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ScienceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SciencerulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SciencerulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioItemMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudiorulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudiorulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudiotypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudiotypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudiotypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudiotypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TeacherMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TrainMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TrainMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TrainrulesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TrainrulesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TraintypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TraintypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/YearsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/YearsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Academic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Academic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Academicrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Academicrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Association.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Associationrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Associationrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Associationtype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Associationtype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Contest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Contest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Contestrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Contestrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Contesttype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Contesttype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Credential.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Credentialrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Credentialrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Credentialtype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Credentialtype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Enterprise.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Enterprise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Enterpriserules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Enterpriserules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Major.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Patents.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Patents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Patentsrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Patentsrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicerules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicerules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicetype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicetype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/PracticetypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/PracticetypeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Production.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Production.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Productionrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Productionrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projectrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projectrules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjecttypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjecttypeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjecttypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjecttypeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Safety.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Safety.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Safetyrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Safetyrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Science.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Science.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Sciencerules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Sciencerules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/StudioExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/StudioExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studiorules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studiorules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studiotype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studiotype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/StudiotypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/StudiotypeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Trainrules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Trainrules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Traintype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Traintype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Years.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Years.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/service/StudioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/service/StudioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/util/ImportExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/util/ImportExcelUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Projecttype.class" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Projecttype.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$GeneratedCriteria.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Manage_Dao/target/" />
@@ -167,95 +57,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudioServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="e#2816#2817#0" expanded="true" />
-                <element signature="e#2876#2877#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="47">
+              <caret line="381" column="103" selection-start-line="381" selection-start-column="103" selection-end-line="381" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="69" column="202" selection-start-line="69" selection-start-column="202" selection-end-line="69" selection-end-column="202" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="107" column="72" lean-forward="true" selection-start-line="107" selection-start-column="72" selection-end-line="107" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="449" column="21" selection-start-line="449" selection-start-column="21" selection-end-line="453" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/contestImport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="436" column="33" selection-start-line="436" selection-start-column="33" selection-end-line="436" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="423" column="33" selection-start-line="423" selection-start-column="33" selection-end-line="423" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="443" column="33" selection-start-line="443" selection-start-column="33" selection-end-line="443" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
-              <caret line="455" column="33" selection-start-line="455" selection-start-column="33" selection-end-line="455" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/studioImport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="465" column="33" selection-start-line="465" selection-start-column="33" selection-end-line="465" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/trainImport.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="430" column="33" selection-start-line="430" selection-start-column="33" selection-end-line="430" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/util/ImportExcelUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+              <caret line="118" column="73" selection-start-line="118" selection-start-column="73" selection-end-line="118" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -309,11 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudentItemMapper.java" />
-        <option value="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudentItemMapper.xml" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java" />
-        <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/DownloadServiceImpl.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/academic.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/association.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/contest.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/credential.jsp" />
@@ -321,7 +148,6 @@
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/patents.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/practice.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/production.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/project.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/safety.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/science.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/train.jsp" />
@@ -355,11 +181,17 @@
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/contestImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/studioImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/trainImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/util/ImportExcelUtil.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/project.jsp" />
+        <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java" />
+        <option value="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticerulesMapper.java" />
+        <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjectExample.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java" />
       </list>
     </option>
   </component>
@@ -454,7 +286,7 @@
               <item name="Manage_Controller" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -462,109 +294,8 @@
               <item name="Manage_Controller" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="pdf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Manage_Service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -577,7 +308,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554004383456" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554029940762" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="D:/SystemWork/Manage_Admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -599,8 +330,8 @@
       <recent name="controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Dao\src\main\java\mapper" />
       <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Pojo\src\main\java\pojo" />
+      <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Dao\src\main\java\mapper" />
       <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Controller\src\main\webapp\WEB-INF\jsp\role" />
     </key>
   </component>
@@ -616,7 +347,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.Manage_Controller [clean]">
+  <component name="RunManager" selected="Maven.Manage_CreditManagement [clean]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -847,10 +578,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Maven.Manage_Controller [clean]" />
-        <item itemvalue="Maven.Manage_CreditManagement [install]" />
-        <item itemvalue="Maven.Manage_Controller [install]" />
         <item itemvalue="Maven.Manage_CreditManagement [clean]" />
+        <item itemvalue="Maven.Manage_CreditManagement [install]" />
+        <item itemvalue="Maven.Manage_Controller [clean]" />
+        <item itemvalue="Maven.Manage_Controller [install]" />
         <item itemvalue="JUnit.test.test" />
       </list>
     </recent_temporary>
@@ -894,7 +625,7 @@
       <workItem from="1552908231889" duration="1328000" />
       <workItem from="1553930436486" duration="2320000" />
       <workItem from="1553958183402" duration="589000" />
-      <workItem from="1553994894963" duration="6377000" />
+      <workItem from="1553994894963" duration="10907000" />
     </task>
     <servers />
   </component>
@@ -931,7 +662,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97634000" />
+    <option name="totallyTimeSpent" value="102164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -943,9 +674,48 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.492569" visible="true" weight="0.16487935" />
+      <window_info id="Structure" order="1" sideWeight="0.507431" side_tool="true" weight="0.2600536" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5063291" side_tool="true" weight="0.25670242" />
+      <window_info id="Web" order="7" sideWeight="0.5063291" side_tool="true" weight="0.25670242" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.33144477" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32719547" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013405" side_tool="true" weight="0.33286119" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49932975" weight="0.3045326" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3286119" />
+      <window_info anchor="bottom" id="Duplicate detector" order="16" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="1" sideWeight="0.52657807" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="PlantUML" order="4" sideWeight="0.49335548" weight="0.3299356" />
+      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49335548" weight="0.26502147" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.29624665" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32908848" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.492569" visible="true" weight="0.16487935" />
       <window_info id="Structure" order="1" sideWeight="0.507431" side_tool="true" weight="0.2600536" />
       <window_info id="Designer" order="2" />
@@ -979,46 +749,7 @@
       <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49335548" weight="0.26502147" />
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.29624665" />
-      <window_info anchor="right" id="Database" order="9" weight="0.32908848" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.492569" visible="true" weight="0.31367293" />
-      <window_info id="Structure" order="1" sideWeight="0.507431" side_tool="true" weight="0.2600536" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5063291" side_tool="true" weight="0.25670242" />
-      <window_info id="Web" order="7" sideWeight="0.5063291" side_tool="true" weight="0.25670242" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.33144477" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.3286119" />
-      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49932975" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Spring" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32719547" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013405" side_tool="true" weight="0.33286119" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.49932975" visible="true" weight="0.3045326" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3286119" />
-      <window_info anchor="bottom" id="Duplicate detector" order="16" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="1" sideWeight="0.52657807" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="PlantUML" order="4" sideWeight="0.49335548" weight="0.3299356" />
-      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49335548" weight="0.26502147" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.29624665" />
+      <window_info anchor="right" id="Maven" order="8" visible="true" weight="0.29624665" />
       <window_info anchor="right" id="Database" order="9" weight="0.32908848" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
@@ -1090,150 +821,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/CreditServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/DownloadServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/EnterpriseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="147" column="19" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/FacultyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/GradeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/MajorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PatentsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="138" column="23" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="182" column="23" selection-start-line="182" selection-start-column="18" selection-end-line="182" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProductionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="148" column="23" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="60" column="2" selection-start-line="60" selection-end-line="61" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/SafetyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="132" column="23" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ScienceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="141" column="23" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/TypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/YearsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
-          <folding>
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#1855#1856#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/Interceptor/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-475">
@@ -1276,13 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1950">
           <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1399,38 +979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="449" column="21" selection-start-line="449" selection-start-column="21" selection-end-line="453" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/contestImport.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="436" column="33" selection-start-line="436" selection-start-column="33" selection-end-line="436" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="423" column="33" selection-start-line="423" selection-start-column="33" selection-end-line="423" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="443" column="33" selection-start-line="443" selection-start-column="33" selection-end-line="443" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="455" column="33" selection-start-line="455" selection-start-column="33" selection-end-line="455" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1455,10 +1007,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="423" column="33" selection-start-line="423" selection-start-column="33" selection-end-line="423" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="449" column="21" selection-start-line="449" selection-start-column="21" selection-end-line="453" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/project.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="363" column="72" lean-forward="true" selection-start-line="363" selection-start-column="72" selection-end-line="363" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1625">
+          <caret line="443" column="33" selection-start-line="443" selection-start-column="33" selection-end-line="443" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AcademicrulesMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PatentsrulesMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/CredentialrulesMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TrainMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/TypeMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ScienceMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AdminMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/SciencerulesMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticerulesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projectrules.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Project.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#1492#1493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjectrulesExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjecttypeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjectExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjecttypeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="381" column="103" selection-start-line="381" selection-start-column="103" selection-end-line="381" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="69" column="202" selection-start-line="69" selection-start-column="202" selection-end-line="69" selection-end-column="202" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
+        <state relative-caret-position="72">
+          <caret line="107" column="72" lean-forward="true" selection-start-line="107" selection-start-column="72" selection-end-line="107" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="118" column="73" selection-start-line="118" selection-start-column="73" selection-end-line="118" selection-end-column="73" />
         </state>
       </provider>
     </entry>

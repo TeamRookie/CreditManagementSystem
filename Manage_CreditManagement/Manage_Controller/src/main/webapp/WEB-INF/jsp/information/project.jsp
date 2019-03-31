@@ -382,9 +382,7 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>

@@ -372,6 +372,29 @@ ${message}
                                     <input   class="form-control" name="projectid" id="addProjectId" type="text" placeholder="项目编号" required />
                                 </div>
 
+
+
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-sm-1 control-label no-padding-right " for="projectLevel">项目级别</label>
+                                <div class="col-sm-2">
+                                    <select id="projectLevel" class="form-control"   name="projectlevel" readonly>
+
+                                        <option value="国家级">国家级</option>
+                                        <option value="省级">省级</option>
+                                        <option value="校级,校A类">校级,校A类</option>
+                                        <option value="院级,校B类">院级,校B类</option>
+                                    </select>
+                                </div>
+                                <label class="col-sm-1 control-label no-padding-right " for="score">结题成绩</label>
+                                <div class="col-sm-2">
+                                    <select id="score" class="form-control"   name="score" readonly>
+
+                                        <option value="结题合格">结题合格</option>
+                                        <option value="结题优秀">结题优秀</option>
+                                    </select>
+                                </div>
                                 <div class="col-sm-1"></div>
                                 <div class="col-sm-1 no-padding-top">
                                     <button type="submit" class="btn btn-sm btn-primary ">
@@ -415,6 +438,8 @@ ${message}
                         <th class="center">项目类别</th>
                         <th class="center">项目名称</th>
                         <th class="center">项目编号</th>
+                        <th class="center">项目级别</th>
+                        <th class="center">结题成绩</th>
                         <th class="center">操作</th>
                     </tr>
                     </thead>
@@ -427,6 +452,8 @@ ${message}
                                 <td class="center">${item.type}</td>
                                 <td class="center">${item.projectname}</td>
                                 <td class="center">${item.projectid}</td>
+                                <td class="center">${item.projectlevel}</td>
+                                <td class="center">${item.score}</td>
                                 <td class="center">
                                     <div class="hidden-sm hidden-xs action-buttons">
                                         <a class="blue" href="${pageContext.request.contextPath}/deleteProjectType.action?id=${item.id}">

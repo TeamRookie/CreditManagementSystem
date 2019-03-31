@@ -14,7 +14,7 @@ public class Projecttype implements Serializable
 
     private String projectid;
 
-    private String porjectlevel;
+    private String projectlevel;
 
     private String score;
 
@@ -60,12 +60,12 @@ public class Projecttype implements Serializable
         this.projectid = projectid == null ? null : projectid.trim();
     }
 
-    public String getPorjectlevel() {
-        return porjectlevel;
+    public String getProjectlevel() {
+        return projectlevel;
     }
 
-    public void setPorjectlevel(String porjectlevel) {
-        this.porjectlevel = porjectlevel == null ? null : porjectlevel.trim();
+    public void setProjectlevel(String projectlevel) {
+        this.projectlevel = projectlevel == null ? null : projectlevel.trim();
     }
 
     public String getScore() {
