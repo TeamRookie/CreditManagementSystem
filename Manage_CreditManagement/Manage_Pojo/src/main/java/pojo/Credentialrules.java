@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Credentialrules implements Serializable {
+public class Credentialrules implements Serializable
+{
     private Integer id;
 
     private String credentiallevel;

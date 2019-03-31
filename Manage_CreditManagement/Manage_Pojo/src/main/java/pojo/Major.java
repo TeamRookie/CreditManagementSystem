@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Major implements Serializable {
+public class Major implements Serializable
+{
     private Integer id;
 
     private String majorname;

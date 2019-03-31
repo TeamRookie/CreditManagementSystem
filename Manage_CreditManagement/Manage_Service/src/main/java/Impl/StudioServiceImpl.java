@@ -47,7 +47,7 @@ public class StudioServiceImpl implements StudioService
     }
 
     @Override
-    public PageBean getStudioImportPageBean(String studioName, String studioLevel, String studioDepartment, Integer currentPage, Integer pageSize)
+    public PageBean getStudioImportPageBean(String studioName, String studioLevel, String studioDepartment, String date,Integer currentPage, Integer pageSize)
     {
         Integer totalCount=0;
         totalCount=studioItemMapper.getStudioImportTotalCount(studioName,studioLevel,studioDepartment);
@@ -55,11 +55,13 @@ public class StudioServiceImpl implements StudioService
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
         HashMap map=new HashMap();
-        /*        System.out.println(contestDate);*/
+
         map.put("pageBean",pageBean);
         map.put("studioName",studioName);
         map.put("studioLevel",studioLevel);
         map.put("studioDepartment",studioDepartment);
+
+        map.put( "studioTime",date );
         List<Studiotype> studioTypeList = studioItemMapper.getStudioImportPageBean(map);
         pageBean.setPageList(studioTypeList);
         return pageBean;
@@ -108,7 +110,7 @@ public class StudioServiceImpl implements StudioService
     }
 
     @Override
-    public void studioExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String studioName, String studioLevel, String studioTime, String department)
+    public void studioExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String studioName, String studioLevel, String studioTime)
     {
         try{
         // 第一步，创建一个workbook，对应一个Excel文件
@@ -128,7 +130,7 @@ public class StudioServiceImpl implements StudioService
             cell.setCellValue(titles[i]);//列名1
             cell.setCellStyle(cellStyle);//列居中显示
         }
-        List<Studio> studioList = studioItemMapper.getStudioDownload(faculty,major,grade,date,studioName,studioTime,studioLevel,department);
+        List<Studio> studioList = studioItemMapper.getStudioDownload(faculty,major,grade,date,studioName,studioTime,studioLevel);
         for (int i = 0; i < studioList.size(); i++) {
             row = sheet.createRow(i+1);
             Studio studio=studioList.get(i);
@@ -146,7 +148,7 @@ public class StudioServiceImpl implements StudioService
             }
             if (studio.getMajorname()!=null)
             {
-                row.createCell(3).setCellValue(studio.getFacultyname());
+                row.createCell(3).setCellValue(studio.getMajorname());
             }
             if(studio.getGradename() !=null){
                 row.createCell(4).setCellValue(studio.getGradename());
@@ -155,25 +157,23 @@ public class StudioServiceImpl implements StudioService
             {
                 row.createCell(5).setCellValue(studio.getStudiotime());
             }
-            if(studio.getDepartment() !=null){
-                row.createCell(6).setCellValue(studio.getDepartment());
-            }
+
             if(studio.getStudioname() !=null){
-                row.createCell(7).setCellValue(studio.getStudioname());
+                row.createCell(6).setCellValue(studio.getStudioname());
             }
             if(studio.getStudiolevel() !=null){
-                row.createCell(8).setCellValue(studio.getStudiolevel());
+                row.createCell(7).setCellValue(studio.getStudiolevel());
             }
             if(studio.getTeachername() !=null){
-                row.createCell(9).setCellValue(studio.getTeachername());
+                row.createCell(8).setCellValue(studio.getTeachername());
             }
             if (studio.getResponsibility()!=null)
             {
-                row.createCell(10).setCellValue(studio.getResponsibility());
+                row.createCell(9).setCellValue(studio.getResponsibility());
             }
             if (studio.getCredit()!=null)
             {
-                row.createCell(11).setCellValue(studio.getCredit());
+                row.createCell(10).setCellValue(studio.getCredit());
             }
         }
 

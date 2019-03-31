@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Contesttype implements Serializable {
+public class Contesttype implements Serializable
+{
     private Integer id;
 
     private String contesttime;

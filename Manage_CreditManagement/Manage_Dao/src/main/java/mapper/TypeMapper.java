@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Type;
 import pojo.TypeExample;
+
+import java.util.List;
 
 public interface TypeMapper {
     int countByExample(TypeExample example);

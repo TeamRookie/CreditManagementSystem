@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Trainrules implements Serializable {
+public class Trainrules implements Serializable
+{
     private Integer id;
 
     private String rank;

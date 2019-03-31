@@ -25,7 +25,6 @@ public class LoginController
     @RequestMapping("/login")
     public String adminLogin(Admin admin, HttpSession session)
     {
-        System.out.println("admin = "+admin.getAdminname()+"        "+"admin = "+admin.getPassword());
         if ( admin.getAdminname() == null || admin.getPassword() == null || StringUtils.isEmpty(admin.getAdminname()) || StringUtils.isEmpty(admin.getPassword()))
         {
             return "login";

@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Safetyrules implements Serializable {
+public class Safetyrules implements Serializable
+{
     private Integer id;
 
     private String safetylevel;

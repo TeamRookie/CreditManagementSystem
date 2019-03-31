@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Academic;
 import pojo.AcademicExample;
+
+import java.util.List;
 
 public interface AcademicMapper {
     int countByExample(AcademicExample example);

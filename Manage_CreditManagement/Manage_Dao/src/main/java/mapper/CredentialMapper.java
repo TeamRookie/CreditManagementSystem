@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Credential;
 import pojo.CredentialExample;
+
+import java.util.List;
 
 public interface CredentialMapper {
     int countByExample(CredentialExample example);

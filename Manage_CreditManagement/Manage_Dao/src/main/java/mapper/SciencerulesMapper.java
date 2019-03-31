@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Sciencerules;
 import pojo.SciencerulesExample;
+
+import java.util.List;
 
 public interface SciencerulesMapper {
     int countByExample(SciencerulesExample example);

@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Enterpriserules;
 import pojo.EnterpriserulesExample;
+
+import java.util.List;
 
 public interface EnterpriserulesMapper {
     int countByExample(EnterpriserulesExample example);

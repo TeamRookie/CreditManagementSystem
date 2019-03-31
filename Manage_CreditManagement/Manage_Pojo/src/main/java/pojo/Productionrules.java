@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Productionrules implements Serializable {
+public class Productionrules implements Serializable
+{
     private Integer id;
 
     private String productionlevel;

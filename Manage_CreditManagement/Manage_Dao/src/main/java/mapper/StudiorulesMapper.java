@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Studiorules;
 import pojo.StudiorulesExample;
+
+import java.util.List;
 
 public interface StudiorulesMapper {
     int countByExample(StudiorulesExample example);

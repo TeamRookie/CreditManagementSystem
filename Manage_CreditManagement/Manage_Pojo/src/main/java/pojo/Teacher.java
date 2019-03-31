@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Teacher implements Serializable {
+public class Teacher implements Serializable
+{
     private String teachernum;
 
     private String teachername;

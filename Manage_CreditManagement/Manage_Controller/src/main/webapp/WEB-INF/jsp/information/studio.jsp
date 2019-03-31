@@ -374,7 +374,7 @@ ${message}
                         <th class="center">专业</th>
                         <th class="center">班级</th>
                         <th class="center">参加时间</th>
-                        <th class="center">所属部门</th>
+
                         <th class="center">工作室名称</th>
                         <th class="center">工作室等级</th>
                         <th class="center">负责指导加教师</th>
@@ -395,7 +395,7 @@ ${message}
                                 <td class="center">${item.majorname}</td>
                                 <td class="center">${item.gradename}</td>
                                 <td class="center">${item.studiotime}</td>
-                                <td class="center">${item.department}</td>
+
                                 <td class="center">${item.studioname}</td>
                                 <td class="center">${item.studiolevel}</td>
                                 <td class="center">${item.responsibility}</td>

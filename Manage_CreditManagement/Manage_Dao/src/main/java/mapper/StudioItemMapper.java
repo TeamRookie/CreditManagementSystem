@@ -22,5 +22,5 @@ public interface StudioItemMapper
 
     List<String> getAllStudioName();
 
-    List<Studio> getStudioDownload(@Param("faculty") String faculty,@Param("major") String major,@Param("grade") String grade,@Param("date") String date,@Param("studioName") String studioName,@Param("studioTime") String studioTime,@Param("studioLevel") String studioLevel,@Param("studioDepartment")String department);
+    List<Studio> getStudioDownload(@Param("faculty") String faculty, @Param("major") String major, @Param("grade") String grade, @Param("date") String date, @Param("studioName") String studioName, @Param("studioTime") String studioTime, @Param("studioLevel") String studioLevel);
 }

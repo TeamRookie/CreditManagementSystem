@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Projectrules;
 import pojo.ProjectrulesExample;
+
+import java.util.List;
 
 public interface ProjectrulesMapper {
     int countByExample(ProjectrulesExample example);

@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Patentsrules implements Serializable {
+public class Patentsrules implements Serializable
+{
     private Integer id;
 
     private String rank;

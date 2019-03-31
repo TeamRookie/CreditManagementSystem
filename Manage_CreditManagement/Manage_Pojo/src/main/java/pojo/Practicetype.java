@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Practicetype implements Serializable {
+public class Practicetype implements Serializable
+{
     private Integer id;
 
     private String practicetime;
@@ -10,6 +11,10 @@ public class Practicetype implements Serializable {
     private String practicename;
 
     private String type;
+
+    private String practicelevel;
+
+    private String score;
 
     private static final long serialVersionUID = 1L;
 
@@ -43,5 +48,21 @@ public class Practicetype implements Serializable {
 
     public void setType(String type) {
         this.type = type == null ? null : type.trim();
+    }
+
+    public String getPracticelevel() {
+        return practicelevel;
+    }
+
+    public void setPracticelevel(String practicelevel) {
+        this.practicelevel = practicelevel == null ? null : practicelevel.trim();
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score == null ? null : score.trim();
     }
 }

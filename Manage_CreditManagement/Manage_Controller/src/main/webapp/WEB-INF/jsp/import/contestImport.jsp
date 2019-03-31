@@ -431,6 +431,16 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
+													<span>
+														总条数<input value="${pageBean.totalCount}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+                            <li>
+                            	<span>
+														总页数<input value="${pageBean.totalPage}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+                            <li>
                                 <a href="${pageContext.request.contextPath}/contestImport.action?currentPage=1&contestName=${contestName}&contestDate=${contestDate}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 

@@ -315,20 +315,19 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/studioImport.action" method="post">
                             <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right " for="addDate">时间</label>
+                                <div class="col-sm-1">
+                                    <select id="date" class="form-control"   name="date" readonly>
+                                    </select>
+                                </div>
                                 <label class="col-sm-1 control-label no-padding-right"  for="name">
                                     工作室名称
                                 </label>
                                 <div class="col-sm-2">
                                     <input   class="form-control" name="studioName" id="name" type="text" placeholder="工作室名称" />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="department">
-                                    所属部门
-                                </label>
-                                <div class="col-sm-2">
-                                    <select id="department" class="form-control"   name="studioDepartment" readonly>
-                                        <option value="">请选择</option>
-                                    </select>
-                                </div>
+
+
                                 <label class="col-sm-1 control-label no-padding-right"  for="studioLevel">
                                     工作室等级
                                 </label>
@@ -356,7 +355,7 @@ ${message}
                         <form class="form-horizontal" role="form"
                               action="${pageContext.request.contextPath}/addStudioType.action" method="post">
                             <div class="form-group">
-                                <label class="col-sm-1 control-label no-padding-right " for="addDate">活动时间</label>
+                                <label class="col-sm-1 control-label no-padding-right " for="addDate">时间</label>
                                 <div class="col-sm-1">
                                     <select id="addDate" class="form-control"   name="studiotime" readonly>
                                     </select>
@@ -367,13 +366,9 @@ ${message}
                                 <div class="col-sm-2">
                                     <input required   class="form-control" name="studioname" id="studioname" type="text" placeholder="工作室名称" />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="studiodepartment">
-                                    所属部门
-                                </label>
-                                <div class="col-sm-2">
-                                    <select id="studiodepartment" class="form-control"   name="department" readonly>
-                                    </select>
-                                </div>
+
+
+
                                 <label class="col-sm-1 control-label no-padding-right"  for="studiolevel">
                                     工作室等级
                                 </label>
@@ -418,9 +413,7 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
@@ -428,7 +421,7 @@ ${message}
                         <th class="center">时间</th>
                         <th class="center">工作室名称</th>
                         <th class="center">工作室等级</th>
-                        <th class="center">所属部门</th>
+
                         <th class="center">操作</th>
                     </tr>
                     </thead>
@@ -442,9 +435,8 @@ ${message}
                                 <td class="center">
                                         ${item.studiolevel}
                                 </td>
-                                <td class="center">
-                                        ${item.department}
-                                </td>
+
+
                                 <td class="center">
                                     <div class="hidden-sm hidden-xs action-buttons">
                                         <a class="blue" href="${pageContext.request.contextPath}/deleteStudioType.action?id=${item.id}">
@@ -467,6 +459,16 @@ ${message}
 
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
+                            <li>
+													<span>
+														总条数<input value="${pageBean.totalCount}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+                            <li>
+                            	<span>
+														总页数<input value="${pageBean.totalPage}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
                             <li>
                                 <a href="${pageContext.request.contextPath}/studioImport.action?currentPage=1&studioName=${studioName}&studioLevel=${studioLevel}&studioDepartment=${studioDepartment}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
@@ -605,7 +607,7 @@ ${message}
                 alert("获取年份列表失败!");
             }
         });
-        $.ajax({
+/*        $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getExistStudioDepartment.action",
             success: function(data)
@@ -620,8 +622,8 @@ ${message}
             fail:function () {
                 alert("获取部门列表失败!");
             }
-        });
-        $.ajax({
+        });*/
+/*        $.ajax({
             type: "POST",
             url: "${pageContext.request.contextPath}/getAllDepartment.action",
             success: function(data)
@@ -636,7 +638,7 @@ ${message}
             fail:function () {
                 alert("获取部门列表失败!");
             }
-        });
+        });*/
     });
     function checkData(){
         var fileDir = $("#upfile").val();

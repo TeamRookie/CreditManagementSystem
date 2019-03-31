@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Projecttype implements Serializable {
+public class Projecttype implements Serializable
+{
     private Integer id;
 
     private String projecttime;
@@ -12,6 +13,10 @@ public class Projecttype implements Serializable {
     private String projectname;
 
     private String projectid;
+
+    private String porjectlevel;
+
+    private String score;
 
     private static final long serialVersionUID = 1L;
 
@@ -53,5 +58,21 @@ public class Projecttype implements Serializable {
 
     public void setProjectid(String projectid) {
         this.projectid = projectid == null ? null : projectid.trim();
+    }
+
+    public String getPorjectlevel() {
+        return porjectlevel;
+    }
+
+    public void setPorjectlevel(String porjectlevel) {
+        this.porjectlevel = porjectlevel == null ? null : porjectlevel.trim();
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score == null ? null : score.trim();
     }
 }

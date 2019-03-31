@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Grade;
 import pojo.GradeExample;
+
+import java.util.List;
 
 public interface GradeMapper {
     int countByExample(GradeExample example);

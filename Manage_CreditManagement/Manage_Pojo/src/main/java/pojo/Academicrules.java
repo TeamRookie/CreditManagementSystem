@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Academicrules implements Serializable {
+public class Academicrules implements Serializable
+{
     private Integer id;
 
     private Float credit;

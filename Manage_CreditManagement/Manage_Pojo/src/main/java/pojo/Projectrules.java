@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Projectrules implements Serializable {
+public class Projectrules implements Serializable
+{
     private Integer id;
 
     private String projectlevel;

@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Associationrules implements Serializable {
+public class Associationrules implements Serializable
+{
     private Integer id;
 
     private String associationlevel;

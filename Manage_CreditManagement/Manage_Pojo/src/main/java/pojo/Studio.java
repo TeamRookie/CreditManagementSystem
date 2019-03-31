@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Studio implements Serializable {
+public class Studio implements Serializable
+{
     private Integer id;
 
     private String studiotime;
@@ -24,8 +25,6 @@ public class Studio implements Serializable {
     private String majorname;
 
     private String gradename;
-
-    private String department;
 
     private String stuname;
 
@@ -119,14 +118,6 @@ public class Studio implements Serializable {
 
     public void setGradename(String gradename) {
         this.gradename = gradename == null ? null : gradename.trim();
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department == null ? null : department.trim();
     }
 
     public String getStuname() {

@@ -2,12 +2,11 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Studiotype implements Serializable {
+public class Studiotype implements Serializable
+{
     private Integer id;
 
     private String studiotime;
-
-    private String department;
 
     private String studioname;
 
@@ -29,14 +28,6 @@ public class Studiotype implements Serializable {
 
     public void setStudiotime(String studiotime) {
         this.studiotime = studiotime == null ? null : studiotime.trim();
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department == null ? null : department.trim();
     }
 
     public String getStudioname() {

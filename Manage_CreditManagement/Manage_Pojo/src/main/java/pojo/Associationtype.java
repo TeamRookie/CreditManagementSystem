@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Associationtype implements Serializable {
+public class Associationtype implements Serializable
+{
     private Integer id;
 
     private String associationtime;

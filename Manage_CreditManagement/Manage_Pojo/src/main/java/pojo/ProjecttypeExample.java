@@ -443,6 +443,146 @@ public class ProjecttypeExample {
             addCriterion("projectid not between", value1, value2, "projectid");
             return (Criteria) this;
         }
+
+        public Criteria andPorjectlevelIsNull() {
+            addCriterion("porjectlevel is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelIsNotNull() {
+            addCriterion("porjectlevel is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelEqualTo(String value) {
+            addCriterion("porjectlevel =", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelNotEqualTo(String value) {
+            addCriterion("porjectlevel <>", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelGreaterThan(String value) {
+            addCriterion("porjectlevel >", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelGreaterThanOrEqualTo(String value) {
+            addCriterion("porjectlevel >=", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelLessThan(String value) {
+            addCriterion("porjectlevel <", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelLessThanOrEqualTo(String value) {
+            addCriterion("porjectlevel <=", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelLike(String value) {
+            addCriterion("porjectlevel like", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelNotLike(String value) {
+            addCriterion("porjectlevel not like", value, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelIn(List<String> values) {
+            addCriterion("porjectlevel in", values, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelNotIn(List<String> values) {
+            addCriterion("porjectlevel not in", values, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelBetween(String value1, String value2) {
+            addCriterion("porjectlevel between", value1, value2, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andPorjectlevelNotBetween(String value1, String value2) {
+            addCriterion("porjectlevel not between", value1, value2, "porjectlevel");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIsNull() {
+            addCriterion("score is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIsNotNull() {
+            addCriterion("score is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreEqualTo(String value) {
+            addCriterion("score =", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotEqualTo(String value) {
+            addCriterion("score <>", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreGreaterThan(String value) {
+            addCriterion("score >", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreGreaterThanOrEqualTo(String value) {
+            addCriterion("score >=", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLessThan(String value) {
+            addCriterion("score <", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLessThanOrEqualTo(String value) {
+            addCriterion("score <=", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreLike(String value) {
+            addCriterion("score like", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotLike(String value) {
+            addCriterion("score not like", value, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreIn(List<String> values) {
+            addCriterion("score in", values, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotIn(List<String> values) {
+            addCriterion("score not in", values, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreBetween(String value1, String value2) {
+            addCriterion("score between", value1, value2, "score");
+            return (Criteria) this;
+        }
+
+        public Criteria andScoreNotBetween(String value1, String value2) {
+            addCriterion("score not between", value1, value2, "score");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Student implements Serializable {
+public class Student implements Serializable
+{
     private String num;
 
     private String stuname;
@@ -27,12 +28,8 @@ public class Student implements Serializable {
 
     private String studenttime;
 
-    private Float creditSum;
+    private  double creditSum;
 
-    public void setCreditSum(Float creditSum){
-        this.creditSum = creditSum;
-    }
-    public Float getCreditSum(){return creditSum;}
     private static final long serialVersionUID = 1L;
 
     public String getNum() {
@@ -129,5 +126,20 @@ public class Student implements Serializable {
 
     public void setStudenttime(String studenttime) {
         this.studenttime = studenttime == null ? null : studenttime.trim();
+    }
+
+    public double getCreditSum()
+    {
+        return creditSum;
+    }
+
+    public void setCreditSum(double creditSum)
+    {
+        this.creditSum = creditSum;
+    }
+
+    public static long getSerialVersionUID()
+    {
+        return serialVersionUID;
     }
 }

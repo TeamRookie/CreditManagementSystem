@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Production implements Serializable {
+public class Production implements Serializable
+{
     private Integer id;
 
     private String productiontime;

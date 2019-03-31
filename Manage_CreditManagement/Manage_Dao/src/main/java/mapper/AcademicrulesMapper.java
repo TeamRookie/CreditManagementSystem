@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Academicrules;
 import pojo.AcademicrulesExample;
+
+import java.util.List;
 
 public interface AcademicrulesMapper {
     int countByExample(AcademicrulesExample example);

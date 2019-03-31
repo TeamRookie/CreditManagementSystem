@@ -12,7 +12,7 @@ public interface StudioService
     List<Studiorules> getStudioRules();
     PageBean getPageBean(Integer pageSize, Integer currentPage);
 
-    PageBean getStudioImportPageBean(String studioName, String studioLevel, String studioDepartment, Integer currentPage, Integer pageSize);
+    PageBean getStudioImportPageBean(String studioName, String studioLevel, String studioDepartment,String date, Integer currentPage, Integer pageSize);
 
     void deleteStudioTypeById(Integer id);
 
@@ -22,5 +22,5 @@ public interface StudioService
 
     List<String> getAllStudioName();
 
-    void studioExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String studioName, String studioLevel, String studioTime, String department);
+    void studioExport(String[] titles, ServletOutputStream out, String faculty, String major, String grade, String date, String studioName, String studioLevel, String studioTime);
 }

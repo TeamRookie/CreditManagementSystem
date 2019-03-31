@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Safetyrules;
 import pojo.SafetyrulesExample;
+
+import java.util.List;
 
 public interface SafetyrulesMapper {
     int countByExample(SafetyrulesExample example);

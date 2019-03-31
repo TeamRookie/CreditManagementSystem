@@ -52,13 +52,15 @@ public class StudioController
     }
 
     @RequestMapping("/studioImport")
-    public String getStudioImport(Model model, String studioName, String studioLevel,String studioDepartment, Integer currentPage)
+    public String getStudioImport(Model model,String date, String studioName, String studioLevel,String studioDepartment, Integer currentPage)
     {
-        PageBean pageBean = studioService.getStudioImportPageBean(studioName, studioLevel,studioDepartment ,currentPage, pageSize);
+        PageBean pageBean = studioService.getStudioImportPageBean(studioName, studioLevel,studioDepartment ,date,currentPage, pageSize);
+
         model.addAttribute("pageBean", pageBean);
         model.addAttribute("studioName", studioName);
         model.addAttribute("studioLevel", studioLevel);
-        model.addAttribute("studioDepartment",studioDepartment);
+        model.addAttribute( "studioTime",date );
+
         return "import/studioImport";
     }
     @RequestMapping("/deleteStudioType")
@@ -70,7 +72,7 @@ public class StudioController
     @RequestMapping(value = "/addStudioType",method = RequestMethod.POST)
     public  String addStudioType(Studiotype studiotype)
     {
-        if (studiotype!=null&&studiotype.getDepartment()!=null&&!studiotype.getDepartment().isEmpty()&&studiotype.getStudiolevel()!=null&&!studiotype.getStudiolevel().isEmpty()&&studiotype.getStudioname()!=null&&!studiotype.getStudioname().isEmpty())
+        if (studiotype!=null&&studiotype.getStudiolevel()!=null&&!studiotype.getStudiolevel().isEmpty()&&studiotype.getStudioname()!=null&&!studiotype.getStudioname().isEmpty())
         {
             studioService.addStudioType(studiotype);
         }
@@ -97,8 +99,8 @@ public class StudioController
                 e1.printStackTrace();
             }
 
-            String[] titles = {"学号","姓名","学院","专业","班级","参加时间","所属部门","工作室名称","工作室等级","负责指导教师","团队职责","学分"};
-            studioService.studioExport(titles, out,faculty,major,grade,date,studioName,studioLevel,studioTime,department);
+            String[] titles = {"学号","姓名","学院","专业","班级","参加时间","工作室名称","工作室等级","负责指导教师","团队职责","学分"};
+            studioService.studioExport(titles, out,faculty,major,grade,date,studioName,studioLevel,studioTime);
             return "success";
         } catch(Exception e){
             e.printStackTrace();

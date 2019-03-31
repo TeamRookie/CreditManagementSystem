@@ -58,8 +58,8 @@ public class ProjectServiceImpl implements ProjectService
         map.put("pageBean",pageBean);
         map.put("projectName",projectName);
         map.put("projectTime",projectTime);
-        System.out.println(projectName);
-        System.out.println(totalCount);
+/*        System.out.println(projectName);
+        System.out.println(totalCount);*/
         List<Projecttype> projectTypeList = projectItemMapper.getProjectImportPageBean(map);
         pageBean.setPageList(projectTypeList);
         return  pageBean;

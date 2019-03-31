@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Major;
 import pojo.MajorExample;
+
+import java.util.List;
 
 public interface MajorMapper {
     int countByExample(MajorExample example);

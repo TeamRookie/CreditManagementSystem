@@ -93,7 +93,6 @@ public class StudentController
         }
     }
     @RequestMapping("/studentImport")
-    @ResponseBody
     public  String studentImport(HttpServletRequest request) throws Exception
     {
         MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;

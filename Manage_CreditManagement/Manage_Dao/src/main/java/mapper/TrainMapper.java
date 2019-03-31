@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Train;
 import pojo.TrainExample;
+
+import java.util.List;
 
 public interface TrainMapper {
     int countByExample(TrainExample example);

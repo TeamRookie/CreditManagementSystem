@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Practicetype;
 import pojo.PracticetypeExample;
+
+import java.util.List;
 
 public interface PracticetypeMapper {
     int countByExample(PracticetypeExample example);

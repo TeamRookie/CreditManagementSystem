@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Credentialtype implements Serializable {
+public class Credentialtype implements Serializable
+{
     private Integer id;
 
     private String information;

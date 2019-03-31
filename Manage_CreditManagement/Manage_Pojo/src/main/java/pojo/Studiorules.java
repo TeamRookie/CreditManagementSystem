@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Studiorules implements Serializable {
+public class Studiorules implements Serializable
+{
     private Integer id;
 
     private String score;

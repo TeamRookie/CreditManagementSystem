@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Practicerules implements Serializable {
+public class Practicerules implements Serializable
+{
     private Integer id;
 
     private String practicelevel;

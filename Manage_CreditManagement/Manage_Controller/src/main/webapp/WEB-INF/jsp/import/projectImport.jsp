@@ -406,9 +406,7 @@ ${message}
                 </div>
 
             </div>
-            <!-- div.table-responsive
 
-            <!-- div.dataTables_borderWrap -->
             <div class="table-responsive">
                 <table id="dynamic-table" class="table table-striped table-bordered table-hover text-nowrap">
                     <thead>
@@ -451,6 +449,16 @@ ${message}
 
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
+                            <li>
+													<span>
+														总条数<input value="${pageBean.totalCount}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+                            <li>
+                            	<span>
+														总页数<input value="${pageBean.totalPage}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
                             <li>
                                 <a href="${pageContext.request.contextPath}/projectImport.action?currentPage=1&projectName=${projectName}&projectTime=${projectTime}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>

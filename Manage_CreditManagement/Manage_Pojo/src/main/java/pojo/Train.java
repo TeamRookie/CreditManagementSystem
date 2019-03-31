@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Train implements Serializable {
+public class Train implements Serializable
+{
     private Integer id;
 
     private String trainname;

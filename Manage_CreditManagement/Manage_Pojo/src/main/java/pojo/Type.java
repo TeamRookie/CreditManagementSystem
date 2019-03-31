@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Type implements Serializable {
+public class Type implements Serializable
+{
     private Integer id;
 
     private String typename;

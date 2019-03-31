@@ -47,7 +47,7 @@ public class ImportFileController
         //该处可调用service相应方法进行数据保存到数据库中，现只对数据输出
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
-            if(lo!=null&&lo.get(0)!=null&&lo.get(1)!=null)
+            if(lo!=null&&lo.size()>=2&&lo.get( 0 )!=null&&lo.get( 1 )!=null)
             {
                 contestService.addContestType(String.valueOf(lo.get(0)), String.valueOf(lo.get(1)));
             }
@@ -71,7 +71,7 @@ public class ImportFileController
         for (int i = 0; i <listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Projecttype projecttype=new Projecttype();
-            if(lo!=null&&lo.get(0)!=null&&lo.get(1)!=null&&lo.get(2)!=null&&lo.get(3)!=null)
+            if(lo!=null&&lo.size()>=4&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null&&lo.get( 3 )!=null)
             {
                 projecttype.setProjecttime(String.valueOf(lo.get(0)));
                 projecttype.setType(String.valueOf(lo.get(1)));
@@ -100,7 +100,7 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Practicetype practicetype=new Practicetype();
-            if(lo!=null&&lo.get(0)!=null&&lo.get(1)!=null&&lo.get(2)!=null)
+            if(lo!=null&&lo.size()>=3&&lo.get( 0 )!=null&&lo.get( 1 )!=null&&lo.get( 2 )!=null)
             {
                 practicetype.setPracticetime(String.valueOf(lo.get(0)));
                 practicetype.setPracticename(String.valueOf(lo.get(1)));
@@ -127,13 +127,15 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Associationtype associationtype=new Associationtype();
-            if (lo!=null&&lo.get(0)!=null&&lo.get(1)!=null&lo.get(2)!=null)
+
+            if(lo!=null&&lo.size()>=3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
             {
-                associationtype.setAssociationtime(String.valueOf(lo.get(0)));
-                associationtype.setAssociationname(String.valueOf(lo.get(1)));
-                associationtype.setAssociationlevel(String.valueOf(lo.get(2)));
-                associationService.addAssociationType(associationtype);
+                    associationtype.setAssociationtime(String.valueOf(lo.get(0)));
+                    associationtype.setAssociationname(String.valueOf(lo.get(1)));
+                    associationtype.setAssociationlevel(String.valueOf(lo.get(2)));
+                    associationService.addAssociationType(associationtype);
             }
+
         }
         return "redirect:associationImport.action";
     }
@@ -178,7 +180,7 @@ public class ImportFileController
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
             Studiotype studiotype=new Studiotype();
-            if (lo!=null&&lo.get(0)!=null&&lo.get(1)!=null)
+            if (lo!=null&&lo.size()>=3&&lo.get( 0 )!=null&&lo.get(1)!=null&&lo.get( 2 )!=null)
             {
                 studiotype.setStudiotime(String.valueOf(lo.get(0)));
                 studiotype.setStudiolevel(String.valueOf(lo.get(1)));
@@ -205,7 +207,7 @@ public class ImportFileController
         //该处可调用service相应方法进行数据保存到数据库中，现只对数据输出
         for (int i = 0; i < listob.size(); i++) {
             List<Object> lo = listob.get(i);
-            if(lo!=null&&lo.get(0)!=null&&lo.get(1)!=null)
+            if(lo!=null&&lo.size()>=2&&lo.get(0)!=null&&lo.get(1)!=null)
             {
                 trainService.addTrainImport(String.valueOf(lo.get(0)),String.valueOf(lo.get(1)));
             }

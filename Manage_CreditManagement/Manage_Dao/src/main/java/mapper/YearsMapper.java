@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Years;
 import pojo.YearsExample;
+
+import java.util.List;
 
 public interface YearsMapper {
     int countByExample(YearsExample example);

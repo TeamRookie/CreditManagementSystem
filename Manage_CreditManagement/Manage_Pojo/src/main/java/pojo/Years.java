@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Years implements Serializable {
+public class Years implements Serializable
+{
     private Integer id;
 
     private String schoolyear;

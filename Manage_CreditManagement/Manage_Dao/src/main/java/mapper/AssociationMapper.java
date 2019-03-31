@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Association;
 import pojo.AssociationExample;
+
+import java.util.List;
 
 public interface AssociationMapper {
     int countByExample(AssociationExample example);

@@ -19,7 +19,7 @@ public class FacultyController
     public  List<Faculty> getFaculty()
     {
         List<Faculty> facultyList=facultyService.getFaculty();
-        System.out.println(facultyList.size());
+/*        System.out.println(facultyList.size());*/
         return facultyList;
     }
 }

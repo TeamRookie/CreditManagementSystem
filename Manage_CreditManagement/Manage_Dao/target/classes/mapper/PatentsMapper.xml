@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.PatentsMapper" >
+  <resultMap id="BaseResultMap" type="pojo.Patents" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="patentstype" property="patentstype" jdbcType="VARCHAR" />
+    <result column="patentsid" property="patentsid" jdbcType="VARCHAR" />
+    <result column="patentstime" property="patentstime" jdbcType="VARCHAR" />
+    <result column="proposer" property="proposer" jdbcType="VARCHAR" />
+    <result column="inventor" property="inventor" jdbcType="VARCHAR" />
+    <result column="patentsname" property="patentsname" jdbcType="VARCHAR" />
+    <result column="responsibility" property="responsibility" jdbcType="VARCHAR" />
+    <result column="stunum" property="stunum" jdbcType="VARCHAR" />
+    <result column="credit" property="credit" jdbcType="REAL" />
+    <result column="facultyname" property="facultyname" jdbcType="VARCHAR" />
+    <result column="majorname" property="majorname" jdbcType="VARCHAR" />
+    <result column="gradename" property="gradename" jdbcType="VARCHAR" />
+    <result column="stuname" property="stuname" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, patentstype, patentsid, patentstime, proposer, inventor, patentsname, responsibility, 
+    stunum, credit, facultyname, majorname, gradename, stuname, url
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.PatentsExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from patents
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from patents
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from patents
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="pojo.PatentsExample" >
+    delete from patents
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="pojo.Patents" >
+    insert into patents (id, patentstype, patentsid, 
+      patentstime, proposer, inventor, 
+      patentsname, responsibility, stunum, 
+      credit, facultyname, majorname, 
+      gradename, stuname, url
+      )
+    values (#{id,jdbcType=INTEGER}, #{patentstype,jdbcType=VARCHAR}, #{patentsid,jdbcType=VARCHAR}, 
+      #{patentstime,jdbcType=VARCHAR}, #{proposer,jdbcType=VARCHAR}, #{inventor,jdbcType=VARCHAR}, 
+      #{patentsname,jdbcType=VARCHAR}, #{responsibility,jdbcType=VARCHAR}, #{stunum,jdbcType=VARCHAR}, 
+      #{credit,jdbcType=REAL}, #{facultyname,jdbcType=VARCHAR}, #{majorname,jdbcType=VARCHAR}, 
+      #{gradename,jdbcType=VARCHAR}, #{stuname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="pojo.Patents" >
+    insert into patents
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="patentstype != null" >
+        patentstype,
+      </if>
+      <if test="patentsid != null" >
+        patentsid,
+      </if>
+      <if test="patentstime != null" >
+        patentstime,
+      </if>
+      <if test="proposer != null" >
+        proposer,
+      </if>
+      <if test="inventor != null" >
+        inventor,
+      </if>
+      <if test="patentsname != null" >
+        patentsname,
+      </if>
+      <if test="responsibility != null" >
+        responsibility,
+      </if>
+      <if test="stunum != null" >
+        stunum,
+      </if>
+      <if test="credit != null" >
+        credit,
+      </if>
+      <if test="facultyname != null" >
+        facultyname,
+      </if>
+      <if test="majorname != null" >
+        majorname,
+      </if>
+      <if test="gradename != null" >
+        gradename,
+      </if>
+      <if test="stuname != null" >
+        stuname,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="patentstype != null" >
+        #{patentstype,jdbcType=VARCHAR},
+      </if>
+      <if test="patentsid != null" >
+        #{patentsid,jdbcType=VARCHAR},
+      </if>
+      <if test="patentstime != null" >
+        #{patentstime,jdbcType=VARCHAR},
+      </if>
+      <if test="proposer != null" >
+        #{proposer,jdbcType=VARCHAR},
+      </if>
+      <if test="inventor != null" >
+        #{inventor,jdbcType=VARCHAR},
+      </if>
+      <if test="patentsname != null" >
+        #{patentsname,jdbcType=VARCHAR},
+      </if>
+      <if test="responsibility != null" >
+        #{responsibility,jdbcType=VARCHAR},
+      </if>
+      <if test="stunum != null" >
+        #{stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="credit != null" >
+        #{credit,jdbcType=REAL},
+      </if>
+      <if test="facultyname != null" >
+        #{facultyname,jdbcType=VARCHAR},
+      </if>
+      <if test="majorname != null" >
+        #{majorname,jdbcType=VARCHAR},
+      </if>
+      <if test="gradename != null" >
+        #{gradename,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="pojo.PatentsExample" resultType="java.lang.Integer" >
+    select count(*) from patents
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update patents
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.patentstype != null" >
+        patentstype = #{record.patentstype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.patentsid != null" >
+        patentsid = #{record.patentsid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.patentstime != null" >
+        patentstime = #{record.patentstime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.proposer != null" >
+        proposer = #{record.proposer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inventor != null" >
+        inventor = #{record.inventor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.patentsname != null" >
+        patentsname = #{record.patentsname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.responsibility != null" >
+        responsibility = #{record.responsibility,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stunum != null" >
+        stunum = #{record.stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.credit != null" >
+        credit = #{record.credit,jdbcType=REAL},
+      </if>
+      <if test="record.facultyname != null" >
+        facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.majorname != null" >
+        majorname = #{record.majorname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gradename != null" >
+        gradename = #{record.gradename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stuname != null" >
+        stuname = #{record.stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update patents
+    set id = #{record.id,jdbcType=INTEGER},
+      patentstype = #{record.patentstype,jdbcType=VARCHAR},
+      patentsid = #{record.patentsid,jdbcType=VARCHAR},
+      patentstime = #{record.patentstime,jdbcType=VARCHAR},
+      proposer = #{record.proposer,jdbcType=VARCHAR},
+      inventor = #{record.inventor,jdbcType=VARCHAR},
+      patentsname = #{record.patentsname,jdbcType=VARCHAR},
+      responsibility = #{record.responsibility,jdbcType=VARCHAR},
+      stunum = #{record.stunum,jdbcType=VARCHAR},
+      credit = #{record.credit,jdbcType=REAL},
+      facultyname = #{record.facultyname,jdbcType=VARCHAR},
+      majorname = #{record.majorname,jdbcType=VARCHAR},
+      gradename = #{record.gradename,jdbcType=VARCHAR},
+      stuname = #{record.stuname,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="pojo.Patents" >
+    update patents
+    <set >
+      <if test="patentstype != null" >
+        patentstype = #{patentstype,jdbcType=VARCHAR},
+      </if>
+      <if test="patentsid != null" >
+        patentsid = #{patentsid,jdbcType=VARCHAR},
+      </if>
+      <if test="patentstime != null" >
+        patentstime = #{patentstime,jdbcType=VARCHAR},
+      </if>
+      <if test="proposer != null" >
+        proposer = #{proposer,jdbcType=VARCHAR},
+      </if>
+      <if test="inventor != null" >
+        inventor = #{inventor,jdbcType=VARCHAR},
+      </if>
+      <if test="patentsname != null" >
+        patentsname = #{patentsname,jdbcType=VARCHAR},
+      </if>
+      <if test="responsibility != null" >
+        responsibility = #{responsibility,jdbcType=VARCHAR},
+      </if>
+      <if test="stunum != null" >
+        stunum = #{stunum,jdbcType=VARCHAR},
+      </if>
+      <if test="credit != null" >
+        credit = #{credit,jdbcType=REAL},
+      </if>
+      <if test="facultyname != null" >
+        facultyname = #{facultyname,jdbcType=VARCHAR},
+      </if>
+      <if test="majorname != null" >
+        majorname = #{majorname,jdbcType=VARCHAR},
+      </if>
+      <if test="gradename != null" >
+        gradename = #{gradename,jdbcType=VARCHAR},
+      </if>
+      <if test="stuname != null" >
+        stuname = #{stuname,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pojo.Patents" >
+    update patents
+    set patentstype = #{patentstype,jdbcType=VARCHAR},
+      patentsid = #{patentsid,jdbcType=VARCHAR},
+      patentstime = #{patentstime,jdbcType=VARCHAR},
+      proposer = #{proposer,jdbcType=VARCHAR},
+      inventor = #{inventor,jdbcType=VARCHAR},
+      patentsname = #{patentsname,jdbcType=VARCHAR},
+      responsibility = #{responsibility,jdbcType=VARCHAR},
+      stunum = #{stunum,jdbcType=VARCHAR},
+      credit = #{credit,jdbcType=REAL},
+      facultyname = #{facultyname,jdbcType=VARCHAR},
+      majorname = #{majorname,jdbcType=VARCHAR},
+      gradename = #{gradename,jdbcType=VARCHAR},
+      stuname = #{stuname,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

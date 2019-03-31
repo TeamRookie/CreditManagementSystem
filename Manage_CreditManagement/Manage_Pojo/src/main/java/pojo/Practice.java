@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Practice implements Serializable {
+public class Practice implements Serializable
+{
     private Integer id;
 
     private String practicetime;

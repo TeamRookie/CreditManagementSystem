@@ -2,7 +2,8 @@ package pojo;
 
 import java.io.Serializable;
 
-public class Project implements Serializable {
+public class Project implements Serializable
+{
     private Integer id;
 
     private String projecttime;

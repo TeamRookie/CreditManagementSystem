@@ -1,9 +1,10 @@
 package mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import pojo.Contestrules;
 import pojo.ContestrulesExample;
+
+import java.util.List;
 
 public interface ContestrulesMapper {
     int countByExample(ContestrulesExample example);
