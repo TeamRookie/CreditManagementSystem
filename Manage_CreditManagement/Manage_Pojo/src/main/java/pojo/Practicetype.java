@@ -10,8 +10,6 @@ public class Practicetype implements Serializable
 
     private String practicename;
 
-    private String type;
-
     private String practicelevel;
 
     private String score;
@@ -40,14 +38,6 @@ public class Practicetype implements Serializable
 
     public void setPracticename(String practicename) {
         this.practicename = practicename == null ? null : practicename.trim();
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
     }
 
     public String getPracticelevel() {

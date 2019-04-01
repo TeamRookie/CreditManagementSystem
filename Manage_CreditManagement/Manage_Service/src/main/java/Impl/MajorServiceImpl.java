@@ -20,7 +20,7 @@ public class MajorServiceImpl implements MajorService
     {
         MajorExample majorExample=new MajorExample();
         MajorExample.Criteria criteria = majorExample.createCriteria();
-        criteria.andFacultynameEqualTo(faculty);
+        criteria.andFacultynameLike(faculty+"%");
         List<Major> majorList = majorMapper.selectByExample(majorExample);
         return majorList;
     }

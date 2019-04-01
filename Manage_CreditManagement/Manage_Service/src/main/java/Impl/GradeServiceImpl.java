@@ -19,7 +19,7 @@ public class GradeServiceImpl implements GradeService
     {
         GradeExample gradeExample=new GradeExample();
         GradeExample.Criteria criteria = gradeExample.createCriteria();
-        criteria.andMajornameEqualTo(major);
+        criteria.andMajornameLike(major+"%");
         List<Grade> gradeList = gradeMapper.selectByExample(gradeExample);
         return gradeList;
     }

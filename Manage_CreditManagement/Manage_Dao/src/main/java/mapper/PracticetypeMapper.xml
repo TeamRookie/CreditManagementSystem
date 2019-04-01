@@ -5,7 +5,6 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="practicetime" property="practicetime" jdbcType="VARCHAR" />
     <result column="practicename" property="practicename" jdbcType="VARCHAR" />
-    <result column="type" property="type" jdbcType="VARCHAR" />
     <result column="practicelevel" property="practicelevel" jdbcType="VARCHAR" />
     <result column="score" property="score" jdbcType="VARCHAR" />
   </resultMap>
@@ -68,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, practicetime, practicename, type, practicelevel, score
+    id, practicetime, practicename, practicelevel, score
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.PracticetypeExample" >
     select
@@ -102,11 +101,9 @@
   </delete>
   <insert id="insert" parameterType="pojo.Practicetype" >
     insert into practicetype (id, practicetime, practicename, 
-      type, practicelevel, score
-      )
+      practicelevel, score)
     values (#{id,jdbcType=INTEGER}, #{practicetime,jdbcType=VARCHAR}, #{practicename,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{practicelevel,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR}
-      )
+      #{practicelevel,jdbcType=VARCHAR}, #{score,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="pojo.Practicetype" >
     insert into practicetype
@@ -119,9 +116,6 @@
       </if>
       <if test="practicename != null" >
         practicename,
-      </if>
-      <if test="type != null" >
-        type,
       </if>
       <if test="practicelevel != null" >
         practicelevel,
@@ -139,9 +133,6 @@
       </if>
       <if test="practicename != null" >
         #{practicename,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null" >
-        #{type,jdbcType=VARCHAR},
       </if>
       <if test="practicelevel != null" >
         #{practicelevel,jdbcType=VARCHAR},
@@ -169,9 +160,6 @@
       <if test="record.practicename != null" >
         practicename = #{record.practicename,jdbcType=VARCHAR},
       </if>
-      <if test="record.type != null" >
-        type = #{record.type,jdbcType=VARCHAR},
-      </if>
       <if test="record.practicelevel != null" >
         practicelevel = #{record.practicelevel,jdbcType=VARCHAR},
       </if>
@@ -188,7 +176,6 @@
     set id = #{record.id,jdbcType=INTEGER},
       practicetime = #{record.practicetime,jdbcType=VARCHAR},
       practicename = #{record.practicename,jdbcType=VARCHAR},
-      type = #{record.type,jdbcType=VARCHAR},
       practicelevel = #{record.practicelevel,jdbcType=VARCHAR},
       score = #{record.score,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -204,9 +191,6 @@
       <if test="practicename != null" >
         practicename = #{practicename,jdbcType=VARCHAR},
       </if>
-      <if test="type != null" >
-        type = #{type,jdbcType=VARCHAR},
-      </if>
       <if test="practicelevel != null" >
         practicelevel = #{practicelevel,jdbcType=VARCHAR},
       </if>
@@ -220,7 +204,6 @@
     update practicetype
     set practicetime = #{practicetime,jdbcType=VARCHAR},
       practicename = #{practicename,jdbcType=VARCHAR},
-      type = #{type,jdbcType=VARCHAR},
       practicelevel = #{practicelevel,jdbcType=VARCHAR},
       score = #{score,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}

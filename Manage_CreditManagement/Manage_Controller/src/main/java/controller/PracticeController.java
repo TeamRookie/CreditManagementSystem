@@ -64,7 +64,7 @@ public class PracticeController
     @RequestMapping(value = "/addPracticeType",method = RequestMethod.POST)
     public  String addPracticeType(Practicetype practicetype)
     {
-        if(practicetype!=null&&practicetype.getPracticename()!=null&&!practicetype.getPracticename().isEmpty()&&practicetype.getPracticetime()!=null&&!practicetype.getPracticetime().isEmpty()&&practicetype.getType()!=null&&!practicetype.getType().isEmpty()&&!practicetype.getPracticelevel().isEmpty()&&!practicetype.getScore().isEmpty())
+        if(practicetype!=null&&practicetype.getPracticename()!=null&&!practicetype.getPracticename().isEmpty()&&practicetype.getPracticetime()!=null&&!practicetype.getPracticetime().isEmpty()&&!practicetype.getPracticelevel().isEmpty()&&!practicetype.getScore().isEmpty())
         {
             practiceService.addPracticeType(practicetype);
         }

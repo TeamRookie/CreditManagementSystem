@@ -353,11 +353,6 @@ ${message}
                                 <div class="col-sm-2">
                                 <input  class="form-control" name="stuname" id="studentName" type="text" placeholder="姓名"  />
                               </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="date">时间</label>
-                                <div class="col-sm-1">
-                                    <select id="date" class="form-control"   name="studentname" readonly>
-                                    </select>
-                                </div>
                                 <div class="col-sm-1"></div>
 
                                 <div class="col-sm-2 no-padding-top">
@@ -649,8 +644,7 @@ ${message}
             success: function(data)
             {
 
-                var content="";
-                content="<option  value=''>请选择</option>";
+                var content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
                     content+="<option  value='"+data[i].majorname+"'>"+data[i].majorname+"</option>";
@@ -670,8 +664,7 @@ ${message}
             data:"major="+major,
             success: function(data)
             {
-                var content="";
-                content="<option  value=''>请选择</option>";
+                var content="<option  value=''>请选择</option>";
                 for (var i=0;i<data.length;i++)
                 {
                     content+="<option  value='"+data[i].gradename+"'>"+data[i].gradename+"</option>";

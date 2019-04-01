@@ -12,8 +12,396 @@
       <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/PracticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/PracticeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/service/PracticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/service/PracticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AcademicItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AcademicItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AcademicMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AcademicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AcademicrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AcademicrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AdminMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationtypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/AssociationtypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContestItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContestItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContestrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContestrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContesttypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ContesttypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialtypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CredentialtypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CreditMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/CreditMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/DepartmentItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/DepartmentItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/DepartmentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/DepartmentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/EnterpriseItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/EnterpriseItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/EnterpriseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/EnterpriseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/EnterpriserulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/EnterpriserulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/FacultyMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/FacultyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/GradeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/GradeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/MajorMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/MajorMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PatentsItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PatentsItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PatentsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PatentsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PatentsrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PatentsrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticeItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticeItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticerulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticerulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticetypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/PracticetypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProductionItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProductionItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProductionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProductionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProductionrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProductionrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjectItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjectItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjectMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjectrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjectrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjecttypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ProjecttypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SafetyItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SafetyItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SafetyMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SafetyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SafetyrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SafetyrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ScienceItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ScienceItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ScienceMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/ScienceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SciencerulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/SciencerulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudentItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudentItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudioItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudioItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudioMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudiorulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudiorulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudiotypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/StudiotypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TeacherMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TeacherMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TrainItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TrainItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TrainMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TrainMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TrainrulesMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TrainrulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TraintypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TraintypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/TypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/YearsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/classes/mapper/YearsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Dao/target/test-classes/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicetype.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicetype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/PracticetypeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/PracticetypeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Academic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicPageBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Academicrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AcademicrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AdminExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AdminExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AdminExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AdminExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Association.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Associationrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Associationtype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationtypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationtypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationtypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/AssociationtypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Contest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestPageBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Contestrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContestrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Contesttype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContesttypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContesttypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContesttypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ContesttypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Credential.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Credentialrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Credentialtype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialtypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialtypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialtypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CredentialtypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Credit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/CreditItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/DepartmentExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/DepartmentExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/DepartmentExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/DepartmentExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Enterprise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriseExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriseExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriseExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriseExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Enterpriserules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriserulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriserulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriserulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/EnterpriserulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Faculty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/FacultyExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/FacultyExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/FacultyExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/FacultyExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Grade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/GradeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/GradeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/GradeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/GradeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Major.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/MajorExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/MajorExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/MajorExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/MajorExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PageBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Patents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Patentsrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PatentsrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Practice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Practicerules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticerulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticerulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticerulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticerulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Practicetype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticetypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticetypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticetypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/PracticetypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Production.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Productionrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProductionrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Projectrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjectrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Projecttype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ProjecttypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Safety.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Safetyrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SafetyrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Science.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ScienceExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ScienceExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ScienceExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/ScienceExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Sciencerules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SciencerulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SciencerulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SciencerulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/SciencerulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudentExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudentExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudentExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudentExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Studio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudioExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudioExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudioExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudioExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Studiorules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiorulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiorulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiorulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiorulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Studiotype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiotypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiotypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiotypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/StudiotypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TeacherExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TeacherExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TeacherExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TeacherExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Train.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Trainrules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainrulesExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainrulesExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainrulesExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TrainrulesExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Traintype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TraintypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TraintypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TraintypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TraintypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TypeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TypeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TypeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/TypeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/Years.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/YearsExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/YearsExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/YearsExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Pojo/target/classes/pojo/YearsExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/GradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/GradeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/MajorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/MajorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/AcademicServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/AssociationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/ChangePasswordImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/ContestServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/CredentialServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/CreditServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/DepartmentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/DownloadServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/EnterpriseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/FacultyServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/GradeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/MajorServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/PatentsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/PracticeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/ProductionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/ProjectServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/SafetyServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/ScienceServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/StudioServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/TrainServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/TypeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/Impl/YearsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/AcademicService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/AssociationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/ChangePasswordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/ContestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/CredentialService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/CreditService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/DepartmentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/DownloadService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/EnterpriseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/FacultyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/GradeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/MajorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/PatentsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/PracticeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/ProductionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/ProjectService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/SafetyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/ScienceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/StudioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/TrainService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/TypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/service/YearsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/util/CommonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/util/ImportExcelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manage_Service/target/classes/util/UtilController.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Manage_Dao/target/" />
@@ -48,77 +436,88 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/PracticeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/PracticeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="97" column="64" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="62" selection-start-line="62" selection-end-line="64" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticeItemMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-75">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/student.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="440" column="48" selection-start-line="440" selection-start-column="48" selection-end-line="440" selection-end-column="48" />
+            <state relative-caret-position="375">
+              <caret line="359" column="44" selection-start-line="359" selection-start-column="44" selection-end-line="359" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/practice.jsp">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/resource/conf/db.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="375" selection-start-line="375" selection-end-line="375" />
+            <state relative-caret-position="75">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/resource/conf/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/GradeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/GradeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/GradeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/MajorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/MajorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/MajorServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/resource/mybatis/SqlMapConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="4" selection-start-line="5" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -172,30 +571,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/credential.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/enterprise.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/patents.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/practice.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/production.jsp" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/safety.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/science.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/train.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/changePassword.jsp" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/service/TypeService.java" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/service/StudentService.java" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/TypeController.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/student.jsp" />
         <option value="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.java" />
         <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projectrules.java" />
         <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/AdminExample.java" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ChangePasswordImpl.java" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/LoginServiceImpl.java" />
         <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Student.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/resource/mybatis/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/studio.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/TypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/FacultyController.java" />
@@ -216,13 +606,22 @@
         <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java" />
         <option value="$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticerulesMapper.java" />
         <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjectExample.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/PracticeController.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" />
-        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java" />
+        <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjecttypeExample.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp" />
         <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp" />
+        <option value="$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicetype.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/PracticeController.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java" />
+        <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/MajorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/java/controller/MajorController.java" />
+        <option value="$PROJECT_DIR$/Manage_Service/src/main/java/Impl/GradeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/resource/mybatis/SqlMapConfig.xml" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/resource/conf/db.properties" />
+        <option value="$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/student.jsp" />
       </list>
     </option>
   </component>
@@ -275,7 +674,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
@@ -286,8 +685,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,16 +692,23 @@
               <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
               <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Manage_CreditManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_CreditManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="Manage_Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554047556041" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554115519953" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="D:/SystemWork/Manage_Admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -326,8 +730,8 @@
       <recent name="controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Pojo\src\main\java\pojo" />
       <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Dao\src\main\java\mapper" />
+      <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Pojo\src\main\java\pojo" />
       <recent name="D:\CreditManagementSystem\Manage_CreditManagement\Manage_Controller\src\main\webapp\WEB-INF\jsp\role" />
     </key>
   </component>
@@ -343,7 +747,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat">
+  <component name="RunManager" selected="Maven.Manage_CreditManagement [clean]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -623,6 +1027,14 @@
       <workItem from="1553958183402" duration="589000" />
       <workItem from="1553994894963" duration="14718000" />
       <workItem from="1554040708902" duration="4264000" />
+      <workItem from="1554073549389" duration="224000" />
+      <workItem from="1554073853067" duration="626000" />
+      <workItem from="1554078211958" duration="714000" />
+      <workItem from="1554079861207" duration="2182000" />
+      <workItem from="1554084495437" duration="3255000" />
+      <workItem from="1554102450239" duration="2277000" />
+      <workItem from="1554107607339" duration="4666000" />
+      <workItem from="1554117012742" duration="668000" />
     </task>
     <servers />
   </component>
@@ -659,7 +1071,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110239000" />
+    <option name="totallyTimeSpent" value="124851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -671,9 +1083,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.492569" visible="true" weight="0.16689008" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.492569" visible="true" weight="0.18297587" />
       <window_info id="Structure" order="1" sideWeight="0.507431" side_tool="true" weight="0.2600536" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -683,7 +1095,7 @@
       <window_info id="Web" order="7" sideWeight="0.5063291" side_tool="true" weight="0.25670242" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.33144477" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.32152975" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -805,7 +1217,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java</url>
-          <line>125</line>
+          <line>126</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -817,155 +1229,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/EnterpriseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/FacultyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="21" column="2" selection-start-line="21" selection-end-line="21" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/GradeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/util/CommonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/Manage_Service/target/Manage_Service-1.0-SNAPSHOT.jar!/Impl/StudioServiceImpl.class" />
-    <entry file="jar://$PROJECT_DIR$/Manage_Service/target/Manage_Service-1.0-SNAPSHOT.jar!/service/StudioService.class" />
-    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/StudioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/StudioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/StudioItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Studiotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/StudioServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#2816#2817#0" expanded="true" />
-            <element signature="e#2876#2877#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/contestImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="436" column="33" selection-start-line="436" selection-start-column="33" selection-end-line="436" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/trainImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="430" column="33" selection-start-line="430" selection-start-column="33" selection-end-line="430" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/util/ImportExcelUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/credentialImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="423" column="33" selection-start-line="423" selection-start-column="33" selection-end-line="423" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="449" column="21" selection-start-line="449" selection-start-column="21" selection-end-line="453" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/project.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="363" column="72" lean-forward="true" selection-start-line="363" selection-start-column="72" selection-end-line="363" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/AcademicrulesMapper.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PatentsrulesMapper.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1008,25 +1271,8 @@
     <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Project.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#1492#1493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjectrulesExample.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjecttypeExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjectExample.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1038,13 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9525">
-          <caret line="381" column="103" selection-start-line="381" selection-start-column="103" selection-end-line="381" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/studioImport.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1052,69 +1291,248 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java">
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/PracticeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="69" column="202" selection-start-line="69" selection-start-column="202" selection-end-line="69" selection-end-column="202" />
+        <state relative-caret-position="275">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/practice.jsp">
+    <entry file="jar://$PROJECT_DIR$/Manage_Service/target/Manage_Service-1.0-SNAPSHOT.jar!/service/ProjectService.class" />
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="375" selection-start-line="375" selection-end-line="375" />
+        <state relative-caret-position="1125">
+          <caret line="62" selection-start-line="62" selection-end-line="64" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticeItemMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="225">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/PracticeServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjectItemMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="62" selection-start-line="62" selection-end-line="64" selection-end-column="47" />
+        <state relative-caret-position="250">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/ProjectItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/information/practice.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9375">
+          <caret line="375" selection-start-line="375" selection-end-line="375" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="49" column="90" selection-start-line="49" selection-start-column="90" selection-end-line="49" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/ProjecttypeExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Projecttype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#1492#1493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8575">
+          <caret line="343" column="79" selection-start-line="343" selection-start-column="79" selection-end-line="343" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="97" column="44" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/PracticetypeExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Pojo/src/main/java/pojo/Practicetype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ContestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5100">
+          <caret line="216" column="68" selection-start-line="216" selection-start-column="68" selection-end-line="216" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/associationImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="111" column="76" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/PracticeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+        <state relative-caret-position="1200">
+          <caret line="66" column="191" selection-start-line="66" selection-start-column="191" selection-end-line="66" selection-end-column="191" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/PracticeService.java">
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state relative-caret-position="100">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ImportFileController.java">
+    <entry file="file://$PROJECT_DIR$/Manage_Dao/src/main/java/mapper/PracticetypeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+        <state relative-caret-position="1625">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/DownloadController.java">
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/projectImport.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="97" column="64" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
+        <state relative-caret-position="8950">
+          <caret line="358" column="45" selection-start-line="358" selection-start-column="45" selection-end-line="358" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/import/practiceImport.jsp">
+    <entry file="jar://$PROJECT_DIR$/Manage_Service/target/Manage_Service-1.0-SNAPSHOT.jar!/service/MajorService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="440" column="48" selection-start-line="440" selection-start-column="48" selection-end-line="440" selection-end-column="48" />
+        <state relative-caret-position="175">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/resource/conf/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/GradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/GradeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/GradeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/java/controller/MajorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/service/MajorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Service/src/main/java/Impl/MajorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/resource/mybatis/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="4" selection-start-line="5" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/resource/conf/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manage_Controller/src/main/webapp/WEB-INF/jsp/role/student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="359" column="44" selection-start-line="359" selection-start-column="44" selection-end-line="359" selection-end-column="44" />
         </state>
       </provider>
     </entry>

@@ -354,16 +354,7 @@ ${message}
                                 <div class="col-sm-1">
                                     <input   class="form-control" name="practicename" id="addPracticeName" type="text" placeholder="项目名称" required />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right"  for="addPracticeType">
-                                    项目类型
-                                </label>
-                                <div class="col-sm-1">
-                                    <select id="addPracticeType" class="form-control"   name="type" readonly>
-                                        <option value="调研">调研</option>
-                                        <option value="服务">服务</option>
-                                        <option value="综合">综合</option>
-                                    </select>
-                                </div>
+
 
 
                                 <div class="col-sm-1"></div>
@@ -376,15 +367,7 @@ ${message}
                             </div>
                             <div class="form-group">
 
-                                <label class="col-sm-1 control-label no-padding-right " for="practiceType">项目类别</label>
-                                <div class="col-sm-1">
-                                    <select id="practiceType" class="form-control"   name="practicetype" readonly>
 
-                                        <option value="调研">调研</option>
-                                        <option value="服务">服务</option>
-                                        <option value="综合">综合</option>
-                                    </select>
-                                </div>
                                 <label class="col-sm-1 control-label no-padding-right " for="practiceLevel">项目级别</label>
                                 <div class="col-sm-2">
                                     <select id="practiceLevel" class="form-control"   name="practicelevel" readonly>
@@ -436,9 +419,8 @@ ${message}
                     <tr>
                         <th class="center">项目时间</th>
                         <th class="center">项目名称</th>
-                        <th class="center">项目类型</th>
                         <th class="center">项目级别</th>
-                        <th class="center">结题成绩e</th>
+                        <th class="center">结题成绩</th>
                         <th class="center">操作</th>
                     </tr>
                     </thead>
@@ -449,7 +431,6 @@ ${message}
                                         ${item.practicetime}
                                 </td>
                                 <td class="center">${item.practicename}</td>
-                                <th class="center">${item.type}</th>
                                 <th class="center">${item.practicelevel}</th>
                                 <td class="center">${item.score}</td>
                                 <td class="center">
