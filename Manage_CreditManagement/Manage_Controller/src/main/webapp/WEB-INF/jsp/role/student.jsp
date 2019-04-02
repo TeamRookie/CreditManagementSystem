@@ -59,7 +59,7 @@
     <![endif]-->
 </head>
 
-<body class="no-skin">
+    <body class="no-skin">
 ${message}
 <div id="navbar" class="navbar navbar-default          ace-save-state">
     <div class="navbar-container ace-save-state" id="navbar-container">
@@ -689,8 +689,8 @@ ${message}
         }
         var num=$("#studentNumber").val();
         var stuname=$("#studentName").val();
-        var date = $("#date").val();
-        var url = "studentDownload.action?" + "facultyname=" + faculty + "&" + "majorname=" + major + "&" + "gradename=" + grade + "&" + "stuname=" + stuname + "&" + "num=" + num + "&" + "name=学生表"+"&"+"studenttime="+date;
+
+        var url = "studentDownload.action?" + "facultyname=" + faculty + "&" + "majorname=" + major + "&" + "gradename=" + grade + "&" + "stuname=" + stuname + "&" + "num=" + num + "&" + "name=学生表";
         window.open(url);
     }
     function importFile() {

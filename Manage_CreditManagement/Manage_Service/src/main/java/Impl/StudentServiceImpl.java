@@ -93,14 +93,15 @@ public class StudentServiceImpl implements StudentService
                 cell.setCellStyle(cellStyle);//列居中显示
             }
             List<Student> studentList = studentItemMapper.getStudentDownload(student);
-            for(Student st:studentList){
+      /*      System.out.println( studentList.size() );*/
+        for(Student st:studentList){
 
                 List<Credit> creditList = new ArrayList<Credit>();
                 List<Type> typeList = typeService.getAllType();
 
                 Float sum = UtilController.creditData(creditService, st.getNum(), typeList, creditList);
                 st.setCreditSum(sum);
-   /*               System.out.println(st.getNum() +"的总分是:"+sum);*/
+                  System.out.println(st.getNum() +"的总分是:"+sum);
             }
             for (int i = 0; i < studentList.size(); i++) {
                 row = sheet.createRow(i+1);
@@ -124,9 +125,9 @@ public class StudentServiceImpl implements StudentService
                 if(item.getGradename() !=null){
                     row.createCell(4).setCellValue(item.getGradename());
                 }
-                if(item.getCreditSum() !=0){
+
                     row.createCell(5).setCellValue(item.getCreditSum());
-                }
+
             }
 
             // 第七步，将文件输出到客户端浏览器
