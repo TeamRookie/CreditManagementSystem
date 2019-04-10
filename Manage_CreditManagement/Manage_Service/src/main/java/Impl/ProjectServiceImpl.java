@@ -55,12 +55,9 @@ public class ProjectServiceImpl implements ProjectService
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
         HashMap map=new HashMap();
-        System.out.println( totalCount );
         map.put("pageBean",pageBean);
         map.put("projectName",projectName);
         map.put("projectTime",projectTime);
-/*        System.out.println(projectName);
-        System.out.println(totalCount);*/
         List<Projecttype> projectTypeList = projectItemMapper.getProjectImportPageBean(map);
         pageBean.setPageList(projectTypeList);
         return  pageBean;

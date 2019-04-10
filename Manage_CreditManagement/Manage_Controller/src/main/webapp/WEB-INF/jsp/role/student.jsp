@@ -348,11 +348,7 @@ ${message}
                                 <div class="col-sm-2">
                                     <input  class="form-control" name="num" id="studentNumber" type="text" placeholder="学号"  />
                                 </div>
-                                <label class="col-sm-1 control-label no-padding-right " for="studentName">姓名</label>
 
-                                <div class="col-sm-2">
-                                <input  class="form-control" name="stuname" id="studentName" type="text" placeholder="姓名"  />
-                              </div>
                                 <div class="col-sm-1"></div>
 
                                 <div class="col-sm-2 no-padding-top">
@@ -443,6 +439,16 @@ ${message}
                         &nbsp; &nbsp;
                         <ul class="pagination middle">
                             <li>
+													<span>
+														总条数<input value="${pageBean.totalCount}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+                            <li>
+                            	<span>
+														总页数<input value="${pageBean.totalPage}" maxlength="3" type="text" readonly="readonly" />
+													</span>
+                            </li>
+                            <li>
                                 <a href="${pageContext.request.contextPath}/getStudent.action?currentPage=1&num=${student.num}&facultyname=${student.facultyname}&majorname=${student.majorname}&gradename=${student.gradename}&stuname=${student.stuname}"><i class="ace-icon fa fa-step-backward middle"></i></a>
                             </li>
 
@@ -454,7 +460,7 @@ ${message}
 
                             <li>
 													<span>
-														<input value="1" maxlength="3" type="text" readonly="readonly" />
+														<input value="${pageBean.currentPage}" maxlength="3" type="text" readonly="readonly" />
 													</span>
                             </li>
 

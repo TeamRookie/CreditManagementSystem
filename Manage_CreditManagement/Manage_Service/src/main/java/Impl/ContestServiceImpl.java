@@ -58,7 +58,7 @@ public class ContestServiceImpl implements ContestService
         Integer start=(pageBean.getCurrentPage()-1)*pageBean.getPageSize();
         pageBean.setStart(start);
         HashMap map=new HashMap();
-/*        System.out.println(contestDate);*/
+
         map.put("pageBean",pageBean);
         map.put("contestDate",contestDate);
         map.put("contestName",contestName);

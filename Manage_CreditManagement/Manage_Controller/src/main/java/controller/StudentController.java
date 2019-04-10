@@ -112,14 +112,17 @@ public class StudentController
             List<Object> lo = listob.get(i);
             if(lo!=null&&lo.get(0)!=null&&lo.get(1)!=null&&lo.get(2)!=null&&lo.get(3)!=null)
             {
-                student.setNum(String.valueOf(lo.get(0)));
-                student.setStuname(String.valueOf(lo.get(1)));
-                student.setId(String.valueOf(lo.get(2)));
-                student.setFacultyname(String.valueOf(lo.get(3)));
-                student.setMajorname(String.valueOf(lo.get(4)));
-                student.setGradename(String.valueOf(lo.get(5)));
-                student.setStudenttime(String.valueOf(6));
-                /*     System.out.println("projectType = "+listob.size());*/
+                student.setNum(String.valueOf(lo.get(0)).trim());
+                student.setStuname(String.valueOf(lo.get(1)).replaceAll( " ","" ).trim());
+                student.setId(String.valueOf(lo.get(2)).trim());
+                student.setFacultyname(String.valueOf(lo.get(3)).trim());
+                student.setMajorname(String.valueOf(lo.get(4)).trim());
+                student.setGradename(String.valueOf(lo.get(5)).trim());
+                student.setStudenttime(String.valueOf(6).trim());
+                student.setStatus( 0 );
+                student.setRole( 0 );
+
+                student.setPassword( String.valueOf( lo.get( 0 ) ).trim() );
                 studentService.addStudent(student);
             }
         }

@@ -79,7 +79,6 @@ public class ImportFileController
                 projecttype.setProjectid(String.valueOf(lo.get(3)).replace( ".00","" ));
                 projecttype.setProjectlevel( String.valueOf( lo.get( 4 ) ) );
                 projecttype.setScore( String.valueOf( lo.get( 5 ) ) );
-                /*     System.out.println("projectType = "+listob.size());*/
                 projectService.addProjectType(projecttype);
             }
         }

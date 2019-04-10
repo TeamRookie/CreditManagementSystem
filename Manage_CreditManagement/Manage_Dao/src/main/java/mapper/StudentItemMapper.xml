@@ -38,7 +38,7 @@
         AND  majorname = #{student.majorname}
       </if>
       <if test="student.gradename !=null and student.gradename!=''">
-        AND  gradename = #{student.grade}
+        AND  gradename = #{student.gradename}
       </if>
       <if test="student.status != null and student.status != ''">
         AND  status = #{status}
@@ -46,6 +46,9 @@
       <if test="student.studenttime !=null and student.studenttime!=''">
         AND  studenttime LIKE  CONCAT('${student.studenttime}','%')
       </if>
+        <if test="student.stuname !=null and student.stuname!=''">
+            AND  stuname =#{stuname}
+        </if>
     </where>
     limit #{pageBean.start},#{pageBean.pageSize}
   </select>

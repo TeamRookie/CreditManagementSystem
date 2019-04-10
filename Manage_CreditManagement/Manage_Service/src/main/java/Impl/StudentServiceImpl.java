@@ -45,6 +45,7 @@ public class StudentServiceImpl implements StudentService
         map.put("pageBean",pageBean);
         map.put("student",student);
         List<Student> studentList= studentItemMapper.getStudentPageBean(map);
+
 /*        for(Student st:studentList){
             *//*没用 但也得有*//*
             List<Credit> creditList = new ArrayList<Credit>();
@@ -149,15 +150,11 @@ public class StudentServiceImpl implements StudentService
     @Override
     public void addStudent(Student student)
     {
-        student.setStatus(1);
-        student.setRole(0);
-        student.setPassword(student.getNum());
         Student stu = studentMapper.selectByPrimaryKey( student.getNum() );
         if(stu==null)
         {
             studentMapper.insert(student);
         }
-
     }
 
     @Override
